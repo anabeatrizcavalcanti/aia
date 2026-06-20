@@ -1,0 +1,11 @@
+retrieval:
+  top_k: 5
+  score_threshold: 0.2
+  active_corpus: reformed
+
+embeddings:
+  provider: openai
+
+vector_store:
+  provider: chromadb
+  persist_directory: corpus/indexes/chroma

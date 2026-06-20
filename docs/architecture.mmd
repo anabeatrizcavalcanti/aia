@@ -1,0 +1,63 @@
+flowchart TD
+    A[Documentos confessionais controlados] --> B[PyMuPDF<br/>Extração de texto]
+    B --> C[Python<br/>Normalização textual própria]
+    C --> D[Python<br/>Chunking estrutural por documento]
+    D --> E[Pydantic + metadados<br/>Taxonomia confessional]
+
+    E --> EMB[OpenAI API<br/>Embeddings]
+    EMB --> F1[ChromaDB<br/>Índice vetorial / Dense retrieval]
+    E --> F2[rank-bm25<br/>Índice lexical / BM25]
+
+    F1 --> G[Busca híbrida]
+    F2 --> G
+    G --> H[Reciprocal Rank Fusion]
+    H --> I[Cross-Encoder Reranking]
+    I --> J[Filtros por metadados<br/>corpus/tradição/documento]
+    J --> K[Parent/Hierarchical Retrieval]
+    K --> L[Contexto final com fontes]
+
+    M[Pergunta do usuário] --> N[Streamlit<br/>Interface de chat]
+    N --> O[LangChain<br/>RAG Orchestration]
+    O --> G
+    L --> O
+    O --> P[Prompt com política de evidência]
+    P --> Q[OpenAI API<br/>LLM]
+    Q --> R[Resposta com citações ou recusa]
+
+    S[Corpus reformado principal] --> A
+    T[Conjuntos confessionais de avaliação] --> A
+
+    U[RAGAS / ARES<br/>Avaliação RAG]
+    V[Métricas próprias<br/>fidelidade, citações, mistura teológica]
+    R --> U
+    R --> V
+
+    subgraph Pipeline documental próprio
+        B
+        C
+        D
+        E
+        EMB
+    end
+
+    subgraph Recuperação e ranqueamento
+        F1
+        F2
+        G
+        H
+        I
+        J
+        K
+    end
+
+    subgraph Orquestração RAG
+        O
+        P
+        Q
+        R
+    end
+
+    subgraph Avaliação
+        U
+        V
+    end

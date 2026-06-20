@@ -1,0 +1,8 @@
+app:
+  name: SolaBot
+  active_corpus: reformed
+  language: pt-BR
+
+paths:
+  corpus_root: corpus
+  reports_root: reports

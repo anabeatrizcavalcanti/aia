@@ -1,0 +1,15 @@
+python-dotenv
+pydantic
+pymupdf
+chromadb
+rank-bm25
+streamlit
+langchain
+langchain-community
+langchain-openai
+ragas
+datasets
+scikit-learn
+numpy
+pytest
+ruff

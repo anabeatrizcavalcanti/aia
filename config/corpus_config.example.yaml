@@ -1,0 +1,20 @@
+corpus:
+  id: reformed
+  name: Corpus reformado principal
+  description: Documentos confessionais reformados controlados pela pesquisadora.
+  raw_path: corpus/raw/reformed
+  processed_path: corpus/processed
+
+documents:
+  - id: westminster_confession
+    title: Confissão de Fé de Westminster
+    tradition: reformada
+  - id: canons_of_dort
+    title: Cânones de Dort
+    tradition: reformada
+  - id: heidelberg_catechism
+    title: Catecismo de Heidelberg
+    tradition: reformada
+  - id: london_baptist_confession_1689
+    title: Confissão Batista de Londres de 1689
+    tradition: batista_reformada
