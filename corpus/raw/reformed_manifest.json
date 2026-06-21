@@ -1,0 +1,51 @@
+{
+  "corpus_id": "reformed",
+  "corpus_name": "Corpus Confessional Reformado",
+  "description": "Corpus principal do SolaBot, composto por documentos confessionais da tradição reformada.",
+  "documents": [
+    {
+      "document_id": "confissao-fe-westminster",
+      "title": "Confissão de Fé de Westminster",
+      "tradition_family": "Protestant",
+      "tradition_branch": "Reformed",
+      "document_type": "confession_of_faith",
+      "language": "pt",
+      "raw_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+      "status": "raw_validated",
+      "notes": []
+    },
+    {
+      "document_id": "canones-de-dort",
+      "title": "Cânones de Dort",
+      "tradition_family": "Protestant",
+      "tradition_branch": "Reformed",
+      "document_type": "doctrinal_canons",
+      "language": "pt",
+      "raw_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+      "status": "raw_validated",
+      "notes": []
+    },
+    {
+      "document_id": "catecismo-heidelberg",
+      "title": "Catecismo de Heidelberg",
+      "tradition_family": "Protestant",
+      "tradition_branch": "Reformed",
+      "document_type": "catechism",
+      "language": "pt",
+      "raw_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+      "status": "raw_validated",
+      "notes": []
+    },
+    {
+      "document_id": "confissao-batista-londres-1689",
+      "title": "Confissão Batista de Londres de 1689",
+      "tradition_family": "Protestant",
+      "tradition_branch": "Reformed",
+      "document_type": "confession_of_faith",
+      "language": "pt",
+      "raw_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+      "status": "raw_validated",
+      "notes": []
+    }
+  ]
+}
