@@ -133,6 +133,27 @@ def test_catechism_top_level_page_classification_is_consistent():
     assert structure["special_layout_pages"] == []
 
 
+def test_catechism_introductory_context_is_structured():
+    structure = json.loads(
+        Path("corpus/reports/structure_analysis/catecismo-heidelberg.structure.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    contexts = structure["introductory_contexts"]
+
+    assert len(contexts) == 1
+    context = contexts[0]
+    assert context["chunk_type"] == "introductory_context"
+    assert context["content_role"] == "contextual"
+    assert context["is_doctrinal"] is False
+    assert context["page_start"] == 1
+    assert context["page_end"] == 1
+    assert "O Catecismo de Heidelberg, o segundo dos padrões doutrinários" in context["text"]
+    assert "Pedro Dathenus" in context["text"]
+    assert "P.1." not in context["text"]
+    assert "Dia do Senhor 1" not in context["text"]
+
+
 def test_catechism_omits_irrelevant_generic_analysis_fields():
     structure = json.loads(
         Path("corpus/reports/structure_analysis/catecismo-heidelberg.structure.json").read_text(

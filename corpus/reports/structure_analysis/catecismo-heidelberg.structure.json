@@ -9,6 +9,18 @@
     1
   ],
   "special_layout_pages": [],
+  "introductory_contexts": [
+    {
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_type": "introductory_context",
+      "content_role": "contextual",
+      "is_doctrinal": false,
+      "section_title": "Material introdutório",
+      "section_reference": "Página 1",
+      "text": "O CATECISMO DE HEIDELBERG\nO Catecismo de Heidelberg, o segundo dos padrões doutrinários das Igrejas Reformadas, foi escrito em\nHeidelberg a pedido do Eleitor Frederico III, governador, entre 1559 e 1576, da mais influente província\nalemã, o Palatinado. Esse piedoso príncipe cristão comissionou Zacarias Ursinus, vinte e oito anos de\nidade e professor de Teologia da Universidade de Heidelberg, e Gaspar Olevianus, vinte e seis anos de\nidade e pregador da corte de Frederico, para que preparassem um catecismo para instruir os jovens e\nguiar pastores e mestres. Na preparação do Catecismo, Frederico contou com o conselho e a\ncooperação de todo o corpo docente de Teologia. O Catecismo de Heidelberg foi adotado pelo Sínodo\nde Heidelberg e publicado na Alemanha com um prefácio de Frederico III datado de 19 de janeiro de\n1563. Uma segunda e terceira edição alemã, com alguns pequenos acréscimos, além de uma tradução\nlatina, foram publicadas em Heidel- berg nesse mesmo ano. Logo cedo o Catecismo foi divido em\ncinqüenta e duas seções para que cada uma delas pudesse ser explicada às igrejas a cada domingo do\nano.\nO Catecismo de Heidelberg tornou-se ampla e favoravelmente conhecido nos Países Baixos quase\nimediatamente após sair das prensas, principalmente pelos esforços de Pedro Dathenus, que o traduziu\npara o holandês e o acrescentou à sua versão do Saltério de Genebra, publicando-o em 1566. No mesmo\nano Pedro Gabriel deu o exemplo, explicando-o à sua congregação em Amsterdã nos sermões das tardes\nde domingo. Os Sínodos Nacionais do século dezesseis o adotou como uma das Formas de Unidade,\nrequerendo dos seus oficiais eclesiásticos que o subscrevessem e que os seus ministros o explicassem às\nigrejas. Essas exigências foram fortemente enfatizadas pelo grande Sínodo de Dort de 1618/1619.O\nCatecismo de Heidelberg tem sido traduzido em muitas línguas e é o mais influente e o mais geralmente\naceito dos di- versos catecismos dos dias da Reforma."
+    }
+  ],
   "parts": [
     {
       "page": 2,

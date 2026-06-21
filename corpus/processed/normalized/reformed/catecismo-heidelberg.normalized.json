@@ -1,0 +1,371 @@
+{
+  "document_id": "catecismo-heidelberg",
+  "title": "Catecismo de Heidelberg",
+  "corpus_id": "reformed",
+  "tradition_family": "Protestant",
+  "tradition_branch": "Reformed",
+  "document_type": "catechism",
+  "language": "pt",
+  "raw_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+  "input_extraction_file": "corpus/processed/extracted/reformed/catecismo-heidelberg.extracted.json",
+  "structure_report_file": "corpus/reports/structure_analysis/catecismo-heidelberg.structure.json",
+  "normalization_strategy": "mechanical_safe_normalization_v001",
+  "pages_count": 29,
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "O CATECISMO DE HEIDELBERG\nO Catecismo de Heidelberg, o segundo dos padrões doutrinários das Igrejas Reformadas, foi escrito em\nHeidelberg a pedido do Eleitor Frederico III, governador, entre 1559 e 1576, da mais influente província\nalemã, o Palatinado. Esse piedoso príncipe cristão comissionou Zacarias Ursinus, vinte e oito anos de\nidade e professor de Teologia da Universidade de Heidelberg, e Gaspar Olevianus, vinte e seis anos de\nidade e pregador da corte de Frederico, para que preparassem um catecismo para instruir os jovens e\nguiar pastores e mestres. Na preparação do Catecismo, Frederico contou com o conselho e a\ncooperação de todo o corpo docente de Teologia. O Catecismo de Heidelberg foi adotado pelo Sínodo\nde Heidelberg e publicado na Alemanha com um prefácio de Frederico III datado de 19 de janeiro de\n1563. Uma segunda e terceira edição alemã, com alguns pequenos acréscimos, além de uma tradução\nlatina, foram publicadas em Heidel- berg nesse mesmo ano. Logo cedo o Catecismo foi divido em\ncinqüenta e duas seções para que cada uma delas pudesse ser explicada às igrejas a cada domingo do\nano.\nO Catecismo de Heidelberg tornou-se ampla e favoravelmente conhecido nos Países Baixos quase\nimediatamente após sair das prensas, principalmente pelos esforços de Pedro Dathenus, que o traduziu\npara o holandês e o acrescentou à sua versão do Saltério de Genebra, publicando-o em 1566. No mesmo\nano Pedro Gabriel deu o exemplo, explicando-o à sua congregação em Amsterdã nos sermões das tardes\nde domingo. Os Sínodos Nacionais do século dezesseis o adotou como uma das Formas de Unidade,\nrequerendo dos seus oficiais eclesiásticos que o subscrevessem e que os seus ministros o explicassem às\nigrejas. Essas exigências foram fortemente enfatizadas pelo grande Sínodo de Dort de 1618/1619.O\nCatecismo de Heidelberg tem sido traduzido em muitas línguas e é o mais influente e o mais geralmente\naceito dos di- versos catecismos dos dias da Reforma.\nCATECISMO DE HEIDELBERG\nDia do Senhor 1\nP.1. Qual é o seu único consolo na vida e na morte?\nR. Que não pertenço a mim mesmo,1 mas pertenço de corpo e alma, tanto na vida quanto na morte,2\nao meu fiel Salvador Jesus Cristo.3 Ele pagou completamente todos os meus pecados com o Seu sangue\nprecioso4 e libertou-me de todo o domínio do diabo.5 Ele também me guarda de tal maneira6 que sem\na vontade do meu Pai celeste nem um fio de cabelo pode cair da minha cabeça;7 na verdade, todas as\ncoisas cooperam para a minha salvação.8 Por isso, pelo Seu Espírito Santo, Ele também me assegura a\nvida eterna9 e faz-me disposto e pronto de coração para viver para Ele de agora em diante.10\n1. 1Co 6.19, 20. 2. Rm 14.7-9. 3. 1Co 3.23; Tt 2.14. 4. 1Pe 1.18, 19; 1Jo 1.7; 2.2. 5. Jo 8.34-36; Hb 2.14,\n15; 1Jo 3.8. 6. Jo 6.39, 40; 10.27-30; 2Ts 3.3; 1Pe 1.5. 7. Mt 10.29-31; Lc 21:16-18. 8. Rm 8.28. 9. Rm\n8.15, 16; 2Co 1.21, 22; 5.5; Ef 1.13, 14. 10. Rm 8:14\nP.2. O que é que você precisa saber para viver e morrer nessa consolação?",
+      "char_count": 2976,
+      "source_char_count": 3013,
+      "page_zone": "introductory_material",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 2,
+      "text": "R. Primeiro, como são grandes meus pecados e miséria;1 segundo, de que modo sou liberto de todos os\nmeus pecados e miséria;2 terceiro, de que modo devo ser grato a Deus por uma tal libertação.3\n1. Rm 3.9, 10; 1Jo 1:10. 2. Jo 17.3; At 4.12; 10.43. 3. Mt 5.16; Rm 6.13; Ef 5.8-10; 1Pe 2.9, 10.\nO Catecismo de Heidelberg\nParte I\nNOSSOS PECADOS E MISÉRIA\nDia do Senhor 2\nP.3. Como é que você sabe dos seus pecados e miséria?\nR. Pela lei de Deus.1 1. Rm 3.20; 7.7-25.\nP.4. O que a lei de Deus exige de nós?\nR. É isso o que Cristo nos ensina resumidamente em Mateus 22.37-40: “Amarás o Senhor, teu Deus, de\ntodo o teu coração, de toda a tua alma e de todo o teu entendimento.1 Este é o grande e primeiro\nmandamento. O segundo, semelhante a este, é: Amarás o teu próximo como a ti mesmo. Destes dois\nmandamentos dependem toda a Lei e os Profetas2”.\n1. Dt 6.5. 2. Lv 19.18.\nP.5. Você consegue guardar tudo isso perfeitamente?\nR. Não.1 Sou, por natureza, inclinado a odiar a Deus e ao meu próximo.2\n1. Rm 3.10, 23; 1Jo 1.8, 10. 2. Gn 6.5; 8.21; Jr 17.9; Rm 7.23; 8.7; Ef 2.3; Tt 3.3.\nDia do Senhor 3\nP.6. Então, Deus criou o homem assim tão mau e perverso?\nR. Não, pelo contrário, Deus criou o homem bom1 e à Sua imagem,2 isso é, em verdadeira justiça e\nsantidade,3 de modo que ele pudesse conhecer corretamente a Deus, o seu Criador,4 amá-lO de\ncoração, e viver com Ele em eterna felicidade para O louvar e glorificar.5\n1. Gn 1.31. 2. Gn 1.26, 27. 3. Ef 4.24. 4. Cl 3.10 5. Sl 8. 52\nP.7. De onde veio, então, a natureza corrompida do homem?\nR. Da queda e desobediência dos nossos primeiros pais, Adão e Eva, no Paraíso.1 Ali a nossa natureza\ntornou-se corrupta2 de tal modo que somos todos concebidos e nascidos em pecado.3\n1. Gn 3. 2. Rm 5.12, 18, 19. 3. Sl 51.5.",
+      "char_count": 1756,
+      "source_char_count": 1786,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 3,
+      "text": "P.8. Mas, somos tão corruptos que não somos capazes de fazer bem algum e somos inclinados a todo o\nmal?\nR. Sim,1 a menos que sejamos gerados novamente pelo Espírito de Deus.2\n1. Gn 6.5; 8.21; Jó 14.4; Is 53.6. 2. Jo 3.3-5.\nDia do Senhor 4\nP.9. Mas, Deus não age injustamente com o homem ao exigir em Sua lei aquilo que o homem não\nconsegue cumprir?\nR. Não, pois Deus criou o homem de tal forma que ele era capaz de a cumprir.1 Mas o homem, sob a\ninstigação do diabo,2 em desobediência deliberada,3 privou a si mesmo e a todos os seus descendentes\ndestes dons.4\n1. Gn 1.31. 2. Gn 3.13; Jo 8.44; 1Tm 2.13, 14. 3. Gn 3.6. 4. rm 5.12, 28, 19.\nP.10. Permitiria Deus que uma tal desobediência e apostasia ficasse sem castigo?\nR. Certamente que não, pois tanto o nosso pecado original quanto os nossos pecados presentes O\ndeixam terrivelmente irado. Por isso Ele os castigará com justo juízo agora e eternamente,1 conforme\ndeclarou:2 “Maldito todo aquele que não permanece em todas as coisas escritas no Livro da lei, para\npraticálas” (Gl 3.10).\n1. Gn 2.17; Ex 34.7; Sl 5.4-6; 7.11; Na 1.2; Rm 1.18; 5.12; Ef 5.6 Hb 9.27. 2. 27.26. 53\nP.11. Mas Deus não é também misericordioso?\nR. Deus é verdadeiramente misericordioso,1 mas também é justo.2 A Sua justiça requer que o pecado\ncometido contra a Sua suprema majestade seja castigado também com a pena mais severa, quer dizer,\ncom o eterno castigo do corpo e da alma.3\n1. Ex 20.6; 34.6, 7; Sl 103.8, 9. 2. Ex 20.5; 34.7; Dt 7.9-11; Sl 5.4-6; Hb 10.30, 31. 3. Mt 25.45, 46.\nParte II NOSSA SALVAÇÃO\nDia do Senhor 5\nP.12. Se pelo justo julgamento de Deus merecemos tanto o castigo temporal quanto o eterno, como,\nentão, poderemos escapar desta punição para sermos novamente recebidos em graça?\nR. Deus requer que a Sua justiça seja satisfeita.1 Por isso, nós mesmos devemos satisfazer essa justiça\ncompletamente, ou um outro por nós.2\n1. Ex 20.5; 23.7; Rm 2:1-11. 2. Is 53.11; Rm 8.3, 4.\nP.13. Podemos, nós mesmos, satisfazer essa justiça?",
+      "char_count": 1977,
+      "source_char_count": 2012,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 4,
+      "text": "R. Certamente que não. Pelo contrário, todos os dias aumentamos a nossa dívida.1\n1. Sl 130.3; Mt 6.12; Rm 2.4, 5.\nP.14. Qualquer mera criatura pode satisfazê-la por nós?\nR. Não. Em primeiro lugar, Deus não vai castigar uma outra criatura pelo pecado que o homem\ncometeu.1 Além disso, não há criatura que possa suportar o peso da ira eterna de Deus contra o\npecado, nem libertar outros dessa ira.2 1. Ez 18.4, 20; Hb 2.14-18. 2. Sl 130.3; Na 1.6.\nP.15. Que tipo de mediador e libertador temos que buscar?\nR. Alguém que seja homem verdadeiro1 e justo,2 e mais pode- roso que todas as criaturas; isso é,\nalguém que seja ao mesmo tempo Deus verdadeiro.3\n1. 1Co 15.21; Hb 2.17. 2. Is 53.9; 2Co 5.21; Hb 7.26. 3. Is 7.14; 9.6; Jr 23.6; Jo 1.1; Rm 8.3, 4.\nDia do Senhor 6\nP.16. Por que tem de ser um homem verdadeiro e justo?\nR. Tem de ser homem verdadeiro, pois a justiça de Deus exige que a mesma natureza humana que\npecou pague pelo pecado.1 Tem de ser homem justo pois alguém que, por natureza, já é pecador, não\npode pagar pelos pecados dos outros.2 1. Rm 5.12, 15; 1Co 15.21; Hb 2.14-16. 2. Hb 7.26, 27; 1Pe 3.18.\nP.17. Por que ele tem de ser, ao mesmo tempo, Deus verdadeiro?\nR. Ele tem de ser Deus verdadeiro para que, pelo poder da Sua natureza Divina,1 possa suportar em sua\nnatureza humana o peso da ira de Deus2 e, conquistar e restituir para nós a justiça e a vida.3\n1.Is 9.6. 2. Dt 4.24; Na 1.6; Sl 130.3. 3. Is 53.5, 11; Jo 3.16; 2Co 5.21.\nP.18. Mas, que Mediador é esse que é, ao mesmo tempo, Deus verdadeiro e homem verdadeiro e\njusto?\nR. O nosso Senhor Jesus Cristo,1 “o qual se nos tornou, da parte de Deus, sabedoria, e justiça, e\nsantificação, e redenção” (1Co 1.30).\n1. Mt 1.21-23; Lc 2.11; 1Tm 2.5; 3.16.\nP.19. Como você sabe disso?\nR. Pelo santo evangelho, revelado pela primeira vez no Paraíso pelo próprio Deus.1 O qual o fez\nproclamar depois pelos patriarcas2 e profetas,3 e prefigurar, como sombras, pelos sacrifícios e outras\ncerimônias da lei.4 Fazendo-o, por fim, ser cumprido por meio do Seu único Filho.5\n1. Gn 3.15. 2. Gn 12.3; 22.18; 49.10. 3. Is 53; Jr 23.5, 6; Mc 7.18-20; At 10.43; Hb 1.1 4. Lv 1-7; Jo 5.46; Hb\n10.1-10. 5. Rm 10.4; Gl 4.4, 5; Cl 2.17.",
+      "char_count": 2183,
+      "source_char_count": 2217,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 5,
+      "text": "Dia do Senhor 7\nP.20. Então, todos os homens foram salvos por Cristo, exatamente como por meio de Adão todos\npereceram?\nR. Não.1Só estão salvos os que, pela verdadeira fé, foram enxertados em Cristo e aceitaram todos os\nSeus benefícios.2\n1. Mt 7 .14; Jo 1.12; 3.16, 18, 36; Rm 11.16-21.\nP.21. O que é a verdadeira fé?\nR. A verdadeira fé é a convicção com que aceito como verdade tudo aquilo que Deus nos revelou em Sua\nPalavra.1 É também a firme certeza2 de que Deus garantiu — não só aos outros como também a mim3\n— perdão de pecados, justiça eterna, e salvação4 por pura graça e somente pelos méritos de Cristo.5 O\nEspírito Santo realiza essa fé em meu coração por meio do evangelho.6\n1. Jo 17.3, 17; Hb 11.1-3; Tg 2.19. 2. Rm 4.18-21; 5.1; 10.10; Hb 4.16. 3. Gl 2.20 4. Rm 1.17; Hb 10.10. 5.\nRm 3.20-26; Gl 2.16; Ef 2.8-10. 6. At 16.14; Rm1.16; 10.17; 1Co 1.21.\nP.22. Então, no que o cristão tem de acreditar?\nR. Em tudo que nos está prometido no evangelho,1 e que nos são ensinados resumidamente pelo\nartigos da nossa fé cristã universal e indubitável.\n1. Mt 28.19; Jo 20.30, 31.\nP.23. Que artigos são esses?\nR.\n1. Creio em Deus Pai, Todo-poderoso, Criador do céu e da terra.\n2. em Jesus Cristo, Seu unigênito Filho, nosso Senhor,\n3. o qual foi concebido por obra do Espírito Santo; nasceu da virgem Maria;\n4. padeceu sob o poder de Pôncio Pilatos, foi crucificado, morte e sepultado; desceu ao inferno;\n5. ressurgiu dos mortos ao terceiro dia;\n6. subiu ao céu; está assentado à mão direita de Deus Pai Todo-poderoso,\n7. de onde há de vir para julgar os vivos e os mortos.\n8. Creio no Espírito Santo;\n9. na santa Igreja universal; na comunhão dos santos;",
+      "char_count": 1658,
+      "source_char_count": 1698,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 6,
+      "text": "10. na remissão dos pecados;\n11. na ressurreição do corpo;\n12. na vida eterna.\nDia do Senhor 8\nP.24. Como se dividem esses artigos?\nR. Em três partes. — a primeira é sobre Deus o Pai e a nossa criação; — a segunda é sobre Deus o Filho e\na nossa redenção;— a terceira é sobre Deus o Espírito Santo e a nossa santificação.\nP.25. Por que é que você fala em três Pessoas: Pai, Filho e Espírito Santo; visto que só existe um único\nDeus?\n1 R. Porque o próprio Deus se revelou de tal maneira em Sua Palavra2 que essas três Pessoas distintas\nsão o único, verdadeiro e eterno Deus.\n1. Dt 6.4; Is 44.6; 45.5; 1Co 8.4, 6. 2. Gn 1.2, 3; Is 61.1; 63.8-10; Mt 3.16, 17; 28.18, 19; Lc 4.18; Jo 14.26;\n15.26; 2Co 13.14; Gl 4.6; Tt 3.5, 6.\nDeus Pai e a Nossa Criação\nDia do Senhor 9\nP.26. Em que você crê quando diz: “Creio em Deus Pai, Todo-poderoso, Criador do céu e da terra”?\nR. Creio que o eterno Pai do nosso Senhor Jesus Cristo, que criou do nada o céu e a terra e tudo o que\nneles há,1 e também os sustenta e governa por Seu conselho e providência eternos,2 é o meu Deus e o\nmeu Pai, por causa do Seu Filho Cristo.3 Creio nEle tão completamente que não tenho nenhuma dúvida\nde que Ele me suprirá de tudo que é necessário ao corpo e à alma,4 e que também converterá em bem\npara mim toda a adversidade que me enviar nessa vida conturbada.5 Ele assim pode fazer porque é\nDeus Todo-Poderoso,6 mas o quer fazer, porque é Pai Fiel.7\n1. Gn 1; 2; Ex 20.11; Jó 38; 39; Sl 33.6; Is 44.24; At 4.24; 14.15. 2. Sl 104.27-30; Mt 6.30; 10.29; Ef 1.11. 3.\nJo 1.12, 13; Rm 8.15, 16; Gl 4.4-7; Ef 1.5. 4. Sl 55.22; Mt 6.25, 26; Lc 12.22-31. 5. Rm 8.28. 6. Gn 18.14;\nRm 8.31-39. 7. Mt 6.32, 33; 7.9-11.\nDia do Senhor 10\nP.27. O que você entende por “Providência de Deus”?\nR. A providência de Deus é o Seu onipotente e onipresente poder,1 por meio do qual, com as Sua mãos,\nEle sustenta continuamente o céu e a terra e todas as criaturas,2 governando-os de tal modo que ervas\ne plantas, chuva e seca, abundância e escassez, comida e bebida, saúde e doença, riqueza e pobreza,3\ntodas as coisas na verdade, não nos vêm por acaso4 mas procedem da Sua mão paternal.5",
+      "char_count": 2133,
+      "source_char_count": 2169,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 7,
+      "text": "1. Jr 23.23, 24; At 17.24-28. 2. Hb 1.3 3. Jr 5.24; At 14.15-17; Jo 9.3; Pv 22.2. 4. Pv 16.33. 5. Mt 10.29.\nP.28. Que benefício há em sabermos que Deus criou todas as coisas e que continuamente as sustenta\npela Sua providência?\nR. Podemos ser pacientes na adversidade,1 agradecidos na prosperidade2 e podemos, quanto ao futuro,\nconfiar firmemente em nosso Deus e Pai fiel, porque criatura alguma poderá nos separar do Seu amor;3\npois todas elas estão de tal modo em Sua mão que sem a Sua vontade, elas não podem nem mesmo se\nmover.4\n1. Jó 1.21, 22; Sl 39.10; Tg 1.3 2. Dt 8.10; 1Ts 5.18. 3. Sl 55.22; Rm 5.3-5; 8.38, 39. 4. Jó 1.12; 2.6; Pv 21.1;\nAt 17.24-28.\nDeus Filho e a Nossa Redenção\nDia do Senhor 11\nP.29. Por que razão é o Filho de Deus chamado de Jesus, que quer dizer, Salvador?\nR. Porque Ele nos salva de todos os nossos pecados,1 e porque em ninguém mais devemos buscar ou\npodemos encontrar salvação.2\n1. Mt 1.21; Hb 7.25. 1. Is 43.11; Jo 15.4, 5; At 4.11, 12; 1Tm 2.5.\nP.30. Aqueles que buscam com fervor a sua salvação ou bem-estar nos santos, em si mesmos ou em\noutra coisa qualquer, também crêem no único Salvador Jesus?\nR. Não. Embora gloriem-se nEle com palavras, eles na verdade negam a Jesus como o único\nSalvador.1 Pois das duas coisas, só uma é verdadeira: ou Jesus é um Salvador incompleto, ou aqueles\nque pela verdadeira fé aceitam esse Salvador têm que achar nEle tudo que é necessário para a sua\nsalvação.2\n1. 1Co 1.12, 13; Gl 5.4 2. Cl 1.19, 20; 2.10; 1Jo 1.7.\nDia do Senhor 12\nP.31. Por que razão é Ele chamado de Cristo, que quer dizer, Ungido?\nR. Porque Ele foi ordenado por Deus o Pai, e ungido com o Espírito Santo,1 para ser o nosso supremo\nProfeta e Mestre,2 que nos revelou completamente o propósito secreto e a vontade de Deus quanto à\nnossa redenção;3 nosso único Sumo Sacerdote4 o qual por um único sacrifício do Seu corpo nos remiu,5\ne intercede continuamente por nós diante do Pai;6 e nosso Rei eterno,7 que nos governa pela Sua\nPalavra e por Seu Espírito, e que nos defende e preserva na redenção que para nós conquistou.8\n1. Sl 45.7 (Hb 1.9); Is 61.1 (Lc 4.18); Lc 3.21, 22. 2. Dt 18.15 (At 3.22) 3. Jo 1.18; 15.15. 4. Sl 110.4 (Hb\n7.17). 5. Hb 9.12; 10.11-14. 6. Rm 8.34; Hb 9.24; 1Jo 2.1. 7. Zc 9.9 (Mt 21.5); Lc 1.33. 8. Mt 28.18-20; Jo\n10.28. Ap 12.10, 11.",
+      "char_count": 2302,
+      "source_char_count": 2339,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 8,
+      "text": "P.32. Por que é que você é chamado de cristão?\nR. Porque, pela fé, sou membro de Cristo e por isso partilho da Sua unção,2 para poder como profeta\nconfessar o Seu nome;3 como sacerdote apresentar a mim mesmo como sacrifício vivo de gratidão a\nEle;4 como rei, de livre e boa consciência, combater o pecado e o diabo nessa vida5 e no porvir reinar\neternamente com Ele sobre todas as criaturas.6\n1. 1Co 12.12-27. 2. Jl 2.28 (At 2.17); 1Jo 2.27. 3. Mt 10.32; Rm 10.9, 10; Hb 13.15. 4. Rm 12.1; 1Pe 2.5, 9.\n5. Gl 5.16, 17; Ef 6.11; 1Tm 1.18, 19. 6. Mt 25.34; 2Tm 2.12.\nDia do Senhor 13\nP.33. Por que é Ele chamado de “Filho unigênito” de Deus, se nós também somos filhos de Deus?\nR. Porque somente Cristo é o eterno e natural Filho de Deus.1 Nós, contudo, somos filhos de Deus por\nadoção, pela graça, por causa de Cristo.2\n1. Jo 1.1-3, 14, 18; 3.16; Rm 8.32; Hb 1; 1Jo 4.9. 2. Jo 1.12; Rm 8.14-17; Gl 4.6; Ef 1.5, 6.\nP.34. Por você O chama de “nosso Senhor”?\nR. Porque Ele nos comprou e nos resgatou, o corpo e a alma,1 de todos os nossos pecados — não com\nouro nem prata, mas com o Seu precioso sangue2 — e nos libertou de todo o domínio do diabo para nos\ntornar Sua possessão.3\n1. 1Co 6.20; 1Tm 2.5, 6. 2. 1Pe 1.18, 19. 3. Cl 1.13, 14; Hb 2.14, 15.\nDia do Senhor 14\nP.35. Que confessa você quando diz que Cristo: “foi concebido por obra do Espírito Santo; nasceu da\nvirgem Maria”?\nR. O eterno Filho de Deus, o qual é e permanece Deus verdadeiro e eterno,1 tomou sobre Si a\nverdadeira natureza humana da carne e do sangue da virgem Maria,2 pela operação do Espírito\nSanto.3 Por isso, Ele é também a verdadeira semente de Davi,4 semelhante a Seus irmãos em tudo,5\nporém, sem pecado.6\n1. Jo 1.1; 10.30-36; Rm 1.3; 9.5; Cl 1.15-17; 1Jo 5.20. 2. Mt 1.18-23; Jo 1.14; Gl 4.4; Hb 2.14. 3. Lc 1.35 4.\n2 Sm 7.12-16; Sl 132.11; Mt 1.1; Lc 1.32; Rm 1.3. 5. Fl 2.7; Hb 2.17. 6. Hb 4.15; 7.26, 27.\nP.36. Que benefício você recebe de Cristo ter sido concebido e nascido sem pecado?\nR. Ele é o nosso Mediador,1 e com a Sua inocência e perfeita santidade cobre aos olhos de Deus o meu\npecado, no qual fui concebido e nascido.2\n1. 1Tm 2.5, 6; Hb 9.13-15. 2. Rm 8.3, 4; 2Co 5.21; Gl 4.4, 5; 1Pe 1.18, 19.\nDia do Senhor 15",
+      "char_count": 2200,
+      "source_char_count": 2236,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 9,
+      "text": "P.37. O que você confessa quando diz que Ele “padeceu”?\nR. Durante todo o tempo em que viveu sobre a terra, e especialmente no final, Cristo suportou no corpo\ne na alma a ira de Deus contra o pecado de toda a raça humana.1 Assim, por Seu sofrimento, como o\núnico sacrifício de expiação,2 Ele redimiu o nosso corpo e a nossa alma da condenação eterna3 e\nconquistou para nós a graça de Deus, a justiça e a vida eterna.4\n1. Is 53; 1Tm 2.6; 1Pe 2.24; 3.18. 2. Rm 3.25; 1Co 5.7; Ef 5.2; Hb 10.14; 1Jo 2.2; 4.10. 3. Rm 8.1-4; Gl\n3.13; Cl 1.13; Hb 9.12; 1Pe 1.18, 19. 4. Jo 3.16; Rm 3.24-26; 2Co 5.21; Hb 9.15.\nP.38. Por que Ele “padeceu sob” o julgamento de “Pôncio Pilatos?”\nR. Embora inocente, Cristo foi condenado por um juiz terreno,1 e assim Ele nos livrou do severo juízo de\nDeus que haveria de cair sobre nós.2\n1. Lc 23.13-24; Jo 19.4, 12-16. 2. Is 53.4, 5; 2Co 5.21; Gl 3.13.\nP.39. Há algum sentido especial em Cristo ter sido crucificado e não ter morrido de outro modo?\nR. Sim. Por causa disso tenho a certeza de que Ele levou sobre Si a maldição que estava sobre mim, pois\nquem era crucificado era maldito de Deus.1\n1. Dt 21.23; Gl 3.13. 62\nDia do Senhor 16\nP.40. Por que foi necessário que Cristo se humilhasse até à morte?\nR. Por causa da justiça e da verdade de Deus1 a satisfação pelos nossos pecados não poderia ocorrer de\noutra forma senão pela morte do Filho de Deus.2\n1. Gn 2.17. 2. Rm 8.3; Fl 2.8; Hb 2.9, 14, 15.\nP.41. Por que foi Ele “sepultado”?\nR. O Seu sepultamento testifica que Ele realmente morreu.1\n1. Is 53.9; Jo 19.38-42; At 13.29; 1Co 15.3, 4.\nP.42. Se Cristo morreu por nós, por que ainda temos que morrer?\nR. A nossa morte não é o pagamento pelos nossos pecados,1 mas ela põe fim aos nossos pecados e é a\nentrada para a vida eterna.2\n1. Mc 8.37; 2. Jo 5.24; Rm 7.24, 25; Fp 1.23.\nP.43. Que outros benefícios recebemos do sacrifício e morte de Cristo na cruz?",
+      "char_count": 1886,
+      "source_char_count": 1922,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 10,
+      "text": "R. Pela morte de Cristo a nossa velha natureza é crucificada, morta e sepultada com Ele,1 para que os\ndesejos malignos da carne não reinem mais sobre nós2 e possamos nos ofertar a Ele como sacrifício de\ngratidão.3\n1. Rm 6.5-11; Cl 2.11-12. 2. Rm 6.12-14. 3. Rm 12.1; Ef 5.1, 2.\nP.44. Por que razão se acrescenta: “desceu ao inferno”?\nR. A angústia, a dor, o terror e a agonia indizíveis que Cristo suportou em todos os Seus sofrimentos1 —\nespecialmente na cruz — dão-me a certeza e a consolação de que, por maiores que sejam as minhas\ntristezas e tentações, Ele me livrou da angústia e do tormento do inferno.2\n1. Sl 18.5, 6; 116.3; Mt 26.36-46; 27.45, 46; Hb 5.7-10. 2. Is 53.\nDia do Senhor 17\nP.45. Como somos favorecidos com a ressurreição de Cristo?\nR. Primeiro: pela ressurreição Ele venceu a morte, para nos tornar participantes da justiça que Ele\nconquistou para nós pela Sua morte.1 Segundo: pelo Seu poder nós também somos ressuscitados para\numa vida nova.2 Terceiro: a ressurreição de Cristo é, para nós, a garantia da nossa ressurreição\ngloriosa.3\n1. Rm 4.25; 1Co 15.16-20; 1Pe 1.3-5. 2. Rm 6.5-11; Ef 2.4-6; Cl 3.1-4. 3. Rm 8.11; 1Co 15.12-23; Fl 3.20,\n21.\nDia do Senhor 18\nP.46. O que você confessa quando diz que Cristo “subiu ao céu”?\nR. Que Cristo, à vista dos Seus discípulos, foi levado da terra ao céu,1 e que lá está para o nosso\nbenefício2 até que venha novamente para julgar os vivos e os mortos.3\n1. Mc 16.19; Lc 24.50, 51; At 1.9-11. 2. Rm 8.34; Hb 4.14; 7.23-25; 9.24. 3. Mt 24.30; At 1.11.\nP.47. Quer dizer, então, que Cristo não está conosco até a consumação dos séculos, conforme Ele nos\nhavia prometido?\n1 R. Cristo é verdadeiro homem e verdadeiro Deus. Segundo Sua natureza humana, Ele não está mais na\nterra,2 mas segundo a Sua natureza divindade, majestade, graça e Espírito, Ele jamais se ausentou de\nnós.3\n1 Mt 28.20. 2. Mt 26.11; Jo 16.28; 17.11; At 3.19-21; Hb 8.4. 3. Mt 28.18-20; Jo 14.16-19; 16.13.\nP.48. Mas, se a natureza humana não estiver presente onde quer que a natureza Divina esteja, não\nestariam as duas naturezas de Cristo separadas uma da outra?",
+      "char_count": 2095,
+      "source_char_count": 2128,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 11,
+      "text": "R. De maneira nenhuma, pois a Sua Divindade é ilimitada e está presente em toda parte.1 Por isso,\nconclui-se que apesar da Sua natureza Divina ultrapassar a natureza humana que Ele assumiu, ela está\ndentro dessa natureza humana e a ela permanece unida como pessoa.2\n1. Jr 23.23, 24; At 7.48, 49. 2. Jo 1.14; 3.13; Cl 2.9.\nP.49. De que modo somos abençoados com a ascensão de Cristo ao céu?\nR. Primeiro: Ele é o nosso Advogado no céu diante do Pai.1 Segundo: temos a nossa carne no céu como\na garantia segura de que Ele, o nosso Cabeça, também nos levará para Si, como membros\nSeus.2 Terceiro: Ele nos enviou o Seu Espírito como garantia,3 pelo poder do qual buscamos as coisas do\nalto — onde Cristo está assentado à direita de Deus — e não as que são da terra.4\n1. Rm 8.34; 1Jo 2.1. 2. Jo 14.2; 17.24; Ef 2.4-6. 3. Jo 14.16; At 2.33; 2Co 1.21, 22; 5.5; Ef 1.13,14 4. Cl 3.1-\n4.\nDia do Senhor 19\nP.50. Por que se acrescentou “está assentado à mão direita de Deus”?\nR. Cristo ascendeu ao céu para manifestar-se lá como o Cabeça da Sua igreja,1 por meio de quem o Pai\ngoverna todas as coisas.2\n1. Ef 1.20-23; Cl 1.18. 2. Mt 28.18; Jo 5.22, 23.\nP.51. Que benefício tem para nós esta glória de Cristo, o nosso Cabeça?\nR. Primeiro: pelo Seu Espírito Santo Ele derrama sobre nós, Seus membros, os dons celestiais.1 Segundo:\npelo Seu poder Ele nos defende e preserva de to- dos os inimigos.2\n1. At 2.33; Ef 4.7-12. 2. Sl 2.9; 110.1, 2; Jo 10.27-30; Ap 19.11-16.\nP.52. Que consolo lhe dá o fato de que Cristo “há de vir para julgar os vivos e os mortos”?\nR. Que em todas as minhas aflições e perseguições eu de cabeça erguida e cheio de ânimo espero vir do\ncéu, como juiz, Aquele mesmo que antes se submeteu ao juízo de Deus por minha causa, e removeu de\nsobre mim toda a maldição.1 Ela lançará todos os Seus e meus inimigos na condenação eterna, mas\nlevará para Si mesmo, para o gozo e glória celestiais, a mim e a todos os Seus escolhidos.2\n1. Lc 21.28; Rm 8.22-25; Fl 3.20, 21; Tt 2.13, 14. 2. Mt 25.31-46; 1Ts 4.16, 17; 2Ts 1.6-10.\nDeus Espírito Santo e a Nossa Santificação\nDia do Senhor 20\nP.53. O que você crê sobre o Espírito Santo?",
+      "char_count": 2131,
+      "source_char_count": 2165,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 12,
+      "text": "R. Primeiro: Creio que Ele é verdadeiro e eterno Deus, juntamente com o Pai e o Filho.1 Segundo: Creio\nque Ele foi dado também a mim2 para — pela verdadeira fé — me tornar participante de Cristo e de\ntodos os Seus benefícios,3 para me consolar4 e para permanecer comigo para sempre.5\n1. Gn 1.1, 2; Mt 28.19; At 5.3, 4; 1Co 3.16. 2. 1Co 6.19; 2Co 1.21, 22; Gl 4.6; Ef 1.13. 3. Gl 3.14; 1Pe 1.2. 4.\nJo 15.26; At 9.31. 5. Jo 14.16, 17; 1Pe 4.14.\n\nDia do Senhor 21\nP.54. O que você crê sobre a “santa Igreja universal ” de Cristo?\nR. Creio que o Filho de Deus,1 desde o começo até o fim do mundo,2 reúne para Si mesmo,3 de entre\ntodo o gênero humano,4 uma igreja eleita para a vida eterna5 a qual protege e preserva na unidade da\nverdadeira fé6 pelo Seu Espírito e pela Sua Palavra.7 E creio que eu sou8 e serei para sempre um\nmembro vivo dela.9\n1. Jo 10.11; At 20.28; Ef 4.11-13; Cl 1.18. 2. Is 59.21; 1Co 11.26. 3. Sl 129.1-5; Mt 16.18; Jo 10.28-30. 4.Gn\n26.4; Ap 5.9. 5.Rm 8.29; Ef 1.3-14. 6. At 2.42-47; Ef 4.1-6. 7. Rm 1.16; 10.14-17; Ef 5.26. 8. 1Jo 3.14, 19-\n21. 9. Sl 23.6; Jo 10.27, 28; 1Co 1.4-9; 1Pe 1.3-5.\nP.55. O que você crê sobre a “comunhão dos santos”?\nR. Primeiro: creio que todos os crentes, juntos e cada um em particular, como membros de Cristo, têm\ncomunhão com Ele e participam de todos os Seus tesouros e dons.1 Segundo: creio que cada um têm o\ndever de usar os seus dons com disposição e alegria para o benefício e o bem-estar dos outros\nmembros.2\n1. Rm 8.32; 1Co 6.17; 12.4-7, 12, 13; 1Jo 1.3 2. Rm 12.4-8; 1Co 12.20-27; 13.1-7; Fl 2.4-8.\nP.56. O que você crê sobre a “remissão dos pecados”?\nR. Creio que Deus, por causa da satisfação que Cristo realizou, não se lembrará mais dos meus pecados1\nnem da minha natu- reza pecaminosa, contra a qual devo lutar durante toda a mi- nha vida,2 mas me\nconcederá graciosamente a justiça de Cristo, para que eu jamais entre em condenação.3\n1. Sl 103.3, 4, 10, 12; Mq 7.18, 19; 2Co 5.18-21; 1Jo 1.7; 2.2. 2. Rm 7.21-25. 3. Jo 3.17, 18; 5.24; Rm 8.1,\n2.\nDia do Senhor 22\nP.57. Que consolação lhe traz a “ressurreição do corpo”?\nR. Que depois dessa vida, não apenas a minha alma será levada imediatamente para Cristo, meu\nCabeça,1 mas que também essa minha carne, ressuscitada pelo poder de Cristo, será reunida à minha\nalma e feita à semelhança do corpo glorioso de Cristo.2",
+      "char_count": 2333,
+      "source_char_count": 2366,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 13,
+      "text": "1. Lc 16.22; 23.43; Fl 1.21-23. 2. Jó 19.25, 26; 1Co 15.20, 42-46, 54; Fl 3.21; 1Jo 3.2.\nP.58. Que consolação lhe traz o artigo sobre a “vida eterna”?\nR. Já agora sinto em meu coração o princípio do gozo eterno,1 pois depois dessa vida obterei a perfeita\nbem-aventurança que o olho jamais viu, nem o ouvido ouviu, nem o coração huma- no pode conceber.\nUma bem-aventurança para se louvar a Deus eternamente.2\n1. Jo 17.3; Rm 14.17; 2Co 5.2, 3. 2. Jo17.24; 1Co 2.9.\nA Nossa Justificação\nDia do Senhor 23\nP.59. Que proveito há para você que agora crê nisso?\nR. O proveito é que em Cristo sou justo diante de Deus e herdeiro da vida eterna.1\n1. Hc 2.4; Jo 3.36; Rm 1.17; 5.1, 2.\nP.60. Como é que você é justo diante de Deus?\nR. Somente pela verdadeira fé em Jesus Cristo.1 Embora a minha consciência me acuse de haver pecado\ngravamente contra os mandamentos de Deus, sem jamais haver obedecido a todos eles,2 e de ainda ser\ninclinado a todo o mal,3 Deus, no entanto, sem que houvesse em mim nenhum mérito próprio,4\nsomente pela Sua graça,5 imputa-me a perfeita satisfação, justiça e santidade de Cristo.6 Se tãosomente aceitar esse dom crendo fielmente com o coração,7 Ele me concede isso como se eu jamais\ntivesse tido ou cometido nenhum pecado, e como se eu mesmo tivesse cumpri- do toda a obediência\nque Cristo cumpriu por mim.8\n1. Rm 3.21-28; Gl 2.16; Ef 2.8, 9; Fl 3.8-11. 2. 3.9, 10. 3. Rm 7.23. 4. Dt 9.6; Ez 36.22; Tt 3.4, 5. 5. Rm 3.24;\nEf 2.8. 6. Rm 4.3-5; 2Co 5.17-19; 1Jo 2.1, 2. 7. Jo 3.18; At 16.30, 31; Rm 3.22. 8. Rm 4.24, 25; 2Co 5.21.\nP.61. Por quê você diz que é justo somente pela fé?\nR. Eu o digo não porque sou agradável a Deus graças ao valor da minha fé, pois somente a satisfação, a\njustiça e santidade de Cristo é a minha justiça diante de Deus.1 É somente pela fé que posso receber e\nfazer dessa justiça a minha própria justiça.2\n1. 1Co 1.30, 31; 2.2. 2. Rm10.10; 1Jo 5.10-12.\nDia do Senhor 24\nP.62. Mas, por que as nossas boas obras não podem ser a nossa justiça diante de Deus, ou pelo menos\nparte dessa justiça?",
+      "char_count": 2036,
+      "source_char_count": 2069,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 14,
+      "text": "R. Porque a justiça que pode subsistir diante do juizo de Deus deve ser absolutamente perfeita e\ntotalmente de acordo com a Sua lei,1 enquanto até mesmo as nossas melhores obras nesta vida são\ntodas imperfeitas e contaminadas com o pecado.2\n1. Dt 27.26; Gl 3.10. 2. Is 64.6.\nP.63. Se as nossas boas obras não merecem nada, por que Deus promete recompensá-las nesta vida e\nna futura?1\nR. Essa recompensa não é por mérito, mas é um dom de graça.2\n1. Mt 5.12; Hb 11.6. 2. Lc 17.10; 2 Tm 4.7, 8.\nP.64. Esse ensinamento não torna as pessoas descuidadas e ímpias?\nR. Não. É impossível que os que são enxertados em Cristo pela verdadeira fé não produzam fruto de\ngratidão.1\n1. Mt 7.18; Lc 6.43-45; Jo 15.5.\nA Palavra e os Sacramentos\nDia do Senhor 25\nP.65. Visto que somente a fé é o que nos torna participantes de Cristo e de todos os Seus benefícios, de\nonde vem essa fé?\nR. Vem do Espírito Santo,1 que a opera em nossos corações pela pregação do evangelho,2 e a fortalece\npelo uso dos sacramentos.3\n1. Jo 3.5; 1Co 2.10-14; Ef 2.8; Fl 1.29. 2. Rm 10.17; 1Pe 1.23-25. 3. Mt 28.19, 20; 1Co 10.16.\nP.66. O que são sacramentos?\nR. Os sacramentos são sinais e selos santos e visíveis. Foram instituídos por Deus para que pelo uso\ndeles Ele pudesse, o mais claramente possível, nos declarar e selar a promessa do evangelho.1 E esta é a\npromessa: que Deus nos concede graciosamente perdão de pecados e vida eterna por causa dos\nsacrifícios de Cristo ofertado na cruz.2\n1. Gn 17.11; Dt 30.6; Rm 4.11. 2. Mt 26.27, 28; At 2.38; Hb 10.10.\nP.67. Então, tanto a Palavra quanto os sacramentos têm por objetivo direcionar a nossa fé para o\nsacrifício de Jesus Cristo na cruz, como a única base para a nossa salvação?\nR. Sim, de fato. O Espírito Santo nos ensina no Evangelho e nos garante pelos sacramentos que toda a\nnossa salvação baseia-se no sacrifício único de Cristo por nós na cruz.1\n1. Rm 6.3; 1Co 11.26; Gl 3.27. 70",
+      "char_count": 1905,
+      "source_char_count": 1941,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 15,
+      "text": "P.68. Quantos sacramentos Cristo instituiu na nova aliança?\nR. Dois: O santo batismo e a santa ceia.1\n1. Mt 28.19, 20; 1Co 11.23-26.\nO Santo Batismo\nDia do Senhor 26\nP.69. Como o santo batismo lhe faz saber e lhe assegura que o único sacrifício de Cristo na cruz lhe\nbeneficia?\nR. Do seguinte modo: Cristo instituiu esse lavar exterior1 e deu com ele a promessa de que, tão certo\nquanto a água remove a sujeira do corpo, assim também o Seu sangue e Espírito removem a impureza\nda minha alma, isto é, todos os meus pecados.2\n1. Mt 28.19. 2. Mt 3.11; Mc 16.16; Jo 1.33; At 2.38; Rm 6.3, 4; 1Pe 3.21.\nP.70. Que significa ser lavado com o sangue e o Espírito de Cristo?\nR. Ser lavado com o sangue de Cristo significa receber de Deus o perdão de pecados, por meio da graça,\npor causa do sangue de Cristo derramado por nós em Seu sacrifício na cruz.1 Ser lavado com o Seu\nEspírito significa ser renovado pelo Espírito Santo e santificado para sermos membros de Cristo, para\nque morramos mais e mais para o pecado e vivamos uma vida santa e irrepreensível.2\n1. Ez 36.25; Zc 13.1; Ef 1.7; Hb 12.24; 1Pe 1.2; Ap 1.5; 7.14. 2. Jo 3.5-8; Rm 6.4; 1Co 6.11; Cl 2.11, 12.\nP.71. Onde Cristo prometeu que nos lavaria com o Seu sangue e Espírito tão certo quanto somos lavados\ncom a água do batismo?\nR. Na instituição do batismo, onde Ele afirma: “Ide, portanto, fazei discípulos de todas as nações,\nbatizando- os em nome do Pai, e do Filho, e do Espírito Santo” (Mt 28.19).“Quem crer e for batizado\nserá salvo; quem, porém, não crer será condenado” (Mc 16.16). Essa promessa se repete onde a\nEscritura chama o batismo de lavar regenerador e de purificação dos pecados (Tt 3.5; At 22.16).\nDia do Senhor 27\nP.72. Então, esse lavar exterior com água por si mesmo remove os pecados?\nR. Não, somente o sangue de Jesus Cristo e o Espírito Santo nos purificam de todo o pecado.1\n1. Mt 3.11; 1Pe 3.21; 1 Jo 1.7.\nP.73. Então, por que o Espírito Santo chama o batismo de “lavar regenerador” e de “purificação de\npecados”?",
+      "char_count": 1995,
+      "source_char_count": 2031,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 16,
+      "text": "R. Deus fala assim por uma razão importante. Ele nos quer ensinar que o sangue e o Espírito de Cristo\nremovem os nossos pecados assim como a água remove a sujeira do corpo.1 Porém, ainda mais\nimportante, Ele nos quer assegurar por meio dessa garantia e sinal divinos que somos tão\nverdadeiramente purificados espiritualmente dos nossos pecados, assim como somos fisicamente\nlavados com a água.2\n1. 1Co 6.11; Ap 1.5; 7-14. 2. Mt 16.16; At 2.38; Rm 6.3, 4; Gl 3.27.\nP.74. As crianças pequenas devem ser batizadas?\nR. Sim. As crianças, assim como os adultos, pertencem à aliança e à igreja de Deus.1 Através do sangue\nde Cristo lhes são prometidos, da mesma forma que aos adultos, a redenção do pecado e o Espírito\nSanto, que opera a fé.2 Assim as crianças, por meio do batismo como sinal da aliança, devem ser\nenxertadas na igreja de Cristo e distinguidas dos filhos dos incrédulos.3 Na velha aliança isso era feito\npela circuncisão,4 que, na nova aliança, foi substituída pela instituição do batismo.5\n1. Gn 17.7; Mt 19.14. 2. Sl 22.10; Is 44.1-3; At 2.38, 39; 16.31. 3. At 10.47; 1Co 7.14. 4. Gn 17.9-14. 5. Cl\n2.11-13.\nA Santa Ceia\nDia do Senhor 28\nP.75. Como a santa ceia lhe faz saber e lhe assegura que você tem parte no único sacrifício de Cristo na\ncruz e de todos os Seus dons?\nR. Do seguinte modo: Cristo ordenou a mim e a todos os crentes que em Sua memória comêssemos\ndesse pão partido e bebêssemos desse cálice. Juntamente com esse mandamento Ele deu essas\npromessas:1 Primeira: tão certo como vejo com os meus olhos o pão do Senhor partido por mim e o Seu\ncálice dado a mim, assim também foi o Seu corpo ofertado por mim e o Seu sangue derramado por mim\nna cruz. Segunda: tão certamente quanto recebo das mãos do ministro e provo com a minha boca o pão\ne o cálice do Senhor como si- nais seguros do corpo e do sangue de Cristo, assim também Ele mesmo,\ncom o Seu corpo crucificado e o Seu sangue derramado, alimenta e nutre a minha alma para a vida\neterna.\n1. Mt 26.26-28; Mc 14.22-24; Lc 22.19, 20; 1Co 11.23-25.\nP.76. O que significa comer o corpo crucificado de Cristo e beber o Seu sangue derramado?\nR. Primeiro: aceitar de todo coração todo o sofrimento e morte de Cristo, e assim receber o perdão dos\npecados e a vida eterna.1 Segundo: ser unido cada vez mais ao santo corpo de Cristo pelo Espírito Santo\nque vive tanto nEle quanto em nós.2 Portanto, embora Cristo esteja no céu3 e nós estejamos na terra,\nsomos carne da Sua carne e osso dos Seus ossos4 e vivemos eternamente e somos governados por um\núnico Espírito, assim como os membros do nosso corpo o são por uma única alma.5",
+      "char_count": 2598,
+      "source_char_count": 2633,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 17,
+      "text": "1. Jo 6.35, 40, 40-54. 2. Jo 6.55, 56; 1Co 12.13. 3. At 1.9-11; 3.21; 1Co 11.26; Cl 3.1. 4. 1Co 6.15, 17; Ef\n5.29, 30; 1Jo 4.13. 5. Jo 6.56-58; 15.1-6; Ef 4.15, 16; 1Jo 3.24.\nP.77. Onde foi que Cristo prometeu que Ele quer alimentar e refrigerar os crentes com o Seu corpo e\nsangue tão certamente quanto eles comem desse pão partido e bebem desse cálice?\nR. Na instituição da Ceia do Senhor: “O Senhor Jesus, na noite em que foi traído, tomou o pão; e, tendo\ndado graças, o partiu e disse: Isto é o meu corpo, que é dado por vós; fazei isto em memória de mim.\nPor semelhante modo, depois de haver ceado, tomou também o cálice, dizendo: Este cálice é a nova\naliança no meu sangue; fazei isto, todas as vezes que o beberdes, em memória de mim. Porque, todas as\nvezes que comerdes este pão e beberdes o cálice, anunciais a morte do Senhor, até que ele venha” (1Co\n11.23-26). Paulo repete essa promessa onde diz: “Porventura, o cálice da bênção que abençoamos não é\na comunhão do sangue de Cristo? O pão que partimos não é a comunhão do corpo de Cristo? Porque\nnós, embora muitos, somos unicamente um pão, um só corpo; porque todos participamos do único pão”\n(1Co 10.16, 17).\nDia do Senhor 29\nP.78. Então, o pão e o vinho são transformados no corpo e no sangue reais de Cristo?\nR. Não. Do mesmo modo que a água do batismo não se transforma no sangue de Cristo nem é a própria\npurificação dos pecados, mas é simplesmente um sinal e uma garantia disso da parte de Deus,1 assim\ntambém o pão na Ceia do Senhor não se torna no próprio corpo de Cristo,2 embora seja chamado de\ncorpo de Cristo3 conforme a natureza e o uso dos sacramentos.4\n1. Ef 5.26; Tt 3.5. 2. Mt 26.26-29. 3. 1Co 10.16, 17; 11.26-28. 4. Gn 17.10, 11; Ex 12.11, 13; 1Co 10.3, 4;\n1Pe 3.21.\nP.79. Por que, então, Cristo chama o pão de “Seu corpo” e o cálice de “Seu sangue”, ou de a “nova\naliança no Seu sangue”, e por que Paulo fala da comunhão do corpo e do sangue de Cristo?\nR. Cristo fala dessa maneira por um motivo importante: Ele quer nos ensinar pela Sua ceia que do\nmesmo modo como o pão e o vinho nos sustentam a vida temporal, assim também o Seu corpo\ncrucificado e o Seu sangue derramado são o verdadeiro alimento e a verdadeira bebida das nossas\nalmas para a vida eterna.1 E, ainda mais, Ele nos quer assegurar por esse sinal e garantia visíveis,\nprimeiramente, que pela operação do Espírito Santo nós participamos do Seu verdadeiro corpo e sangue\ntão certo quanto recebemos com a nossa boca esses santos sinais em memória dEle;2 e em segundo\nlugar, que todo o Seu sofrimento e obediência são tão certamente nos- sos como se nós mesmos\ntivéssemos sofrido e pago pelos nossos pecados.3\n1. Jo 6.51, 55. 2. 1Co 10.16, 17; 11.26. 3. Rm 6.5-11.\nDia do Senhor 30\nP.80. Qual é a diferença entre a Ceia do Senhor e a missa do papa?",
+      "char_count": 2793,
+      "source_char_count": 2831,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 18,
+      "text": "R. A Ceia do Senhor nos testifica, primeiramente, que temos o perdão completo de todos os nossos\npecados pelo único sacrifício de Jesus Cristo, que Ele mesmo realizou na cruz de uma vez por todas;1 em\nsegundo lugar,que pelo Espírito Santo somos enxertados em Cristo,2 o qual está agora no céu em Seu\ncorpo verdadeiro à mão direita do Pai,3 e é onde Ele quer ser adorado.4 A missa, no entanto, ensina\nprimeiro que nem os vivos nem os mortos têm o perdão de pecados por meio do sofrimento de Cristo se\nEle não for ainda sacrificado diariamente em favor deles pelos sacerdotes; e em segundo lugar, que\nCristo está presente corporalmente na forma do pão e do vinho, e neles deve ser adorado. A missa,\nportanto, é basicamente nada mais que a negação do único sacrifício e sofrimento de Jesus Cristo, e é\numa idolatria maldita.\n1. Mt 26.28; Jo 10.30; Hb 7.27; 9.12, 25, 26; 10..10-18. 2. 1Co 6.17; 10.16, 17. 3. Jo 20.17; At 7.55, 56; Hb\n1.3; 8.1. 4. Jo 4.21-24; Fp 3.20; Cl 3.1; 1Ts 1.10.\nP.81. Quem deve vir à mesa do Senhor?\nR. Aqueles que, em verdade, estão descontentes consigo mesmos por causa dos seus pecados e que,\nmesmo assim, confiam que eles lhes foram perdoados e que o mal que ainda resta neles está coberto\npelo sofrimento e morte de Cristo, e que também desejam fortalecer a sua fé e corrigir as suas vidas,\ncada vez mais. Mas os hipócritas e os que não se arrependem comem e bebem juízo para si mesmos.1\n1. 1Co 10.19-22; 11.26-32.\nP.82. Esses que por sua confissão e vida demonstram que são incrédulos e ímpios devem ser admitidos à\nceia do Senhor?\nR. Não, porque a aliança de Deus seria profanada e a Sua ira se acenderia contra toda a\ncongregação.1 Por isso, segundo o mandamento de Cristo a Seus apóstolos, a igreja de Cristo tem o\ndever de excluir tais pessoas pelas chaves do reino do céu, até que corrijam as suas vidas.\n1. Sl 50.16; Is 1.11-17; 1Co 11.17-34. 76\nDia do Senhor 31\nP.83. O que são as chaves do reino do céu?\nR. A pregação do santo evangelho e a disciplina eclesiástica. É por esses dois meios que o reino do céu\nse abre para os que crêem, e se fecha para os incrédulos.1\n1. Mt 16.19; Jo 20. 21-23.\nP.84. Como se abre e se fecha o reino do céu pela pregação do evangelho?\nR. De acordo com o mandamento de Cristo, o reino do céu se abre quando se proclama e se testifica de\npúblico a todo o crente — individual ou coletivamente — que Deus perdoou de fato a todos os seus\npecados por causa dos méritos de Cristo, sempre que aceitam a promessa do evangelho com fé\nverdadeira. O reino do céu se fecha quando se proclama e se testifica a todo os incrédulos e hipócritas",
+      "char_count": 2595,
+      "source_char_count": 2632,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 19,
+      "text": "que, enquanto não se arrependerem, a ira de Deus e a condenação eterna repousam sobre\neles. Segundo esse testemunho do evangelho, Deus os julgará tanto nessa quanto na vida porvir.1\n1. Mt 16.19; Jo 3.31-36; 20.21-23.\nP.85. Como se fecha e se abre o reino do céu pela disciplina eclesiástica?\nR. De acordo com o mandamento de Cristo, aqueles que se chamam de cristãos mas que se mostram\nnão-cristãos na doutrina ou na vida devem ser, em primeiro lugar e de modo fraternal, admoestado\nmais de uma vez. Se não abandonarem a seus erros nem à sua impiedade, de- vem ser denunciados à\nigreja, isto é aos presbíteros. Se também não derem ouvidos às admoestações deles, serão proibidos de\nparticipar dos sacramentos e excluídos da congregação cristã pelos presbíteros e do reino de Cristo pelo\npróprio Deus.1 Serão novamente recebidos como membros de Cristo e da igreja quando prometerem e\ndemonstrarem arrependimento real.2\n1. Mt 18.15-20; 1Co 5.3-5; 11-13; 2Ts 3.14, 15. 2. Lc 15.20-24; 2Co 2.6-11.\nParte III A NOSSA GRATIDÃO\nDia do Senhor 32\nP.86. Se fomos libertados da nossa miséria somente pela graça através de Cristo, sem nenhum mérito\nnosso, por que então devemos praticar boas obras?\nR. Por que Cristo, tendo nos remido pelo Seu sangue, também nos renova por Seu Espírito Santo à Sua\nimagem para que, com toda a nossa vida, mostremo-nos gratos a Deus por Seus benefícios1 e para que\nEle seja louvado por nós.2 Além disso, para que tenhamos a certeza da nossa fé por causa dos seus\nfrutos,3 e que pelo novo viver piedoso possamos ganhar os nossos próximos para Cristo.4\n1. Rm 6.13; 12.1, 2; 1Pe 2.5-10. 2. Mt 5.16; 1Co 6.19, 20. 3. Mt 7.17, 18; Gl 5.22-24; 2Pe 1.10, 11. 4. Mt\n5.14-16; Rm 14.17-19; 1Pe 2.12; 3.1, 2.\nP.87. Podem ser salvos aqueles que não abandonam o modo de viver ingrato e impenitente e não se\nconvertem a Deus?\nR. Não, de modo nenhum. A Escritura diz que nenhum impuro, idólatra, adúltero, ladrão, avarento,\nbêbado, maldizente, assaltante ou semelhante herdará o reino do céu.1\n1. 1Co 6.9, 10; Gl 5.19-21; Ef 5.5, 6; Jo 3.14.\nDia do Senhor 33\nP.88. O que é o verdadeiro arrependimento ou conversão do homem?\nR. É a morte da velha natureza e a ressurreição da nova natureza.1\n1. Rm 6.1-11; 1Co 5.7; 2Co 5.17; Ef 4.22-24; Cl 3.5-10. 78",
+      "char_count": 2254,
+      "source_char_count": 2292,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 20,
+      "text": "P.89. O que é a morte da velha natureza?\nR. É a profunda e sincera tristeza por termos ofendido a Deus com os nossos pecados, e o abominar e\nfugir desses pecados cada vez mais.1\n1. Sl 51.3, 4, 17; Jl 2.12, 13; Rm 8.12, 13; 2Co 7.10.\nP.90. O que é a ressurreição da nova natureza?\nR. É a alegria sincera em Deus por Cristo,1 e o amor e o deleite de viver segundo a vontade de Deus em\ntodas as boas obras.2\n1. Sl 51.8, 12; Is 57.15; Rm 5.1; 14.17. 2. Rm 6.10, 11; Gl 2.20.\nP.91. Mas, o que são as boas obras?\nR. Somente as que são feitas pela verdadeira fé,1 em conformidade com a lei de Deus2 e para a Sua\nglória,3 e não aquelas que se baseiam na nossa própria opinião ou em preceitos de homens.4\n1. Jo 15.5; Rm 14.23; Hb 11.6. 2. Lv 18.4; 1Sm 15.22; Ef 11.6. 3. 1Co 10.31. 4. Dt 12.32; Is 29.13; Ez 10.18,\n19; Mt 15.7-9.\nOs Dez Mandamentos\nDia do Senhor 34\nP.92. O que diz a lei de Deus?\nR. “Então, falou Deus todas estas palavras: Eu sou o SENHOR, teu Deus, que te tirei da terra do Egito,\nda casa da servidão.\n1. Não terás outros deuses diante de mim.\n2. Não farás para ti imagem de escultura, nem semelhança alguma do que há em cima nos céus, nem\nembaixo na terra, nem nas águas debaixo da terra. Não as adorarás, nem lhes darás culto; porque eu\nsou o SENHOR, teu Deus, Deus zeloso, que visito a iniqüidade dos pais nos filhos até à terceira e quarta\ngeração daqueles que me aborrecem e faço misericórdia até mil gerações daqueles que me amam e\nguardam os meus mandamentos.\n3. Não tomarás o nome do SENHOR, teu Deus, em vão, por- que o SENHOR não terá por inocente o que\ntomar o seu nome em vão.\n4. Lembra-te do dia de sábado, para o santificar. Seis dias trabalharás e farás toda a tua obra. Mas o\nsétimo dia é o sábado do SENHOR, teu Deus; não farás nenhum trabalho, nem tu, nem o teu filho, nem a\ntua filha, nem o teu servo, nem a tua serva, nem o teu animal, nem o forasteiro das tuas portas para\ndentro; porque, em seis dias, fez o SENHOR os céus e a terra, o mar e tudo o que neles há e, ao sétimo\ndia, descansou; por isso, o SENHOR abençoou o dia de sábado e o santificou.",
+      "char_count": 2082,
+      "source_char_count": 2115,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 21,
+      "text": "5. Honra teu pai e tua mãe, para que se prolonguem os teus dias na terra que o SENHOR, teu Deus, te\ndá.\n6. Não matarás.\n7. Não adulterarás.\n8. Não furtarás.\n9. Não dirás falso testemunho contra o teu próximo.\n10. Não cobiçarás a casa do teu próximo. Não cobiçarás a mulher do teu próximo, nem o seu servo, nem\na sua serva, nem o seu boi, nem o seu jumento, nem coisa alguma que pertença ao teu próximo”.1\n1. Ex 20.1-17; Dt 5.6-21.\nP.93. Como estão divididos estes mandamentos?\nR. Em duas partes. A primeira nos ensina como viver com relação a Deus; a segunda, que deveres temos\npara com o nosso próximo.1\n1. Mt 22.37-40.\nP.94. Que exige o SENHOR no primeiro mandamento?\nR. Que, por amor a minha salvação, devo evitar e fugir de toda idolatria,1 feitiçaria, superstição2 e\ninvocação a santos ou a outras criaturas.3 E que devo reconhecer corretamente ao único e verdadeiro\nDeus,4 confiar somente nEle,5 submeter-me a Ele em toda humil- dade6 e paciência,7 só dEle esperar\ntodo o bem,8 e que devo O amar,9 temer10 e honrar11 com todo o meu coração. Em resumo: é\npreferível repudiar a todas as criaturas a fazer qualquer coisa, mínima que seja, contra a Sua vontade.12\n1. 1Co 6.9, 10; 10.5-14; 1Jo 5.21. 2. Lv 19.31; Dt 18.9-12. 3. Mt 4.10; Ap 19.10; 22.8, 9. 4. Jo 17.3. 5. Jr\n17.5, 7. 6. 1Pe 5.5, 6. 7. Rm 5.3, 4; 1Co 10.10; Fp 2.14; Cl 1.11; Hb 10.36. 8. Sl 104.27, 28; Is 45.7; Tg 1.17.\n9. Dt 6.5; (Mt 22.37). 10. Dt 6.2; Sl 111.10; Pv 1.7; 9.10; Mt 10.28; 1Pe 1.17. 11. Dt 6.13; (Mt 4.10); Dt\n10.20. 12. Mt 5.29, 30; 10.37-39; At 5.29.\nP.95. O que é idolatria?\nR. Idolatria é ter ou inventar algo em que colocar a nossa confiança em lugar ou ao lado do único e\nverdadeiro Deus que se revelou em Sua Palavra.1\n1. 1Cr 16.26; Gl 4.8, 9; Ef 5.5; Fp 3.19.\nDia do Senhor 35\nP.96. Que exige Deus no segundo mandamento?",
+      "char_count": 1813,
+      "source_char_count": 1847,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 22,
+      "text": "R. Que não façamos a imagem de Deus em hipótese alguma,1 nem O adoremos de nenhum outro modo\ndiferente do que nos ordenou em Sua Palavra.2\n1. Dt 4.15-19; Is 40.18-25; At 17.29; Rm 1.23. 2. Lv 10.1-7; Dt 12.30; 1Sm 15.22, 23; Mt 15.9; Jo 4.23, 24.\nP.97. Então, não podemos fazer nenhum tipo de imagem?\nR. Deus não pode nem deve ser visivelmente representado de nenhuma maneira. As criaturas podem\nser representadas, mas Deus nos proíbe fazer ou ter imagens delas para adorá-las ou para servir a Deus\npor meio delas.1\n1. Ex 34.13, 14, 17; Nm 33.52; 2Rs 18.4, 5; Is 40.25.\nP.98. Quer dizer que não se pode tolerar as imagens nas igrejas como “livros para os leigos”?\nR. Não. Pois não devemos querer ser mais sábios do que o próprio Deus. Ele quer que o Seu povo seja\nensinado não por meio de ídolos mudos1 mas pela pregação viva da Sua Palavra.2\n1. Jr 10.8; Hc 2.18-20. Rm 10.14, 15, 17; 2 Tm 3.16, 17; 2Pe 1.19.\nDia do Senhor 36\nP.99. O que se exige no terceiro mandamento?\nR. Que não blasfememos nem façamos mau uso o Nome de Deus por maldição,1 perjúrio2 ou votos\ndesnecessários,3 e que não par- ticipemos, por omissão silenciosa, desses terríveis pecados.4 Antes\ndevemos usar o santo nome de Deus somente com temor e reverência,5 para que possamos confessá-lO\ncorretamen- te,6 invocá-lO,7 e O glorificar com todas as nossas palavras e obras.8\n1. Lv 24.10-17. 2. Lv 19.12. 3. Mt 5.37; Tg 5.12. 4. Lv 5.1; Pv 29.24. 5. Sl 99.1-5; Is 45.23; Jr 4.2. 6. Mt\n10.32, 33; Rm 10.9, 10. 7. Sl 50.14, 15. 1Tm 2.8. 8. Rm 2.24; Cl 3.17; 1Tm 6.1.\nP.100. Será que blasfemar o Nome de Deus por juramentos e maldições é um pecado tão grande que\nDeus se ira também contra aqueles que não impedem nem proíbem isso o tanto quanto podem?\nR. Certamente que sim.1 Porque nenhum pecado é maior nem provoca mais a ira de Deus do que\nblasfemar o Seu Nome. É por isso que Ele ordenou que esse pecado fosse punido com a morte.2\n1. Lv 5.1. 2. Lv 24.16. 82\nDia do Senhor 37\nP.101. Mas será que podemos, de modo piedoso, fazer juramentos e votos em Nome de Deus? R. Sim,\nquando o governo o exige de seus súditos, ou quando a necessidade o exige para que se guarde e se\npromova a fidelidade e a verdade, para a glória de Deus e o bem do nosso próximo. Esse tipo de\njuramento tem por base a Palavra de Deus1 e foi assim utilizado da maneira correta pelos santos do\nVelho e do Novo Testamentos.2",
+      "char_count": 2361,
+      "source_char_count": 2395,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 23,
+      "text": "1. Dt 6.13; 10.20; Jr 4.1, 2; Hb 6.16. 2. Gn 21.24; 31-53; Js 9.15; 1Sm 24.22; 1Rs 1.29, 30; Rm 1.9; 2Co\n1.23.\nP.102. Podemos também jurar pelos santos ou por outras criaturas?\nR. Não. Um juramento legítimo é uma invocação a Deus, para que Ele, o único que conhece o coração,\nsirva como testemunha da verdade e que me castigue se eu jurar falsamente.1 Nenhuma criatura é\ndigna de uma tal honra.2\n1. Rm 9.1; 2Co 1.23. 2. Mt 5.34-37; 23.16-22; Tg 5.12.\nDia do Senhor 38\nP.103. O que exige Deus no quarto mandamento?\nR. Primeiro, que o ministério do evangelho e as escolas cris- tãs sejam mantidas1 e que eu,\nespecialmente no dia de descanso, seja diligente em ir à igreja de Deus2 para ouvir à Palavra de Deus,3\nparticipar dos sacramentos,4 para invocar publicamente ao Senhor 5 e para praticar a caridade cristã\npara com os necessitados. 6 Segundo, para que em todos os dias da minha vida eu cesse as minhas más\nobras, deixe o Senhor operar em mim por Seu Espírito Santo, e assim começar nesta vida o descanso\neterno.7\n1. Dt 6.4-9; 20-25; 1Co 9.13, 14; 2Tm 2.2; 3.13-17; Tt 1.5. 2. Dt 12.5-12; Sl 40.9, 10; 68.26; At 2.42-47; Hb\n10.23-25. 3. Rm 10.14-17; 1Co 14.26-33; 1Tm 4.13. 4. 1Co 11.23, 24. 5. Cl 3.16; 1Tm 2.1. 6. Sl 50.14; 1Co\n16.2; 2Co 8; 9. 7. Is 66.23; Hb 4.9-11.\nDia do Senhor 39\nP.104. O que exige Deus no quinto mandamento?\nR. Que eu demonstre toda honra, amor e fidelidade a meu pai e à minha mãe, e a todos os meus\nsuperiores; que eu me submeta devidamente às suas boas instrução e disciplina1 e que também seja\npaciente com as suas fraquezas e defeitos,2 pois é a vontade de Deus nos governar pelas mãos deles.3\n1. Ex 21.17; Pv 1.8; 4.1; Rm 13.1, 2; Ef 5.21, 22; 6.1-9; Cl 3.18-4.1. 2. Pv 20.20; 23.22; 1Pe 2.18. 3. Mt\n22.21, Rm 13.1-8; Ef 6.1-9; Cl 3.18-21.\nDia do Senhor 40\nP.105. O que exige Deus no sexto mandamento?\nR. Que eu não devo desonrar, odiar, injuriar nem matar o meu próximo por pensamentos, palavras, ou\ngestos e muito menos por ações, por mim mesmo ou através de outros;1 antes, devo fazer morrer todo\ndesejo de vingança.2 Além disso, não devo me fazer mal nem me expor levianamente ao perigo.3 Por\nisso também o governo empunha a espada para impedir homicídios.4",
+      "char_count": 2196,
+      "source_char_count": 2229,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 24,
+      "text": "1. Gn 9.6; Lv 19.17, 18; Mt 5.21, 22; 26.52. 2. Pv 25.21, 22; Mt 18.35; Rm 12.19; Ef 4.26. 3. Mt 4.7; 26.52;\nRm 13.11-14. 4. Gn 9.6; Ex 21.14; Rm 13.4.\nP.106. Mas, esse mandamento fala somente de matar?\nR. Ao nos proibir de matar Deus nos ensina que detesta a raiz do homicídio, a saber: a inveja, o ódio, a\nira e o desejo de vingança1 e que Ele considera tudo isso como homicídio.2\n1. Pv 14.30; Rm 1.29; 12.19; Gl 5.19-21; Tg 1.20; 1Jo 2.9-11. 2. 1Jo 3.15. 84\nP.107. Então, basta que não matemos o nosso próximo dessa maneira?\nR. Não. Deus ao condenar a inveja, o ódio, a ira e o desejo de vingança nos ordena a amar os nossos\ninimigos como a nós mesmos,1 a demonstrar paciência, paz, mansidão, misericórdia e amizade para\ncom ele,2 a protegê-lo do mal o tanto que pudermos e a fa- zer o bem até mesmo aos nossos inimigos.3\n1. Mt 7.12; 22.39; Rm 12.10. 2. Mt 5.5; Lc 6.36; Rm 12.10, 18; Gl 6.1, 2; Ef 4.2; Cl 3.12; 1Pe 3.8. 3. Ex\n23.4, 5; Mt 5.44, 45; Rm 12.20.\nDia do Senhor 41\nP.108. O que nos ensina o sétimo mandamento?\nR. Que toda a impureza sexual é amaldiçoada por Deus.1 Por isso devemos abominá-la de todo coração2\ne viver vidas puras e disciplinadas, tanto dentro quanto fora do santo matrimônio.3\n1. Lv 18.30; Ef 5.3-5. 2. Jd 22, 23. 3. 1Co 7.1-9; 1Ts 4.3-8; Hb 13.4.\nP.109. Neste mandamento, Deus só proíbe o adultério e pecados vergonhosos semelhantes?\nR. Desde que somos, corpo e alma, templos do Espírito Santo, é a vontade de Deus que nos\nconservemos puros e santos. Por isso Ele proíbe todas as ações impuras, gesticulações, palavras,\npensamentos, desejos,1 e tudo aquilo que possa nos induzir à impureza.2\n1. Mt 5.27-29; 1Co 6.18-20; Ef 5.3, 4. 2. 1Co 15.33; Ef 5.18.\nDia do Senhor 42\nP.110. O que proíbe Deus no oitavo mandamento?\nR. Deus não apenas proíbe o roubo e o furto que as autoridades punem1 mas também os esquemas e\nciladas malignos como falsos pesos e falsas medidas, negócio enganoso, dinheiro falsificado e usura;2\nnão devemos defraudar o nosso próximo de maneira nenhuma, nem pela força nem pela aparência de\ndireito.3 Além disso Deus proíbe toda a avareza4 e todo o abuso e desperdício de Suas dádivas.5\n1. Ex 22.1; 1Co 5.9, 10; 6.9, 10. 2. Dt 25.13-16; Sl 15.5; Pv 11.1; 12.22; Ez 45.9-12; Lc 6.35. 3. Mq 6.9-11;\nLc 3.14; Tg 5.1-6. 4. Lc 12.15; Ef 5.5. 5. Pv 21.20; 23.20, 21; Lc 16.10-13.",
+      "char_count": 2325,
+      "source_char_count": 2358,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 25,
+      "text": "P.111. O que exige Deus de você nesse mandamento?\nR. Que eu promova o bem do meu próximo sempre que for lícito e possível; que eu o trate do mesmo\nmodo que desejaria ser tratado pelos outros e que trabalhe fielmente para ter condições de dar aos\nnecessitados.1\n1. Is 58.5-10; Mt 7.12; Gl 6.9, 10; Ef 4.28.\nDia do Senhor 43\nP.112. O que se exige no nono mandamento?\nR. Que eu não devo levantar falso testemunho contra ninguém, nem distorcer as palavras de ninguém,\nnão fazer fofoca nem difamar, não condenar nem me ajuntar com ninguém para condenar a outrem\nprecipitadamente e sem o ter ouvido.1 Antes devo repudiar toda mentira e engano, obras próprias do\ndiabo, para não trazer sobre mim a pesada ira de Deus.2 No tribunal ou em qualquer outro lugar eu\ndevo amar à verdade,3 dizê-la e confessá-la com honestidade e fazer tudo o que puder para defender e\npromover a honra e a reputação do meu próximo.4\n1. Sl 15; Pv 19.5, 9; 21.28; Mt 7.1; Lc 6.37; Rm 1.28-32. 2. Lv 19.11, 12; Pv 12.22; 13.5; Jo 8.44; Ap 21.8. 3.\n1Co 13.6; Ef 4.25. 4. 1Pe 3.8, 9; 4.8.\nDia do Senhor 44\nP.113. O que exige de nós o décimo mandamento?\nR. Que nem o mais leve pensamento ou desejo contrário a quais-quer mandamentos de Deus jamais\ndeveriam se levantar em nosso coração. Antes, devemos sempre detestar de todo coração a todo o\npecado e, nos deleitar em toda a justiça.1\n1. Sl 19.7-14; 139.23, 24; Rm 7.7, 8.\nP.114. Mas os que se converteram a Deus são capazes de guardar esses mandamentos perfeitamente?\nR. Não.\nPois até mesmo os mais santos nessa vida só têm um leve começo dessa obediência.1 Mesmo assim,\neles começam a viver — com sincero fervor e propósito —não apenas segundo alguns mandamentos de\nDeus, mas conforme todos eles.2 1. Ec 7.20; Rm 7.14, 15; 1Co 13.9; 1Jo 1.8 2. Sl 1.1, 2; Rm 7.22-25; Fp\n3.12-16.\nP.115. Se nessa vida ninguém consegue obedecer perfeitamente os Dez Mandamentos, por que Deus\nmanda que sejam pregados com tanto rigor?\nR. Primeiro, para que ao longo das nossas vidas possamos cada vez mais estar conscientes da nossa\nnatureza pecaminosa, e assim buscarmos com mais fervor o perdão dos pecados e a justiça de\nCristo.1 Segundo, para que, ao orarmos a Deus pela graça do Espírito Santo, jamais deixemos de",
+      "char_count": 2215,
+      "source_char_count": 2250,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 26,
+      "text": "batalhar para sermos cada vez mais renovados à imagem de Deus, até que após esta vida alcancemos o\nalvo da perfeição.2\n1. Sl 32.5; Rm 3.19-26; 7.7, 24, 25; 1Jo 1.9. 2. 1Co 9.24; Fp 3.12-14; 1Jo 3.1-3.\nA Oração\nDia do Senhor 4\nP.116. Por que a oração é necessária aos cristãos?\nR. Porque a oração é a parte mais importante da gratidão que Deus exige de nós.1 Além disso, Deus só\nconcederá a Sua graça e o Espírito San- to àqueles que, constante e sinceramente, Lhe pedem esses\ndons e O agradecem por eles.2\n1. Sl 50.14, 15; 116.12-19; 1Ts 6.16-18. 2. Mt 7.7, 8; Lc 11.9-13.\nP.117. O que é preciso para que nossa oração agrade a Deus e por Ele seja ouvida? R. Primeiro, devemos\ninvocar de coração apenas o único e ver- dadeiro Deus — que se revelou em Sua Palavra — por tudo\naquilo que Ele nos ordenou orar.1 Segundo, devemos ter plena consciência da nossa necessida- de e\nmiséria, para que possamos nos humilhar diante de Deus.2 Terceiro, devemos descansar no fundamento\ninabalável — do qual não somos merecedores — de que Deus com certeza ouvirá às nossas orações por\ncausa de Cristo, nosso Senhor, conforme Ele nos prometeu na Sua Palavra.3\n1. Sl 145.18-20; Jo 4.22-24; Rm 8.26, 27; Tg 1.5; 1Jo 5.14, 15 ; Ap 19.10. 2. 2Cr 7.14; 20.12; Sl 2.11; 34.18;\n62.8; Is 66.2; Ap 4. 3. Dn 9.17-19; Mt 7.8; Jo 14.13, 14; 16.23; Rm 10.13; Tg 1.6.\nP.118. O que foi que Deus ordenou que Lhe pedíssemos?\nR. Tudo aquilo que necessitamos para nossos corpos e almas, conforme à oração que o próprio Cristo,\nnosso Senhor, nos en- sinou.1\n1. Mt 6.33; Tg 1.17.\nP.119. Qual é a oração do Senhor?\nR. “Pai nosso, que estás nos céus, santificado seja o teu nome;\nvenha o teu reino; faça-se a tua vontade,\nassim na terra como no céu; o pão nosso de cada dia dá-nos hoje;\ne perdoa-nos as nossas dívidas, assim como nós temos perdoado aos nossos devedores;\ne não nos deixes cair em tentação; mas livra-nos do mal pois teu é o reino,\no poder e a glória para sempre. Amém!”1",
+      "char_count": 1945,
+      "source_char_count": 1981,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 27,
+      "text": "1. Mt 6.9-13; Lc 11.2-4.\nDia do Senhor 46\nP.120. Por que Cristo ordenou nos dirigir a Deus como o “Pai nosso”?\nR. Para despertar em nós, logo no início da nossa oração, a reverência filial e confiante em Deus que\ndeve ser básica à nossa oração. Deus, por meio de Cristo, tornou-se o nosso Pai, e se os nos- sos pais\nnão nos negam as coisas terrenas, muito menos nos negará Deus aquilo que Lhe pedirmos pela fé.1\n1. Mt 7.9-11; Lc 11.11-13.\nP.121. Por que se acrescentou “que estás nos céu”?\nR. Essas palavras nos ensinam a não pensar na majestade de Deus de modo terreno,1 e a esperar do Seu\npoder infinito tudo aquilo que necessitamos para os nossos corpos e almas.2\n1. Jr 23.23, 24; At 17.24, 25. 2. Mt 6.25-34; Rm 8.31, 32.\nDia do Senhor 47\nP.122. Qual é a primeira petição?\nR. “Santificado seja o teu nome”. Isto é: Que nos concedas, antes de mais nada, que possamos Te\nconhecer da maneira correta,1 e que Te santifiquemos, glorifiquemos e louvemos em todas as Tuas\nobras, das quais brilham o Teu poder infinito, sabedoria, bondade, justiça, misericórdia e\nverdade.2 Também que nos concedas que dirijamos toda a nossa vida — ou pensamentos, palavras e\nações — de tal maneira que o Teu nome não seja blasfemado por nossa causa, mas que seja\nsempre honrado e glorificado.3\n1. Jr 9.23, 24; 31.33, 34; Mt 16.17; Jo 17.3. 2. Ex 34.5-8; Sl 145; Jr 32.16-20; Lc 1.46-55, 68-75; Rm 11.33-\n36. 3. Sl 115.1; Mt 5.16.\nDia do Senhor 48\nP.123. Qual é a segunda petição?\nR. “Venha o teu reino”. Isto é: Que nos governes pela Tua Palavra e Espírito de tal modo que nos\nsubmetamos a Ti1 cada vez mais. Que protejas e faças crescer a Tua igreja.2 Que destruas as obras do\ndiabo, todo poder que se levante contra Ti e toda conspiração contra a Tua Palavra.3 Que faças todas\nessas coisas até que venha a plenitude do Teu reino, em que serás tudo em todos.4\n1. Sl 119.5, 105; 143.10; Mt 6.33. 2. Sl 51.18; 122.6-9; Mt 16.18; At 2.42-47. 3. Rm 16.20; 1Jo 3.8. 4. Rm\n8.22, 23; 1Co 15.28; Ap 22.17, 20.\nDia do Senhor 49\nP.124. Qual é a terceira petição?",
+      "char_count": 2033,
+      "source_char_count": 2067,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 28,
+      "text": "R. “Faça-se a tua vontade, assim na terra como no céu”. Isto é: Que nós e todos os homens renunciemos\nà nossa própria vontade, e sem murmuração obedeçamos à Tua vontade, a única que é boa.1 Também\nque concedas que todos cumpram os deveres de seus ofícios e vocações2 tão espontânea e fielmente\ncomo os anjos no céu.3\n1. Mt 7.21; 16.24-26; Lc 22.42; Rm 12.1, 2; Tt 2.11, 12. 2. 1Co 7.17-24; Ef 6.5-9. 3. Sl 103.20, 21.\nDia do Senhor 50\nP.125. Qual é a quarta petição?\nR. “O pão nosso de cada dia dá-nos hoje”. Isto é: Que supras todas as nossas necessidades físicas1 para\nque re- conheçamos que Tu és a única fonte de todo o bem,2 e que — sem a Tua bênção — nem o\nnosso cuidado, nem o nosso labor nem mesmo os Teus dons, podem nos fazer bem algum.3 E, portanto,\nque não depositemos a nossa confiança em nenhuma criatura, mas somente em Ti.4\n1. Sl 104.27-30; 145.15, 16; Mt 6.25-34. 2. At 14.17; 17.25; Tg 1.17. 3. Dt 8.3; Sl 37.16; 127.1, 2; 1Co\n15.58. 4. Sl 55.22; 62; 146; Jr 17.5-8; Hb 13.5, 6.\nDia do Senhor 51\nP.126. Qual é a quinta petição?\nR. “E perdoa-nos as nossas dívidas, assim como nós temos perdoado aos nossos devedores”. Isto é: Que,\npor causa do sangue de Cristo, não nos imputes, pecadores desgraçados que somos, nenhuma das\nnossas transgressões nem o mal que ainda persiste em nós,1 e que também encontremos em nós essa\nevidência da Tua graça: que estamos plenamente determinados de todo o coração a perdoar nosso\npróximo.2\n1. Sl 51.1-7; 143.2; Rm 8.1; 1Jo 2.1, 2. 2. Mt 6.14, 15; 18.21-35.\nDia do Senhor 52\nP.127. Qual é a sexta petição?\nR. “E não nos deixes cair em tentação; mas livra-nos do mal”. Isto é: Que somos tão fracos em nós\nmesmos que não podemos per- manecer firmes por um momento sequer.1 Além disso, os nossos\ninimigos declarados — o diabo,2 o mundo3 e a nossa própria carne4 — não cessam de nos\natacar. Queiras, portanto, sustentar-nos e fortalecer-nos pelo poder do Teu Espírito Santo, para que não\nsejamos derrotados nessa batalha espiritual,5 mas que sempre resistamos a nossos inimi- gos, até que\nalcancemos finalmente a vitória total.6\n1. Sl 103.14-16; Jo 15.1-5. 2. 2Co 11.14; Ef 6.10-13; 1Pe 5.8. 3. Jo 15.18-21. 4. Rm 7.13; Gl 5.17. 5. Mt\n10.19, 20; 26.41; Mc 13.33; Rm 5.3-5. 6. 1Co 10.13; 1Ts 3.13; 5.23.\nP.128. Com é que você conclui a sua oração?",
+      "char_count": 2292,
+      "source_char_count": 2325,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 29,
+      "text": "R. “Pois teu é o reino, o poder e a glória para sempre”. Isto é: Tudo isso Te pedimos porque, como nosso\nRei com poder sobre todas as coisas, tanto queres quanto podes nos dar tudo o que é bom,1 e por essa\ncausa não nós, mas o Teu santo Nome é digno de receber toda a glória para sempre.2\n1. Rm 10.11-13; 2Pe 2.9. 2. Sl 115.1; Jr 33.8, 9; Jo 14.13.\nP.129. O que significa a palavra “Amém”?\nR. Amém significa: é verdadeiro e certo. Pois é mais certo e verdadeiro que Deus ouviu a minha oração,\ndo que o sentimento que tenho em meu coração de desejar isso dEle.1\n1. Is 65.24; 2Co 1.20; 2Tm 2.13.",
+      "char_count": 593,
+      "source_char_count": 606,
+      "page_zone": "confessional_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    }
+  ],
+  "marker_validation": {
+    "Dia do Senhor": true,
+    "P.": true,
+    "R.": true
+  },
+  "document_warnings": []
+}

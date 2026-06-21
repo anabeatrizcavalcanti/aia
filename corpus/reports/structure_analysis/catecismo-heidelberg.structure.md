@@ -12,6 +12,7 @@ Foram analisadas 29 páginas do arquivo `corpus/raw/reformed/O CATECISMO DE HEID
 
 ### Consistência catequética
 
+- Contextos introdutórios estruturados: 1
 - Unidades pergunta-resposta montadas: 129
 - Perguntas com resposta na mesma linha: [101, 117]
 - Perguntas sem resposta textual detectada: nenhuma ocorrência relevante

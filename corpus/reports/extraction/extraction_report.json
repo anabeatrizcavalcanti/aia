@@ -1,0 +1,74 @@
+{
+  "status": "PARTIAL",
+  "corpus_id": "reformed",
+  "manifest_path": "corpus/raw/reformed_manifest.json",
+  "output_dir": "corpus/processed/extracted/reformed",
+  "documents_processed": 4,
+  "documents": [
+    {
+      "document_id": "canones-de-dort",
+      "title": "Cânones de Dort",
+      "raw_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+      "pages_count": 33,
+      "total_chars": 91456,
+      "empty_pages": [],
+      "very_short_pages": [
+        33
+      ],
+      "warnings": [],
+      "json_path": "corpus/processed/extracted/reformed/canones-de-dort.extracted.json",
+      "txt_path": "corpus/processed/extracted/reformed/canones-de-dort.extracted.txt"
+    },
+    {
+      "document_id": "catecismo-heidelberg",
+      "title": "Catecismo de Heidelberg",
+      "raw_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+      "pages_count": 29,
+      "total_chars": 62653,
+      "empty_pages": [],
+      "very_short_pages": [],
+      "warnings": [],
+      "json_path": "corpus/processed/extracted/reformed/catecismo-heidelberg.extracted.json",
+      "txt_path": "corpus/processed/extracted/reformed/catecismo-heidelberg.extracted.txt"
+    },
+    {
+      "document_id": "confissao-batista-londres-1689",
+      "title": "Confissão Batista de Londres de 1689",
+      "raw_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+      "pages_count": 81,
+      "total_chars": 283175,
+      "empty_pages": [],
+      "very_short_pages": [],
+      "warnings": [],
+      "json_path": "corpus/processed/extracted/reformed/confissao-batista-londres-1689.extracted.json",
+      "txt_path": "corpus/processed/extracted/reformed/confissao-batista-londres-1689.extracted.txt"
+    },
+    {
+      "document_id": "confissao-fe-westminster",
+      "title": "Confissão de Fé de Westminster",
+      "raw_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+      "pages_count": 60,
+      "total_chars": 131783,
+      "empty_pages": [
+        1
+      ],
+      "very_short_pages": [
+        2
+      ],
+      "warnings": [
+        "Pagina 1 nao retornou texto extraivel."
+      ],
+      "json_path": "corpus/processed/extracted/reformed/confissao-fe-westminster.extracted.json",
+      "txt_path": "corpus/processed/extracted/reformed/confissao-fe-westminster.extracted.txt"
+    }
+  ],
+  "scope_not_executed": [
+    "chunks_final",
+    "embeddings",
+    "vector_index",
+    "chatbot",
+    "ocr",
+    "openai_api_call",
+    "manual_doctrinal_editing"
+  ]
+}

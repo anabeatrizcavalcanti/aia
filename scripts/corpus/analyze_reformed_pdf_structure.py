@@ -307,6 +307,44 @@ def collect_catechism_parts(lines_by_page: list[tuple[int, list[str]]]) -> list[
     return parts
 
 
+def collect_catechism_introductory_contexts(lines_by_page: list[tuple[int, list[str]]]) -> list[dict[str, Any]]:
+    """Coleta o material introdutório histórico antes do corpo catequético."""
+    contexts: list[dict[str, Any]] = []
+    for page_number, lines in lines_by_page:
+        if page_number != 1:
+            continue
+
+        intro_lines: list[str] = []
+        for line in lines:
+            clean_line = line.strip()
+            if not clean_line:
+                continue
+
+            normalized = normalize_label(clean_line)
+            if normalized == "catecismo de heidelberg" and intro_lines:
+                break
+            if LORDS_DAY_RE.match(clean_line) or QUESTION_RE.match(clean_line):
+                break
+
+            intro_lines.append(clean_line)
+
+        text = "\n".join(intro_lines).strip()
+        if text:
+            contexts.append(
+                {
+                    "page_start": page_number,
+                    "page_end": page_number,
+                    "chunk_type": "introductory_context",
+                    "content_role": "contextual",
+                    "is_doctrinal": False,
+                    "section_title": "Material introdutório",
+                    "section_reference": "Página 1",
+                    "text": text,
+                }
+            )
+    return contexts
+
+
 def collect_catechism_titles(lines_by_page: list[tuple[int, list[str]]]) -> list[dict[str, Any]]:
     """Coleta títulos estruturais próprios do Catecismo de Heidelberg."""
     titles: list[dict[str, Any]] = []
@@ -1763,6 +1801,7 @@ def analyze_pdf(document: dict[str, Any], fitz_module: Any) -> dict[str, Any]:
         summary["canons_structure"] = build_dort_structure(lines_by_page)
     elif is_heidelberg:
         catechism_units = build_catechism_units(lines_by_page)
+        summary["introductory_contexts"] = collect_catechism_introductory_contexts(lines_by_page)
         summary["parts"] = collect_catechism_parts(lines_by_page)
         summary["catechism_units"] = catechism_units
         summary["catechism_consistency"] = build_catechism_consistency(catechism_units)
@@ -1868,6 +1907,7 @@ def write_markdown_report(summary: dict[str, Any]) -> Path:
                 "",
                 "### Consistência catequética",
                 "",
+                f"- Contextos introdutórios estruturados: {len(summary.get('introductory_contexts', []))}",
                 f"- Unidades pergunta-resposta montadas: {consistency['qa_unit_count']}",
                 (
                     "- Perguntas com resposta na mesma linha: "

@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "corpus_id": "reformed",
+  "input_dir": "corpus/processed/extracted/reformed",
+  "output_dir": "corpus/processed/normalized/reformed",
+  "normalization_strategy": "mechanical_safe_normalization_v001",
+  "documents_processed": 4,
+  "documents": [
+    {
+      "document_id": "canones-de-dort",
+      "title": "Cânones de Dort",
+      "raw_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+      "input_extraction_file": "corpus/processed/extracted/reformed/canones-de-dort.extracted.json",
+      "pages_count": 33,
+      "total_chars": 72297,
+      "normalization_actions": {
+        "normalized_excess_blank_lines": 33,
+        "normalized_whitespace": 33,
+        "recomposed_safe_hyphenation": 2
+      },
+      "page_zones": {
+        "confessional_body": 30,
+        "introductory_material": 1,
+        "unknown": 2
+      },
+      "pages_with_warnings": [],
+      "marker_validation": {
+        "Capítulo da Doutrina": true,
+        "Artigo": true,
+        "Rejeição de Erros": true,
+        "Refutação": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+      "txt_path": "corpus/processed/normalized/reformed/canones-de-dort.normalized.txt"
+    },
+    {
+      "document_id": "catecismo-heidelberg",
+      "title": "Catecismo de Heidelberg",
+      "raw_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+      "input_extraction_file": "corpus/processed/extracted/reformed/catecismo-heidelberg.extracted.json",
+      "pages_count": 29,
+      "total_chars": 61661,
+      "normalization_actions": {
+        "normalized_excess_blank_lines": 29,
+        "normalized_whitespace": 29,
+        "recomposed_safe_hyphenation": 1
+      },
+      "page_zones": {
+        "confessional_body": 28,
+        "introductory_material": 1
+      },
+      "pages_with_warnings": [],
+      "marker_validation": {
+        "Dia do Senhor": true,
+        "P.": true,
+        "R.": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/reformed/catecismo-heidelberg.normalized.json",
+      "txt_path": "corpus/processed/normalized/reformed/catecismo-heidelberg.normalized.txt"
+    },
+    {
+      "document_id": "confissao-batista-londres-1689",
+      "title": "Confissão Batista de Londres de 1689",
+      "raw_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+      "input_extraction_file": "corpus/processed/extracted/reformed/confissao-batista-londres-1689.extracted.json",
+      "pages_count": 81,
+      "total_chars": 282900,
+      "normalization_actions": {
+        "normalized_excess_blank_lines": 81,
+        "normalized_whitespace": 71,
+        "recomposed_safe_hyphenation": 10
+      },
+      "page_zones": {
+        "confessional_body": 70,
+        "introductory_material": 1,
+        "special_layout": 1,
+        "unknown": 9
+      },
+      "pages_with_warnings": [],
+      "marker_validation": {
+        "CAPÍTULO": true,
+        "AS SAGRADAS ESCRITURAS": true,
+        "1.": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+      "txt_path": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.txt"
+    },
+    {
+      "document_id": "confissao-fe-westminster",
+      "title": "Confissão de Fé de Westminster",
+      "raw_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+      "input_extraction_file": "corpus/processed/extracted/reformed/confissao-fe-westminster.extracted.json",
+      "pages_count": 60,
+      "total_chars": 129667,
+      "normalization_actions": {
+        "normalized_excess_blank_lines": 60,
+        "normalized_whitespace": 60,
+        "recomposed_safe_hyphenation": 5
+      },
+      "page_zones": {
+        "confessional_body": 40,
+        "introductory_material": 14,
+        "special_layout": 1,
+        "table_of_contents": 1,
+        "unknown": 4
+      },
+      "pages_with_warnings": [
+        1
+      ],
+      "marker_validation": {
+        "CAPÍTULO": true,
+        "DA ESCRITURA SAGRADA": true,
+        "I.": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+      "txt_path": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.txt"
+    }
+  ],
+  "scope_not_executed": [
+    "chunks_final",
+    "embeddings",
+    "vector_index",
+    "chatbot",
+    "ocr",
+    "openai_api_call",
+    "manual_doctrinal_editing"
+  ]
+}
