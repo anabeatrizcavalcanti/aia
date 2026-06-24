@@ -172,12 +172,12 @@ def test_non_doctrinal_chunks_are_contextual_or_structural():
             assert chunk["content_role"] in {"contextual", "structural"}
 
 
-def test_spec_003b_reports_exist_and_record_known_warnings():
-    report_path = Path("corpus/reports/chunking/SPEC-003B-chunking-report.json")
-    spec_report_path = Path("reports/specs/SPEC-003B-structural-chunking-final.md")
+def test_final_chunking_reports_exist_and_record_known_warnings():
+    report_path = Path("corpus/reports/chunking/chunking-final-report.json")
+    stage_report_path = Path("reports/specs/structural-chunking-final.md")
 
     assert report_path.exists()
-    assert spec_report_path.exists()
+    assert stage_report_path.exists()
 
     report = json.loads(report_path.read_text(encoding="utf-8"))
     westminster = next(item for item in report["summaries"] if item["document_id"] == "confissao-fe-westminster")

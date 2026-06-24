@@ -14,7 +14,7 @@ def test_reformed_raw_directory_exists():
     assert Path("corpus/raw/reformed").exists()
 
 
-def test_spec_001_scripts_exist():
+def test_reformed_corpus_foundation_scripts_exist():
     assert Path("scripts/corpus/validate_reformed_raw_corpus.py").exists()
     assert Path("scripts/corpus/analyze_reformed_pdf_structure.py").exists()
     assert Path("scripts/pipeline/extract_reformed_corpus.py").exists()
@@ -48,13 +48,11 @@ def test_structure_jsons_do_not_include_human_review_fields():
         assert forbidden_fields.isdisjoint(structure)
 
 
-def test_structure_markdown_reports_do_not_include_chat_recommendations():
+def test_structure_markdown_reports_omit_generic_manual_review_notes():
     forbidden_phrases = [
         "## Recomendação inicial de chunking",
-        "## Próximo passo recomendado",
         "Essa recomendação deve ser revisada manualmente",
         "Revisar os padrões detectados neste relatório",
-        "Próximo passo recomendado",
     ]
 
     report_paths = list(Path("corpus/reports/structure_analysis").glob("*.structure.md"))

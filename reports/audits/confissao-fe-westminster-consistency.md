@@ -1,33 +1,29 @@
-# Auditoria de consistência — Confissão de Fé de Westminster
+# Auditoria estrutural — Confissão de Fé de Westminster
 
-## Síntese
+## Registro
 
-O relatório estrutural da Confissão de Fé de Westminster foi reorganizado para representar a lógica documental do texto: capítulos, seções em algarismos romanos, texto confessional e referências bíblicas inline.
+O JSON estrutural da Confissão de Fé de Westminster foi reorganizado em torno de capítulos e seções em algarismos romanos. As referências bíblicas inline foram preservadas no texto e também extraídas para um campo próprio.
 
-## Estrutura criada
+## Estrutura usada
 
-O campo `westminster_structure` contém:
+`westminster_structure` contém:
 
-- `chapters`: capítulos do corpo principal da confissão;
-- `sections`: seções numeradas em algarismos romanos dentro de cada capítulo;
-- `section_text`: texto confessional da seção;
-- `biblical_references`: referências bíblicas extraídas do próprio texto da seção;
-- `special_layouts`: estruturas especiais preservadas, como a tabela dos livros bíblicos no capítulo I.
+- `chapters`;
+- `sections`;
+- `section_text`;
+- `biblical_references`;
+- `special_layouts`.
 
-## Classificação de páginas
+No nível geral:
 
-No nível geral do relatório, a classificação de páginas foi ajustada para evitar falsos positivos:
+- `introductory_pages`: páginas 3 a 17;
+- `special_layout_pages`: página 18.
 
-- `introductory_pages`: páginas 3 a 17, incluindo sumário, breve história e textos introdutórios;
-- `special_layout_pages`: página 18, onde aparece a tabela dos livros do Antigo e do Novo Testamento.
+Campos genéricos como `articles`, `questions`, `answers`, `rejections`, `lords_days`, `parts`, contadores brutos e lista técnica de páginas foram removidos.
 
-## Campos removidos
+## Capítulo I, seção I
 
-Foram removidos da saída JSON os campos genéricos que não ajudam a representar este documento, como `articles`, `questions`, `answers`, `rejections`, `lords_days`, `parts`, contadores brutos de possíveis referências, exemplos de notas, lista técnica de páginas, riscos genéricos e recomendação de chunking.
-
-## Caso verificado: capítulo I, seção I
-
-O capítulo `CAPÍTULO I DA ESCRITURA SAGRADA` passou a conter seções estruturadas. A seção I preserva o texto confessional e extrai as referências bíblicas inline.
+`CAPÍTULO I DA ESCRITURA SAGRADA` passou a conter seções estruturadas. A seção I preserva o texto confessional e registra as referências bíblicas encontradas no próprio texto.
 
 Exemplo de referências extraídas:
 
@@ -43,10 +39,10 @@ Exemplo de referências extraídas:
 ]
 ```
 
-## Caso verificado: capítulo I, seção II
+## Capítulo I, seção II
 
-A seção II contém uma tabela de livros bíblicos. Essa estrutura foi preservada em `special_layouts` e também recomposta dentro de `section_text`, para não transformar cada livro bíblico em uma unidade confessional isolada.
+A seção II contém a lista dos livros bíblicos. Essa estrutura foi preservada em `special_layouts` e também mantida dentro de `section_text`, sem transformar cada livro em chunk isolado.
 
-## Recomendação
+## Decisão para chunking
 
-Na etapa de chunking, a Confissão de Westminster deve usar `westminster_structure.chapters[].sections[]` como base principal. Cada chunk deve corresponder preferencialmente a uma seção confessional, preservando capítulo, número da seção, texto e referências bíblicas.
+O chunking usa `westminster_structure.chapters[].sections[]`. Cada chunk corresponde a uma seção confessional, com capítulo, número da seção, texto e referências bíblicas.

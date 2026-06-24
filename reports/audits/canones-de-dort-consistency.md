@@ -1,30 +1,30 @@
-# Auditoria de consistência — Cânones de Dort
+# Auditoria estrutural — Cânones de Dort
 
-## Síntese
+## Registro
 
-O relatório estrutural dos Cânones de Dort foi reorganizado para representar a lógica documental do texto. Antes, o JSON listava artigos, rejeições, erros e refutações como eventos separados. Agora ele inclui `canons_structure`, que preserva a hierarquia própria do documento.
+O JSON estrutural dos Cânones de Dort foi reorganizado para refletir a hierarquia real do documento. Antes, artigos, rejeições, erros e refutações apareciam como eventos soltos; agora ficam agrupados em `canons_structure`.
 
-## Estrutura criada
+## Estrutura usada
 
-O campo `canons_structure` contém:
+`canons_structure` contém:
 
-- `doctrinal_chapters`: capítulos doutrinários;
-- `articles`: artigos positivos de cada capítulo;
-- `rejection_of_errors`: seção de rejeição de erros de cada capítulo;
-- `pairs`: pares formados por `Erro N` e `Refutação`;
-- `conclusion`: conclusão final dos Cânones de Dort;
-- contadores de capítulos, artigos, pares erro/refutação e presença de conclusão.
+- capítulos doutrinários;
+- artigos positivos;
+- seção de rejeição de erros;
+- pares `Erro N` + `Refutação`;
+- conclusão;
+- contadores de capítulos, artigos, pares erro/refutação e conclusão.
 
-No nível geral do relatório, a classificação de páginas foi ajustada para evitar falsos positivos:
+No nível geral:
 
-- `introductory_pages`: apenas a página 1;
-- `special_layout_pages`: nenhuma ocorrência nesta análise.
+- `introductory_pages`: página 1;
+- `special_layout_pages`: nenhuma ocorrência.
 
-Também foram removidos da saída JSON dos Cânones os campos genéricos que não ajudam a representar este documento, como `lords_days`, `parts`, `questions`, `answers`, `pages`, contadores brutos de possíveis referências e a lista genérica de riscos. A estratégia de chunking continua documentada no relatório Markdown, mas não precisa ser repetida dentro da estrutura JSON usada como base para o pipeline.
+Campos genéricos que não ajudam neste documento foram removidos do JSON, como `lords_days`, `parts`, `questions`, `answers`, contadores brutos de referências e lista técnica de páginas.
 
 ## Artigos positivos
 
-Cada artigo positivo passou a ser representado como uma unidade própria com:
+Cada artigo positivo passou a ter:
 
 - `article_number`;
 - `article_heading`;
@@ -32,9 +32,9 @@ Cada artigo positivo passou a ser representado como uma unidade própria com:
 - `article_text`;
 - `reference_in_text`;
 - `article_references`;
-- `chunk_type` igual a `doctrinal_article`.
+- `chunk_type=doctrinal_article`.
 
-Exemplo verificado no quinto capítulo:
+Caso verificado no quinto capítulo:
 
 ```json
 {
@@ -45,40 +45,23 @@ Exemplo verificado no quinto capítulo:
 }
 ```
 
-Nesse caso, o título do artigo, o texto doutrinário e as referências bíblicas finais foram separados corretamente.
-Quando o próprio texto do artigo contém referências bíblicas entre parênteses, essas referências permanecem em `article_text` e também são registradas em `reference_in_text`.
+Referências que aparecem dentro do próprio texto permanecem em `article_text` e também são registradas em `reference_in_text`.
 
-## Rejeição de Erros
+## Rejeição de erros
 
-Cada capítulo possui uma seção `Rejeição de Erros`. Dentro dela, o parser agrupa cada `Erro N` com sua `Refutação` correspondente.
-
-Cada par recebe:
-
-- `error_number`;
-- `error_text`;
-- `refutation_text`;
-- `refutation_references`;
-- `chunk_type` igual a `error_refutation`.
-
-As referências bíblicas das refutações são extraídas a partir dos parênteses presentes no texto, preservando a refutação completa como texto principal.
+Cada `Erro N` foi associado à sua `Refutação`. O par recebe `chunk_type=error_refutation`, preservando o erro, a refutação e as referências bíblicas presentes nos parênteses da refutação.
 
 ## Conclusão
 
-A seção final `Conclusão` foi tratada separadamente dos capítulos doutrinários. Ela contém parágrafos comuns e afirmações numeradas, com `paragraph_type` indicando se o trecho é um parágrafo ordinário ou uma afirmação numerada.
+A conclusão fica separada dos capítulos doutrinários. Seus blocos foram classificados como parágrafo comum ou afirmação numerada.
 
-## Contadores atuais
+## Contadores
 
 - capítulos doutrinários: 4;
 - artigos positivos: 59;
 - pares erro/refutação: 34;
 - conclusão: presente.
 
-## Recomendação para chunking
+## Decisão para chunking
 
-Na etapa de chunking, os Cânones de Dort devem usar:
-
-- `doctrinal_article` para artigos positivos;
-- `error_refutation` para pares erro/refutação;
-- um tipo próprio para os parágrafos da conclusão, como `conclusion_paragraph`.
-
-Essa separação é importante porque os artigos positivos e as rejeições de erro têm funções teológicas e documentais diferentes.
+O chunking usa `doctrinal_article` para artigos, `error_refutation` para pares erro/refutação e `conclusion_paragraph` para a conclusão. Essa separação evita misturar exposição positiva da doutrina com refutação de erro.

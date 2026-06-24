@@ -1,8 +1,8 @@
 """Gera chunks estruturais do corpus reformado.
 
-A SPEC-003A criou a base comum do chunking e processou Cânones de Dort e
-Catecismo de Heidelberg. A SPEC-003B completa o corpus reformado com
-Westminster, Londres 1689 e a consolidação em `all_chunks.jsonl`.
+O script cria os chunks por documento, preserva a base de Cânones de Dort e
+Catecismo de Heidelberg, completa Westminster e Londres 1689 e consolida o
+corpus reformado em `all_chunks.jsonl`.
 """
 
 from __future__ import annotations
@@ -24,9 +24,9 @@ DEFAULT_NORMALIZED_DIR = ROOT_DIR / "corpus" / "processed" / "normalized" / "ref
 DEFAULT_STRUCTURE_DIR = ROOT_DIR / "corpus" / "reports" / "structure_analysis"
 DEFAULT_OUTPUT_DIR = ROOT_DIR / "corpus" / "processed" / "chunks" / "reformed"
 DEFAULT_REPORT_DIR = ROOT_DIR / "corpus" / "reports" / "chunking"
-SPEC_003A_DOCUMENTS = {"canones-de-dort", "catecismo-heidelberg"}
-SPEC_003B_DOCUMENTS = {"confissao-fe-westminster", "confissao-batista-londres-1689"}
-ALL_DOCUMENTS = SPEC_003A_DOCUMENTS | SPEC_003B_DOCUMENTS
+BASE_CHUNKING_DOCUMENTS = {"canones-de-dort", "catecismo-heidelberg"}
+FINAL_CHUNKING_DOCUMENTS = {"confissao-fe-westminster", "confissao-batista-londres-1689"}
+ALL_DOCUMENTS = BASE_CHUNKING_DOCUMENTS | FINAL_CHUNKING_DOCUMENTS
 CONSOLIDATED_CHUNKS_FILE = "all_chunks.jsonl"
 SCHEMA_VERSION = "reformed-structural-chunk-v1"
 RETRIEVAL_NAMESPACE = "reformed_confessional"
@@ -908,13 +908,13 @@ def document_warnings_for_summary(document_id: str, normalized_document: dict[st
 
 
 def build_report(summaries: list[dict[str, Any]]) -> dict[str, Any]:
-    """Monta o relatorio geral de chunking da SPEC-003A."""
+    """Monta o relatorio geral do chunking base."""
     status = "PASS"
     if any(summary["validation_issues"] for summary in summaries):
         status = "FAIL"
     elif any(summary["warning_chunks"] or summary["document_warnings"] for summary in summaries):
         status = "PARTIAL"
-    if {summary["document_id"] for summary in summaries} != SPEC_003A_DOCUMENTS:
+    if {summary["document_id"] for summary in summaries} != BASE_CHUNKING_DOCUMENTS:
         status = "FAIL"
 
     return {
@@ -922,7 +922,7 @@ def build_report(summaries: list[dict[str, Any]]) -> dict[str, Any]:
         "schema_version": SCHEMA_VERSION,
         "documents_processed": [summary["document_id"] for summary in summaries],
         "summaries": summaries,
-        "not_created_in_spec_003a": [
+        "not_created_in_base_chunking": [
             "corpus/processed/chunks/reformed/all_chunks.jsonl",
             "corpus/processed/chunks/reformed/confissao-fe-westminster.chunks.jsonl",
             "corpus/processed/chunks/reformed/confissao-batista-londres-1689.chunks.jsonl",
@@ -985,12 +985,12 @@ def consolidate_all_chunks(output_dir: Path) -> dict[str, Any]:
     }
 
 
-def build_spec_003b_report(
+def build_final_chunking_report(
     summaries: list[dict[str, Any]],
     consolidation: dict[str, Any],
     generated_documents: list[str],
 ) -> dict[str, Any]:
-    """Monta o relatorio geral de chunking e consolidacao da SPEC-003B."""
+    """Monta o relatorio geral de chunking e consolidacao final."""
     status = "PASS"
     if any(summary["validation_issues"] for summary in summaries) or consolidation["validation_issues"]:
         status = "FAIL"
@@ -1003,8 +1003,8 @@ def build_spec_003b_report(
         "status": status,
         "schema_version": SCHEMA_VERSION,
         "documents_processed": [summary["document_id"] for summary in summaries],
-        "documents_chunked_in_spec_003b": generated_documents,
-        "documents_preserved_from_spec_003a": [
+        "documents_chunked_in_final_step": generated_documents,
+        "documents_preserved_from_base_step": [
             document_id for document_id in ["canones-de-dort", "catecismo-heidelberg"]
             if document_id not in generated_documents
         ],
@@ -1026,12 +1026,12 @@ def build_spec_003b_report(
 def write_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Path, Path]:
     """Grava relatorio geral de chunking em JSON e Markdown."""
     report_dir.mkdir(parents=True, exist_ok=True)
-    json_path = report_dir / "SPEC-003A-chunking-report.json"
-    md_path = report_dir / "SPEC-003A-chunking-report.md"
+    json_path = report_dir / "chunking-base-report.json"
+    md_path = report_dir / "chunking-base-report.md"
     json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     lines = [
-        "# Relatório de chunking — SPEC-003A",
+        "# Relatório de chunking — base estrutural",
         "",
         "## Status",
         "",
@@ -1040,8 +1040,8 @@ def write_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Pat
         "## Síntese",
         "",
         (
-            "A SPEC-003A gerou chunks estruturais para Cânones de Dort e Catecismo de Heidelberg "
-            "a partir dos relatórios estruturais da SPEC-001 e dos textos normalizados da SPEC-002."
+            "A etapa de chunking base gerou chunks estruturais para Cânones de Dort e "
+            "Catecismo de Heidelberg a partir dos relatórios estruturais e dos textos normalizados."
         ),
         "",
         "## Documentos chunkados",
@@ -1065,7 +1065,7 @@ def write_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Pat
 
     lines.extend(
         [
-            "## O que não foi feito nesta SPEC",
+            "## O que não foi feito nesta etapa",
             "",
             "- Westminster ainda não foi chunkado.",
             "- Londres 1689 ainda não foi chunkado.",
@@ -1084,15 +1084,15 @@ def write_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Pat
     return json_path, md_path
 
 
-def write_spec_003b_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Path, Path]:
-    """Grava relatorio de chunking e consolidacao da SPEC-003B."""
+def write_final_chunking_report(report: dict[str, Any], report_dir: Path) -> tuple[Path, Path]:
+    """Grava relatorio de chunking e consolidacao final."""
     report_dir.mkdir(parents=True, exist_ok=True)
-    json_path = report_dir / "SPEC-003B-chunking-report.json"
-    md_path = report_dir / "SPEC-003B-chunking-report.md"
+    json_path = report_dir / "chunking-final-report.json"
+    md_path = report_dir / "chunking-final-report.md"
     json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     lines = [
-        "# Relatório de chunking — SPEC-003B",
+        "# Relatório de chunking — consolidação final",
         "",
         "## Status",
         "",
@@ -1101,19 +1101,19 @@ def write_spec_003b_chunking_report(report: dict[str, Any], report_dir: Path) ->
         "## Síntese",
         "",
         (
-            "A SPEC-003B completou o chunking estrutural do corpus reformado com Westminster "
+            "A etapa final de chunking completou o corpus reformado com Westminster "
             "e Confissão Batista de Londres de 1689, preservou os chunks de Dort e Heidelberg "
-            "gerados na SPEC-003A e consolidou os quatro documentos em `all_chunks.jsonl`."
+            "gerados na etapa base e consolidou os quatro documentos em `all_chunks.jsonl`."
         ),
         "",
-        "## Documentos chunkados nesta SPEC",
+        "## Documentos chunkados nesta etapa",
         "",
     ]
-    for document_id in report["documents_chunked_in_spec_003b"]:
+    for document_id in report["documents_chunked_in_final_step"]:
         lines.append(f"- `{document_id}`")
 
-    lines.extend(["", "## Documentos preservados da SPEC-003A", ""])
-    for document_id in report["documents_preserved_from_spec_003a"]:
+    lines.extend(["", "## Documentos preservados da etapa base", ""])
+    for document_id in report["documents_preserved_from_base_step"]:
         lines.append(f"- `{document_id}`")
 
     lines.extend(["", "## Resumo por documento", ""])
@@ -1145,7 +1145,7 @@ def write_spec_003b_chunking_report(report: dict[str, Any], report_dir: Path) ->
             f"- Soma por documento: {consolidation['per_document_counts']}",
             f"- Problemas de validação: {consolidation['validation_issues'] or 'nenhuma ocorrência'}",
             "",
-            "## O que não foi feito nesta SPEC",
+            "## O que não foi feito nesta etapa",
             "",
             "- Não foram gerados embeddings.",
             "- Não foi criado índice vetorial.",
@@ -1204,8 +1204,8 @@ def run_chunking(
                 summarize_chunks(document_id, validated_chunks, jsonl_path, issues, document_warnings)
             )
         consolidation = consolidate_all_chunks(output_dir)
-        report = build_spec_003b_report(all_summaries, consolidation, documents)
-        write_spec_003b_chunking_report(report, report_dir)
+        report = build_final_chunking_report(all_summaries, consolidation, documents)
+        write_final_chunking_report(report, report_dir)
         return report
 
     report = build_report(summaries)
@@ -1247,8 +1247,8 @@ def main() -> int:
         print(f"O chunking estrutural falhou: {exc}", file=sys.stderr)
         return 1
 
-    spec_label = "SPEC-003B" if args.consolidate else "SPEC-003A"
-    print(f"Chunking {spec_label} concluído com status {report['status']}.")
+    step_label = "consolidado" if args.consolidate else "base"
+    print(f"Chunking {step_label} concluído com status {report['status']}.")
     for summary in report["summaries"]:
         print(f"- {summary['document_id']}: {summary['chunk_count']} chunks em {summary['jsonl_path']}")
     if args.consolidate:

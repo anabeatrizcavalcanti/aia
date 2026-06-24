@@ -45,17 +45,15 @@ def test_chunking_script_exists():
     assert Path("scripts/pipeline/chunk_reformed_corpus.py").exists()
 
 
-def test_spec_003a_chunk_files_exist():
+def test_part_a_chunk_files_exist():
     assert Path("corpus/processed/chunks/reformed/canones-de-dort.chunks.jsonl").exists()
     assert Path("corpus/processed/chunks/reformed/catecismo-heidelberg.chunks.jsonl").exists()
 
 
-def test_spec_003a_does_not_create_out_of_scope_chunk_files():
-    report_text = Path("reports/specs/SPEC-003A-structural-chunking-base.md").read_text(encoding="utf-8")
+def test_part_a_report_keeps_later_outputs_out_of_scope():
+    report_text = Path("reports/specs/structural-chunking-base.md").read_text(encoding="utf-8")
 
-    assert "Westminster ainda não foi chunkado" in report_text
-    assert "Londres 1689 ainda não foi chunkado" in report_text
-    assert "`all_chunks.jsonl` ainda não foi criado" in report_text
+    assert "Westminster, Londres 1689 e `all_chunks.jsonl` ficaram fora desta etapa." in report_text
 
 
 def test_jsonl_files_are_valid_and_have_no_duplicate_chunk_ids():
@@ -168,6 +166,6 @@ def test_canons_preserves_articles_refutations_and_non_doctrinal_intro():
 
 
 def test_chunking_reports_exist():
-    assert Path("corpus/reports/chunking/SPEC-003A-chunking-report.json").exists()
-    assert Path("corpus/reports/chunking/SPEC-003A-chunking-report.md").exists()
-    assert Path("reports/specs/SPEC-003A-structural-chunking-base.md").exists()
+    assert Path("corpus/reports/chunking/chunking-base-report.json").exists()
+    assert Path("corpus/reports/chunking/chunking-base-report.md").exists()
+    assert Path("reports/specs/structural-chunking-base.md").exists()

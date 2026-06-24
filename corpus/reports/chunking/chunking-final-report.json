@@ -1,0 +1,150 @@
+{
+  "status": "PARTIAL",
+  "schema_version": "reformed-structural-chunk-v1",
+  "documents_processed": [
+    "confissao-fe-westminster",
+    "canones-de-dort",
+    "catecismo-heidelberg",
+    "confissao-batista-londres-1689"
+  ],
+  "documents_chunked_in_spec_003b": [
+    "confissao-fe-westminster",
+    "confissao-batista-londres-1689"
+  ],
+  "documents_preserved_from_spec_003a": [
+    "canones-de-dort",
+    "catecismo-heidelberg"
+  ],
+  "summaries": [
+    {
+      "document_id": "confissao-fe-westminster",
+      "jsonl_path": "corpus/processed/chunks/reformed/confissao-fe-westminster.chunks.jsonl",
+      "chunk_count": 187,
+      "chunk_types": {
+        "confessional_section": 172,
+        "introductory_context": 14,
+        "special_layout": 1
+      },
+      "non_doctrinal_count": 15,
+      "special_layout_count": 1,
+      "structural_origin": "`westminster_structure.chapters[].sections[]` para seções confessionais e `westminster_structure.special_layouts` para layouts especiais",
+      "warning_chunks": [],
+      "document_warnings": [
+        "westminster_page_1_without_extractable_text_in_spec_002"
+      ],
+      "validation_issues": []
+    },
+    {
+      "document_id": "canones-de-dort",
+      "jsonl_path": "corpus/processed/chunks/reformed/canones-de-dort.chunks.jsonl",
+      "chunk_count": 107,
+      "chunk_types": {
+        "conclusion_paragraph": 13,
+        "doctrinal_article": 59,
+        "error_refutation": 34,
+        "introductory_context": 1
+      },
+      "non_doctrinal_count": 1,
+      "special_layout_count": 0,
+      "structural_origin": "`canons_structure` para artigos, rejeições de erro, conclusão e contexto introdutório",
+      "warning_chunks": [],
+      "document_warnings": [],
+      "validation_issues": []
+    },
+    {
+      "document_id": "catecismo-heidelberg",
+      "jsonl_path": "corpus/processed/chunks/reformed/catecismo-heidelberg.chunks.jsonl",
+      "chunk_count": 130,
+      "chunk_types": {
+        "catechism_question_answer": 129,
+        "introductory_context": 1
+      },
+      "non_doctrinal_count": 1,
+      "special_layout_count": 0,
+      "structural_origin": "`introductory_contexts` para o contexto introdutório e `catechism_units` para as unidades pergunta-resposta",
+      "warning_chunks": [
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-010",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_bible_book"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-020",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-029",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry",
+            "reference_parse_issue:1:duplicated_reference_marker_suspected",
+            "reference_parse_issue:1:duplicated_reference_marker_suspected"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-060",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_bible_book"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-098",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry"
+          ]
+        }
+      ],
+      "document_warnings": [],
+      "validation_issues": []
+    },
+    {
+      "document_id": "confissao-batista-londres-1689",
+      "jsonl_path": "corpus/processed/chunks/reformed/confissao-batista-londres-1689.chunks.jsonl",
+      "chunk_count": 159,
+      "chunk_types": {
+        "confessional_paragraph": 157,
+        "special_layout": 2
+      },
+      "non_doctrinal_count": 2,
+      "special_layout_count": 2,
+      "structural_origin": "`london_baptist_structure.chapters[].paragraphs[]` para parágrafos confessionais e `london_baptist_structure.special_layouts` para layouts especiais",
+      "warning_chunks": [],
+      "document_warnings": [],
+      "validation_issues": []
+    }
+  ],
+  "consolidation": {
+    "jsonl_path": "corpus/processed/chunks/reformed/all_chunks.jsonl",
+    "source_files": [
+      "corpus/processed/chunks/reformed/confissao-fe-westminster.chunks.jsonl",
+      "corpus/processed/chunks/reformed/canones-de-dort.chunks.jsonl",
+      "corpus/processed/chunks/reformed/catecismo-heidelberg.chunks.jsonl",
+      "corpus/processed/chunks/reformed/confissao-batista-londres-1689.chunks.jsonl"
+    ],
+    "chunk_count": 583,
+    "per_document_counts": {
+      "confissao-fe-westminster": 187,
+      "canones-de-dort": 107,
+      "catecismo-heidelberg": 130,
+      "confissao-batista-londres-1689": 159
+    },
+    "validation_issues": []
+  },
+  "scope_not_executed": [
+    "embeddings",
+    "vector_index",
+    "chatbot",
+    "openai_api_call",
+    "ocr",
+    "manual_doctrinal_editing",
+    "other_traditions_evaluation",
+    "user_upload"
+  ]
+}

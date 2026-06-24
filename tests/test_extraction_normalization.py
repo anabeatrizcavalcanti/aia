@@ -50,7 +50,7 @@ def test_extraction_and_normalization_reports_exist():
     assert Path("corpus/reports/extraction/extraction_report.md").exists()
     assert Path("corpus/reports/normalization/normalization_report.json").exists()
     assert Path("corpus/reports/normalization/normalization_report.md").exists()
-    assert Path("reports/specs/SPEC-002-extraction-normalization.md").exists()
+    assert Path("reports/specs/extraction-normalization.md").exists()
 
 
 def test_extracted_jsons_are_valid_and_preserve_metadata():

@@ -1,6 +1,6 @@
 """Normaliza mecanicamente os textos extraidos do corpus reformado.
 
-A normalizacao desta SPEC e conservadora: preserva paginas, marcadores
+A normalizacao desta etapa e conservadora: preserva paginas, marcadores
 estruturais, referencias biblicas e metadados. Ela nao gera chunks finais.
 """
 

@@ -1,0 +1,91 @@
+{
+  "status": "PARTIAL",
+  "schema_version": "reformed-structural-chunk-v1",
+  "documents_processed": [
+    "canones-de-dort",
+    "catecismo-heidelberg"
+  ],
+  "summaries": [
+    {
+      "document_id": "canones-de-dort",
+      "jsonl_path": "corpus/processed/chunks/reformed/canones-de-dort.chunks.jsonl",
+      "chunk_count": 107,
+      "chunk_types": {
+        "conclusion_paragraph": 13,
+        "doctrinal_article": 59,
+        "error_refutation": 34,
+        "introductory_context": 1
+      },
+      "non_doctrinal_count": 1,
+      "structural_origin": "`canons_structure` para artigos, rejeições de erro, conclusão e contexto introdutório",
+      "warning_chunks": [],
+      "validation_issues": []
+    },
+    {
+      "document_id": "catecismo-heidelberg",
+      "jsonl_path": "corpus/processed/chunks/reformed/catecismo-heidelberg.chunks.jsonl",
+      "chunk_count": 130,
+      "chunk_types": {
+        "catechism_question_answer": 129,
+        "introductory_context": 1
+      },
+      "non_doctrinal_count": 1,
+      "structural_origin": "`introductory_contexts` para o contexto introdutório e `catechism_units` para as unidades pergunta-resposta",
+      "warning_chunks": [
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-010",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_bible_book"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-020",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-029",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry",
+            "reference_parse_issue:1:duplicated_reference_marker_suspected",
+            "reference_parse_issue:1:duplicated_reference_marker_suspected"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-060",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_bible_book"
+          ]
+        },
+        {
+          "chunk_id": "catecismo-heidelberg_pergunta-098",
+          "warnings": [
+            "unresolved_reference_marker:2",
+            "reference_parse_issue:2:missing_reference_entry"
+          ]
+        }
+      ],
+      "validation_issues": []
+    }
+  ],
+  "not_created_in_spec_003a": [
+    "corpus/processed/chunks/reformed/all_chunks.jsonl",
+    "corpus/processed/chunks/reformed/confissao-fe-westminster.chunks.jsonl",
+    "corpus/processed/chunks/reformed/confissao-batista-londres-1689.chunks.jsonl"
+  ],
+  "scope_not_executed": [
+    "embeddings",
+    "vector_index",
+    "chatbot",
+    "openai_api_call",
+    "ocr",
+    "manual_doctrinal_editing",
+    "other_traditions_evaluation",
+    "user_upload"
+  ]
+}

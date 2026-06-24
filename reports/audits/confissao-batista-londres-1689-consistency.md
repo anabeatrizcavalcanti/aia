@@ -1,38 +1,34 @@
-# Auditoria de consistência — Confissão Batista de Londres de 1689
+# Auditoria estrutural — Confissão Batista de Londres de 1689
 
-## Síntese
+## Registro
 
-O relatório estrutural da Confissão Batista de Londres de 1689 foi reorganizado para representar a lógica documental do texto: capítulos, parágrafos numerados, texto confessional e blocos de referências bíblicas associados aos marcadores do texto.
+O JSON estrutural da Confissão Batista de Londres de 1689 foi reorganizado por capítulos e parágrafos numerados. As referências bíblicas foram mantidas associadas ao parágrafo correspondente.
 
-## Estrutura criada
+## Estrutura usada
 
-O campo `london_baptist_structure` contém:
+`london_baptist_structure` contém:
 
-- `chapters`: capítulos do corpo principal da confissão;
-- `paragraphs`: parágrafos numerados dentro de cada capítulo;
-- `paragraph_text`: texto confessional do parágrafo;
-- `reference_in_text`: marcadores de referência encontrados no texto;
-- `reference_text`: bloco completo de referências daquele parágrafo;
-- `references`: bloco de referência agrupado por marcador;
-- `reference_associations`: associação entre marcador e referências bíblicas curtas;
-- `special_layouts`: estruturas especiais preservadas, como a tabela dos livros bíblicos.
+- `chapters`;
+- `paragraphs`;
+- `paragraph_text`;
+- `reference_in_text`;
+- `reference_text`;
+- `references`;
+- `reference_associations`;
+- `special_layouts`.
 
-## Classificação de páginas
+No nível geral:
 
-No nível geral do relatório, a classificação de páginas foi ajustada para evitar falsos positivos:
+- `introductory_pages`: página 1;
+- `special_layout_pages`: página 3.
 
-- `introductory_pages`: apenas a página 1;
-- `special_layout_pages`: página 3, onde aparece a tabela dos livros do Antigo e do Novo Testamento.
+Campos genéricos como `titles`, `articles`, `questions`, `answers`, `rejections`, `lords_days`, `parts`, contadores brutos e lista técnica de páginas foram removidos.
 
-## Campos removidos
+## Capítulo 2, parágrafo 1
 
-Foram removidos da saída JSON os campos genéricos que não ajudam a representar este documento, como `titles`, `articles`, `questions`, `answers`, `rejections`, `lords_days`, `parts`, contadores brutos de possíveis referências, exemplos de notas, lista técnica de páginas, riscos genéricos e recomendação de chunking.
+O capítulo `CAPÍTULO 2 DEUS E A SANTÍSSIMA TRINDADE` contém o parágrafo 1 como unidade estruturada. O texto confessional fica em `paragraph_text`; as referências ficam em `reference_text`, `references` e `reference_associations`.
 
-## Caso verificado: capítulo 2, parágrafo 1
-
-O capítulo `CAPÍTULO 2 DEUS E A SANTÍSSIMA TRINDADE` passou a conter o parágrafo 1 como uma unidade estruturada. O texto confessional permanece em `paragraph_text`, enquanto as referências bíblicas ficam em `reference_text`, `references` e `reference_associations`.
-
-Exemplo de associação:
+Exemplo:
 
 ```json
 {
@@ -43,6 +39,6 @@ Exemplo de associação:
 }
 ```
 
-## Recomendação
+## Decisão para chunking
 
-Na etapa de chunking, a Confissão Batista de Londres deve usar `london_baptist_structure.chapters[].paragraphs[]` como base principal. Cada chunk deve corresponder preferencialmente a um parágrafo numerado, preservando capítulo, parágrafo, texto confessional, marcadores e referências bíblicas associadas.
+O chunking usa `london_baptist_structure.chapters[].paragraphs[]`. Cada chunk corresponde a um parágrafo numerado, com capítulo, parágrafo, texto confessional, marcadores e referências bíblicas associadas.
