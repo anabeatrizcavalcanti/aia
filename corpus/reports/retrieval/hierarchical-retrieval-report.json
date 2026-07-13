@@ -1,0 +1,2655 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "strategy": "structural_window",
+    "anchor_source": "reranked_retriever",
+    "reranked_top_k": 5,
+    "parent_context_max_chars": 9000,
+    "sibling_window_before": 1,
+    "sibling_window_after": 1,
+    "include_full_parent_when_small": true,
+    "full_parent_max_chars": 7000,
+    "include_metadata_header": true,
+    "preserve_anchor_first": true,
+    "default_filters": {
+      "corpus_id": "reformed",
+      "retrieval_namespace": "reformed_confessional"
+    }
+  },
+  "dependency_status": {
+    "sentence_transformers_available": true,
+    "rank_bm25_available": true,
+    "chromadb_available": true,
+    "openai_api_key_configured": true
+  },
+  "missing_required_inputs": [],
+  "retrieval_error": null,
+  "chunks_path": "corpus/processed/chunks/reformed/all_chunks_for_embeddings.jsonl",
+  "chunks_loaded": 583,
+  "parent_groups": 152,
+  "validation_queries": [
+    {
+      "query": "O que é o batismo?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "parent_keys": [
+        "confissao-batista-londres-1689::chapter::capitulo-28",
+        "confissao-batista-londres-1689::chapter::capitulo-29",
+        "confissao-fe-westminster::chapter::capitulo-xxviii"
+      ],
+      "anchor_chunk_ids": [
+        "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+        "confissao-fe-westminster_capitulo-xxviii_secao-i",
+        "confissao-batista-londres-1689_capitulo-28_paragrafo-1",
+        "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+        "confissao-batista-londres-1689_capitulo-29_paragrafo-4"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": 4.666769027709961,
+          "anchor_pre_rerank_score": 0.03252247488101534,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+          "parent_title": "CAPÍTULO 29 — BATISMO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-4"
+          ],
+          "included_chunk_count": 4,
+          "page_start": 74,
+          "page_end": 75,
+          "context_char_count": 4446,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+            "parent_title": "CAPÍTULO 29 — BATISMO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "e416543a826fbb7ba2d872b928ace0858bd335bc98440a4e8fd36c3a7e2be356"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "a034a8ac17c9428be1288ef2cca68ebc0628fc7c7283991a2f2e9dab6e4722cc"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "4479d7f088a3cf632fd82e525a4f1601c5ba6cb199dd4a5c7dcf6ad042a8f198"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 75,
+                "text_hash": "9625191d3a585e454ec92a2be6065d7ec8c3f384fad20d64026a6bb97a3da29d"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-i",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "confessional_section",
+          "anchor_score": 3.4914698600769043,
+          "anchor_pre_rerank_score": 0.028373015873015873,
+          "parent_key": "confissao-fe-westminster::chapter::capitulo-xxviii",
+          "parent_title": "CAPÍTULO XXVIII — DO BATISMO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_capitulo-xxviii_secao-i",
+            "confissao-fe-westminster_capitulo-xxviii_secao-ii",
+            "confissao-fe-westminster_capitulo-xxviii_secao-iii",
+            "confissao-fe-westminster_capitulo-xxviii_secao-iv",
+            "confissao-fe-westminster_capitulo-xxviii_secao-v",
+            "confissao-fe-westminster_capitulo-xxviii_secao-vi",
+            "confissao-fe-westminster_capitulo-xxviii_secao-vii"
+          ],
+          "included_chunk_count": 7,
+          "page_start": 54,
+          "page_end": 54,
+          "context_char_count": 4190,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::chapter::capitulo-xxviii",
+            "parent_title": "CAPÍTULO XXVIII — DO BATISMO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-i",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "b1eda5d9bfda56c61577b0ea6273b92bc003a1a5803d5c6a429d56f5f2612bb7"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-ii",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "624351b17548b4fb4f0b94fc9fd9d445437eed3478edc8c0950d7cc513137252"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-iii",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "9686c9568bbcce0a6c6a88a11275babd886a20985aa8bff8d38620d962a0ec4b"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-iv",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "8ac95fb2575ca339cb92df1283c21f2c7c86654d4dbcf4e7123608ff86730663"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-v",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "1e4733a81008f8cd49932f39e7903053caa0ec8ed4d118eeb5f151d310aaecc4"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-vi",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "13f333055d07f7eddf3477f06a980de70028da92ec2b1855eb07d1ed29e1e769"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-vii",
+                "chunk_type": "confessional_section",
+                "page_start": 54,
+                "page_end": 54,
+                "text_hash": "a396131179961411d4f873a7d6cf8b1747982dc96c72ec9b52e15e176d058db8"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-28_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": 0.0654543861746788,
+          "anchor_pre_rerank_score": 0.02844551282051282,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-28",
+          "parent_title": "CAPÍTULO 28 — BATISMO E CEIA DO SENHOR",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-28_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-28_paragrafo-2"
+          ],
+          "included_chunk_count": 2,
+          "page_start": 73,
+          "page_end": 73,
+          "context_char_count": 1907,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-28",
+            "parent_title": "CAPÍTULO 28 — BATISMO E CEIA DO SENHOR",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-28_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 73,
+                "page_end": 73,
+                "text_hash": "0d46fc0903aa23ac0338fc0c14d5458995affb2e8811502477f3e7c3106b71ee"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-28_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 73,
+                "page_end": 73,
+                "text_hash": "0ec21605291c15b08ac3f563d41266d56d979038bbde3d5c04bf3fb4710bdee7"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -1.2073619365692139,
+          "anchor_pre_rerank_score": 0.02976190476190476,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+          "parent_title": "CAPÍTULO 29 — BATISMO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-4"
+          ],
+          "included_chunk_count": 4,
+          "page_start": 74,
+          "page_end": 75,
+          "context_char_count": 4446,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+            "parent_title": "CAPÍTULO 29 — BATISMO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "a034a8ac17c9428be1288ef2cca68ebc0628fc7c7283991a2f2e9dab6e4722cc"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "e416543a826fbb7ba2d872b928ace0858bd335bc98440a4e8fd36c3a7e2be356"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "4479d7f088a3cf632fd82e525a4f1601c5ba6cb199dd4a5c7dcf6ad042a8f198"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 75,
+                "text_hash": "9625191d3a585e454ec92a2be6065d7ec8c3f384fad20d64026a6bb97a3da29d"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -1.5952078104019165,
+          "anchor_pre_rerank_score": 0.030776515151515152,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+          "parent_title": "CAPÍTULO 29 — BATISMO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-29_paragrafo-3"
+          ],
+          "included_chunk_count": 4,
+          "page_start": 74,
+          "page_end": 75,
+          "context_char_count": 4446,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-29",
+            "parent_title": "CAPÍTULO 29 — BATISMO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 75,
+                "text_hash": "9625191d3a585e454ec92a2be6065d7ec8c3f384fad20d64026a6bb97a3da29d"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "e416543a826fbb7ba2d872b928ace0858bd335bc98440a4e8fd36c3a7e2be356"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "a034a8ac17c9428be1288ef2cca68ebc0628fc7c7283991a2f2e9dab6e4722cc"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 74,
+                "page_end": 74,
+                "text_hash": "4479d7f088a3cf632fd82e525a4f1601c5ba6cb199dd4a5c7dcf6ad042a8f198"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que é necessário para a salvação?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "catecismo-heidelberg",
+        "confissao-batista-londres-1689"
+      ],
+      "parent_keys": [
+        "catecismo-heidelberg::group::dia-do-senhor-16",
+        "confissao-batista-londres-1689::chapter::capitulo-1",
+        "confissao-batista-londres-1689::chapter::capitulo-14",
+        "confissao-batista-londres-1689::chapter::capitulo-15"
+      ],
+      "anchor_chunk_ids": [
+        "confissao-batista-londres-1689_capitulo-1_paragrafo-1",
+        "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+        "confissao-batista-londres-1689_capitulo-14_paragrafo-2",
+        "catecismo-heidelberg_pergunta-040",
+        "confissao-batista-londres-1689_capitulo-15_paragrafo-3"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -2.0728206634521484,
+          "anchor_pre_rerank_score": 0.015384615384615385,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+          "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-2"
+          ],
+          "included_chunk_count": 2,
+          "page_start": 2,
+          "page_end": 3,
+          "context_char_count": 5528,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+            "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 2,
+                "page_end": 2,
+                "text_hash": "a49a8cd6f9fdc706bbe7ccd12fa27ee5be17ad557c4666cc773d609321385b80"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 3,
+                "page_end": 3,
+                "text_hash": "798baa68f23f6b3a716cf4e4fc3ca52e4b7f2b096ff6ce39d121309657d917e9"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -2.4478888511657715,
+          "anchor_pre_rerank_score": 0.02819138376017471,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+          "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-4"
+          ],
+          "included_chunk_count": 5,
+          "page_start": 35,
+          "page_end": 37,
+          "context_char_count": 6853,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+            "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 37,
+                "text_hash": "2c436b7dc6fb479644c2eadfff693c781c1c00977ec777ec239ef7138db60b4a"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 35,
+                "page_end": 36,
+                "text_hash": "ee21ddbd549ef5d5193abd8b5741758862988f43ed22e5175f27752eab93affa"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "e34544d63997935edbeaac9a4ad3bf47169d17aa2f328f70b725c7c6eb163b01"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "4777933ff20b670ab52c5bcfe1db41bfd67a1daa30273c01962d8ce029f0354b"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-14_paragrafo-2",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -2.480576753616333,
+          "anchor_pre_rerank_score": 0.015384615384615385,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-14",
+          "parent_title": "CAPÍTULO 14 — FÉ SALVADORA",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-14_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-14_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-14_paragrafo-3"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 34,
+          "page_end": 35,
+          "context_char_count": 7491,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-14",
+            "parent_title": "CAPÍTULO 14 — FÉ SALVADORA",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-14_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 34,
+                "page_end": 35,
+                "text_hash": "a82b9d827b5eb0b6ce5c8b368abdbbbb5068d6fea7a858859b516aa8eb1ad247"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-14_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 34,
+                "page_end": 34,
+                "text_hash": "a9bf012173c07a348407f9316e98d23b7f6ab85c136e89bf668b470e4b305522"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-14_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 35,
+                "page_end": 35,
+                "text_hash": "d8bcb6d29b52674b7e7d5bf5c5e63f51361774f064d73496191e2842d5310b53"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "catecismo-heidelberg_pergunta-040",
+          "anchor_document_id": "catecismo-heidelberg",
+          "anchor_document": "Catecismo de Heidelberg",
+          "anchor_chunk_type": "catechism_question_answer",
+          "anchor_score": -3.581123113632202,
+          "anchor_pre_rerank_score": 0.014084507042253521,
+          "parent_key": "catecismo-heidelberg::group::dia-do-senhor-16",
+          "parent_title": "Dia do Senhor 16",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "catecismo-heidelberg_pergunta-040",
+            "catecismo-heidelberg_pergunta-041",
+            "catecismo-heidelberg_pergunta-042",
+            "catecismo-heidelberg_pergunta-043",
+            "catecismo-heidelberg_pergunta-044"
+          ],
+          "included_chunk_count": 5,
+          "page_start": 9,
+          "page_end": 10,
+          "context_char_count": 3030,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "catecismo-heidelberg",
+            "document": "Catecismo de Heidelberg",
+            "source_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/catecismo-heidelberg.normalized.json",
+            "parent_key": "catecismo-heidelberg::group::dia-do-senhor-16",
+            "parent_title": "Dia do Senhor 16",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "catecismo-heidelberg_pergunta-040",
+                "chunk_type": "catechism_question_answer",
+                "page_start": 9,
+                "page_end": 9,
+                "text_hash": "515fea583363f56584edecb75a75d571e5ad83eba91f2001e3df8c1e4ecc2ebf"
+              },
+              {
+                "chunk_id": "catecismo-heidelberg_pergunta-041",
+                "chunk_type": "catechism_question_answer",
+                "page_start": 9,
+                "page_end": 9,
+                "text_hash": "4e77fc7cc01941379126189dd323290db194c27c14a63f52172cd7875d3c948c"
+              },
+              {
+                "chunk_id": "catecismo-heidelberg_pergunta-042",
+                "chunk_type": "catechism_question_answer",
+                "page_start": 9,
+                "page_end": 9,
+                "text_hash": "1a550865f7fa0bbec31e85ba5b88d560fe62cab29784b5b06ade6cb7a16705f3"
+              },
+              {
+                "chunk_id": "catecismo-heidelberg_pergunta-043",
+                "chunk_type": "catechism_question_answer",
+                "page_start": 9,
+                "page_end": 10,
+                "text_hash": "1e51f840354309f8314e65c8e9ae4cbda1feaf85ffd630165b517f5c03bc3e2f"
+              },
+              {
+                "chunk_id": "catecismo-heidelberg_pergunta-044",
+                "chunk_type": "catechism_question_answer",
+                "page_start": 10,
+                "page_end": 10,
+                "text_hash": "e03aaae475ca612ad73878e728a0f53bdacc3adf06f9991935c1bbd102b76f8b"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -3.607107162475586,
+          "anchor_pre_rerank_score": 0.014285714285714285,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+          "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-5"
+          ],
+          "included_chunk_count": 5,
+          "page_start": 35,
+          "page_end": 37,
+          "context_char_count": 6853,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+            "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 35,
+                "page_end": 36,
+                "text_hash": "ee21ddbd549ef5d5193abd8b5741758862988f43ed22e5175f27752eab93affa"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "e34544d63997935edbeaac9a4ad3bf47169d17aa2f328f70b725c7c6eb163b01"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "4777933ff20b670ab52c5bcfe1db41bfd67a1daa30273c01962d8ce029f0354b"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 37,
+                "text_hash": "2c436b7dc6fb479644c2eadfff693c781c1c00977ec777ec239ef7138db60b4a"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que é eleição?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "canones-de-dort"
+      ],
+      "parent_keys": [
+        "canones-de-dort::chapter::primeiro-capitulo-da-doutrina"
+      ],
+      "anchor_chunk_ids": [
+        "canones-de-dort_capitulo-01_artigo-07",
+        "canones-de-dort_capitulo-01_artigo-09",
+        "canones-de-dort_capitulo-01_artigo-10",
+        "canones-de-dort_capitulo-01_rejeicao-erros_erro-05",
+        "canones-de-dort_capitulo-01_rejeicao-erros_erro-01"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "canones-de-dort_capitulo-01_artigo-07",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": 3.167187213897705,
+          "anchor_pre_rerank_score": 0.02938045560996381,
+          "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+          "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-01_artigo-07",
+            "canones-de-dort_capitulo-01_artigo-06",
+            "canones-de-dort_capitulo-01_artigo-08"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 3,
+          "page_end": 4,
+          "context_char_count": 4126,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+            "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-07",
+                "chunk_type": "doctrinal_article",
+                "page_start": 3,
+                "page_end": 3,
+                "text_hash": "42f04382fc957d3178e06be47ba0e05e48761bcdc162e7303174d15647bf023f"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-06",
+                "chunk_type": "doctrinal_article",
+                "page_start": 3,
+                "page_end": 3,
+                "text_hash": "b86a24c885fb78b284e8aea9ae4d4e4e001074c821e7117a04c3268681d0ca42"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-08",
+                "chunk_type": "doctrinal_article",
+                "page_start": 3,
+                "page_end": 4,
+                "text_hash": "2e54198c2bb6a972f0b7e45157bf0a518680a2742fbfe1e7c10ab94f4c1a890e"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "canones-de-dort_capitulo-01_artigo-09",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": -0.32958459854125977,
+          "anchor_pre_rerank_score": 0.02854251012145749,
+          "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+          "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-01_artigo-09",
+            "canones-de-dort_capitulo-01_artigo-08",
+            "canones-de-dort_capitulo-01_artigo-10"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 3,
+          "page_end": 4,
+          "context_char_count": 3111,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+            "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-09",
+                "chunk_type": "doctrinal_article",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "4a8534a25dd85925abfbd1f5a3b07ffcea5568b49e6506c2afc26f59aad7fca2"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-08",
+                "chunk_type": "doctrinal_article",
+                "page_start": 3,
+                "page_end": 4,
+                "text_hash": "2e54198c2bb6a972f0b7e45157bf0a518680a2742fbfe1e7c10ab94f4c1a890e"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-10",
+                "chunk_type": "doctrinal_article",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "043f5a535f74dea3196de4215dc510b89125e0c8aee331a67994059440478e60"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "canones-de-dort_capitulo-01_artigo-10",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": -1.4851658344268799,
+          "anchor_pre_rerank_score": 0.028991596638655463,
+          "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+          "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-01_artigo-10",
+            "canones-de-dort_capitulo-01_artigo-09",
+            "canones-de-dort_capitulo-01_artigo-11"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 4,
+          "page_end": 4,
+          "context_char_count": 2884,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+            "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-10",
+                "chunk_type": "doctrinal_article",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "043f5a535f74dea3196de4215dc510b89125e0c8aee331a67994059440478e60"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-09",
+                "chunk_type": "doctrinal_article",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "4a8534a25dd85925abfbd1f5a3b07ffcea5568b49e6506c2afc26f59aad7fca2"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-11",
+                "chunk_type": "doctrinal_article",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "70da2c67cff688fcf12f9c20c9e22bcc8893d6680ad0393555af466ddbef6cf4"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-05",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "error_refutation",
+          "anchor_score": -1.595402717590332,
+          "anchor_pre_rerank_score": 0.03009207275993712,
+          "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+          "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-01_rejeicao-erros_erro-05",
+            "canones-de-dort_capitulo-01_rejeicao-erros_erro-04",
+            "canones-de-dort_capitulo-01_rejeicao-erros_erro-06"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 8,
+          "page_end": 9,
+          "context_char_count": 4358,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+            "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-05",
+                "chunk_type": "error_refutation",
+                "page_start": 8,
+                "page_end": 9,
+                "text_hash": "e76fa866bb7b266dc2874ee86595bc7a648b22dd792afb67cdbb08643ce7ac10"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-04",
+                "chunk_type": "error_refutation",
+                "page_start": 8,
+                "page_end": 8,
+                "text_hash": "cb829d62f31a01927dd08a048ba2cc068676f9cd023dcb5c85b6f5cb3cc4434f"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-06",
+                "chunk_type": "error_refutation",
+                "page_start": 9,
+                "page_end": 9,
+                "text_hash": "f6badd4df084d9330868d718aa5d6127dd0d93096f1bb0128f8dfdac17fe64dd"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-01",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "error_refutation",
+          "anchor_score": -1.8651840686798096,
+          "anchor_pre_rerank_score": 0.029877369007803793,
+          "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+          "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-01_rejeicao-erros_erro-01",
+            "canones-de-dort_capitulo-01_artigo-18",
+            "canones-de-dort_capitulo-01_rejeicao-erros_erro-02"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 6,
+          "page_end": 7,
+          "context_char_count": 3596,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::primeiro-capitulo-da-doutrina",
+            "parent_title": "Primeiro Capítulo da Doutrina — A Eleição e a Reprovação Divinas",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-01",
+                "chunk_type": "error_refutation",
+                "page_start": 7,
+                "page_end": 7,
+                "text_hash": "4773835f10122a2a56373a96201ca97b5551e54f3430885d8f775fb7887151fb"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_artigo-18",
+                "chunk_type": "doctrinal_article",
+                "page_start": 6,
+                "page_end": 6,
+                "text_hash": "b310c3c175e260b343290eea37702a71c8f0c8f1e166f3f1405cd0a14691ad7a"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-02",
+                "chunk_type": "error_refutation",
+                "page_start": 7,
+                "page_end": 7,
+                "text_hash": "5e2aa02945b2ab5ea60a79fce08f3fc4692a486ff51762223075f81434ab13a1"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que é justificação?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "parent_keys": [
+        "confissao-batista-londres-1689::chapter::capitulo-11",
+        "confissao-fe-westminster::chapter::capitulo-xi"
+      ],
+      "anchor_chunk_ids": [
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+        "confissao-fe-westminster_capitulo-xi_secao-i",
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-4"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -0.11080422252416611,
+          "anchor_pre_rerank_score": 0.031544957774465976,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-2"
+          ],
+          "included_chunk_count": 2,
+          "page_start": 29,
+          "page_end": 30,
+          "context_char_count": 4665,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 29,
+                "page_end": 29,
+                "text_hash": "9afa4ce514b5f6a9878cc1b7de8f42c607441e695549032a767e9ff0d9fc9964"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 29,
+                "page_end": 30,
+                "text_hash": "bf87b3e66e185313a3b1664322f4562d1fe32e5300270f9cccb86c82e984316e"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -1.272689700126648,
+          "anchor_pre_rerank_score": 0.029211087420042643,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-4"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 29,
+          "page_end": 31,
+          "context_char_count": 5589,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 30,
+                "text_hash": "c31d708f8d5c19ffb824a31d4a4b7df6a656eccea6a9fe0ea72be7ca1d5202eb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 29,
+                "page_end": 30,
+                "text_hash": "bf87b3e66e185313a3b1664322f4562d1fe32e5300270f9cccb86c82e984316e"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 31,
+                "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -1.3412655591964722,
+          "anchor_pre_rerank_score": 0.02844551282051282,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-6"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 30,
+          "page_end": 31,
+          "context_char_count": 6341,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 31,
+                "page_end": 31,
+                "text_hash": "031a0de4a7c7f174a2443990ac3ac0243895973166595d302f74217047e49adf"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 31,
+                "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-6",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 31,
+                "page_end": 31,
+                "text_hash": "aa90f65a8471c180bd1854bcd4fd7530f93f038b46bf14d9adee1ed1f9cd74f7"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "confissao-fe-westminster_capitulo-xi_secao-i",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "confessional_section",
+          "anchor_score": -1.9190847873687744,
+          "anchor_pre_rerank_score": 0.030834914611005692,
+          "parent_key": "confissao-fe-westminster::chapter::capitulo-xi",
+          "parent_title": "CAPÍTULO XI — DA JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_capitulo-xi_secao-i",
+            "confissao-fe-westminster_capitulo-xi_secao-ii",
+            "confissao-fe-westminster_capitulo-xi_secao-iii",
+            "confissao-fe-westminster_capitulo-xi_secao-iv",
+            "confissao-fe-westminster_capitulo-xi_secao-v",
+            "confissao-fe-westminster_capitulo-xi_secao-vi"
+          ],
+          "included_chunk_count": 6,
+          "page_start": 33,
+          "page_end": 33,
+          "context_char_count": 4452,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::chapter::capitulo-xi",
+            "parent_title": "CAPÍTULO XI — DA JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-i",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "5b8fd57af38bdbf45506f1703b9285c5fcce61ad300fcf4236d93d1d45bc8d84"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-ii",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "13d9a6e59b043111092fe09585be1c27d88288d35dcb1b1ae1468a152babbb58"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-iii",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "f0439c8c44c8d651c44d08292805c834b5f76df24f8885129680d96086432147"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-iv",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "46d5f21b4137df8d4a97c65688c1b594719a4839a88ee39a0928429888b23624"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-v",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "99e917d8df2a28160c0c7b73a5ee9a7f3471557dedc6d98d1d85d1bfcb07789c"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-vi",
+                "chunk_type": "confessional_section",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "61a1890cd21730cb0fe6549972dd1b2471528a1ade98cb037c07135bfe6f3203"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -1.9942662715911865,
+          "anchor_pre_rerank_score": 0.02976190476190476,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-5"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 30,
+          "page_end": 31,
+          "context_char_count": 7926,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 31,
+                "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 30,
+                "text_hash": "c31d708f8d5c19ffb824a31d4a4b7df6a656eccea6a9fe0ea72be7ca1d5202eb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 31,
+                "page_end": 31,
+                "text_hash": "031a0de4a7c7f174a2443990ac3ac0243895973166595d302f74217047e49adf"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que a tradição reformada ensina sobre as Escrituras?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "parent_keys": [
+        "canones-de-dort::section::pagina-1",
+        "confissao-batista-londres-1689::chapter::capitulo-1",
+        "confissao-fe-westminster::section::pagina-12",
+        "confissao-fe-westminster::section::pagina-8"
+      ],
+      "anchor_chunk_ids": [
+        "confissao-fe-westminster_introducao_pagina-12",
+        "canones-de-dort_introducao_pagina-01",
+        "confissao-fe-westminster_introducao_pagina-08",
+        "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+        "confissao-batista-londres-1689_capitulo-1_paragrafo-6"
+      ],
+      "expansion_statuses": [
+        "anchor_only",
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "confissao-fe-westminster_introducao_pagina-12",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "introductory_context",
+          "anchor_score": 0.6452843546867371,
+          "anchor_pre_rerank_score": 0.015873015873015872,
+          "parent_key": "confissao-fe-westminster::section::pagina-12",
+          "parent_title": "Material introdutório",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "anchor_only",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_introducao_pagina-12"
+          ],
+          "included_chunk_count": 1,
+          "page_start": 12,
+          "page_end": 12,
+          "context_char_count": 3887,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::section::pagina-12",
+            "parent_title": "Material introdutório",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "anchor_only",
+            "parent_expansion_reason": "context_window_limited_to_anchor",
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_introducao_pagina-12",
+                "chunk_type": "introductory_context",
+                "page_start": 12,
+                "page_end": 12,
+                "text_hash": "b79756cd4554668a3564dc0335c436d25384ad27668a6535e9c657a04550da1f"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "canones-de-dort_introducao_pagina-01",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "introductory_context",
+          "anchor_score": -1.046289324760437,
+          "anchor_pre_rerank_score": 0.014705882352941176,
+          "parent_key": "canones-de-dort::section::pagina-1",
+          "parent_title": "Material introdutório",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "anchor_only",
+          "included_chunk_ids": [
+            "canones-de-dort_introducao_pagina-01"
+          ],
+          "included_chunk_count": 1,
+          "page_start": 1,
+          "page_end": 1,
+          "context_char_count": 2319,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::section::pagina-1",
+            "parent_title": "Material introdutório",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "anchor_only",
+            "parent_expansion_reason": "context_window_limited_to_anchor",
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_introducao_pagina-01",
+                "chunk_type": "introductory_context",
+                "page_start": 1,
+                "page_end": 1,
+                "text_hash": "a7b07ebe83668970654dc903d4a32ebe01cb6e35f4bcb36f4fcf31ecbca84afd"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-fe-westminster_introducao_pagina-08",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "introductory_context",
+          "anchor_score": -1.0743252038955688,
+          "anchor_pre_rerank_score": 0.01639344262295082,
+          "parent_key": "confissao-fe-westminster::section::pagina-8",
+          "parent_title": "Material introdutório",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "anchor_only",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_introducao_pagina-08"
+          ],
+          "included_chunk_count": 1,
+          "page_start": 8,
+          "page_end": 8,
+          "context_char_count": 3738,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::section::pagina-8",
+            "parent_title": "Material introdutório",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "anchor_only",
+            "parent_expansion_reason": "context_window_limited_to_anchor",
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_introducao_pagina-08",
+                "chunk_type": "introductory_context",
+                "page_start": 8,
+                "page_end": 8,
+                "text_hash": "1dfceeb3e2a123112de85a7003255300a5b4a9f08b713e2c2caea2e31744be82"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -3.380352020263672,
+          "anchor_pre_rerank_score": 0.03128054740957967,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+          "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-6"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 3,
+          "page_end": 5,
+          "context_char_count": 6721,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+            "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "d8e57038318301f888f3d96e8e758917d51275a30a1f78a07d3312c7d730fd48"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 3,
+                "page_end": 4,
+                "text_hash": "18fd4a981f6dd1ed47e9e806310cd6ac08420d292696bd08351bd090be45853a"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-6",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 4,
+                "page_end": 5,
+                "text_hash": "9fb2437835230fae971209fbc4e2f04afca96ed5dda8b9523ac59b6ea253eae2"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-6",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -3.886536121368408,
+          "anchor_pre_rerank_score": 0.03177805800756621,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+          "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-6",
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+            "confissao-batista-londres-1689_capitulo-1_paragrafo-7"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 4,
+          "page_end": 5,
+          "context_char_count": 6360,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-1",
+            "parent_title": "CAPÍTULO 1 — AS SAGRADAS ESCRITURAS",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-6",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 4,
+                "page_end": 5,
+                "text_hash": "9fb2437835230fae971209fbc4e2f04afca96ed5dda8b9523ac59b6ea253eae2"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 4,
+                "page_end": 4,
+                "text_hash": "d8e57038318301f888f3d96e8e758917d51275a30a1f78a07d3312c7d730fd48"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-7",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 5,
+                "page_end": 5,
+                "text_hash": "f0a8a6047985422a259e0e8e97f4630141dfb3fc000102af7e644439b9489b73"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O crente pode perder a salvação?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "parent_keys": [
+        "canones-de-dort::chapter::quinto-capitulo-da-doutrina",
+        "confissao-batista-londres-1689::chapter::capitulo-18",
+        "confissao-fe-westminster::chapter::capitulo-xviii"
+      ],
+      "anchor_chunk_ids": [
+        "confissao-fe-westminster_capitulo-xviii_secao-iv",
+        "canones-de-dort_capitulo-04_rejeicao-erros_erro-03",
+        "confissao-batista-londres-1689_capitulo-18_paragrafo-4",
+        "canones-de-dort_capitulo-04_artigo-09",
+        "confissao-fe-westminster_capitulo-xviii_secao-iii"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iv",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "confessional_section",
+          "anchor_score": 5.447536468505859,
+          "anchor_pre_rerank_score": 0.015625,
+          "parent_key": "confissao-fe-westminster::chapter::capitulo-xviii",
+          "parent_title": "CAPÍTULO XVIII — DA CERTEZA DA GRAÇA E DA SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_capitulo-xviii_secao-iv",
+            "confissao-fe-westminster_capitulo-xviii_secao-i",
+            "confissao-fe-westminster_capitulo-xviii_secao-ii",
+            "confissao-fe-westminster_capitulo-xviii_secao-iii"
+          ],
+          "included_chunk_count": 4,
+          "page_start": 41,
+          "page_end": 41,
+          "context_char_count": 4705,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::chapter::capitulo-xviii",
+            "parent_title": "CAPÍTULO XVIII — DA CERTEZA DA GRAÇA E DA SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iv",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "f4a6e37b0cee2bfe21829784ef6fc04e36519b1cfa1d4d488a72ee65a1bd529d"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-i",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "52fb62c3bd24e30db5989a24bab16eb0fcf9e4023131962124c2860a14bbc292"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-ii",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "883c7decd4e6a13ecce2f08f351db0cd465350baedac38f7772b6eb0a46d582d"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iii",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "9f5dc01b7ee12f4ac4a85989759950eddb2c1e48326d209cfaa14a2810c3df66"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "canones-de-dort_capitulo-04_rejeicao-erros_erro-03",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "error_refutation",
+          "anchor_score": 3.508094072341919,
+          "anchor_pre_rerank_score": 0.03028233151183971,
+          "parent_key": "canones-de-dort::chapter::quinto-capitulo-da-doutrina",
+          "parent_title": "Quinto Capítulo da Doutrina — A Perseverança dos Santos",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-04_rejeicao-erros_erro-03",
+            "canones-de-dort_capitulo-04_rejeicao-erros_erro-02",
+            "canones-de-dort_capitulo-04_rejeicao-erros_erro-04"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 28,
+          "page_end": 29,
+          "context_char_count": 3545,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::quinto-capitulo-da-doutrina",
+            "parent_title": "Quinto Capítulo da Doutrina — A Perseverança dos Santos",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_rejeicao-erros_erro-03",
+                "chunk_type": "error_refutation",
+                "page_start": 29,
+                "page_end": 29,
+                "text_hash": "638862957120c81e837ae612d91d37c2faf82142cc8cbbe856ad9cd0c5f1236b"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_rejeicao-erros_erro-02",
+                "chunk_type": "error_refutation",
+                "page_start": 28,
+                "page_end": 29,
+                "text_hash": "435c45baba94c704d03ab679213834960e998ad61e34006e95ec505741fa0498"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_rejeicao-erros_erro-04",
+                "chunk_type": "error_refutation",
+                "page_start": 29,
+                "page_end": 29,
+                "text_hash": "2976922b2b5d3a206bee28135a1d576333aa4ea1517a158082789fa2dc3726e1"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-18_paragrafo-4",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": 2.078270673751831,
+          "anchor_pre_rerank_score": 0.030798389007344232,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-18",
+          "parent_title": "CAPÍTULO 18 — A CERTEZA DA GRAÇA E DA SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-18_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-18_paragrafo-3"
+          ],
+          "included_chunk_count": 2,
+          "page_start": 43,
+          "page_end": 46,
+          "context_char_count": 8374,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-18",
+            "parent_title": "CAPÍTULO 18 — A CERTEZA DA GRAÇA E DA SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-18_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 45,
+                "page_end": 46,
+                "text_hash": "80beedf0e9bf539675eafcfc7585a8f67968f4f6f36fc64fc32e91bc9d42f569"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-18_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 43,
+                "page_end": 45,
+                "text_hash": "fffb4aceb855115d850d6cd78acb9d9f5a8bd6a2c81e831f970af3e21da0ef3a"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "canones-de-dort_capitulo-04_artigo-09",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": 0.6150314807891846,
+          "anchor_pre_rerank_score": 0.014705882352941176,
+          "parent_key": "canones-de-dort::chapter::quinto-capitulo-da-doutrina",
+          "parent_title": "Quinto Capítulo da Doutrina — A Perseverança dos Santos",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-04_artigo-09",
+            "canones-de-dort_capitulo-04_artigo-08",
+            "canones-de-dort_capitulo-04_artigo-10"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 25,
+          "page_end": 26,
+          "context_char_count": 2868,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::quinto-capitulo-da-doutrina",
+            "parent_title": "Quinto Capítulo da Doutrina — A Perseverança dos Santos",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_artigo-09",
+                "chunk_type": "doctrinal_article",
+                "page_start": 26,
+                "page_end": 26,
+                "text_hash": "5fcbee3d82cd6c0c8ea6c9eb00b0c316305f40be17f0c252f5323ab4e8549e88"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_artigo-08",
+                "chunk_type": "doctrinal_article",
+                "page_start": 25,
+                "page_end": 26,
+                "text_hash": "e3406b3cd62b49cd47bab34b63461bdbf2addbc7485ea9ee9472688da9af16ed"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-04_artigo-10",
+                "chunk_type": "doctrinal_article",
+                "page_start": 26,
+                "page_end": 26,
+                "text_hash": "f384e220d98ccb2ffdbf28ed493044b83b74aee1c1f3b0616678d669dfa45b46"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iii",
+          "anchor_document_id": "confissao-fe-westminster",
+          "anchor_document": "Confissão de Fé de Westminster",
+          "anchor_chunk_type": "confessional_section",
+          "anchor_score": -0.005078836344182491,
+          "anchor_pre_rerank_score": 0.029138513513513514,
+          "parent_key": "confissao-fe-westminster::chapter::capitulo-xviii",
+          "parent_title": "CAPÍTULO XVIII — DA CERTEZA DA GRAÇA E DA SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-fe-westminster_capitulo-xviii_secao-iii",
+            "confissao-fe-westminster_capitulo-xviii_secao-i",
+            "confissao-fe-westminster_capitulo-xviii_secao-ii",
+            "confissao-fe-westminster_capitulo-xviii_secao-iv"
+          ],
+          "included_chunk_count": 4,
+          "page_start": 41,
+          "page_end": 41,
+          "context_char_count": 4705,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-fe-westminster",
+            "document": "Confissão de Fé de Westminster",
+            "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-fe-westminster.normalized.json",
+            "parent_key": "confissao-fe-westminster::chapter::capitulo-xviii",
+            "parent_title": "CAPÍTULO XVIII — DA CERTEZA DA GRAÇA E DA SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iii",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "9f5dc01b7ee12f4ac4a85989759950eddb2c1e48326d209cfaa14a2810c3df66"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-i",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "52fb62c3bd24e30db5989a24bab16eb0fcf9e4023131962124c2860a14bbc292"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-ii",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "883c7decd4e6a13ecce2f08f351db0cd465350baedac38f7772b6eb0a46d582d"
+              },
+              {
+                "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iv",
+                "chunk_type": "confessional_section",
+                "page_start": 41,
+                "page_end": 41,
+                "text_hash": "f4a6e37b0cee2bfe21829784ef6fc04e36519b1cfa1d4d488a72ee65a1bd529d"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que é regeneração?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689"
+      ],
+      "parent_keys": [
+        "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+        "confissao-batista-londres-1689::chapter::capitulo-13",
+        "confissao-batista-londres-1689::chapter::capitulo-15"
+      ],
+      "anchor_chunk_ids": [
+        "canones-de-dort_capitulo-03_artigo-12",
+        "confissao-batista-londres-1689_capitulo-13_paragrafo-1",
+        "canones-de-dort_capitulo-03_artigo-13",
+        "canones-de-dort_capitulo-03_artigo-16",
+        "confissao-batista-londres-1689_capitulo-15_paragrafo-1"
+      ],
+      "expansion_statuses": [
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "canones-de-dort_capitulo-03_artigo-12",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": 0.38462033867836,
+          "anchor_pre_rerank_score": 0.03278688524590164,
+          "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+          "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-03_artigo-12",
+            "canones-de-dort_capitulo-03_artigo-11",
+            "canones-de-dort_capitulo-03_artigo-13"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 18,
+          "page_end": 19,
+          "context_char_count": 3813,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+            "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-12",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 19,
+                "text_hash": "04d4bb756c0adba7bee5afc767396b482f688bf05246409d91d5a74fa30f266f"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-11",
+                "chunk_type": "doctrinal_article",
+                "page_start": 18,
+                "page_end": 18,
+                "text_hash": "c91e6ecf86a9f1c8406001e9087e4cc5a33d781515431d9472b74c0bf6119d3b"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-13",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 19,
+                "text_hash": "708fc48237fabec870d8ec3faa20bf04bd201c070c7ea7dc937a128e8195ebe1"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-13_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -2.4173238277435303,
+          "anchor_pre_rerank_score": 0.0136986301369863,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-13",
+          "parent_title": "CAPÍTULO 13 — A SANTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-13_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-13_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-13_paragrafo-3"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 32,
+          "page_end": 34,
+          "context_char_count": 5988,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-13",
+            "parent_title": "CAPÍTULO 13 — A SANTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-13_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 32,
+                "page_end": 33,
+                "text_hash": "52085c3b1dffe4e9261db1a82d9a2d38029f28a34f4f6ec53f85b14daf25de33"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-13_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 33,
+                "page_end": 33,
+                "text_hash": "e78961024092d4860fa70e163785b2dddb2adbc8552c3ab6c54119e02613c385"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-13_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 33,
+                "page_end": 34,
+                "text_hash": "b7e00346a6e63adde877026dc05a53d736703e16c8f1dc87ca7f517923b51520"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "canones-de-dort_capitulo-03_artigo-13",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": -2.531557321548462,
+          "anchor_pre_rerank_score": 0.03225806451612903,
+          "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+          "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-03_artigo-13",
+            "canones-de-dort_capitulo-03_artigo-12",
+            "canones-de-dort_capitulo-03_artigo-14"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 19,
+          "page_end": 19,
+          "context_char_count": 3496,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+            "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-13",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 19,
+                "text_hash": "708fc48237fabec870d8ec3faa20bf04bd201c070c7ea7dc937a128e8195ebe1"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-12",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 19,
+                "text_hash": "04d4bb756c0adba7bee5afc767396b482f688bf05246409d91d5a74fa30f266f"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-14",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 19,
+                "text_hash": "e347fc70d39c2e74e52bc068fbe2bfe64bcc285738e369bc1a1c7010101ced98"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "canones-de-dort_capitulo-03_artigo-16",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "doctrinal_article",
+          "anchor_score": -2.7363061904907227,
+          "anchor_pre_rerank_score": 0.028205128205128206,
+          "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+          "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "canones-de-dort_capitulo-03_artigo-16",
+            "canones-de-dort_capitulo-03_artigo-15",
+            "canones-de-dort_capitulo-03_artigo-17"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 19,
+          "page_end": 20,
+          "context_char_count": 5043,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::chapter::terceiro-e-quarto-capitulos-da-doutrina",
+            "parent_title": "Terceiro e Quarto Capítulos da Doutrina — A Corrupção do Homem, a sua Conversão a Deus e o Modo como isso Ocorre",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-16",
+                "chunk_type": "doctrinal_article",
+                "page_start": 20,
+                "page_end": 20,
+                "text_hash": "2dcf20eb35095626cf7c1ea99ce9d6318b87ac694370ee845dc3fc886d4d19fb"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-15",
+                "chunk_type": "doctrinal_article",
+                "page_start": 19,
+                "page_end": 20,
+                "text_hash": "263a8d59c26b07ae026b49010b91303273868379b98f04223be3769911b9fcfe"
+              },
+              {
+                "chunk_id": "canones-de-dort_capitulo-03_artigo-17",
+                "chunk_type": "doctrinal_article",
+                "page_start": 20,
+                "page_end": 20,
+                "text_hash": "301ae67a84e715e251b7027a99aceeafeb4d7d9444aca813a6f2d18a763f526d"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -2.8636913299560547,
+          "anchor_pre_rerank_score": 0.014492753623188406,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+          "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-5"
+          ],
+          "included_chunk_count": 5,
+          "page_start": 35,
+          "page_end": 37,
+          "context_char_count": 6853,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+            "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 35,
+                "page_end": 36,
+                "text_hash": "ee21ddbd549ef5d5193abd8b5741758862988f43ed22e5175f27752eab93affa"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "e34544d63997935edbeaac9a4ad3bf47169d17aa2f328f70b725c7c6eb163b01"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "4777933ff20b670ab52c5bcfe1db41bfd67a1daa30273c01962d8ce029f0354b"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 37,
+                "text_hash": "2c436b7dc6fb479644c2eadfff693c781c1c00977ec777ec239ef7138db60b4a"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "O que é expiação?",
+      "anchor_top_k": 5,
+      "contexts_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689"
+      ],
+      "parent_keys": [
+        "canones-de-dort::section::pagina-1",
+        "confissao-batista-londres-1689::chapter::capitulo-11",
+        "confissao-batista-londres-1689::chapter::capitulo-15",
+        "confissao-batista-londres-1689::chapter::capitulo-2"
+      ],
+      "anchor_chunk_ids": [
+        "canones-de-dort_introducao_pagina-01",
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+        "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+        "confissao-batista-londres-1689_capitulo-2_paragrafo-1",
+        "confissao-batista-londres-1689_capitulo-15_paragrafo-3"
+      ],
+      "expansion_statuses": [
+        "anchor_only",
+        "expanded"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "anchor_chunk_id": "canones-de-dort_introducao_pagina-01",
+          "anchor_document_id": "canones-de-dort",
+          "anchor_document": "Cânones de Dort",
+          "anchor_chunk_type": "introductory_context",
+          "anchor_score": -2.8270480632781982,
+          "anchor_pre_rerank_score": 0.01639344262295082,
+          "parent_key": "canones-de-dort::section::pagina-1",
+          "parent_title": "Material introdutório",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "anchor_only",
+          "included_chunk_ids": [
+            "canones-de-dort_introducao_pagina-01"
+          ],
+          "included_chunk_count": 1,
+          "page_start": 1,
+          "page_end": 1,
+          "context_char_count": 2319,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "canones-de-dort",
+            "document": "Cânones de Dort",
+            "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/canones-de-dort.normalized.json",
+            "parent_key": "canones-de-dort::section::pagina-1",
+            "parent_title": "Material introdutório",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "anchor_only",
+            "parent_expansion_reason": "context_window_limited_to_anchor",
+            "included_chunks": [
+              {
+                "chunk_id": "canones-de-dort_introducao_pagina-01",
+                "chunk_type": "introductory_context",
+                "page_start": 1,
+                "page_end": 1,
+                "text_hash": "a7b07ebe83668970654dc903d4a32ebe01cb6e35f4bcb36f4fcf31ecbca84afd"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -4.455896854400635,
+          "anchor_pre_rerank_score": 0.014285714285714285,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-4"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 29,
+          "page_end": 31,
+          "context_char_count": 5589,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 30,
+                "text_hash": "c31d708f8d5c19ffb824a31d4a4b7df6a656eccea6a9fe0ea72be7ca1d5202eb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 29,
+                "page_end": 30,
+                "text_hash": "bf87b3e66e185313a3b1664322f4562d1fe32e5300270f9cccb86c82e984316e"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 31,
+                "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 3,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -4.639720916748047,
+          "anchor_pre_rerank_score": 0.014925373134328358,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+          "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-11_paragrafo-6"
+          ],
+          "included_chunk_count": 3,
+          "page_start": 30,
+          "page_end": 31,
+          "context_char_count": 6341,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-11",
+            "parent_title": "CAPÍTULO 11 — A JUSTIFICAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 31,
+                "page_end": 31,
+                "text_hash": "031a0de4a7c7f174a2443990ac3ac0243895973166595d302f74217047e49adf"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 30,
+                "page_end": 31,
+                "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-6",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 31,
+                "page_end": 31,
+                "text_hash": "aa90f65a8471c180bd1854bcd4fd7530f93f038b46bf14d9adee1ed1f9cd74f7"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 4,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-2_paragrafo-1",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -4.8266072273254395,
+          "anchor_pre_rerank_score": 0.014285714285714285,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-2",
+          "parent_title": "CAPÍTULO 2 — DEUS E A SANTÍSSIMA TRINDADE",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "anchor_only",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-2_paragrafo-1"
+          ],
+          "included_chunk_count": 1,
+          "page_start": 6,
+          "page_end": 8,
+          "context_char_count": 5846,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-2",
+            "parent_title": "CAPÍTULO 2 — DEUS E A SANTÍSSIMA TRINDADE",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "anchor_only",
+            "parent_expansion_reason": "context_window_limited_to_anchor",
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-2_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 6,
+                "page_end": 8,
+                "text_hash": "74539cda306d205dd0771f6d8d7a090da0f45dcfdb5886b4c7d641ba66f1f262"
+              }
+            ]
+          }
+        },
+        {
+          "rank": 5,
+          "anchor_chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+          "anchor_document_id": "confissao-batista-londres-1689",
+          "anchor_document": "Confissão Batista de Londres de 1689",
+          "anchor_chunk_type": "confessional_paragraph",
+          "anchor_score": -4.940528869628906,
+          "anchor_pre_rerank_score": 0.014492753623188406,
+          "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+          "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+          "parent_strategy": "structural_window",
+          "parent_expansion_status": "expanded",
+          "included_chunk_ids": [
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+            "confissao-batista-londres-1689_capitulo-15_paragrafo-5"
+          ],
+          "included_chunk_count": 5,
+          "page_start": 35,
+          "page_end": 37,
+          "context_char_count": 6853,
+          "metadata": {
+            "corpus_id": "reformed",
+            "retrieval_namespace": "reformed_confessional",
+            "document_id": "confissao-batista-londres-1689",
+            "document": "Confissão Batista de Londres de 1689",
+            "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+            "normalized_source": "corpus/processed/normalized/reformed/confissao-batista-londres-1689.normalized.json",
+            "parent_key": "confissao-batista-londres-1689::chapter::capitulo-15",
+            "parent_title": "CAPÍTULO 15 — ARREPENDIMENTO PARA VIDA E SALVAÇÃO",
+            "parent_strategy": "structural_window",
+            "parent_expansion_status": "expanded",
+            "parent_expansion_reason": null,
+            "included_chunks": [
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 35,
+                "page_end": 36,
+                "text_hash": "ee21ddbd549ef5d5193abd8b5741758862988f43ed22e5175f27752eab93affa"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-2",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "e34544d63997935edbeaac9a4ad3bf47169d17aa2f328f70b725c7c6eb163b01"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-4",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 36,
+                "text_hash": "4777933ff20b670ab52c5bcfe1db41bfd67a1daa30273c01962d8ce029f0354b"
+              },
+              {
+                "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+                "chunk_type": "confessional_paragraph",
+                "page_start": 36,
+                "page_end": 37,
+                "text_hash": "2c436b7dc6fb479644c2eadfff693c781c1c00977ec777ec239ef7138db60b4a"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "most_retrieved_documents": {
+    "confissao-batista-londres-1689": 21,
+    "canones-de-dort": 12,
+    "confissao-fe-westminster": 6,
+    "catecismo-heidelberg": 1
+  },
+  "anchor_chunk_types": {
+    "confessional_paragraph": 21,
+    "doctrinal_article": 7,
+    "confessional_section": 4,
+    "introductory_context": 4,
+    "error_refutation": 3,
+    "catechism_question_answer": 1
+  },
+  "expansion_statuses": {
+    "expanded": 35,
+    "anchor_only": 5
+  },
+  "scope_not_executed": [
+    "final_chatbot",
+    "llm_answer_generation",
+    "openai_chat_model_call",
+    "other_traditions_evaluation",
+    "user_upload",
+    "chunk_embedding_pdf_change",
+    "new_extraction_normalization_chunking_or_indexing",
+    "evidence_based_refusal_policy"
+  ]
+}

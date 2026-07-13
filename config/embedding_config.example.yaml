@@ -1,0 +1,5 @@
+embedding_provider: openai
+model_name: text-embedding-3-large
+input_field: embedding_text
+batch_size: 64
+output_dimensions: 3072

@@ -1,8 +1,10 @@
 python-dotenv
 pydantic
 pymupdf
+openai
 chromadb
 rank-bm25
+sentence-transformers
 streamlit
 langchain
 langchain-community
@@ -13,3 +15,5 @@ scikit-learn
 numpy
 pytest
 ruff
+fastapi
+uvicorn

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "input_chunks_path": "corpus/processed/chunks/alliance/all_chunks.jsonl",
+  "filtered_chunks_path": "corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl",
+  "embeddings_path": "corpus/processed/embeddings/alliance/openai_embeddings.jsonl",
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-large",
+  "embedding_dimensions": 3072,
+  "total_chunks": 1119,
+  "eligible_chunks": 1115,
+  "excluded_chunks": 4,
+  "exclusion_reasons": {
+    "summary_or_non_retrievable_layout": 4
+  },
+  "embeddings_generated": 1115,
+  "resumed": true,
+  "api_key_available": true,
+  "api_error": null,
+  "validation_issues": [],
+  "manual_audit_paths": [
+    "reports/audits/canones-de-dort-consistency.md",
+    "reports/audits/catecismo-heidelberg-consistency.md",
+    "reports/audits/confissao-batista-londres-1689-consistency.md",
+    "reports/audits/confissao-fe-westminster-consistency.md",
+    "reports/audits/structure-inconsistencies.md"
+  ],
+  "scope_not_executed": [
+    "chromadb_index",
+    "chatbot",
+    "llm_response_generation",
+    "other_traditions_evaluation",
+    "user_upload",
+    "manual_doctrinal_text_editing",
+    "new_extraction_normalization_or_chunking"
+  ]
+}

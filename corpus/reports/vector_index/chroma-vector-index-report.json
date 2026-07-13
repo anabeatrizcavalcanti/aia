@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "embeddings_path": "corpus/processed/embeddings/alliance/openai_embeddings.jsonl",
+  "chunks_path": "corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl",
+  "persist_directory": "corpus/indexes/chroma/alliance",
+  "collection_name": "solabot_alliance_v1",
+  "distance_metric": "cosine",
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-large",
+  "embedding_dimensions": 3072,
+  "embeddings_read": 1115,
+  "chunks_indexed": 1115,
+  "collection_count": 1115,
+  "metadata_fields": [
+    "chunk_id",
+    "corpus_id",
+    "retrieval_namespace",
+    "document_id",
+    "doc_id",
+    "document",
+    "document_title",
+    "document_type",
+    "source_category",
+    "denomination",
+    "tradition",
+    "tradition_family",
+    "tradition_branch",
+    "language",
+    "chunk_type",
+    "content_role",
+    "is_doctrinal",
+    "document_structure_type",
+    "section_title",
+    "section_reference",
+    "subsection_title",
+    "chapter_title",
+    "chapter_reference",
+    "article_number",
+    "paragraph_number",
+    "paragraph_label",
+    "paragraph_number_roman",
+    "inciso",
+    "alinea",
+    "full_reference",
+    "biblical_references",
+    "page_start",
+    "page_end",
+    "source_path",
+    "normalized_source",
+    "text_hash"
+  ],
+  "validation_queries": [
+    {
+      "query": "O que a Confissão de Fé Congregacional ensina sobre justificação?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "confissao-fe-congregacional-alianca_capitulo-xii_paragrafo-i",
+          "document_id": "confissao-fe-congregacional-alianca",
+          "document": "Confissão de Fé Congregacional",
+          "chunk_type": "confession_paragraph",
+          "page_start": 16,
+          "page_end": 16,
+          "distance": 0.24271273612976074
+        },
+        {
+          "chunk_id": "confissao-fe-congregacional-alianca_capitulo-xii_paragrafo-ii",
+          "document_id": "confissao-fe-congregacional-alianca",
+          "document": "Confissão de Fé Congregacional",
+          "chunk_type": "confession_paragraph",
+          "page_start": 16,
+          "page_end": 16,
+          "distance": 0.284932017326355
+        },
+        {
+          "chunk_id": "confissao-fe-congregacional-alianca_capitulo-xii_paragrafo-vi",
+          "document_id": "confissao-fe-congregacional-alianca",
+          "document": "Confissão de Fé Congregacional",
+          "chunk_type": "confession_paragraph",
+          "page_start": 17,
+          "page_end": 17,
+          "distance": 0.3167968988418579
+        },
+        {
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 29,
+          "page_end": 29,
+          "distance": 0.32168835401535034
+        },
+        {
+          "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-i",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "confessional_section",
+          "page_start": 33,
+          "page_end": 33,
+          "distance": 0.3247566223144531
+        }
+      ],
+      "observation": "A consulta recuperou a Confissão de Fé Congregacional para um tema doutrinário."
+    },
+    {
+      "query": "Quais documentos uma igreja precisa apresentar para se filiar à Aliança?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-007",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 3,
+          "page_end": 3,
+          "distance": 0.2965828776359558
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-008",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 3,
+          "page_end": 3,
+          "distance": 0.3051018714904785
+        },
+        {
+          "chunk_id": "constituicao-alianca-2022_artigo-005_paragrafo-1o_inciso-v",
+          "document_id": "constituicao-alianca-2022",
+          "document": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "inciso",
+          "page_start": 4,
+          "page_end": 4,
+          "distance": 0.30510807037353516
+        },
+        {
+          "chunk_id": "constituicao-alianca-2022_artigo-005_paragrafo-1o_inciso-vii",
+          "document_id": "constituicao-alianca-2022",
+          "document": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "inciso",
+          "page_start": 4,
+          "page_end": 4,
+          "distance": 0.30635976791381836
+        },
+        {
+          "chunk_id": "constituicao-alianca-2022_artigo-005_paragrafo-1o_inciso-iv",
+          "document_id": "constituicao-alianca-2022",
+          "document": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "inciso",
+          "page_start": 4,
+          "page_end": 4,
+          "distance": 0.30773603916168213
+        }
+      ],
+      "observation": "A consulta normativa recuperou Constituição e/ou Regimento Interno."
+    },
+    {
+      "query": "Quais são os deveres de uma igreja local?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-020",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 6,
+          "page_end": 7,
+          "distance": 0.3338603377342224
+        },
+        {
+          "chunk_id": "confissao-batista-londres-1689_capitulo-26_paragrafo-14",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 71,
+          "page_end": 71,
+          "distance": 0.37936270236968994
+        },
+        {
+          "chunk_id": "confissao-batista-londres-1689_capitulo-26_paragrafo-12",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 70,
+          "page_end": 70,
+          "distance": 0.38181984424591064
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-019",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 6,
+          "page_end": 6,
+          "distance": 0.40725529193878174
+        },
+        {
+          "chunk_id": "confissao-batista-londres-1689_capitulo-26_paragrafo-10",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 69,
+          "page_end": 70,
+          "distance": 0.4082399010658264
+        }
+      ],
+      "observation": "A consulta normativa recuperou Constituição e/ou Regimento Interno."
+    },
+    {
+      "query": "Como funciona o processo de ordenação de ministros?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-036",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 10,
+          "page_end": 10,
+          "distance": 0.5065830945968628
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-026",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 8,
+          "page_end": 8,
+          "distance": 0.5338952541351318
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-023",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 7,
+          "page_end": 7,
+          "distance": 0.5544495582580566
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-027",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 8,
+          "page_end": 8,
+          "distance": 0.554949164390564
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-041",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 12,
+          "page_end": 12,
+          "distance": 0.5568591952323914
+        }
+      ],
+      "observation": "A consulta recuperou documentos normativos sobre ordenação ou emancipação."
+    },
+    {
+      "query": "Quais são os deveres éticos do pastor em relação à Aliança?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "codigo-etica-ministro-alianca_artigo-011",
+          "document_id": "codigo-etica-ministro-alianca",
+          "document": "Código de Ética do Ministro Congregacional",
+          "chunk_type": "ethics_article",
+          "page_start": 5,
+          "page_end": 5,
+          "distance": 0.2763436436653137
+        },
+        {
+          "chunk_id": "codigo-etica-ministro-alianca_artigo-012",
+          "document_id": "codigo-etica-ministro-alianca",
+          "document": "Código de Ética do Ministro Congregacional",
+          "chunk_type": "ethics_article",
+          "page_start": 5,
+          "page_end": 6,
+          "distance": 0.3495140075683594
+        },
+        {
+          "chunk_id": "codigo-etica-ministro-alianca_artigo-009",
+          "document_id": "codigo-etica-ministro-alianca",
+          "document": "Código de Ética do Ministro Congregacional",
+          "chunk_type": "ethics_article",
+          "page_start": 3,
+          "page_end": 4,
+          "distance": 0.3536621332168579
+        },
+        {
+          "chunk_id": "codigo-etica-ministro-alianca_artigo-013",
+          "document_id": "codigo-etica-ministro-alianca",
+          "document": "Código de Ética do Ministro Congregacional",
+          "chunk_type": "ethics_article",
+          "page_start": 6,
+          "page_end": 6,
+          "distance": 0.3686487674713135
+        },
+        {
+          "chunk_id": "constituicao-alianca-2022_artigo-013",
+          "document_id": "constituicao-alianca-2022",
+          "document": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 7,
+          "page_end": 7,
+          "distance": 0.3783438801765442
+        }
+      ],
+      "observation": "A consulta recuperou o Código de Ética do Ministro Congregacional."
+    },
+    {
+      "query": "Quais os critérios para emancipação de campos missionários?",
+      "results_count": 5,
+      "top_chunks": [
+        {
+          "chunk_id": "resolucao-alianca-01-2020_considerando-01",
+          "document_id": "resolucao-alianca-01-2020",
+          "document": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+          "chunk_type": "resolution_considerando",
+          "page_start": 2,
+          "page_end": 2,
+          "distance": 0.40881526470184326
+        },
+        {
+          "chunk_id": "resolucao-alianca-01-2020_considerando-02",
+          "document_id": "resolucao-alianca-01-2020",
+          "document": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+          "chunk_type": "resolution_considerando",
+          "page_start": 2,
+          "page_end": 2,
+          "distance": 0.429107666015625
+        },
+        {
+          "chunk_id": "resolucao-alianca-01-2020_artigo-002",
+          "document_id": "resolucao-alianca-01-2020",
+          "document": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+          "chunk_type": "resolution_article",
+          "page_start": 3,
+          "page_end": 3,
+          "distance": 0.44365960359573364
+        },
+        {
+          "chunk_id": "constituicao-alianca-2022_artigo-005_paragrafo-4o_inciso-iv_alinea-b",
+          "document_id": "constituicao-alianca-2022",
+          "document": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "alinea",
+          "page_start": 6,
+          "page_end": 6,
+          "distance": 0.4502602815628052
+        },
+        {
+          "chunk_id": "regimento-interno-alianca-2022_artigo-040",
+          "document_id": "regimento-interno-alianca-2022",
+          "document": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+          "chunk_type": "normative_article",
+          "page_start": 11,
+          "page_end": 12,
+          "distance": 0.4539536237716675
+        }
+      ],
+      "observation": "A consulta recuperou documentos normativos sobre ordenação ou emancipação."
+    }
+  ],
+  "retrieval_error": null,
+  "validation_issues": [],
+  "chromadb_available": true,
+  "scope_not_executed": [
+    "new_chunk_embeddings",
+    "chatbot",
+    "llm_response_generation",
+    "external_corpus_evaluation",
+    "user_upload",
+    "manual_doctrinal_text_editing",
+    "new_extraction_normalization_or_chunking"
+  ]
+}

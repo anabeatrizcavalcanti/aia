@@ -1,0 +1,987 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "hybrid_candidate_k": 20,
+    "final_top_k": 5,
+    "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "max_text_chars": 3500,
+    "default_filters": {
+      "corpus_id": "reformed",
+      "retrieval_namespace": "reformed_confessional"
+    }
+  },
+  "dependency_status": {
+    "sentence_transformers_available": true,
+    "rank_bm25_available": true,
+    "chromadb_available": true,
+    "openai_api_key_configured": true
+  },
+  "missing_required_inputs": [],
+  "retrieval_error": null,
+  "validation_queries": [
+    {
+      "query": "O que é o batismo?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "confessional_section"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 74,
+          "page_end": 74,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "e416543a826fbb7ba2d872b928ace0858bd335bc98440a4e8fd36c3a7e2be356",
+          "reranker_score": 4.666769027709961,
+          "pre_rerank_rank": 1,
+          "pre_rerank_score": 0.03252247488101534,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 0,
+          "text_preview": "CAPÍTULO 29 BATISMO 1. O Batismo é uma ordenança do Novo Testamento, instituída por Jesus Cristo, para ser, para a pessoa batizada, um sinal de sua comunhão com Cristo, na sua morte e ressurreição; de sua união com Ele; 1 da remissão dos pecados; 2 da consagração da pessoa a Deus, através de Jesus Cristo, para viver e andar em novidade de Vida. 3 Referênc..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "confissao-fe-westminster_capitulo-xxviii_secao-i",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "confessional_section",
+          "page_start": 54,
+          "page_end": 54,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "b1eda5d9bfda56c61577b0ea6273b92bc003a1a5803d5c6a429d56f5f2612bb7",
+          "reranker_score": 3.4914698600769043,
+          "pre_rerank_rank": 10,
+          "pre_rerank_score": 0.028373015873015873,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 8,
+          "text_preview": "CAPÍTULO XXVIII DO BATISMO I. O batismo é um sacramento do Novo Testamento, ordenado por Jesus Cristo (Mt 28:19), não somente para a solene admissão da parte batizada à igreja visível (1Co 12:13); mas, também, para ser-lhe um sinal e selo do pacto da graça (Rm 4:11 com Cl 2:11-12), de seu enxertamento em Cristo (Gl 3:27; Rm 6:5), da regeneração (Tt 3:5),..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-28_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 73,
+          "page_end": 73,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "0d46fc0903aa23ac0338fc0c14d5458995affb2e8811502477f3e7c3106b71ee",
+          "reranker_score": 0.0654543861746788,
+          "pre_rerank_rank": 9,
+          "pre_rerank_score": 0.02844551282051282,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 6,
+          "text_preview": "CAPÍTULO 28 BATISMO E CEIA DO SENHOR 1. O Batismo e a Ceia do Senhor são ordenanças que foram instituídas de maneira explícita e soberana, pelo próprio Senhor Jesus - o único Legislador. Ele determinou que sejam continuadas em sua igreja estas ordenanças, até o fim do mundo. 1 Referências bíblicas: 1 Mt.28.19,20: Ide, portanto, fazei discípulos de todas a..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-2",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 74,
+          "page_end": 74,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "a034a8ac17c9428be1288ef2cca68ebc0628fc7c7283991a2f2e9dab6e4722cc",
+          "reranker_score": -1.2073619365692139,
+          "pre_rerank_rank": 5,
+          "pre_rerank_score": 0.02976190476190476,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 1,
+          "text_preview": "CAPÍTULO 29 BATISMO 2. Somente pode ser submetidas a esta ordenança as pessoas que de fato professam arrependimento para com Deus, fé e obediência ao Senhor Jesus. 4 Referências bíblicas: 4 Mc.16.16: Quem crer e for batizado será salvo; quem, porém, não crer será condenado. At.8.36,37: Seguindo eles caminho fora, chegado a certo lugar onde havia água, dis..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-29_paragrafo-4",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 74,
+          "page_end": 75,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "9625191d3a585e454ec92a2be6065d7ec8c3f384fad20d64026a6bb97a3da29d",
+          "reranker_score": -1.5952078104019165,
+          "pre_rerank_rank": 3,
+          "pre_rerank_score": 0.030776515151515152,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -2,
+          "text_preview": "CAPÍTULO 29 BATISMO 4. Para a devida administração desta ordenança é necessária a imersão, ou seja, a submersão da pessoa na água. 6 Referências bíblicas: 6 Mt.3.16: Batizado Jesus, saiu logo da água, e eis que se lhe abriram os céus, e viu o Espírito de Deus descendo como pomba, vindo sobre ele. Jo.3.23: Ora, João estava também batizando em Enon, perto d..."
+        }
+      ]
+    },
+    {
+      "query": "O que é necessário para a salvação?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "catecismo-heidelberg",
+        "confissao-batista-londres-1689"
+      ],
+      "chunk_types": [
+        "catechism_question_answer",
+        "confessional_paragraph"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 2,
+          "page_end": 2,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "a49a8cd6f9fdc706bbe7ccd12fa27ee5be17ad557c4666cc773d609321385b80",
+          "reranker_score": -2.0728206634521484,
+          "pre_rerank_rank": 10,
+          "pre_rerank_score": 0.015384615384615385,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 9,
+          "text_preview": "CAPÍTULO 1 AS SAGRADAS ESCRITURAS 1. A Sagrada Escritura é a única regra suficiente, certa e infalível de conhecimento para a salvação, de fé e de obediência. [1] A luz da natureza, e as obras da criação e da providência, manifestam a bondade, a sabedoria e o poder de Deus, de tal modo que os homens ficam inescusáveis; contudo não são suficientes para dar..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-5",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 36,
+          "page_end": 37,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "2c436b7dc6fb479644c2eadfff693c781c1c00977ec777ec239ef7138db60b4a",
+          "reranker_score": -2.4478888511657715,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.02819138376017471,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 0,
+          "text_preview": "CAPÍTULO 15 ARREPENDIMENTO PARA VIDA E SALVAÇÃO 5. Mediante Cristo, no pacto da graça, Deus fez provisão completa para que os crentes sejam preservados na salvação. Assim como não existe pecado tão pequeno que não mereça a condenação eterna, 8 não existe pecado tão grande que possa trazer condenação sobre os que se arrependem. 9 Isso torna necessária a pr..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-14_paragrafo-2",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 34,
+          "page_end": 35,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "a82b9d827b5eb0b6ce5c8b368abdbbbb5068d6fea7a858859b516aa8eb1ad247",
+          "reranker_score": -2.480576753616333,
+          "pre_rerank_rank": 9,
+          "pre_rerank_score": 0.015384615384615385,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 6,
+          "text_preview": "CAPÍTULO 14 FÉ SALVADORA 2. Por esta fé o cristão crê ser verdadeiro tudo quanto é revelado na Palavra, 4 a qual se reveste da autoridade do próprio Deus. E também reconhece a sobreexcelência da Palavra, acima de todos os escritos e todas as demais coisas neste mundo 5 – por ela demonstrar a glória de Deus nos atributos de Deus; a excelência de Cristo na..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "catecismo-heidelberg_pergunta-040",
+          "document_id": "catecismo-heidelberg",
+          "document": "Catecismo de Heidelberg",
+          "chunk_type": "catechism_question_answer",
+          "page_start": 9,
+          "page_end": 9,
+          "source_path": "corpus/raw/reformed/O CATECISMO DE HEIDELBERG (Portuguese).pdf",
+          "text_hash": "515fea583363f56584edecb75a75d571e5ad83eba91f2001e3df8c1e4ecc2ebf",
+          "reranker_score": -3.581123113632202,
+          "pre_rerank_rank": 20,
+          "pre_rerank_score": 0.014084507042253521,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 16,
+          "text_preview": "Parte II NOSSA SALVAÇÃO Dia do Senhor 16 Deus Filho e a Nossa Redenção P.40. Por que foi necessário que Cristo se humilhasse até à morte? R. Por causa da justiça e da verdade de Deus1 a satisfação pelos nossos pecados não poderia ocorrer de outra forma senão pela morte do Filho de Deus.2 Referências bíblicas: 1. Gn 2.17. 2. Rm 8.3; Fl 2.8; Hb 2.9, 14, 15."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 36,
+          "page_end": 36,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb",
+          "reranker_score": -3.607107162475586,
+          "pre_rerank_rank": 18,
+          "pre_rerank_score": 0.014285714285714285,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 13,
+          "text_preview": "CAPÍTULO 15 ARREPENDIMENTO PARA VIDA E SALVAÇÃO 3. Este arrependimento salvador é uma graça evangélica, 4 por intermédio da qual a pessoa, por obra do Espírito Santo, é levada a sentir os múltiplos males do seu pecado, e, com fé em Cristo, humilha-se por causa do pecado, com uma tristeza santa, ódio ao pecado e repugnância a si mesma, 5 orando por perdão..."
+        }
+      ]
+    },
+    {
+      "query": "O que é eleição?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "canones-de-dort"
+      ],
+      "chunk_types": [
+        "doctrinal_article",
+        "error_refutation"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "canones-de-dort_capitulo-01_artigo-07",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 3,
+          "page_end": 3,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "42f04382fc957d3178e06be47ba0e05e48761bcdc162e7303174d15647bf023f",
+          "reranker_score": 3.167187213897705,
+          "pre_rerank_rank": 4,
+          "pre_rerank_score": 0.02938045560996381,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 3,
+          "text_preview": "Artigo 7 — Definição da Eleição A eleição é o propósito imutável de Deus pelo qual Ele, antes da fundação do mundo, segundo o soberano beneplácito da Sua vontade e por pura graça, escolheu para a salvação em Cristo — de entre toda a raça humana, caída pela própria culpa do estado original de integridade no pecado e na perdição — um número definido de pess..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "canones-de-dort_capitulo-01_artigo-09",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 4,
+          "page_end": 4,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "4a8534a25dd85925abfbd1f5a3b07ffcea5568b49e6506c2afc26f59aad7fca2",
+          "reranker_score": -0.32958459854125977,
+          "pre_rerank_rank": 8,
+          "pre_rerank_score": 0.02854251012145749,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 6,
+          "text_preview": "Artigo 9 — A eleição não se baseia em fé prevista Tal eleição não se baseia em fé prevista, em obediência da fé, santidade ou de qualquer outra boa qualidade ou disposição que seja a causa ou a condição necessária aos homens para serem eleitos; os homens, todavia, são eleitos para a fé, para a obediência da fé, para a santidade etc. A eleição é, portanto,..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "canones-de-dort_capitulo-01_artigo-10",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 4,
+          "page_end": 4,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "043f5a535f74dea3196de4215dc510b89125e0c8aee331a67994059440478e60",
+          "reranker_score": -1.4851658344268799,
+          "pre_rerank_rank": 7,
+          "pre_rerank_score": 0.028991596638655463,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 4,
+          "text_preview": "Artigo 10 — A eleição baseia-se no beneplácito de Deus A causa dessa eleição graciosa é tão-somente o beneplácito de Deus, o qual não consiste de haver Deus escolhido de entre todas as condições possíveis umas certas qualidades ou ações dos homens como requisito para a salvação; mas consiste em que Ele, de entre a multidão dos pecadores, adotou para Sua p..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-05",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "error_refutation",
+          "page_start": 8,
+          "page_end": 9,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "e76fa866bb7b266dc2874ee86595bc7a648b22dd792afb67cdbb08643ce7ac10",
+          "reranker_score": -1.595402717590332,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.03009207275993712,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -2,
+          "text_preview": "Erro 5 — A eleição incompleta e não-definitiva de pessoas específicas para a salvação dá-se com base na presciência da fé, da conversão, da santidade, da piedade que começaram ou existiram por algum tempo. A eleição completa e definitiva, no entanto, ocorreu por causa da presciência da perseverança na fé, da conversão, da santidade e da piedade até o fim...."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "canones-de-dort_capitulo-01_rejeicao-erros_erro-01",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "error_refutation",
+          "page_start": 7,
+          "page_end": 7,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "4773835f10122a2a56373a96201ca97b5551e54f3430885d8f775fb7887151fb",
+          "reranker_score": -1.8651840686798096,
+          "pre_rerank_rank": 3,
+          "pre_rerank_score": 0.029877369007803793,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -2,
+          "text_preview": "Erro 1 — O completo e total decreto da eleição para a salvação é a vontade de Deus de salvar aos que irão crer e perseverar na fé e na obediência. Quanto a esse decreto, nada mais que isso foi revelado pela Palavra de Deus. Refutação — Esse erro é um engano e contradiz claramente à Escritura que declara não somente que Deus irá salvar aos que crêem mas ta..."
+        }
+      ]
+    },
+    {
+      "query": "O que é justificação?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "confessional_section"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 29,
+          "page_end": 29,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "9afa4ce514b5f6a9878cc1b7de8f42c607441e695549032a767e9ff0d9fc9964",
+          "reranker_score": -0.11080422252416611,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.031544957774465976,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 1,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 1. Aqueles a quem Deus chama eficazmente, Ele também os justifica, gratuitamente; 1 não por infundir-lhes justiça, mas perdoando-lhes os pecados, considerando-os e aceitando-os como pessoas justas; 2 não por coisa alguma realizada neles ou por eles mesmos feita, mas unicamente por consideração a Cristo; 3 não por imputar-lhes co..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 30,
+          "page_end": 30,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "c31d708f8d5c19ffb824a31d4a4b7df6a656eccea6a9fe0ea72be7ca1d5202eb",
+          "reranker_score": -1.272689700126648,
+          "pre_rerank_rank": 9,
+          "pre_rerank_score": 0.029211087420042643,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 7,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 3. Pela sua obediência e morte, Cristo pagou plenamente a dívida de todos os que são justificados. A favor destes, pelo sacrifício de si mesmo, no sangue da sua cruz, Ele deu satisfação adequada, verdadeira e plena à justiça de Deus, quando tomou o lugar deles e recebeu a punição que a eles era devida. 8 O Pai voluntariamente co..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 31,
+          "page_end": 31,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "031a0de4a7c7f174a2443990ac3ac0243895973166595d302f74217047e49adf",
+          "reranker_score": -1.3412655591964722,
+          "pre_rerank_rank": 10,
+          "pre_rerank_score": 0.02844551282051282,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 7,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 5. Deus continua a perdoar os pecados daqueles que são justificados. 14 Embora jamais possam decair do estado de justificação, 15 eles, no entanto, podem incorrer no desagrado paternal de Deus, 16 por causa de seus pecados. E, nesse estado, eles geralmente não podem desfrutar da luz da presença de Deus, até que se humilhem, conf..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "confissao-fe-westminster_capitulo-xi_secao-i",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "confessional_section",
+          "page_start": 33,
+          "page_end": 33,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "5b8fd57af38bdbf45506f1703b9285c5fcce61ad300fcf4236d93d1d45bc8d84",
+          "reranker_score": -1.9190847873687744,
+          "pre_rerank_rank": 3,
+          "pre_rerank_score": 0.030834914611005692,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -1,
+          "text_preview": "CAPÍTULO XI DA JUSTIFICAÇÃO I. Os que Deus chama eficazmente, também livremente os justifica (Rm 8:30; Rm 3:24), não infundindo neles a justiça, mas perdoando os seus pecados e aceitando a suas pessoas como justas; não por qualquer coisa neles operada ou por eles feita, mas somente por causa de Cristo; não imputando como justiça a própria fé ou que qualqu..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-4",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 30,
+          "page_end": 31,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "e24e6bc8d086f161f9dd493215e5b96390892cf2a5a5549e15d9f92a25e993ad",
+          "reranker_score": -1.9942662715911865,
+          "pre_rerank_rank": 5,
+          "pre_rerank_score": 0.02976190476190476,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 0,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 4. Desde toda eternidade, Deus decretou justificar a todos os eleitos. 11 Vindo a plenitude do tempo, Cristo morreu pelos pecados e ressuscitou para a justificação deles. 12 Entretanto, os eleitos não são justificados individualmente enquanto o Espírito Santo não lhes aplica, em tempo oportuno, a pessoa de Cristo e os benefícios..."
+        }
+      ]
+    },
+    {
+      "query": "O que a tradição reformada ensina sobre as Escrituras?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "introductory_context"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "confissao-fe-westminster_introducao_pagina-12",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "introductory_context",
+          "page_start": 12,
+          "page_end": 12,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "b79756cd4554668a3564dc0335c436d25384ad27668a6535e9c657a04550da1f",
+          "reranker_score": 0.6452843546867371,
+          "pre_rerank_rank": 12,
+          "pre_rerank_score": 0.015873015873015872,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 11,
+          "text_preview": "13 Uma das razões para tal apreço por este documento é o fato de que ele incorpora e sistematiza dois séculos de reflexão teológica mundial por parte de igrejas oriundas da reforma em toda a Terra; reflexão esta que, segundo o ideal da Reforma Protestante, originase e limita-se ao que, a Escritura ensina, colocando-a como suprema e suficiente regra de fé..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "canones-de-dort_introducao_pagina-01",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "introductory_context",
+          "page_start": 1,
+          "page_end": 1,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "a7b07ebe83668970654dc903d4a32ebe01cb6e35f4bcb36f4fcf31ecbca84afd",
+          "reranker_score": -1.046289324760437,
+          "pre_rerank_rank": 17,
+          "pre_rerank_score": 0.014705882352941176,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 15,
+          "text_preview": "Os Cânones de Dort O terceiro dos padrões doutrinários das Igrejas Reformadas é Os Cânones de Dort, também chamado de Os Cinco Artigos Contra os Remonstrantes. Os Cânones são exposições doutrinárias que foram adotadas pelo grande Sínodo Reformado de Dort de 1618/1619. Esse Sínodo teve dimensão internacional, pois não se compunha apenas de delegados das ig..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-fe-westminster_introducao_pagina-08",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "introductory_context",
+          "page_start": 8,
+          "page_end": 8,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "1dfceeb3e2a123112de85a7003255300a5b4a9f08b713e2c2caea2e31744be82",
+          "reranker_score": -1.0743252038955688,
+          "pre_rerank_rank": 10,
+          "pre_rerank_score": 0.01639344262295082,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 7,
+          "text_preview": "9 glória de Cristo verdadeiramente entronizado no meio de Seu povo, em igrejas fiéis, faria profunda marca nos refugiados que, agora, ansiavam por semelhante reforma em sua terra. Por conseguinte, o horror que os habitantes do reino constataram ser a manifestação clara da doutrina e natureza do Anticristo romano, faria igualmente dura marca nos que ficara..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-5",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 4,
+          "page_end": 4,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "d8e57038318301f888f3d96e8e758917d51275a30a1f78a07d3312c7d730fd48",
+          "reranker_score": -3.380352020263672,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.03128054740957967,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -2,
+          "text_preview": "CAPÍTULO 1 AS SAGRADAS ESCRITURAS 5. Pelo testemunho da Igreja de Deus podemos ser movidos e persuadidos a ter em alto e reverente apreço as Sagradas Escrituras. A santidade do assunto, a eficácia da doutrina, a majestade do estilo, a harmonia de todas as partes, o propósito do todo (que é dar toda glória a Deus), a plena revelação que faz do único meio d..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-1_paragrafo-6",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 4,
+          "page_end": 5,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "9fb2437835230fae971209fbc4e2f04afca96ed5dda8b9523ac59b6ea253eae2",
+          "reranker_score": -3.886536121368408,
+          "pre_rerank_rank": 1,
+          "pre_rerank_score": 0.03177805800756621,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -4,
+          "text_preview": "CAPÍTULO 1 AS SAGRADAS ESCRITURAS 6. Todo o conselho de Deus, concernente a todas as coisas necessárias para a sua própria glória, para a salvação do homem, a fé e a vida, está expressamente declarado ou necessariamente contido na Sagrada Escritura. A ela nada em tempo algum se acrescentará, quer por nova revelação do Espírito, quer por tradições de homen..."
+        }
+      ]
+    },
+    {
+      "query": "O crente pode perder a salvação?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689",
+        "confissao-fe-westminster"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "confessional_section",
+        "doctrinal_article",
+        "error_refutation"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iv",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "confessional_section",
+          "page_start": 41,
+          "page_end": 41,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "f4a6e37b0cee2bfe21829784ef6fc04e36519b1cfa1d4d488a72ee65a1bd529d",
+          "reranker_score": 5.447536468505859,
+          "pre_rerank_rank": 9,
+          "pre_rerank_score": 0.015625,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 8,
+          "text_preview": "CAPÍTULO XVIII DA CERTEZA DA GRAÇA E DA SALVAÇÃO IV. Os verdadeiros crentes podem ter, por diversos modos, a sua segurança de salvação abalada, diminuída e interrompida por negligenciar a conservação dela, caindo em algum pecado especial que fira a consciência e entristeça o Espírito Santo, por alguma repentina e veemente tentação, retirando Deus a luz do..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "canones-de-dort_capitulo-04_rejeicao-erros_erro-03",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "error_refutation",
+          "page_start": 29,
+          "page_end": 29,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "638862957120c81e837ae612d91d37c2faf82142cc8cbbe856ad9cd0c5f1236b",
+          "reranker_score": 3.508094072341919,
+          "pre_rerank_rank": 3,
+          "pre_rerank_score": 0.03028233151183971,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 1,
+          "text_preview": "Erro 3 — Os crentes verdadeiramente regenerados não apenas podem cair completa e definitivamente da fé justificadora, e tam- bém da graça e da salvação, como de fato não raramente caem e se perdem eternamente. Refutação — Essa opinião anula a graça da justificação e da regeneração e da sua contínua preservação por meio de Cristo, e contraria as palavras c..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-18_paragrafo-4",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 45,
+          "page_end": 46,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "80beedf0e9bf539675eafcfc7585a8f67968f4f6f36fc64fc32e91bc9d42f569",
+          "reranker_score": 2.078270673751831,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.030798389007344232,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -1,
+          "text_preview": "CAPÍTULO 18 A CERTEZA DA GRAÇA E DA SALVAÇÃO 4. Os crentes verdadeiros podem ter a sua certeza de salvação abalada, diminuída ou interrompida, de diversas maneiras: por negligência na preservação dessa certeza; por caírem em algum pecado específico, que fere a consciência e entristece o Espírito; 13 por uma tentação súbita ou veemente; 14 por Deus retirar..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "canones-de-dort_capitulo-04_artigo-09",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 26,
+          "page_end": 26,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "5fcbee3d82cd6c0c8ea6c9eb00b0c316305f40be17f0c252f5323ab4e8549e88",
+          "reranker_score": 0.6150314807891846,
+          "pre_rerank_rank": 13,
+          "pre_rerank_score": 0.014705882352941176,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 9,
+          "text_preview": "Artigo 9 — A certeza dessa preservação Os próprios crentes podem ter a plena certeza da preservação do eleito para a salvação e da perseverança dos verdadeiros crentes na fé. E estão de fato convictos segundo a medida da fé de cada um deles, pela qual crêem firmemente que são e que permane- cerão membros verdadeiros e vivos da igreja e que possuem o perdã..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-fe-westminster_capitulo-xviii_secao-iii",
+          "document_id": "confissao-fe-westminster",
+          "document": "Confissão de Fé de Westminster",
+          "chunk_type": "confessional_section",
+          "page_start": 41,
+          "page_end": 41,
+          "source_path": "corpus/raw/reformed/A_Confissao_de_Fe_de_Westminster_1647_Or.pdf",
+          "text_hash": "9f5dc01b7ee12f4ac4a85989759950eddb2c1e48326d209cfaa14a2810c3df66",
+          "reranker_score": -0.005078836344182491,
+          "pre_rerank_rank": 5,
+          "pre_rerank_score": 0.029138513513513514,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 0,
+          "text_preview": "CAPÍTULO XVIII DA CERTEZA DA GRAÇA E DA SALVAÇÃO III. Esta segurança infalível não pertence de tal modo à essência da fé, que um verdadeiro crente, antes de possuí-la, não tenha de esperar muito e lutar com muitas dificuldades (1Jo 5:13; Is 50:10; Mc 9:24; Sl cap. 88; Sl 77:1-12); contudo, sendo pelo Espírito habilitado a conhecer as coisas que lhe são li..."
+        }
+      ]
+    },
+    {
+      "query": "O que é regeneração?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "doctrinal_article"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "canones-de-dort_capitulo-03_artigo-12",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 19,
+          "page_end": 19,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "04d4bb756c0adba7bee5afc767396b482f688bf05246409d91d5a74fa30f266f",
+          "reranker_score": 0.38462033867836,
+          "pre_rerank_rank": 1,
+          "pre_rerank_score": 0.03278688524590164,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 0,
+          "text_preview": "Artigo 12 — A regeneração é obra de Deus somente Esta conversão é aquela regeneração, nova criação, ressurgir dos mortos vivificação, tão exaltada nas Escrituras, a qual Deus opera em nós a despeito de nós. Essa regeneração, contudo, não se realiza de modo algum pelo ensino exterior, pela persuasão moral ou por um modo tal de operação que, após ter Deus f..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-13_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 32,
+          "page_end": 33,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "52085c3b1dffe4e9261db1a82d9a2d38029f28a34f4f6ec53f85b14daf25de33",
+          "reranker_score": -2.4173238277435303,
+          "pre_rerank_rank": 20,
+          "pre_rerank_score": 0.0136986301369863,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 18,
+          "text_preview": "CAPÍTULO 13 A SANTIFICAÇÃO 1. Os que estão unidos a Cristo, tendo sido chamados eficazmente e regenerados, possuem agora um novo coração e um novo espírito, criados nele por mérito da morte e da ressurreição de Cristo; 1 e, por esse mesmo mérito, são mais e mais santificados individualmente, pela atuação da Palavra e do Espírito de Cristo neles habitando...."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "canones-de-dort_capitulo-03_artigo-13",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 19,
+          "page_end": 19,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "708fc48237fabec870d8ec3faa20bf04bd201c070c7ea7dc937a128e8195ebe1",
+          "reranker_score": -2.531557321548462,
+          "pre_rerank_rank": 2,
+          "pre_rerank_score": 0.03225806451612903,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": -1,
+          "text_preview": "Artigo 13 — A regeneração é incompreensível Na vida presente, não é possível aos que crêem compreenderem totalmente o modo como Deus realiza esta obra. Contudo, lhes é suficiente conhecer e sentir que por essa graça de Deus eles crêem de coração e amam o Seu Salvador. Referências bíblicas: Jo 3.8; Rm 10.9."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "canones-de-dort_capitulo-03_artigo-16",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "doctrinal_article",
+          "page_start": 20,
+          "page_end": 20,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "2dcf20eb35095626cf7c1ea99ce9d6318b87ac694370ee845dc3fc886d4d19fb",
+          "reranker_score": -2.7363061904907227,
+          "pre_rerank_rank": 6,
+          "pre_rerank_score": 0.028205128205128206,
+          "pre_rerank_sources": [
+            "bm25",
+            "vector"
+          ],
+          "rank_delta": 2,
+          "text_preview": "Artigo 16 — A vontade do homem não é eliminada, mas é vivificada O homem, pela sua queda, não deixou de ser homem dotado de inteligência e vontade. O pecado que impregnou toda a raça humana não privou o homem da sua natureza humana, mas trouxe sobre ele a depravação e a morte espiritual. Assim também a graça divina da regeneração não atua sobre os homens..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 35,
+          "page_end": 36,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "ee21ddbd549ef5d5193abd8b5741758862988f43ed22e5175f27752eab93affa",
+          "reranker_score": -2.8636913299560547,
+          "pre_rerank_rank": 13,
+          "pre_rerank_score": 0.014492753623188406,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 8,
+          "text_preview": "CAPÍTULO 15 ARREPENDIMENTO PARA VIDA E SALVAÇÃO 1. Há entre os eleitos aqueles cuja conversão não se dá senão após uma certa idade, depois de eles terem vivido algum tempo em seu estado natural e servido a vários prazeres e concupiscências. Mas Deus, ao chamá-lo eficazmente, concede-lhes o arrependimento para vida. 1 Referências bíblicas: 1 Tt.3.2-5: ......"
+        }
+      ]
+    },
+    {
+      "query": "O que é expiação?",
+      "hybrid_candidate_k": 20,
+      "final_top_k": 5,
+      "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "hybrid_candidates_count": 20,
+      "results_count": 5,
+      "documents": [
+        "canones-de-dort",
+        "confissao-batista-londres-1689"
+      ],
+      "chunk_types": [
+        "confessional_paragraph",
+        "introductory_context"
+      ],
+      "results": [
+        {
+          "final_rank": 1,
+          "chunk_id": "canones-de-dort_introducao_pagina-01",
+          "document_id": "canones-de-dort",
+          "document": "Cânones de Dort",
+          "chunk_type": "introductory_context",
+          "page_start": 1,
+          "page_end": 1,
+          "source_path": "corpus/raw/reformed/Os-Canones-de-Dort.pdf",
+          "text_hash": "a7b07ebe83668970654dc903d4a32ebe01cb6e35f4bcb36f4fcf31ecbca84afd",
+          "reranker_score": -2.8270480632781982,
+          "pre_rerank_rank": 3,
+          "pre_rerank_score": 0.01639344262295082,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 2,
+          "text_preview": "Os Cânones de Dort O terceiro dos padrões doutrinários das Igrejas Reformadas é Os Cânones de Dort, também chamado de Os Cinco Artigos Contra os Remonstrantes. Os Cânones são exposições doutrinárias que foram adotadas pelo grande Sínodo Reformado de Dort de 1618/1619. Esse Sínodo teve dimensão internacional, pois não se compunha apenas de delegados das ig..."
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-3",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 30,
+          "page_end": 30,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "c31d708f8d5c19ffb824a31d4a4b7df6a656eccea6a9fe0ea72be7ca1d5202eb",
+          "reranker_score": -4.455896854400635,
+          "pre_rerank_rank": 18,
+          "pre_rerank_score": 0.014285714285714285,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 16,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 3. Pela sua obediência e morte, Cristo pagou plenamente a dívida de todos os que são justificados. A favor destes, pelo sacrifício de si mesmo, no sangue da sua cruz, Ele deu satisfação adequada, verdadeira e plena à justiça de Deus, quando tomou o lugar deles e recebeu a punição que a eles era devida. 8 O Pai voluntariamente co..."
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-11_paragrafo-5",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 31,
+          "page_end": 31,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "031a0de4a7c7f174a2443990ac3ac0243895973166595d302f74217047e49adf",
+          "reranker_score": -4.639720916748047,
+          "pre_rerank_rank": 12,
+          "pre_rerank_score": 0.014925373134328358,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 9,
+          "text_preview": "CAPÍTULO 11 A JUSTIFICAÇÃO 5. Deus continua a perdoar os pecados daqueles que são justificados. 14 Embora jamais possam decair do estado de justificação, 15 eles, no entanto, podem incorrer no desagrado paternal de Deus, 16 por causa de seus pecados. E, nesse estado, eles geralmente não podem desfrutar da luz da presença de Deus, até que se humilhem, conf..."
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-2_paragrafo-1",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 6,
+          "page_end": 8,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "74539cda306d205dd0771f6d8d7a090da0f45dcfdb5886b4c7d641ba66f1f262",
+          "reranker_score": -4.8266072273254395,
+          "pre_rerank_rank": 19,
+          "pre_rerank_score": 0.014285714285714285,
+          "pre_rerank_sources": [
+            "bm25"
+          ],
+          "rank_delta": 15,
+          "text_preview": "CAPÍTULO 2 DEUS E A SANTÍSSIMA TRINDADE 1. O Senhor nosso Deus é somente um, o Deus vivo e verdadeiro, [1] cuja subsistência está em si mesmo e provém de si mesmo; [2] infinito em seu ser e perfeição, cuja essência por ninguém pode ser compreendida, senão por Ele mesmo. [3] Ele é um espírito puríssimo, [4] invisível, sem corpo, membros ou paixões; o único..."
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "confissao-batista-londres-1689_capitulo-15_paragrafo-3",
+          "document_id": "confissao-batista-londres-1689",
+          "document": "Confissão Batista de Londres de 1689",
+          "chunk_type": "confessional_paragraph",
+          "page_start": 36,
+          "page_end": 36,
+          "source_path": "corpus/raw/reformed/A Confissão de Fé Batista de Londres de 1689.pdf",
+          "text_hash": "ec0b725793c94e31b9c6293e6983d120e801c94af9a37bd55ff4566c33efb0bb",
+          "reranker_score": -4.940528869628906,
+          "pre_rerank_rank": 16,
+          "pre_rerank_score": 0.014492753623188406,
+          "pre_rerank_sources": [
+            "vector"
+          ],
+          "rank_delta": 11,
+          "text_preview": "CAPÍTULO 15 ARREPENDIMENTO PARA VIDA E SALVAÇÃO 3. Este arrependimento salvador é uma graça evangélica, 4 por intermédio da qual a pessoa, por obra do Espírito Santo, é levada a sentir os múltiplos males do seu pecado, e, com fé em Cristo, humilha-se por causa do pecado, com uma tristeza santa, ódio ao pecado e repugnância a si mesma, 5 orando por perdão..."
+        }
+      ]
+    }
+  ],
+  "ranking_changes": {
+    "items_with_rank_delta": 40,
+    "moved_up": 27,
+    "moved_down": 8,
+    "unchanged": 5,
+    "max_position_gain": 18,
+    "max_position_loss": -4
+  },
+  "most_retrieved_documents": {
+    "confissao-batista-londres-1689": 21,
+    "canones-de-dort": 12,
+    "confissao-fe-westminster": 6,
+    "catecismo-heidelberg": 1
+  },
+  "most_retrieved_chunk_types": {
+    "confessional_paragraph": 21,
+    "doctrinal_article": 7,
+    "confessional_section": 4,
+    "introductory_context": 4,
+    "error_refutation": 3,
+    "catechism_question_answer": 1
+  },
+  "scope_not_executed": [
+    "final_chatbot",
+    "llm_answer_generation",
+    "openai_chat_model_call",
+    "other_traditions_evaluation",
+    "user_upload",
+    "chunk_embedding_pdf_change",
+    "new_extraction_normalization_chunking_or_indexing",
+    "parent_hierarchical_retrieval",
+    "evidence_based_refusal_policy"
+  ]
+}

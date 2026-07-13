@@ -1,0 +1,13 @@
+{
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-large",
+  "embedding_dimensions": 3072,
+  "input_chunks_path": "corpus/processed/chunks/alliance/all_chunks.jsonl",
+  "filtered_chunks_path": "corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl",
+  "embeddings_path": "corpus/processed/embeddings/alliance/openai_embeddings.jsonl",
+  "total_chunks": 1119,
+  "eligible_chunks": 1115,
+  "excluded_chunks": 4,
+  "embeddings_generated": 1115,
+  "status": "PASS"
+}

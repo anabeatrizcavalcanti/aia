@@ -1,8 +1,10 @@
 corpus:
-  id: reformed
-  name: Corpus reformado principal
-  description: Documentos confessionais reformados controlados pela pesquisadora.
-  raw_path: corpus/raw/reformed
+  id: alliance_documents
+  name: Documentos doutrinários e normativos da Aliança
+  description: Corpus controlado com documentos confessionais, regimentais, éticos e administrativos da Aliança.
+  raw_path:
+    - corpus/raw/reformed
+    - corpus/raw/normative
   processed_path: corpus/processed
 
 documents:
@@ -18,3 +20,18 @@ documents:
   - id: london_baptist_confession_1689
     title: Confissão Batista de Londres de 1689
     tradition: batista_reformada
+  - id: congregational_confession_alliance
+    title: Confissão de Fé Congregacional
+    tradition: congregacional
+  - id: alliance_constitution_2022
+    title: Constituição da Aliança
+    tradition: congregacional
+  - id: alliance_internal_regiment_2022
+    title: Regimento Interno da Aliança
+    tradition: congregacional
+  - id: congregational_minister_ethics_code
+    title: Código de Ética do Ministro Congregacional
+    tradition: congregacional
+  - id: alliance_resolution_01_2020
+    title: Resolução Aliança nº 01/2020
+    tradition: congregacional

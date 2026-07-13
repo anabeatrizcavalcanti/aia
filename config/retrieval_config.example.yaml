@@ -1,11 +1,83 @@
 retrieval:
+  vector_store: chromadb
+  persist_directory: corpus/indexes/chroma/alliance
+  collection_name: solabot_alliance_v1
+  embedding_provider: openai
+  embedding_model: text-embedding-3-large
+  embedding_dimensions: 3072
   top_k: 5
-  score_threshold: 0.2
-  active_corpus: reformed
+  default_filters: {}
+  return_fields:
+    - chunk_id
+    - doc_id
+    - document_id
+    - document
+    - document_title
+    - document_type
+    - source_category
+    - denomination
+    - tradition
+    - chunk_type
+    - content_role
+    - document_structure_type
+    - section_title
+    - section_reference
+    - subsection_title
+    - chapter_title
+    - chapter_reference
+    - article_number
+    - paragraph_number
+    - inciso
+    - alinea
+    - full_reference
+    - biblical_references
+    - page_start
+    - page_end
+    - source_path
+    - text_hash
 
-embeddings:
-  provider: openai
+hybrid_retrieval:
+  vector_candidate_k: 40
+  bm25_candidate_k: 40
+  final_top_k: 5
+  rrf_k: 60
+  bm25_text_field: embedding_text
+  default_filters: {}
 
-vector_store:
-  provider: chromadb
-  persist_directory: corpus/indexes/chroma
+reranker_retrieval:
+  enabled: true
+  provider: sentence_transformers
+  model_name: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+  hybrid_candidate_k: 40
+  final_top_k: 30
+  max_text_chars: 3500
+  include_metadata_in_reranker_text: true
+
+hierarchical_retrieval:
+  enabled: true
+  strategy: structural_window
+  anchor_source: reranked_retriever
+  reranked_top_k: 30
+  parent_context_max_chars: 9000
+  sibling_window_before: 1
+  sibling_window_after: 1
+  include_full_parent_when_small: true
+  full_parent_max_chars: 7000
+  include_metadata_header: true
+  preserve_anchor_first: true
+
+retrieval_pipeline:
+  enabled: true
+  source: hierarchical_retriever
+  final_context_top_k: 4
+  max_total_context_chars: 18000
+  max_context_chars_per_parent: 9000
+  consolidate_by_parent_key: true
+  deduplicate_included_chunks: true
+  prefer_expanded_contexts: true
+  reduce_introductory_context_for_doctrinal_queries: true
+  keep_anchor_only_when_no_expanded_alternative: true
+  preserve_document_diversity: true
+  max_contexts_per_parent_key: 1
+  include_context_package_header: true
+  include_source_map: true

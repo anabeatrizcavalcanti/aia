@@ -1,14 +1,19 @@
-"""
-Reordenação de candidatos por Cross-Encoder.
+"""Compatibilidade para imports antigos do reranker.
+
+O caminho atual usa ``cross_encoder_reranker.CrossEncoderReranker`` e
+``reranked_retriever.RerankedRetriever``.
 """
 
+from sola_bot.retrieval.cross_encoder_reranker import (
+    CrossEncoderReranker,
+    CrossEncoderRerankerError,
+    build_reranker_text,
+)
+from sola_bot.retrieval.reranked_retriever import RerankedRetriever
 
-def rerank_with_cross_encoder(
-    query: str,
-    candidates: list[dict[str, str]],
-    top_k: int = 5,
-) -> list[dict[str, str]]:
-    """
-    Reordena candidatos avaliando conjuntamente pergunta e chunk.
-    """
-    raise NotImplementedError("Cross-Encoder reranking is not implemented yet.")
+__all__ = [
+    "CrossEncoderReranker",
+    "CrossEncoderRerankerError",
+    "RerankedRetriever",
+    "build_reranker_text",
+]
