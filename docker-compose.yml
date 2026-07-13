@@ -14,6 +14,7 @@ services:
       HF_HOME: /app/storage/huggingface
       RERANKER_ENABLED: "true"
       RERANKER_MODEL: cross-encoder/ms-marco-TinyBERT-L2-v2
+      RERANKER_UNLOAD_AFTER_REQUEST: "true"
       RERANKED_TOP_K: "12"
       HYBRID_CANDIDATE_K: "16"
       RERANKER_MAX_TEXT_CHARS: "1800"

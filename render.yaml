@@ -23,6 +23,8 @@ services:
         value: "true"
       - key: RERANKER_MODEL
         value: cross-encoder/ms-marco-TinyBERT-L2-v2
+      - key: RERANKER_UNLOAD_AFTER_REQUEST
+        value: "true"
       - key: RERANKED_TOP_K
         value: "12"
       - key: HYBRID_CANDIDATE_K

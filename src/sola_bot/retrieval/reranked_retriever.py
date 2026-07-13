@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gc
 import os
 from typing import Any
 
@@ -31,6 +32,7 @@ class RerankedRetriever:
         self.reranker_model = os.getenv("RERANKER_MODEL", reranker_model).strip() or reranker_model
         self.max_text_chars = _int_env("RERANKER_MAX_TEXT_CHARS", max_text_chars)
         self.include_metadata = include_metadata
+        self.unload_after_request = _bool_env("RERANKER_UNLOAD_AFTER_REQUEST", False)
         self.hybrid_retriever = HybridRetriever(
             vector_candidate_k=hybrid_candidate_k,
             bm25_candidate_k=hybrid_candidate_k,
@@ -38,12 +40,14 @@ class RerankedRetriever:
         )
         self.reranker_enabled = _reranker_enabled()
         self.reranker = None
-        if self.reranker_enabled:
+        if self.reranker_enabled and not self.unload_after_request:
             self.reranker = reranker or CrossEncoderReranker(
                 model_name=self.reranker_model,
                 max_text_chars=self.max_text_chars,
                 include_metadata=include_metadata,
             )
+        elif reranker is not None:
+            self.reranker = reranker
 
     def retrieve(
         self,
@@ -59,12 +63,34 @@ class RerankedRetriever:
             filters=filters,
         )
         if self.reranker is None:
-            return [_with_skipped_reranker_metadata(result) for result in candidates[:final_top_k]]
+            if not self.reranker_enabled:
+                return [_with_skipped_reranker_metadata(result) for result in candidates[:final_top_k]]
+            reranker = self._create_reranker()
+            try:
+                return reranker.rerank(query=query, candidates=candidates, top_k=final_top_k)
+            finally:
+                if self.unload_after_request:
+                    del reranker
+                    gc.collect()
         return self.reranker.rerank(query=query, candidates=candidates, top_k=final_top_k)
+
+    def _create_reranker(self) -> CrossEncoderReranker:
+        return CrossEncoderReranker(
+            model_name=self.reranker_model,
+            max_text_chars=self.max_text_chars,
+            include_metadata=self.include_metadata,
+        )
 
 
 def _reranker_enabled() -> bool:
     value = os.getenv("RERANKER_ENABLED", "true").strip().lower()
+    return value not in {"0", "false", "no", "off"}
+
+
+def _bool_env(name: str, default: bool) -> bool:
+    value = os.getenv(name, "").strip().lower()
+    if not value:
+        return default
     return value not in {"0", "false", "no", "off"}
 
 

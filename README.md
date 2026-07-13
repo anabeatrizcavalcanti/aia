@@ -408,12 +408,13 @@ Para caber melhor no plano gratuito, o reranker continua ativo, mas com carga re
 ```bash
 RERANKER_ENABLED=true
 RERANKER_MODEL=cross-encoder/ms-marco-TinyBERT-L2-v2
+RERANKER_UNLOAD_AFTER_REQUEST=true
 RERANKED_TOP_K=12
 HYBRID_CANDIDATE_K=16
 RERANKER_MAX_TEXT_CHARS=1800
 ```
 
-Isso preserva a etapa metodologica de reranking sem tentar reordenar dezenas de textos longos em uma instancia pequena. O Dockerfile baixa o modelo do reranker durante o build para evitar que a primeira pergunta do usuario tente baixar o modelo em runtime. Em ambiente local ou pago, use o modelo multilingue completo `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`.
+Isso preserva a etapa metodologica de reranking sem tentar reordenar dezenas de textos longos em uma instancia pequena. O Dockerfile baixa o modelo do reranker durante o build para evitar que a primeira pergunta do usuario tente baixar o modelo em runtime. No plano gratuito, o reranker e descarregado da memoria apos cada pergunta para reduzir risco de `502` por memoria. Em ambiente local ou pago, use o modelo multilingue completo `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`.
 
 ## Endpoints Principais
 
