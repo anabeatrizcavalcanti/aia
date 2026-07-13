@@ -403,6 +403,18 @@ Passos no Render:
 
 Observacoes do Render Free: o servico pode dormir apos inatividade, a primeira resposta depois de acordar pode demorar e arquivos criados em runtime podem ser perdidos em reinicios. Como o corpus esta dentro da imagem, ele volta a existir a cada deploy/restart.
 
+Para caber melhor no plano gratuito, o reranker continua ativo, mas com carga reduzida:
+
+```bash
+RERANKER_ENABLED=true
+RERANKER_MODEL=cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+RERANKED_TOP_K=12
+HYBRID_CANDIDATE_K=16
+RERANKER_MAX_TEXT_CHARS=1800
+```
+
+Isso preserva a etapa metodologica de reranking sem tentar reordenar dezenas de textos longos em uma instancia pequena. O Dockerfile baixa o modelo do reranker durante o build para evitar que a primeira pergunta do usuario tente baixar o modelo em runtime.
+
 ## Endpoints Principais
 
 - `GET /api/health`

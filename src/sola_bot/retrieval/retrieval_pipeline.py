@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from sola_bot.retrieval.context_consolidator import (
@@ -30,8 +31,8 @@ class RetrievalPipeline:
         self.final_context_top_k = final_context_top_k
         self.max_total_context_chars = max_total_context_chars
         self.max_context_chars_per_parent = max_context_chars_per_parent
-        anchor_candidate_k = max(30, final_context_top_k * 8)
-        hybrid_candidate_k = max(40, final_context_top_k * 10)
+        anchor_candidate_k = _int_env("RERANKED_TOP_K", max(30, final_context_top_k * 8))
+        hybrid_candidate_k = _int_env("HYBRID_CANDIDATE_K", max(40, final_context_top_k * 10))
         self.hierarchical_retriever = hierarchical_retriever or HierarchicalRetriever(
             reranked_top_k=anchor_candidate_k,
             reranked_retriever=RerankedRetriever(
@@ -127,3 +128,14 @@ class RetrievalPipeline:
             return retry_package
 
         return package
+
+
+def _int_env(name: str, default: int) -> int:
+    value = os.getenv(name, "").strip()
+    if not value:
+        return default
+    try:
+        parsed = int(value)
+    except ValueError:
+        return default
+    return max(1, parsed)

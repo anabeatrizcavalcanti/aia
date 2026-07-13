@@ -281,6 +281,24 @@ function App() {
     }
   }
 
+  async function readJsonResponse(response, label) {
+    const text = await response.text();
+    if (!text.trim()) {
+      throw new Error(`${label} retornou HTTP ${response.status} sem corpo.`);
+    }
+    let payload;
+    try {
+      payload = JSON.parse(text);
+    } catch {
+      throw new Error(`${label} retornou HTTP ${response.status} sem JSON válido: ${text.slice(0, 180)}`);
+    }
+    if (!response.ok) {
+      const message = payload.message || payload.detail || `HTTP ${response.status}`;
+      throw new Error(`${label}: ${message}`);
+    }
+    return payload;
+  }
+
   async function sendQuestion(nextQuestion) {
     const cleanQuestion = nextQuestion.trim();
     if (!cleanQuestion || isLoading) return;
@@ -307,7 +325,7 @@ function App() {
         }),
       });
 
-      const payload = await response.json();
+      const payload = await readJsonResponse(response, "API de chat");
       answerPayload = payload;
       setMessages((current) => [
         ...current,
@@ -358,7 +376,7 @@ function App() {
         throw new Error(`HTTP ${response.status}`);
       }
 
-      const payload = await response.json();
+      const payload = await readJsonResponse(response, "API de sugestões");
       const nextSuggestions = Array.isArray(payload.suggestions)
         ? payload.suggestions
             .map((suggestion, index) => hydrateSuggestion(suggestion, index))

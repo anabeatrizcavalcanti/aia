@@ -19,6 +19,16 @@ services:
         value: solabot_alliance_v1
       - key: HF_HOME
         value: /app/.cache/huggingface
+      - key: RERANKER_ENABLED
+        value: "true"
+      - key: RERANKER_MODEL
+        value: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+      - key: RERANKED_TOP_K
+        value: "12"
+      - key: HYBRID_CANDIDATE_K
+        value: "16"
+      - key: RERANKER_MAX_TEXT_CHARS
+        value: "1800"
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_CHAT_MODEL
