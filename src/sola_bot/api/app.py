@@ -74,6 +74,11 @@ def get_generator() -> RagGenerator:
 @app.get("/", response_model=None)
 def index():
     """Serve a interface web local."""
+    return serve_web_index()
+
+
+def serve_web_index():
+    """Retorna o index.html buildado pelo Vite."""
     index_path = WEB_DIST_DIR / "index.html"
     if not index_path.exists():
         index_path = WEB_DIR / "index.html"
@@ -168,6 +173,14 @@ def suggestions(request: SuggestionRequest) -> JSONResponse:
         )
 
     return JSONResponse(content={"status": "ok", "suggestions": suggested_questions})
+
+
+@app.get("/{path:path}", response_model=None)
+def web_fallback(path: str):
+    """Serve a interface React para rotas do frontend."""
+    if path.startswith("api/") or path.startswith("assets/") or path.startswith("static/"):
+        return JSONResponse(status_code=404, content={"detail": "Not Found"})
+    return serve_web_index()
 
 
 def build_filters(document_id: str | None, chunk_type: str | None) -> dict[str, str] | None:
