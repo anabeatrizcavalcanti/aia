@@ -9,7 +9,6 @@ __pycache__
 node_modules
 web/node_modules
 web/dist
-runtime_artifacts
 runtime_logs
 corpus
 corpus/reports

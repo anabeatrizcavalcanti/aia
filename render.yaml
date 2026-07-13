@@ -2,7 +2,7 @@ services:
   - type: web
     name: solabot
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /api/health
     envVars:
       - key: HOST
@@ -10,15 +10,15 @@ services:
       - key: PORT
         value: 10000
       - key: RAG_CORPUS_DIR
-        value: /app/storage/corpus
+        value: /app/corpus
       - key: CHROMA_PERSIST_DIRECTORY
-        value: /app/storage/corpus/indexes/chroma/alliance
+        value: /app/corpus/indexes/chroma/alliance
       - key: RAG_CHUNKS_PATH
-        value: /app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+        value: /app/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
       - key: CHROMA_COLLECTION_NAME
         value: solabot_alliance_v1
       - key: HF_HOME
-        value: /app/storage/huggingface
+        value: /app/.cache/huggingface
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_CHAT_MODEL
@@ -29,7 +29,3 @@ services:
         sync: false
       - key: LANGSMITH_PROJECT
         value: solabot-production
-    disk:
-      name: solabot-data
-      mountPath: /app/storage
-      sizeGB: 1

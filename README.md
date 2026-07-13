@@ -325,7 +325,7 @@ Docker nao e obrigatorio para desenvolver localmente. O caminho mais simples con
 python scripts/run_web_chat.py
 ```
 
-Use Docker quando quiser empacotar backend e frontend buildado em um ambiente reproduzivel. Os dados do RAG ficam fora da imagem e sao montados como volume.
+Use Docker quando quiser empacotar backend e frontend buildado em um ambiente reproduzivel. Localmente, o Compose monta `./corpus` como volume. No Render Free, os dados do RAG entram na imagem pelo arquivo `runtime_artifacts/solabot-runtime-corpus.tar.gz`.
 
 Antes de rodar o container, confirme que os artefatos de runtime existem localmente:
 
@@ -338,7 +338,7 @@ Com Compose:
 docker compose up --build
 ```
 
-O Compose monta `./corpus` em `/app/storage/corpus` dentro do container.
+O Compose monta `./corpus` em `/app/storage/corpus` dentro do container para facilitar teste local.
 
 Execucao direta equivalente:
 
@@ -353,18 +353,30 @@ A aplicacao ficara em:
 http://127.0.0.1:8000
 ```
 
-## Deploy no Render com Disco Persistente
+## Deploy Gratis no Render
 
-A opcao mais limpa para producao e manter o Git/Docker somente com o codigo e colocar os artefatos RAG em um disco persistente do Render.
+No Render Free, nao ha disco persistente. Por isso, o pacote de dados RAG precisa ser versionado e copiado para dentro da imagem Docker.
 
 Arquitetura:
 
 ```txt
-GitHub/Docker image: codigo, frontend buildado e dependencias
-Render persistent disk: corpus/processed/chunks, corpus/indexes/chroma e manifestos
+GitHub/Docker image: codigo, frontend buildado, dependencias e runtime_artifacts/solabot-runtime-corpus.tar.gz
+Container em runtime: extrai o pacote para /app/corpus durante o build da imagem
 ```
 
-O arquivo `render.yaml` ja declara um Web Service Docker com disco montado em `/app/storage`. No Render, configure as variaveis sensiveis no painel:
+Antes do deploy, gere ou atualize o pacote de dados:
+
+```bash
+python scripts/deployment/create_runtime_corpus_archive.py
+```
+
+O arquivo gerado deve existir e ser commitado:
+
+```txt
+runtime_artifacts/solabot-runtime-corpus.tar.gz
+```
+
+O arquivo `render.yaml` declara um Web Service Docker gratuito. No Render, configure as variaveis sensiveis no painel:
 
 ```bash
 OPENAI_API_KEY=...
@@ -374,41 +386,22 @@ LANGSMITH_API_KEY=...
 As variaveis de dados ficam assim:
 
 ```bash
-RAG_CORPUS_DIR=/app/storage/corpus
-RAG_CHUNKS_PATH=/app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
-CHROMA_PERSIST_DIRECTORY=/app/storage/corpus/indexes/chroma/alliance
+RAG_CORPUS_DIR=/app/corpus
+RAG_CHUNKS_PATH=/app/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+CHROMA_PERSIST_DIRECTORY=/app/corpus/indexes/chroma/alliance
 CHROMA_COLLECTION_NAME=solabot_alliance_v1
 ```
 
-Para preparar o pacote de dados local:
+Passos no Render:
 
-```bash
-python scripts/deployment/create_runtime_corpus_archive.py
-```
+1. Clique em `New` > `Blueprint`.
+2. Selecione o repositorio.
+3. Use a branch com este commit.
+4. Use `render.yaml` como Blueprint Path.
+5. Preencha `OPENAI_API_KEY`.
+6. Crie o servico.
 
-Isso gera:
-
-```txt
-runtime_artifacts/solabot-runtime-corpus.tar.gz
-```
-
-Depois de criar o servico no Render e anexar o disco, envie esse arquivo para o servico via SSH/SCP ou pelo Shell do Render e extraia dentro de `/app/storage`:
-
-```bash
-cd /app/storage
-tar -xzf solabot-runtime-corpus.tar.gz
-```
-
-Depois da extracao, estes caminhos devem existir no Render:
-
-```txt
-/app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
-/app/storage/corpus/indexes/chroma/alliance/
-/app/storage/corpus/raw/reformed_manifest.json
-/app/storage/corpus/raw/normative_manifest.json
-```
-
-Observacoes do Render: web services precisam escutar em `0.0.0.0` e na porta `PORT`; o script `scripts/run_web_chat.py` ja respeita essas variaveis. Discos persistentes preservam somente arquivos dentro do mount path e ficam disponiveis apenas em runtime, nao durante o build.
+Observacoes do Render Free: o servico pode dormir apos inatividade, a primeira resposta depois de acordar pode demorar e arquivos criados em runtime podem ser perdidos em reinicios. Como o corpus esta dentro da imagem, ele volta a existir a cada deploy/restart.
 
 ## Endpoints Principais
 
