@@ -2,220 +2,322 @@
 
 ## Sobre o Projeto
 
-SolaBot é um projeto de agente conversacional baseado em arquitetura RAG para consulta doutrinária cristã a partir de documentos confessionais. A proposta não é criar um chatbot genérico apoiado apenas no conhecimento prévio de um modelo de linguagem, mas um sistema fundamentado em um corpus documental controlado.
+SolaBot e um assistente conversacional baseado em RAG para consulta a documentos doutrinarios/confessionais e documentos normativos denominacionais. A proposta nao e criar um chatbot generico apoiado apenas no conhecimento previo do modelo, mas um sistema fundamentado em corpus controlado, com recuperacao rastreavel, citacoes documentais e recusa quando nao houver evidencia suficiente.
 
-O foco inicial será uma instância especializada na tradição reformada. A arquitetura, porém, será organizada para permitir a inclusão de outros conjuntos documentais confessionais em cenários controlados de avaliação.
+O escopo atual combina confissoes e catecismos ja processados com um corpus normativo composto por Constituicao, Regimento Interno, Codigo de Etica do Ministro Congregacional, Resolucao nº 01/2020 e Confissao de Fe Congregacional.
 
 ## Objetivo
 
-Desenvolver e avaliar um agente conversacional capaz de responder perguntas doutrinárias com base em confissões de fé, catecismos e declarações confessionais, mantendo fidelidade documental, rastreabilidade das fontes e controle explícito do corpus ativo.
+Desenvolver e avaliar um assistente documental capaz de responder perguntas doutrinarias e normativas a partir dos documentos processados, mantendo fidelidade documental, rastreabilidade das fontes, controle de corpus ativo e separacao entre ensino doutrinario, norma institucional, procedimento administrativo e orientacao etica.
 
 ## Escopo Atual
 
-Nesta fase, o corpus será controlado, preparado e processado pela desenvolvedora/pesquisadora. O pipeline documental próprio do projeto será responsável por extração, normalização, chunking estrutural, metadados, auditoria e avaliação.
+O projeto possui quatro camadas principais:
 
-No início do desenvolvimento, o corpus principal conterá apenas documentos reformados. Nesse cenário inicial, não há risco real de mistura entre tradições, pois o corpus ativo será reformado. O risco de mistura teológica será avaliado posteriormente, quando outros conjuntos documentais confessionais forem adicionados em cenários controlados de avaliação.
+1. Pipeline documental para extracao, normalizacao, chunking estrutural, metadados e auditoria.
+2. Pipeline de embeddings e recuperacao com ChromaDB, BM25, busca hibrida, RRF, reranking e recuperacao hierarquica.
+3. Geracao RAG com politica de evidencia, PromptBuilder, CitationFormatter e chamada ao modelo.
+4. Interface local com API FastAPI e frontend React.
 
-Upload livre de documentos pelo usuário final não faz parte do escopo principal atual e poderá ser considerado como trabalho futuro.
+O corpus ativo consolidado usa o id `alliance_documents`. Os chunks unificados ficam em `corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl` e a collection ChromaDB usada pelo retrieval e `solabot_alliance_v1`.
 
-## O que o SolaBot vai fazer
+Upload livre de documentos pelo usuario final nao faz parte do escopo atual.
 
-O SolaBot deverá receber perguntas como:
+## Perguntas Suportadas
 
-- "O que é o batismo?"
-- "O que é necessário para a salvação?"
-- "O divórcio é permitido?"
+Exemplos de perguntas que o sistema deve tratar:
 
-As respostas deverão ser construídas a partir dos documentos disponíveis no corpus ativo, com indicação das fontes utilizadas. Na instância inicial, isso significa responder a partir do corpus reformado. Durante a avaliação, o sistema será exposto a conjuntos confessionais de outras tradições para testar se respeita o corpus ativo, preserva rastreabilidade e evita mistura teológica indevida.
+- "Do que se trata a justificação?"
+- "O que é ser regenerado?"
+- "O que é a perseverança dos santos?"
+- "O que a Aliança entende por igreja filiada?"
+- "Quais os deveres da igreja local?"
+- "Como funciona o processo de ordenação de ministros?"
+- "Quais são os deveres éticos de um pastor?"
+- "Quais os critérios para emancipação de campos missionários?"
+
+Perguntas normativas devem ser sustentadas por documentos normativos. Perguntas doutrinarias devem ser sustentadas por documentos doutrinarios/confessionais. Perguntas mistas podem combinar ambos quando os trechos recuperados sustentarem a resposta.
+
+## Corpus Atual
+
+Documentos doutrinarios/confessionais:
+
+- Confissao de Fe de Westminster;
+- Canones de Dort;
+- Catecismo de Heidelberg;
+- Confissao Batista de Londres de 1689;
+- Confissao de Fe Congregacional.
+
+Documentos normativos:
+
+- Constituicao da Alianca;
+- Regimento Interno;
+- Codigo de Etica do Ministro Congregacional;
+- Resolucao nº 01/2020.
+
+Artefatos principais:
+
+- Chunks reformados: `corpus/processed/chunks/reformed/`
+- Chunks normativos: `corpus/processed/chunks/normative/`
+- Chunks unificados para embeddings: `corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl`
+- Manifesto de embeddings: `corpus/processed/embeddings/alliance/embedding_manifest.json`
+- Indice ChromaDB local: `corpus/indexes/chroma/alliance/`
+- Relatorios tecnicos: `corpus/reports/`
+- Especificacoes de etapa: `reports/specs/` e `specs/`
+
+Os arquivos `openai_embeddings.jsonl`, `corpus/indexes/chroma/`, `web/dist/`, `node_modules/` e `runtime_logs/` sao artefatos locais gerados e nao devem ser versionados.
 
 ## Arquitetura Geral
 
 ```mermaid
 flowchart TD
-    A[Documentos confessionais controlados] --> B[PyMuPDF<br/>Extração de texto]
-    B --> C[Python<br/>Normalização textual própria]
-    C --> D[Python<br/>Chunking estrutural por documento]
-    D --> E[Pydantic + metadados<br/>Taxonomia confessional]
+    D1[Documentos doutrinarios/confessionais] --> A[PyMuPDF<br/>Extracao de texto]
+    D2[Documentos normativos] --> A
+    A --> B[Normalizacao textual]
+    B --> C[Chunking estrutural]
+    C --> M[Metadados documentais<br/>tipo, fonte, capitulo, artigo, paragrafo, full_reference]
 
-    E --> EMB[OpenAI API<br/>Embeddings]
-    EMB --> F1[ChromaDB<br/>Índice vetorial / Dense retrieval]
-    E --> F2[rank-bm25<br/>Índice lexical / BM25]
+    M --> E[OpenAI Embeddings]
+    E --> V[ChromaDB<br/>Dense retrieval]
+    M --> L[BM25<br/>Busca lexical]
 
-    F1 --> G[Busca híbrida]
-    F2 --> G
-    G --> H[Reciprocal Rank Fusion]
-    H --> I[Cross-Encoder Reranking]
-    I --> J[Filtros por metadados<br/>corpus/tradição/documento]
-    J --> K[Parent/Hierarchical Retrieval]
-    K --> L[Contexto final com fontes]
+    V --> H[Busca hibrida]
+    L --> H
+    H --> RRF[Reciprocal Rank Fusion]
+    RRF --> RR[Cross-Encoder Reranking]
+    RR --> HR[Parent/Hierarchical Retrieval]
+    HR --> FC[Contexto consolidado<br/>com mapa de fontes]
 
-    M[Pergunta do usuário] --> N[Streamlit<br/>Interface de chat]
-    N --> O[LangChain<br/>RAG Orchestration]
-    O --> G
-    L --> O
-    O --> P[Prompt com política de evidência]
-    P --> Q[OpenAI API<br/>LLM]
-    Q --> R[Resposta com citações ou recusa]
+    U[Pergunta do usuario] --> WEB[React<br/>Interface web]
+    WEB --> API[FastAPI<br/>/api/chat]
+    API --> GEN[RagGenerator]
+    GEN --> RP[RetrievalPipeline]
+    RP --> H
+    FC --> EP[EvidencePolicy]
+    EP -->|evidencia suficiente| PB[PromptBuilder]
+    EP -->|evidencia insuficiente| REF[Resposta de recusa]
+    PB --> OAI[OpenAI Chat Completions]
+    OAI --> CF[CitationFormatter]
+    CF --> ANS[Resposta com citacoes]
 
-    S[Corpus reformado principal] --> A
-    T[Conjuntos confessionais de avaliação] --> A
-
-    U[RAGAS / ARES<br/>Avaliação RAG]
-    V[Métricas próprias<br/>fidelidade, citações, mistura teológica]
-    R --> U
-    R --> V
-
-    subgraph Pipeline documental próprio
+    subgraph Pipeline documental
+        A
         B
         C
-        D
+        M
+    end
+
+    subgraph Recuperacao
         E
-        EMB
-    end
-
-    subgraph Recuperação e ranqueamento
-        F1
-        F2
-        G
-        H
-        I
-        J
-        K
-    end
-
-    subgraph Orquestração RAG
-        O
-        P
-        Q
-        R
-    end
-
-    subgraph Avaliação
-        U
         V
+        L
+        H
+        RRF
+        RR
+        HR
+        FC
+    end
+
+    subgraph Geracao RAG
+        GEN
+        RP
+        EP
+        PB
+        OAI
+        CF
+        REF
+        ANS
     end
 ```
 
 ## Fluxo RAG
 
-1. Os documentos confessionais controlados são extraídos com PyMuPDF.
-2. O texto passa por normalização e chunking estrutural por módulos próprios do projeto.
-3. Cada chunk recebe metadados de corpus, tradição, documento, seção, páginas e namespace de recuperação.
-4. Os chunks alimentam um índice vetorial para dense retrieval e um índice lexical BM25.
-5. A pergunta do usuário é recebida pela interface Streamlit.
-6. LangChain orquestra a cadeia RAG, conectando retriever, prompt, contexto recuperado e LLM.
-7. A recuperação combina busca vetorial e lexical, aplica RRF, reranking, filtros por metadados e recuperação hierárquica.
-8. O prompt RAG usa uma política de evidência para responder com citações ou recusar quando não houver base documental suficiente.
+1. Os documentos controlados sao extraidos com PyMuPDF.
+2. O texto passa por normalizacao e chunking estrutural.
+3. Cada chunk recebe metadados como `doc_id`, `document_title`, `document_type`, `source_category`, `chapter_title`, `section_title`, `article_number`, `paragraph_number`, `inciso`, `alinea`, `full_reference`, `biblical_references`, paginas e `retrieval_namespace`.
+4. Os chunks elegiveis geram embeddings OpenAI e alimentam uma collection ChromaDB.
+5. O BM25 e inicializado a partir dos chunks processados para preservar termos exatos.
+6. O `RetrievalPipeline` combina busca vetorial e BM25, aplica RRF, reranking e expansao hierarquica.
+7. O contexto consolidado e avaliado pela `EvidencePolicy`.
+8. Se houver evidencia suficiente, o `PromptBuilder` monta o prompt final e o modelo responde com fontes formatadas pelo `CitationFormatter`.
+9. Se a evidencia for insuficiente ou incompatível com o tipo de pergunta, o sistema recusa educadamente.
 
-## Fundamentação Teórica e Estratégia Algorítmica
+## Politica de Evidencia
 
-O SolaBot será estruturado como uma arquitetura RAG modular para um domínio sensível, no qual respostas doutrinárias precisam ser fundamentadas em documentos confessionais, com rastreabilidade das fontes, controle de corpus ativo e avaliação do risco de mistura teológica.
+A `EvidencePolicy` considera a natureza da pergunta:
 
-A técnica central será Retrieval-Augmented Generation. O modelo de linguagem não deverá responder apenas com base em seu conhecimento paramétrico, mas a partir de trechos recuperados do corpus documental ativo.
+- Perguntas doutrinarias exigem contexto doutrinario/confessional.
+- Perguntas normativas exigem contexto normativo.
+- Perguntas mistas podem combinar os dois tipos de fonte.
+- Perguntas genericas procuram evidencias no maior numero possivel de documentos recuperados, sem preferencia automatica por fonte normativa ou doutrinaria.
 
-O chunking deverá ser estrutural, respeitando a organização interna dos documentos confessionais. A Confissão de Fé de Westminster e a Confissão Batista de Londres de 1689 serão divididas considerando capítulos, seções e parágrafos; os Cânones de Dort, por capítulos doutrinários, artigos e rejeições de erro; o Catecismo de Heidelberg, por perguntas e respostas.
+O sistema nao deve inventar artigos, incisos, capitulos, regras, doutrinas ou conclusoes que nao estejam sustentadas pelo contexto recuperado.
 
-A recuperação deverá combinar dense retrieval por embeddings e BM25. A busca vetorial captura proximidade semântica, enquanto a busca lexical preserva termos teológicos técnicos como eleição, reprovação, justificação, regeneração, expiação, aliança, batismo e perseverança dos santos.
-
-A estratégia principal de recuperação será híbrida, com fusão de rankings por Reciprocal Rank Fusion. Após a recuperação inicial, a arquitetura deverá prever Cross-Encoder Reranking para reordenar candidatos a partir do par pergunta + chunk.
-
-Os chunks deverão conter metadados como `corpus_id`, `tradition`, `document_id`, `section_title`, `page_start`, `page_end`, `source_path` e `retrieval_namespace`. O retriever deverá aplicar filtros por corpus ativo, tradição e documento para controlar o escopo confessional da resposta.
-
-A arquitetura também deverá prever Parent Document Retrieval, usando chunks menores para busca e trechos maiores ou hierárquicos para envio ao LLM. Isso é importante porque documentos confessionais dependem de contexto interno, como capítulo, artigo, seção ou pergunta.
-
-O sistema deverá aplicar recusa baseada em evidência: quando os trechos recuperados não sustentarem uma resposta, o chatbot deverá informar que não encontrou base documental suficiente no corpus ativo, em vez de inventar uma resposta.
-
-A avaliação será inspirada em métricas de sistemas RAG, como fidelidade ao contexto, relevância da resposta, precisão do contexto e recuperação correta dos trechos relevantes. Além disso, serão definidas métricas próprias para consulta doutrinária, incluindo fidelidade documental, acurácia das citações, taxa de mistura teológica, taxa de resposta sem evidência, taxa de recusa correta, qualidade dos chunks e separação entre corpus reformado e conjuntos confessionais de avaliação.
-
-## Corpus Inicial
-
-O corpus principal será reformado e controlado pela desenvolvedora/pesquisadora. A fase inicial prevê os seguintes documentos:
-
-- Confissão de Fé de Westminster;
-- Cânones de Dort;
-- Catecismo de Heidelberg;
-- Confissão Batista de Londres de 1689.
-
-Outros conjuntos documentais confessionais serão adicionados durante a avaliação, em cenários controlados, para testar fidelidade documental, separação entre corpus, risco de mistura teológica e comportamento do sistema quando exposto a documentos de tradições diferentes da tradição reformada.
-
-## Stack Tecnológica
+## Stack Tecnologica
 
 | Componente | Tecnologia | Finalidade |
 | --- | --- | --- |
-| Interface | Streamlit | Interface web do chatbot |
-| Linguagem principal | Python | Lógica central da aplicação e scripts do pipeline |
-| Pipeline documental | Scripts próprios do SolaBot | Extração, normalização, chunking estrutural, metadados, auditoria e avaliação |
-| Extração de PDF | PyMuPDF | Extração textual dos documentos confessionais |
-| Validação de dados | pydantic | Modelos de dados, metadados e validação |
-| Orquestração RAG | LangChain | Integração entre retriever, prompt, contexto e LLM |
-| Banco vetorial | ChromaDB | Armazenamento e recuperação de embeddings dos chunks |
-| Embeddings | OpenAI API | Vetorização de perguntas e chunks documentais |
-| Busca lexical | rank-bm25 | Recuperação por termos doutrinários exatos |
-| Provedor de LLM | OpenAI API | Geração de respostas com base no contexto recuperado |
-| Avaliação RAG | RAGAS / ARES | Apoio à avaliação de fidelidade, relevância e contexto |
-| Dados de avaliação | datasets | Organização de conjuntos de perguntas e respostas esperadas |
-| Métricas e análise | scikit-learn / numpy | Cálculo de métricas e análise quantitativa |
-| Configuração | python-dotenv | Carregamento de variáveis de ambiente |
-| Testes | pytest | Testes automatizados |
-| Qualidade de código | ruff | Lint e padronização |
+| Interface | React + Vite | Interface web local |
+| API | FastAPI | Endpoints de chat, documentos, sugestoes e healthcheck |
+| Linguagem principal | Python | Pipeline documental, retrieval e geracao |
+| Extracao de PDF | PyMuPDF | Extracao textual dos documentos |
+| Banco vetorial | ChromaDB | Armazenamento e busca por embeddings |
+| Embeddings | OpenAI API | Vetorizacao de chunks e perguntas |
+| Busca lexical | rank-bm25 | Recuperacao por termos exatos |
+| Reranking | sentence-transformers | Cross-Encoder reranking |
+| Geracao | OpenAI API | Resposta final baseada no contexto |
+| Configuracao | python-dotenv | Variaveis de ambiente |
+| Testes | pytest | Verificacoes automatizadas |
+| Qualidade | ruff | Lint e padronizacao |
 
 ## Estrutura do Projeto
 
 ```txt
 sola-bot/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── docs/
 ├── config/
 ├── corpus/
+│   ├── raw/
+│   ├── processed/
+│   ├── indexes/
+│   └── reports/
 ├── reports/
 ├── scripts/
+│   └── pipeline/
 ├── src/
 │   └── sola_bot/
-└── tests/
+│       ├── api/
+│       ├── generation/
+│       └── retrieval/
+├── tests/
+└── web/
 ```
 
-## Instalação
+## Instalacao
 
-Crie um ambiente virtual em uma etapa futura do desenvolvimento e instale as dependências:
+Instale as dependencias Python:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Configuração de Ambiente
+Instale as dependencias do frontend apenas se for rodar o Vite em modo desenvolvimento:
 
-Copie o arquivo `.env.example` para `.env` e preencha as variáveis necessárias:
+```bash
+cd web
+npm install
+```
+
+## Configuracao de Ambiente
+
+Copie `.env.example` para `.env` e configure:
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 CHROMA_PERSIST_DIRECTORY=corpus/indexes/chroma
-ACTIVE_CORPUS=reformed
+ACTIVE_CORPUS=alliance_documents
 ```
 
-Não versionar chaves de API reais.
+Nao versionar chaves reais nem arquivos `.env`.
 
-## Como Executar
+## Como Reprocessar o Corpus
 
-Os comandos abaixo representam a intenção inicial do projeto. A lógica completa ainda será implementada:
+Corpus reformado ja existente:
 
 ```bash
-python scripts/ingest_corpus.py
-python scripts/build_vector_index.py
-streamlit run src/sola_bot/app/streamlit_app.py
-python scripts/evaluate_rag.py
+python scripts/pipeline/extract_reformed_corpus.py
+python scripts/pipeline/normalize_reformed_corpus.py
+python scripts/pipeline/chunk_reformed_corpus.py
 ```
 
-## Roadmap
+Corpus normativo:
 
-- Criar pipeline próprio de ingestão documental;
-- Implementar extração de PDFs com PyMuPDF;
-- Implementar normalização textual;
-- Implementar chunking estrutural com metadados auditáveis;
-- Criar índices vetorial e lexical;
-- Implementar retrieval híbrido com RRF, reranking e filtros de metadados;
-- Integrar geração de respostas com modelo de linguagem;
-- Criar avaliação com perguntas de teste e métricas;
-- Executar cenários controlados com documentos confessionais de outras tradições.
+```bash
+python scripts/pipeline/extract_normative_corpus.py
+python scripts/pipeline/normalize_normative_corpus.py
+python scripts/pipeline/chunk_normative_corpus.py
+python scripts/pipeline/audit_normative_corpus.py
+```
+
+Embeddings e indice vetorial:
+
+```bash
+python scripts/pipeline/generate_openai_embeddings.py --resume
+python scripts/pipeline/build_reformed_chroma_index.py --reset
+```
+
+## Como Rodar a Aplicacao
+
+Modo principal, com FastAPI servindo API e frontend buildado:
+
+```bash
+python scripts/run_web_chat.py
+```
+
+URL principal:
+
+```txt
+http://127.0.0.1:8000
+```
+
+Modo de desenvolvimento do frontend:
+
+```bash
+python scripts/run_web_chat.py
+cd web
+npm run dev
+```
+
+Nesse modo:
+
+- `http://127.0.0.1:8000` e a API FastAPI.
+- `http://127.0.0.1:5173` e o servidor Vite para desenvolvimento visual.
+- O Vite encaminha chamadas `/api/*` para `http://127.0.0.1:8000`.
+
+Nao ha necessidade de usar a porta `7173`.
+
+## Endpoints Principais
+
+- `GET /api/health`
+- `GET /api/documents`
+- `POST /api/chat`
+- `POST /api/suggestions`
+
+## Verificacoes Uteis
+
+```bash
+python -m pytest tests/test_normative_corpus_pipeline.py
+python -m pytest tests/test_openai_embeddings.py
+python -m pytest tests/test_chroma_vector_index.py
+python -m pytest tests/test_vector_retriever.py
+python -m pytest tests/test_hybrid_retriever.py
+python -m pytest tests/test_reranker_retriever.py
+python -m pytest tests/test_hierarchical_retriever.py
+python -m pytest tests/test_retrieval_pipeline.py
+python -m pytest tests/test_rag_answer_generation.py
+python -m pytest tests/test_alliance_rag_integration.py
+```
+
+Perguntas minimas de verificacao:
+
+- "Do que se trata a justificação?"
+- "O que é ser regenerado?"
+- "O que a Confissão de Fé Congregacional ensina sobre justificação?"
+- "Quais documentos uma igreja precisa apresentar para se filiar?"
+- "Quais os deveres da igreja local?"
+- "Como funciona o processo de ordenação de ministros?"
+- "Quais são os deveres éticos do pastor?"
+- "Quais os critérios para emancipação de campos missionários?"
+
+## Observacoes de Versionamento
+
+Nao commitar:
+
+- `.env`
+- `node_modules/`
+- `web/node_modules/`
+- `web/dist/`
+- `runtime_logs/`
+- `corpus/indexes/chroma/`
+- `corpus/processed/embeddings/**/openai_embeddings.jsonl`
+
+Esses arquivos sao gerados localmente e podem ser reconstruidos pelos scripts do projeto.
