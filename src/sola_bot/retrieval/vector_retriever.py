@@ -12,6 +12,11 @@ except ImportError:  # pragma: no cover - tratado no fluxo de uso
     chromadb = None
 
 from sola_bot.retrieval.query_embedder import embed_query
+from sola_bot.retrieval.paths import (
+    chroma_collection_name,
+    chroma_persist_directory,
+    chunks_path as runtime_chunks_path,
+)
 from sola_bot.retrieval.retrieval_result import RetrievalResult
 
 
@@ -32,29 +37,30 @@ class VectorRetriever:
 
     def __init__(
         self,
-        persist_directory: str = DEFAULT_PERSIST_DIRECTORY,
-        collection_name: str = DEFAULT_COLLECTION_NAME,
+        persist_directory: str | None = None,
+        collection_name: str | None = None,
         embedding_model: str = DEFAULT_EMBEDDING_MODEL,
-        chunks_path: str = DEFAULT_CHUNKS_PATH,
+        chunks_path: str | None = None,
     ) -> None:
         if chromadb is None:
             raise VectorRetrieverError("chromadb não está instalado neste ambiente.")
 
-        self.persist_directory = persist_directory
-        self.collection_name = collection_name
+        persist_path = self._repo_path(persist_directory) if persist_directory else chroma_persist_directory()
+        chunks_file = self._repo_path(chunks_path) if chunks_path else runtime_chunks_path()
+        self.persist_directory = str(persist_path)
+        self.collection_name = collection_name or chroma_collection_name()
         self.embedding_model = embedding_model
-        self.chunks_path = chunks_path
-        self._chunk_text_by_id = self._load_chunk_texts(chunks_path)
+        self.chunks_path = str(chunks_file)
+        self._chunk_text_by_id = self._load_chunk_texts(chunks_file)
 
-        persist_path = self._repo_path(persist_directory)
         if not persist_path.exists():
-            raise VectorRetrieverError(f"Índice ChromaDB não encontrado: {persist_directory}")
+            raise VectorRetrieverError(f"Índice ChromaDB não encontrado: {persist_path}")
 
         client = chromadb.PersistentClient(path=str(persist_path))
         try:
-            self.collection = client.get_collection(collection_name)
+            self.collection = client.get_collection(self.collection_name)
         except Exception as exc:
-            raise VectorRetrieverError(f"Collection ChromaDB não encontrada: {collection_name}") from exc
+            raise VectorRetrieverError(f"Collection ChromaDB não encontrada: {self.collection_name}") from exc
 
     def retrieve(
         self,
@@ -123,7 +129,7 @@ class VectorRetriever:
             )
         return parsed
 
-    def _load_chunk_texts(self, chunks_path: str) -> dict[str, str]:
+    def _load_chunk_texts(self, chunks_path: str | Path) -> dict[str, str]:
         """Carrega o texto original dos chunks para apresentação dos resultados."""
         path = self._repo_path(chunks_path)
         if not path.exists():
@@ -142,7 +148,7 @@ class VectorRetriever:
         return texts
 
     @staticmethod
-    def _repo_path(path: str) -> Path:
+    def _repo_path(path: str | Path) -> Path:
         """Resolve caminhos relativos à raiz do repositório."""
         candidate = Path(path)
         if candidate.is_absolute():

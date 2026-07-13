@@ -30,6 +30,8 @@ if str(SRC_DIR) not in sys.path:
 
 from sola_bot.generation.rag_answer import RagAnswer  # noqa: E402
 from sola_bot.generation.rag_generator import RagGenerator  # noqa: E402
+from sola_bot.observability import traceable  # noqa: E402
+from sola_bot.retrieval.paths import corpus_dir  # noqa: E402
 
 
 if load_dotenv is not None:
@@ -92,9 +94,10 @@ def health() -> dict[str, str]:
 @app.get("/api/documents")
 def documents() -> dict[str, Any]:
     """Lista documentos disponíveis na base documental atual."""
+    corpus_root = corpus_dir()
     manifest_paths = [
-        ROOT_DIR / "corpus" / "raw" / "reformed_manifest.json",
-        ROOT_DIR / "corpus" / "raw" / "normative_manifest.json",
+        corpus_root / "raw" / "reformed_manifest.json",
+        corpus_root / "raw" / "normative_manifest.json",
     ]
     documents = []
     for manifest_path in manifest_paths:
@@ -177,6 +180,30 @@ def build_filters(document_id: str | None, chunk_type: str | None) -> dict[str, 
     return filters or None
 
 
+def _trace_suggestions_inputs(inputs: dict[str, Any]) -> dict[str, Any]:
+    request = inputs.get("request")
+    if hasattr(request, "model_dump"):
+        request_data = request.model_dump()
+    elif hasattr(request, "dict"):
+        request_data = request.dict()
+    else:
+        request_data = str(request)
+    return {"request": request_data}
+
+
+def _trace_suggestions_output(suggestions: list[dict[str, str]]) -> dict[str, Any]:
+    return {
+        "suggestion_count": len(suggestions),
+        "suggestions": suggestions,
+    }
+
+
+@traceable(
+    name="SolaBot suggested questions",
+    run_type="chain",
+    process_inputs=_trace_suggestions_inputs,
+    process_outputs=_trace_suggestions_output,
+)
 def build_suggested_questions(request: SuggestionRequest) -> list[dict[str, str]]:
     """Usa OpenAI para sugerir perguntas relacionadas e úteis para o usuário."""
     prompt = build_suggestions_prompt(request)

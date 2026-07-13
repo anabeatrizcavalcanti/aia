@@ -12,6 +12,7 @@ try:
 except ImportError:  # pragma: no cover - dependência validada no fluxo de execução
     BM25Okapi = None
 
+from sola_bot.retrieval.paths import chunks_path as runtime_chunks_path
 from sola_bot.retrieval.retrieval_result import RetrievalResult
 from sola_bot.retrieval.vector_retriever import DEFAULT_CHUNKS_PATH, DEFAULT_FILTERS
 
@@ -40,16 +41,17 @@ class BM25Retriever:
 
     def __init__(
         self,
-        chunks_path: str = DEFAULT_CHUNKS_PATH,
+        chunks_path: str | None = None,
         text_field: str = "embedding_text",
     ) -> None:
         if BM25Okapi is None:
             raise BM25RetrieverError(
                 "rank-bm25 não está instalado. Instale a dependência para usar BM25Okapi."
             )
-        self.chunks_path = chunks_path
+        chunks_file = self._repo_path(chunks_path) if chunks_path else runtime_chunks_path()
+        self.chunks_path = str(chunks_file)
         self.text_field = text_field
-        self.chunks = self._load_chunks(chunks_path)
+        self.chunks = self._load_chunks(chunks_file)
 
     def retrieve(
         self,
@@ -76,7 +78,7 @@ class BM25Retriever:
         )[:top_k]
         return [self._build_result(chunk, float(score)) for chunk, score in ranked]
 
-    def _load_chunks(self, chunks_path: str) -> list[dict[str, Any]]:
+    def _load_chunks(self, chunks_path: str | Path) -> list[dict[str, Any]]:
         """Carrega chunks elegíveis para recuperação."""
         path = self._repo_path(chunks_path)
         if not path.exists():
@@ -170,7 +172,7 @@ class BM25Retriever:
         )
 
     @staticmethod
-    def _repo_path(path: str) -> Path:
+    def _repo_path(path: str | Path) -> Path:
         """Resolve caminhos relativos à raiz do repositório."""
         candidate = Path(path)
         if candidate.is_absolute():

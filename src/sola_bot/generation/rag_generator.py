@@ -30,10 +30,47 @@ from sola_bot.generation.evidence_policy import (
 )
 from sola_bot.generation.prompt_builder import build_rag_prompt
 from sola_bot.generation.rag_answer import Citation, RagAnswer
+from sola_bot.observability import drop_self, traceable, wrap_openai_client
 from sola_bot.retrieval.retrieval_pipeline import RetrievalPipeline
 
 
 DEFAULT_CHAT_MODEL = "gpt-5.4-mini"
+
+
+def _trace_rag_answer_output(answer: RagAnswer) -> dict[str, Any]:
+    return answer.to_dict()
+
+
+def _trace_context_output(context_package: Any) -> dict[str, Any]:
+    if hasattr(context_package, "to_dict"):
+        return context_package.to_dict()
+    return {"context_package": str(context_package)}
+
+
+def _trace_evidence_output(decision: EvidenceDecision) -> dict[str, Any]:
+    return decision.to_dict()
+
+
+def _trace_prompt_inputs(inputs: dict[str, Any]) -> dict[str, Any]:
+    data = drop_self(inputs)
+    context_package = data.get("context_package")
+    citations = data.get("citations") or []
+    summary: dict[str, Any] = {
+        "query": data.get("query"),
+        "citation_count": len(citations),
+    }
+    if context_package is not None:
+        summary["context_count"] = getattr(context_package, "context_count", None)
+        summary["total_context_chars"] = getattr(context_package, "total_context_chars", None)
+        summary["documents"] = getattr(context_package, "documents", None)
+    return summary
+
+
+def _trace_prompt_output(prompt: str) -> dict[str, Any]:
+    return {
+        "prompt": prompt,
+        "prompt_char_count": len(prompt),
+    }
 
 
 class RagGenerator:
@@ -57,6 +94,12 @@ class RagGenerator:
         self.evidence_policy = evidence_policy or EvidencePolicy()
         self.client = client
 
+    @traceable(
+        name="SolaBot RAG answer",
+        run_type="chain",
+        process_inputs=drop_self,
+        process_outputs=_trace_rag_answer_output,
+    )
     def answer(
         self,
         query: str,
@@ -64,7 +107,7 @@ class RagGenerator:
     ) -> RagAnswer:
         """Gera resposta ou recusa a partir de evidência documental."""
         try:
-            context_package = self.retrieval_pipeline.retrieve(query=query, filters=filters)
+            context_package = self._retrieve_context(query=query, filters=filters)
         except Exception as exc:
             return RagAnswer(
                 query=query,
@@ -80,11 +123,11 @@ class RagGenerator:
             )
 
         citations = citations_from_source_map(context_package)
-        decision = self.evidence_policy.evaluate(context_package)
+        decision = self._evaluate_evidence(context_package)
         if not decision.can_answer:
             return self._refused_answer(query, context_package, citations, decision)
 
-        prompt = build_rag_prompt(query=query, context_package=context_package, citations=citations)
+        prompt = self._build_prompt(query=query, context_package=context_package, citations=citations)
         try:
             response_text = self._call_openai(prompt)
         except Exception as exc:
@@ -130,6 +173,42 @@ class RagGenerator:
             },
         )
 
+    @traceable(
+        name="SolaBot retrieval",
+        run_type="retriever",
+        process_inputs=drop_self,
+        process_outputs=_trace_context_output,
+    )
+    def _retrieve_context(
+        self,
+        query: str,
+        filters: dict[str, Any] | None = None,
+    ):
+        return self.retrieval_pipeline.retrieve(query=query, filters=filters)
+
+    @traceable(
+        name="SolaBot evidence policy",
+        run_type="chain",
+        process_inputs=drop_self,
+        process_outputs=_trace_evidence_output,
+    )
+    def _evaluate_evidence(self, context_package) -> EvidenceDecision:
+        return self.evidence_policy.evaluate(context_package)
+
+    @traceable(
+        name="SolaBot prompt builder",
+        run_type="chain",
+        process_inputs=_trace_prompt_inputs,
+        process_outputs=_trace_prompt_output,
+    )
+    def _build_prompt(
+        self,
+        query: str,
+        context_package,
+        citations: list[Citation],
+    ) -> str:
+        return build_rag_prompt(query=query, context_package=context_package, citations=citations)
+
     def _call_openai(self, prompt: str) -> str:
         client = self._client()
         response = client.chat.completions.create(
@@ -166,7 +245,7 @@ class RagGenerator:
             raise RuntimeError("Pacote openai não está instalado.")
         if not os.getenv("OPENAI_API_KEY", "").strip():
             raise RuntimeError("OPENAI_API_KEY não está configurada.")
-        self.client = OpenAI()
+        self.client = wrap_openai_client(OpenAI())
         return self.client
 
     def _refused_answer(

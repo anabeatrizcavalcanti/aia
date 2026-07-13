@@ -6,15 +6,7 @@ langsmith
 chromadb
 rank-bm25
 sentence-transformers
-streamlit
-langchain
-langchain-community
-langchain-openai
-ragas
-datasets
 scikit-learn
 numpy
-pytest
-ruff
 fastapi
 uvicorn

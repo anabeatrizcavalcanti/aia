@@ -9,6 +9,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
 
+from sola_bot.retrieval.paths import chunks_path as runtime_chunks_path
 from sola_bot.retrieval.retrieval_result import RetrievalResult
 
 
@@ -85,7 +86,7 @@ class ParentContextBuilder:
 
     def __init__(
         self,
-        chunks_path: str = DEFAULT_CHUNKS_PATH,
+        chunks_path: str | None = None,
         parent_context_max_chars: int = 9000,
         sibling_window_before: int = 1,
         sibling_window_after: int = 1,
@@ -94,7 +95,7 @@ class ParentContextBuilder:
         include_metadata_header: bool = True,
         preserve_anchor_first: bool = True,
     ) -> None:
-        self.chunks_path = Path(chunks_path)
+        self.chunks_path = _repo_path(chunks_path) if chunks_path else runtime_chunks_path()
         self.parent_context_max_chars = parent_context_max_chars
         self.sibling_window_before = sibling_window_before
         self.sibling_window_after = sibling_window_after
@@ -466,3 +467,10 @@ def _slug(value: str) -> str:
     lowered = ascii_text.lower()
     lowered = re.sub(r"[^a-z0-9]+", "-", lowered).strip("-")
     return lowered or "sem-chave"
+
+
+def _repo_path(path: str | Path) -> Path:
+    candidate = Path(path)
+    if candidate.is_absolute():
+        return candidate
+    return Path(__file__).resolve().parents[3] / candidate

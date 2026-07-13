@@ -1,0 +1,16 @@
+services:
+  solabot:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      RAG_CORPUS_DIR: /app/storage/corpus
+      CHROMA_PERSIST_DIRECTORY: /app/storage/corpus/indexes/chroma/alliance
+      RAG_CHUNKS_PATH: /app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+      HF_HOME: /app/storage/huggingface
+    volumes:
+      - ./corpus:/app/storage/corpus

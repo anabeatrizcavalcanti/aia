@@ -213,11 +213,53 @@ Copie `.env.example` para `.env` e configure:
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
-CHROMA_PERSIST_DIRECTORY=corpus/indexes/chroma
-ACTIVE_CORPUS=alliance_documents
+RAG_CORPUS_DIR=corpus
+RAG_CHUNKS_PATH=corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+CHROMA_PERSIST_DIRECTORY=corpus/indexes/chroma/alliance
+CHROMA_COLLECTION_NAME=solabot_alliance_v1
+LANGSMITH_TRACING=false
+LANGSMITH_API_KEY=your_langsmith_api_key_here
+LANGSMITH_PROJECT=solabot-local
 ```
 
 Nao versionar chaves reais nem arquivos `.env`.
+
+## Integracao com LangSmith
+
+A integracao com LangSmith e opcional e fica desligada por padrao em `.env.example`.
+Quando `LANGSMITH_TRACING=true`, o backend envia traces do fluxo RAG para o projeto configurado.
+
+No site do LangSmith:
+
+1. Acesse `https://smith.langchain.com`.
+2. Crie ou selecione um workspace.
+3. Crie um `Personal Access Token (PAT)` em `Settings` > `API Keys` para uso local. Use `Service key` apenas se a aplicacao for publicada como servico/ambiente de producao.
+4. Crie ou selecione um projeto em `Projects`; o nome deve bater com `LANGSMITH_PROJECT`.
+5. Copie a API key para o `.env` local.
+
+No `.env` local:
+
+```bash
+LANGSMITH_TRACING=true
+LANGSMITH_API_KEY=lsv2_sua_chave_aqui
+LANGSMITH_PROJECT=solabot-local
+```
+
+Se o workspace estiver em uma regiao diferente da padrao dos EUA, configure tambem o endpoint informado pelo LangSmith:
+
+```bash
+LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+```
+
+Depois, reinicie a aplicacao:
+
+```bash
+python scripts/run_web_chat.py
+```
+
+Ao enviar uma pergunta pela interface, o projeto no LangSmith deve mostrar um trace pai `SolaBot RAG answer` com spans de recuperacao, politica de evidencia, montagem do prompt e chamada OpenAI. Chamadas de sugestoes aparecem como `SolaBot suggested questions`.
+
+Na tela de quickstart do LangSmith, nao use o exemplo `Claude Agent SDK` nem configure `ANTHROPIC_API_KEY`, porque esta aplicacao usa OpenAI. Para este projeto, basta configurar as variaveis acima no `.env`, instalar `requirements.txt` e rodar a aplicacao. Se quiser comparar com um exemplo do site, selecione a aba `OpenAI`.
 
 ## Como Reprocessar o Corpus
 
@@ -274,6 +316,99 @@ Nesse modo:
 - O Vite encaminha chamadas `/api/*` para `http://127.0.0.1:8000`.
 
 Nao ha necessidade de usar a porta `7173`.
+
+## Docker
+
+Docker nao e obrigatorio para desenvolver localmente. O caminho mais simples continua sendo:
+
+```bash
+python scripts/run_web_chat.py
+```
+
+Use Docker quando quiser empacotar backend e frontend buildado em um ambiente reproduzivel. Os dados do RAG ficam fora da imagem e sao montados como volume.
+
+Antes de rodar o container, confirme que os artefatos de runtime existem localmente:
+
+- `corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl`
+- `corpus/indexes/chroma/alliance/`
+
+Com Compose:
+
+```bash
+docker compose up --build
+```
+
+O Compose monta `./corpus` em `/app/storage/corpus` dentro do container.
+
+Execucao direta equivalente:
+
+```bash
+docker build -t solabot .
+docker run --rm -p 8000:8000 --env-file .env -e RAG_CORPUS_DIR=/app/storage/corpus -e CHROMA_PERSIST_DIRECTORY=/app/storage/corpus/indexes/chroma/alliance -e RAG_CHUNKS_PATH=/app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl -v "%cd%/corpus:/app/storage/corpus" solabot
+```
+
+A aplicacao ficara em:
+
+```txt
+http://127.0.0.1:8000
+```
+
+## Deploy no Render com Disco Persistente
+
+A opcao mais limpa para producao e manter o Git/Docker somente com o codigo e colocar os artefatos RAG em um disco persistente do Render.
+
+Arquitetura:
+
+```txt
+GitHub/Docker image: codigo, frontend buildado e dependencias
+Render persistent disk: corpus/processed/chunks, corpus/indexes/chroma e manifestos
+```
+
+O arquivo `render.yaml` ja declara um Web Service Docker com disco montado em `/app/storage`. No Render, configure as variaveis sensiveis no painel:
+
+```bash
+OPENAI_API_KEY=...
+LANGSMITH_API_KEY=...
+```
+
+As variaveis de dados ficam assim:
+
+```bash
+RAG_CORPUS_DIR=/app/storage/corpus
+RAG_CHUNKS_PATH=/app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+CHROMA_PERSIST_DIRECTORY=/app/storage/corpus/indexes/chroma/alliance
+CHROMA_COLLECTION_NAME=solabot_alliance_v1
+```
+
+Para preparar o pacote de dados local:
+
+```bash
+python scripts/deployment/create_runtime_corpus_archive.py
+```
+
+Isso gera:
+
+```txt
+runtime_artifacts/solabot-runtime-corpus.tar.gz
+```
+
+Depois de criar o servico no Render e anexar o disco, envie esse arquivo para o servico via SSH/SCP ou pelo Shell do Render e extraia dentro de `/app/storage`:
+
+```bash
+cd /app/storage
+tar -xzf solabot-runtime-corpus.tar.gz
+```
+
+Depois da extracao, estes caminhos devem existir no Render:
+
+```txt
+/app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
+/app/storage/corpus/indexes/chroma/alliance/
+/app/storage/corpus/raw/reformed_manifest.json
+/app/storage/corpus/raw/normative_manifest.json
+```
+
+Observacoes do Render: web services precisam escutar em `0.0.0.0` e na porta `PORT`; o script `scripts/run_web_chat.py` ja respeita essas variaveis. Discos persistentes preservam somente arquivos dentro do mount path e ficam disponiveis apenas em runtime, nao durante o build.
 
 ## Endpoints Principais
 
