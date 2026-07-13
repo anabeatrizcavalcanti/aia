@@ -1,0 +1,206 @@
+{
+  "topic_map_id": "congregational_normative_topic_map_v1",
+  "default": {
+    "topic": "denominational_governance",
+    "subtopic": "general_governance"
+  },
+  "document_defaults": {
+    "codigo-etica-ministro-alianca": {
+      "topic": "ministerial_ethics",
+      "subtopic": "ethical_principles"
+    },
+    "confissao-fe-congregacional-alianca": {
+      "topic": "scripture",
+      "subtopic": "sacred_scripture"
+    },
+    "constituicao-alianca-2022": {
+      "topic": "denominational_governance",
+      "subtopic": "general_governance"
+    },
+    "resolucao-alianca-01-2020": {
+      "topic": "denominational_governance",
+      "subtopic": "administrative_resolution"
+    },
+    "regimento-interno-alianca-2022": {
+      "topic": "church_administration",
+      "subtopic": "local_church_government"
+    }
+  },
+  "keyword_rules": [
+    {
+      "keywords": ["sagrada escritura", "escrituras", "antigo testamento", "novo testamento", "cânon", "canon"],
+      "topic": "scripture",
+      "subtopic": "sacred_scripture"
+    },
+    {
+      "keywords": ["santíssima trindade", "trindade", "deus vivo", "deidade"],
+      "topic": "god_and_trinity",
+      "subtopic": "trinity"
+    },
+    {
+      "keywords": ["decreto eterno", "predestinado", "predestinação", "eleitos"],
+      "topic": "divine_decree",
+      "subtopic": "eternal_decree"
+    },
+    {
+      "keywords": ["criação", "criou", "criaturas"],
+      "topic": "creation",
+      "subtopic": "creation_of_world"
+    },
+    {
+      "keywords": ["providência", "anjos", "angelicais"],
+      "topic": "providence",
+      "subtopic": "divine_providence"
+    },
+    {
+      "keywords": ["queda", "pecado", "punição"],
+      "topic": "fall_and_sin",
+      "subtopic": "sin"
+    },
+    {
+      "keywords": ["pacto", "aliança da graça", "aliança das obras"],
+      "topic": "covenant_theology",
+      "subtopic": "covenant_of_grace"
+    },
+    {
+      "keywords": ["cristo", "mediador", "filho de deus"],
+      "topic": "christology",
+      "subtopic": "christ_mediator"
+    },
+    {
+      "keywords": ["livre arbítrio", "vontade"],
+      "topic": "free_will",
+      "subtopic": "human_will"
+    },
+    {
+      "keywords": ["vocação eficaz", "chamado eficaz"],
+      "topic": "effectual_calling",
+      "subtopic": "calling"
+    },
+    {
+      "keywords": ["justificação", "justificados"],
+      "topic": "justification",
+      "subtopic": "justification_by_faith"
+    },
+    {
+      "keywords": ["adoção", "adotados"],
+      "topic": "adoption",
+      "subtopic": "adoption_in_christ"
+    },
+    {
+      "keywords": ["santificação", "santificados"],
+      "topic": "sanctification",
+      "subtopic": "sanctification"
+    },
+    {
+      "keywords": ["fé salvífica", "fé salvadora"],
+      "topic": "saving_faith",
+      "subtopic": "faith"
+    },
+    {
+      "keywords": ["arrependimento"],
+      "topic": "repentance",
+      "subtopic": "repentance_unto_life"
+    },
+    {
+      "keywords": ["boas obras"],
+      "topic": "good_works",
+      "subtopic": "good_works"
+    },
+    {
+      "keywords": ["perseverança dos santos", "perseverança"],
+      "topic": "perseverance",
+      "subtopic": "perseverance_of_saints"
+    },
+    {
+      "keywords": ["certeza da graça", "certeza da salvação"],
+      "topic": "assurance",
+      "subtopic": "assurance_of_salvation"
+    },
+    {
+      "keywords": ["lei de deus", "lei moral"],
+      "topic": "law_of_god",
+      "subtopic": "moral_law"
+    },
+    {
+      "keywords": ["instituição das igrejas", "ordem apontada", "igrejas locais", "oficiais"],
+      "topic": "church_order",
+      "subtopic": "institution_of_churches"
+    },
+    {
+      "keywords": ["segunda vinda", "juízo final", "ressurreição", "último dia"],
+      "topic": "last_things",
+      "subtopic": "final_judgment"
+    },
+    {
+      "keywords": ["resolução aliança", "plano de incentivo", "resolve"],
+      "topic": "denominational_governance",
+      "subtopic": "administrative_resolution"
+    },
+    {
+      "keywords": ["ética", "sigilo", "penalidade", "vedado", "ministro"],
+      "topic": "ministerial_ethics",
+      "subtopic": "ethical_principles"
+    },
+    {
+      "keywords": ["vida pessoal", "família", "esposa", "cônjuge", "filhos"],
+      "topic": "pastoral_ministry",
+      "subtopic": "pastoral_family"
+    },
+    {
+      "keywords": ["ingresso", "filiação", "filiada", "filiadas", "desligamento", "exclusão"],
+      "topic": "church_affiliation",
+      "subtopic": "church_filiation"
+    },
+    {
+      "keywords": ["disciplina", "processo disciplinar", "pena", "penalidade"],
+      "topic": "church_discipline",
+      "subtopic": "disciplinary_process"
+    },
+    {
+      "keywords": ["assembleia", "conselho eclesiástico", "diretoria", "administração"],
+      "topic": "church_administration",
+      "subtopic": "local_church_government"
+    },
+    {
+      "keywords": ["concílio", "diretoria nacional", "conselho fiscal", "departamento", "comissão"],
+      "topic": "councils_and_directories",
+      "subtopic": "councils"
+    },
+    {
+      "keywords": ["região administrativa", "distrito administrativo", "diretor regional"],
+      "topic": "denominational_governance",
+      "subtopic": "regional_administration"
+    },
+    {
+      "keywords": ["ordenado", "ordenação", "licença", "credenciado", "credencial", "sagrado ministério", "departamento teológico", "teologia"],
+      "topic": "pastoral_ordination",
+      "subtopic": "ordination_requirements"
+    },
+    {
+      "keywords": ["contribuição", "contribuir", "patrimônio", "orçamento", "tesouraria", "financeiro"],
+      "topic": "financial_responsibilities",
+      "subtopic": "contributions"
+    },
+    {
+      "keywords": ["batismo", "ceia", "ordenança", "sacramentos"],
+      "topic": "sacraments_or_ordinances",
+      "subtopic": "ordinances"
+    },
+    {
+      "keywords": ["casamento", "divórcio", "matrimônio"],
+      "topic": "marriage_and_divorce",
+      "subtopic": "marriage"
+    },
+    {
+      "keywords": ["campo missionário", "congregação", "ponto de pregação", "emancipação", "missões"],
+      "topic": "missions_and_emancipation",
+      "subtopic": "mission_fields"
+    },
+    {
+      "keywords": ["governo congregacional", "autonomia", "independência"],
+      "topic": "congregational_government",
+      "subtopic": "congregational_autonomy"
+    }
+  ]
+}

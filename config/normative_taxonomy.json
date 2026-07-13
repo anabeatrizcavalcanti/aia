@@ -1,0 +1,160 @@
+{
+  "taxonomy_id": "congregational_normative_taxonomy_v1",
+  "description": "Taxonomia operacional para documentos normativos congregacionais.",
+  "topics": {
+    "denominational_governance": [
+      "general_governance",
+      "deliberative_bodies",
+      "national_board",
+      "regional_administration",
+      "district_administration",
+      "administrative_resolution"
+    ],
+    "scripture": [
+      "sacred_scripture",
+      "canon",
+      "biblical_authority"
+    ],
+    "god_and_trinity": [
+      "divine_attributes",
+      "trinity"
+    ],
+    "divine_decree": [
+      "eternal_decree",
+      "predestination"
+    ],
+    "creation": [
+      "creation_of_world",
+      "creation_of_humanity"
+    ],
+    "providence": [
+      "divine_providence",
+      "angels"
+    ],
+    "fall_and_sin": [
+      "fall",
+      "sin",
+      "punishment"
+    ],
+    "covenant_theology": [
+      "covenant_of_grace",
+      "covenant_of_works"
+    ],
+    "christology": [
+      "christ_mediator",
+      "person_and_work_of_christ"
+    ],
+    "free_will": [
+      "human_will"
+    ],
+    "effectual_calling": [
+      "calling"
+    ],
+    "justification": [
+      "justification_by_faith"
+    ],
+    "adoption": [
+      "adoption_in_christ"
+    ],
+    "sanctification": [
+      "sanctification"
+    ],
+    "saving_faith": [
+      "faith"
+    ],
+    "repentance": [
+      "repentance_unto_life"
+    ],
+    "good_works": [
+      "good_works"
+    ],
+    "perseverance": [
+      "perseverance_of_saints"
+    ],
+    "assurance": [
+      "assurance_of_salvation"
+    ],
+    "law_of_god": [
+      "moral_law"
+    ],
+    "church_order": [
+      "institution_of_churches",
+      "local_church_order",
+      "church_officers"
+    ],
+    "last_things": [
+      "resurrection",
+      "final_judgment",
+      "second_coming"
+    ],
+    "church_membership": [
+      "member_reception",
+      "member_responsibilities",
+      "member_discipline"
+    ],
+    "church_affiliation": [
+      "church_filiation",
+      "church_disaffiliation",
+      "church_exclusion"
+    ],
+    "church_discipline": [
+      "disciplinary_process",
+      "penalties",
+      "restoration"
+    ],
+    "pastoral_ministry": [
+      "ministerial_service",
+      "pastoral_relationships",
+      "pastoral_family"
+    ],
+    "ministerial_ethics": [
+      "ethical_principles",
+      "personal_life",
+      "confidentiality",
+      "penalties"
+    ],
+    "pastoral_ordination": [
+      "ordination_requirements",
+      "licensing",
+      "ministerial_credentials",
+      "ministry_requirements",
+      "theological_training"
+    ],
+    "church_administration": [
+      "local_church_government",
+      "assemblies",
+      "officers"
+    ],
+    "councils_and_directories": [
+      "councils",
+      "boards",
+      "committees"
+    ],
+    "congregational_government": [
+      "congregational_autonomy",
+      "church_order",
+      "ecclesiastical_authority"
+    ],
+    "financial_responsibilities": [
+      "contributions",
+      "patrimony",
+      "budget"
+    ],
+    "sacraments_or_ordinances": [
+      "baptism",
+      "lord_supper",
+      "ordinances"
+    ],
+    "marriage_and_divorce": [
+      "marriage",
+      "divorce",
+      "family"
+    ],
+    "missions_and_emancipation": [
+      "mission_fields",
+      "congregations",
+      "emancipation",
+      "congregations_and_mission_fields"
+    ]
+  }
+}

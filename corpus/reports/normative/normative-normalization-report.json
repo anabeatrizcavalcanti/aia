@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "corpus_id": "congregational_normative",
+  "input_dir": "corpus/processed/extracted/normative",
+  "output_dir": "corpus/processed/normalized/normative",
+  "normalization_strategy": "normative_mechanical_safe_normalization_v001",
+  "documents_processed": 5,
+  "documents": [
+    {
+      "document_id": "codigo-etica-ministro-alianca",
+      "title": "Código de Ética do Ministro Congregacional",
+      "raw_path": "corpus/raw/normative/Codigo de ética.pdf",
+      "input_extraction_file": "corpus/processed/extracted/normative/codigo-etica-ministro-alianca.extracted.json",
+      "pages_count": 10,
+      "total_chars": 23633,
+      "normalization_actions": {
+        "no_changes": 1,
+        "normalized_excess_blank_lines": 9,
+        "normalized_whitespace": 9,
+        "recomposed_safe_hyphenation": 1
+      },
+      "page_zones": {
+        "empty": 1,
+        "normative_body": 1,
+        "preamble_or_body": 1,
+        "unknown": 7
+      },
+      "pages_with_warnings": [
+        1
+      ],
+      "marker_validation": {
+        "PREÂMBULO": true,
+        "DAS DISPOSIÇÕES PRELIMINARES": true,
+        "Art. 1º": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/normative/codigo-etica-ministro-alianca.normalized.json",
+      "txt_path": "corpus/processed/normalized/normative/codigo-etica-ministro-alianca.normalized.txt"
+    },
+    {
+      "document_id": "confissao-fe-congregacional-alianca",
+      "title": "Confissão de Fé Congregacional",
+      "raw_path": "corpus/raw/normative/Confissão de fé Congregacional.pdf",
+      "input_extraction_file": "corpus/processed/extracted/normative/confissao-fe-congregacional-alianca.extracted.json",
+      "pages_count": 48,
+      "total_chars": 114610,
+      "normalization_actions": {
+        "normalized_excess_blank_lines": 48,
+        "normalized_whitespace": 48,
+        "recomposed_safe_hyphenation": 2
+      },
+      "page_zones": {
+        "confessional_body": 31,
+        "unknown": 17
+      },
+      "pages_with_warnings": [],
+      "marker_validation": {
+        "CONFISSÃO DE FÉ CONGREGACIONAL": true,
+        "CAPÍTULO I": true,
+        "A INSTITUIÇÃO DAS IGREJAS": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/normative/confissao-fe-congregacional-alianca.normalized.json",
+      "txt_path": "corpus/processed/normalized/normative/confissao-fe-congregacional-alianca.normalized.txt"
+    },
+    {
+      "document_id": "constituicao-alianca-2022",
+      "title": "Constituição da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+      "raw_path": "corpus/raw/normative/Constituição da Aliança.pdf",
+      "input_extraction_file": "corpus/processed/extracted/normative/constituicao-alianca-2022.extracted.json",
+      "pages_count": 26,
+      "total_chars": 55622,
+      "normalization_actions": {
+        "no_changes": 1,
+        "normalized_excess_blank_lines": 25,
+        "normalized_whitespace": 25,
+        "recomposed_safe_hyphenation": 4
+      },
+      "page_zones": {
+        "empty": 1,
+        "normative_body": 1,
+        "preamble_or_body": 1,
+        "table_of_contents": 1,
+        "unknown": 22
+      },
+      "pages_with_warnings": [
+        1
+      ],
+      "marker_validation": {
+        "PREÂMBULO": true,
+        "CAPÍTULO I": true,
+        "Art. 1º": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/normative/constituicao-alianca-2022.normalized.json",
+      "txt_path": "corpus/processed/normalized/normative/constituicao-alianca-2022.normalized.txt"
+    },
+    {
+      "document_id": "regimento-interno-alianca-2022",
+      "title": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+      "raw_path": "corpus/raw/normative/regimento_interno.pdf",
+      "input_extraction_file": "corpus/processed/extracted/normative/regimento-interno-alianca-2022.extracted.json",
+      "pages_count": 32,
+      "total_chars": 77297,
+      "normalization_actions": {
+        "no_changes": 1,
+        "normalized_excess_blank_lines": 31,
+        "normalized_whitespace": 31,
+        "recomposed_safe_hyphenation": 8,
+        "removed_isolated_page_number": 31
+      },
+      "page_zones": {
+        "empty": 1,
+        "normative_body": 2,
+        "unknown": 29
+      },
+      "pages_with_warnings": [
+        1
+      ],
+      "marker_validation": {
+        "CAPÍTULO I": true,
+        "SEÇÃO I": true,
+        "Art. 1º": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/normative/regimento-interno-alianca-2022.normalized.json",
+      "txt_path": "corpus/processed/normalized/normative/regimento-interno-alianca-2022.normalized.txt"
+    },
+    {
+      "document_id": "resolucao-alianca-01-2020",
+      "title": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+      "raw_path": "corpus/raw/normative/Resolução_aliança.pdf",
+      "input_extraction_file": "corpus/processed/extracted/normative/resolucao-alianca-01-2020.extracted.json",
+      "pages_count": 4,
+      "total_chars": 4803,
+      "normalization_actions": {
+        "no_changes": 1,
+        "normalized_excess_blank_lines": 3,
+        "normalized_whitespace": 3
+      },
+      "page_zones": {
+        "empty": 1,
+        "resolution_body": 1,
+        "unknown": 2
+      },
+      "pages_with_warnings": [
+        1
+      ],
+      "marker_validation": {
+        "RESOLUÇÃO ALIANÇA Nº 01": true,
+        "CONSIDERANDO": true,
+        "RESOLVE:": true
+      },
+      "document_warnings": [],
+      "json_path": "corpus/processed/normalized/normative/resolucao-alianca-01-2020.normalized.json",
+      "txt_path": "corpus/processed/normalized/normative/resolucao-alianca-01-2020.normalized.txt"
+    }
+  ]
+}

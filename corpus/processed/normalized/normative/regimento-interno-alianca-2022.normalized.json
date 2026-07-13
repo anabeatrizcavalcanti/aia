@@ -1,0 +1,455 @@
+{
+  "document_id": "regimento-interno-alianca-2022",
+  "doc_id": "regimento-interno-alianca-2022",
+  "title": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+  "subtitle": null,
+  "document_title": "Regimento Interno da Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+  "corpus_id": "congregational_normative",
+  "denomination": "Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+  "tradition": "congregacional",
+  "tradition_family": "Protestant",
+  "tradition_branch": "Congregational",
+  "document_type": "internal_regiment",
+  "source_category": "denominational_normative_document",
+  "year": 2022,
+  "resolution_number": null,
+  "resolution_date": null,
+  "language": "pt",
+  "raw_path": "corpus/raw/normative/regimento_interno.pdf",
+  "input_extraction_file": "corpus/processed/extracted/normative/regimento-interno-alianca-2022.extracted.json",
+  "normalization_strategy": "normative_mechanical_safe_normalization_v001",
+  "pages_count": 32,
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "",
+      "char_count": 0,
+      "source_char_count": 0,
+      "page_zone": "empty",
+      "normalization_actions": [
+        "no_changes"
+      ],
+      "warnings": [
+        "empty_page_text",
+        "empty_after_normalization"
+      ]
+    },
+    {
+      "page_number": 2,
+      "text": "REGIMENTO INTERNO DA ALIANÇA DAS IGREJAS EVANGÉLICAS\nCONGREGACIONAIS DO BRASIL\nCAPÍTULO I\nDAS IGREJAS FILIADAS\nSEÇÃO I\nDA FINALIDADE, ORGANIZAÇÃO E FILIAÇÃO DA IGREJA LOCAL\nArt. 1º. As igrejas filiadas à Aliança das Igrejas Evangélicas Congregacionais\ndo Brasil, doravante denominada “ALIANÇA”, são instituições autônomas,\norganizadas sob princípios congregacionais com base bíblica, segundo o\nmodelo neotestamentário, e têm por finalidade cultuar a Deus \"em espírito e em\nverdade\"; pregar o Evangelho; ensinar os fiéis a guardarem a sã doutrina e\nprática das Escrituras Sagradas em sua pureza e integridade; e dar, perante o\nmundo, testemunho do amor e da graça redentora de Deus.\n§ 1º. Os membros de uma igreja local são homens e mulheres heterossexuais,\nbatizados cerimonialmente com água, como preceitua as Sagradas Escrituras\nem nome do Pai, do Filho e do Espírito Santo, após a sua pública profissão de\nfé.\n§ 2º. As deliberações das igrejas filiadas não podem colidir, em hipótese\nalguma, com a Constituição da denominação, o Regimento Interno, a\nConfissão de Fé da Aliança das Igrejas Evangélicas Congregacionais do Brasil,\no Código de Ética do Ministro Congregacional, as Decisões conciliares e\nResoluções administrativas.\nArt. 2º. As igrejas devem ter personalidade jurídica, de conformidade com as\nleis do País.\nArt. 3º. As igrejas filiadas à ALIANÇA, no exercício da atividade evangelística,\npodem organizar campos missionários, congregações e pontos de pregação.\n§ 1º. Designa-se “campo missionário” o grupo de crentes que, situado em\ncampo pioneiro, longe das demais igrejas filiadas e sem capacidade de manterse, é tutelado por uma igreja filiada, podendo esta estabelecer parceria com a\nALIANÇA, através do Departamento de Orientação Missionária – DOM, para\nmanutenção do referido campo.\nI – Obtendo o campo missionário capacidade para se manter, e, em havendo a\nparceria referida no § 1º, deverá ser iniciado, imediatamente, o processo de\nemancipação do campo e sua consequente filiação à ALIANÇA.\n§ 2º. Designa-se “congregação” a comunidade de crentes professos, com o\nmínimo de dez membros, que se reúne regularmente fora da sede da igreja\npara cultuar a Deus e evangelizar, com autonomia relativa, a critério da igreja\nmãe.\n§ 3º. Designa-se “ponto de pregação” o grupo de crentes que à semelhança da\ncongregação se reúne fora da sede da igreja, sem nenhuma autonomia\nadministrativa.\nArt. 4º. O poder eclesiástico e administrativo das igrejas reside na assembleia\ngeral de membros.",
+      "char_count": 2499,
+      "source_char_count": 2526,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 3,
+      "text": "Parágrafo único. Para efeito de ordem, a administração das igrejas é confiada,\npela assembleia, ao conselho eclesiástico e aos membros eleitos para\nfinalidades administrativas específicas.\nArt. 5º. Para alcançar os seus objetivos espirituais de evangelizar os não\nconversos e edificar os crentes, e ainda, para efeito de melhor administração\ninterna, a igreja local tem organizações específicas:\nI – Conselho Eclesiástico composto de pastores, presbíteros e diáconos;\na) Os missionários e missionárias, quando credenciados pela ALIANÇA,\npoderão fazer parte do Conselho Eclesiástico de uma igreja local, a critério\ndesta.\nII – Departamentos de educação religiosa, de homens, de auxiliadoras, de\njovens, de adolescentes, de crianças, de música, de missões e outros que se\nfizerem necessários.\nParágrafo único. A superintendência da escola dominical é gerida pelo\ndepartamento de educação religiosa e os conjuntos corais, grupos musicais e\nInstrumentais são subordinados ao departamento de música.\nArt. 6º. Uma congregação, formalmente organizada como igreja, poderá filiarse à ALIANÇA, desde que apresente as seguintes condições, além da\ndocumentação exigida no art. 5º, § 1º, da Constituição da ALIANÇA:\nI – Mínimo de 40 (quarenta) membros capazes de assumir a responsabilidade\nde mantê-la, dentre eles um presbítero e dois diáconos;\nII – Declaração de acatamento da Constituição da denominação, do Regimento\nInterno, da Confissão de fé, do Código de Ética do Ministro Congregacional,\ndas Decisões conciliares e das Resoluções administrativas;\nIII – Estatuto próprio;\nIV – Cópia da ata da assembleia geral que deliberou sobre a filiação\npretendida, com assinatura de, no mínimo, 2/3 (dois terços) dos membros.\nArt. 7º. O pedido de filiação de uma igreja à ALIANÇA será encaminhado à\nRegião Administrativa que exerce jurisdição sobre a área na qual a igreja\nrequerente está inserida.\n§ 1º. Recebido o pedido, a Região Administrativa, constatando estarem\natendidas as condições exigidas no artigo anterior, o encaminhará à Diretoria\nNacional com o devido parecer.\n§ 2º. A Diretoria Nacional examinará o pedido de filiação e o aprovará, ou não,\ndando ciência, à igreja requerente, da decisão.\n§\n3º. Se aprovado o pedido de filiação, a Diretoria Nacional enviará\ncomunicado à Região Administrativa que exercerá jurisdição sobre a nova\nigreja.\n§ 4º. A filiação de que trata este artigo será classificada em:\na) Filiação regular: assim consideradas as igrejas que estiverem adimplentes\ncom as contribuições previstas no art. 18 da Constituição da ALIANÇA;\nb) Filiação temporária: assim consideradas as igrejas que forem recebidas nos\nmoldes preconizados no art. 5º, § 1º, alínea a, da Constituição da ALIANÇA.\nArt. 8º. O ato solene de filiação da igreja à ALIANÇA, caso esta opte por\nrealizá-lo, será público, presidido por representante da respectiva Região\nAdministrativa, ou por quem esta designar.",
+      "char_count": 2894,
+      "source_char_count": 2925,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 4,
+      "text": "Art. 9º. A igreja perderá a autonomia e independência quando:\n§ 1º. Não tiver mais capacidade de manter-se financeiramente ou quando a sua\nmembresia tornar-se inferior a 40 membros.\nI – A igreja que perder a autonomia e independência passará à condição de\ncongregação, nos termos do art. 3º, § 2º, deste Regimento, devendo integrarse a qualquer igreja filiada à ALIANÇA, cujo processo de integração será\nconduzido pela Região Administrativa à qual está subordinada;\nII – Não preenchendo a igreja os requisitos previstos no art. 3º, § 2º, deste\nRegimento, poderá passar à condição de campo missionário, nos termos do\nart. 3º, § 1º, ou, à condição de ponto de pregação, conforme previsão constante\nno § 3º do referido art. 3º.\n§ 2º. A perda da autonomia e independência deverá ser declarada pela\nassembleia geral, cujo resultado deverá ser comunicado à ALIANÇA, através\nda Região Administrativa correspondente, juntando-se, ao comunicado, cópia\nda ata que deliberou sobre o assunto e a relação de todos os membros\npresentes à assembleia.\n§ 3º. A Região Administrativa que exerce jurisdição sobre a igreja designará\nrepresentante para presidir o processo de que trata o parágrafo anterior.\nArt. 10. A igreja perderá a condição de filiada à ALIANÇA quando:\nI – For desligada, por ato da Diretoria Nacional, após processo no qual terá\ngarantido o direito à ampla defesa nos termos da legislação pátria;\nII – For deferido, pela Diretoria Nacional, o pedido de desligamento, desde que\nassinado por 2/3 dos membros da igreja;\nIII – Houver renúncia tácita de jurisdição, considerando-se, como tal:\na) Deixar de representar-se nos Concílios Nacional ou Regional por 4 (quatro)\nconcílios consecutivos, sem justificativa;\nb) Deixar de contribuir, por mais de doze meses consecutivos, sem justificativa\nplausível, conforme disposição no art. 18, § 1º, da Constituição da ALIANÇA.\nParágrafo único. O pedido de desligamento de que trata o inciso II só será\napreciado pela Diretoria Nacional se na assembleia da igreja que deliberar pelo\nreferido pedido estiver presente uma representação da ALIANÇA, designada\npela supracitada diretoria, com direito à voz, para prestar os esclarecimentos\ndevidos.\nArt. 11. O processo de desligamento de uma igreja, previsto no inciso I do\nartigo anterior, deverá apurar:\nI – A ministração de doutrina contraditória com os ensinos das Sagradas\nEscrituras e os princípios estabelecidos nos documentos normativos da\nALIANÇA;\nII – Insubordinação em relação às decisões emanadas dos Concílios, da\nDiretoria Nacional e/ou da Região Administrativa.\nArt. 12. O desligamento de uma igreja da ALIANÇA implicará, também, no\ndesligamento do seu pastor titular, pastores auxiliares, presbíteros, diáconos,\nmissionários e/ou missionárias credenciados pela ALIANÇA, caso optem por\npermanecer como membros da igreja desligada.",
+      "char_count": 2829,
+      "source_char_count": 2860,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 5,
+      "text": "Art. 13. Cessados os motivos que levaram a igreja a ser desligada da\nALIANÇA, poderá haver nova filiação, obedecendo-se as disposições do art. 6º\ndeste Regimento.\n\nSEÇÃO II\nDA RECEPÇÃO E DISCIPLINA DE MEMBROS\n\nArt. 14. Os membros de uma igreja são aqueles definidos no art. 1º, § 1º, deste\nRegimento.\n§ 1º. O membro menor de 18 anos, não emancipado, quando da participação\nnas assembleias da igreja, terá os seus direitos restritos, devendo as restrições\nconstarem no estatuto da igreja local, atentando-se para as normas\npreconizadas na legislação pátria.\n§ 2º. A igreja local receberá em sua membresia um crente oriundo de outra\nigreja, mediante a adoção dos seguintes critérios:\nI – Por carta de transferência, quando o membro vier de outra igreja filiada à\nALIANÇA ou de igreja que for reconhecidamente evangélica;\nII – Por jurisdição, quando a igreja de origem não fornecer carta de\ntransferência;\nIII – Por reconciliação, caso um membro anteriormente excluído, que tenha\nsido admitido como membro de outra igreja, manifeste sinais de\narrependimento e desejo de reintegrar-se à igreja.\n\nArt. 15. As pessoas não batizadas que frequentarem com regularidade a igreja\ne que se submeterem aos princípios da Palavra de Deus, e às diretrizes da\nigreja, serão consideradas, para efeito de registro estatístico, como\ncongregadas.\n\nArt. 16. A igreja local tem autonomia para disciplinar os seus membros caso\ntransgridam os mandamentos do Senhor ou não observem as diretrizes dos\nseus documentos normativos.\nParágrafo único. Nenhuma pena disciplinar será aplicada sem que haja\ninstauração de processo para apuração da verdade, devidamente instruído, e\ncom amplo direito de defesa ao acusado.\n\nArt. 17. As penalidades que podem ser impostas pelas igrejas filiadas à\nALIANÇA são as seguintes:\nI – Censura;\nII – Suspensão;\nIII – Desligamento de cargo ou função;\nIV – Exclusão.\n§ 1º. Censura é a reprovação formal de falta que não tenha repercussão moral,\nem que, verbalmente ou por escrito, se adverte o membro sobre o seu erro\ne/ou culpa, exortando-o para que se corrija.\n§ 2º. Suspensão é o afastamento temporário dos direitos e cargos exercidos na\nigreja.\n§ 3º. Desligamento é a exoneração de cargos, sem prejuízo de qualquer outra\npenalidade concomitante.\n§ 4º. Exclusão é a penalidade máxima que consiste em excluir o disciplinado\ndo rol de membros da igreja.",
+      "char_count": 2355,
+      "source_char_count": 2410,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 6,
+      "text": "Art. 18. O membro excluído de uma igreja da ALIANÇA ou que tenha tido os\nseus direitos suspensos, não poderá ser recebido por outra, sem que a igreja\nque aplicou a penalidade seja ouvida.\n\nParágrafo único. A igreja deverá informar à ALIANÇA sobre punições\naplicadas aos presbíteros, diáconos, missionários ou missionárias e membros\nde departamentos da denominação, para que sejam afastados de suas funções\nou tenham seus direitos suspensos.\n\nSEÇÃO III\nDIREITOS E DEVERES DE UMA IGREJA LOCAL\n\nArt. 19. É direito de uma igreja local:\nI – Deliberar e julgar os assuntos que estejam relacionados à vida espiritual de\nseus membros, à exceção dos pastores;\nII – Admitir, readmitir, disciplinar, desligar e excluir membros, bem como darlhes transferência;\nIII – Decidir sobre questões orçamentárias e administrativas;\nIV – Eleger e/ou exonerar pastores, presbíteros e diáconos;\nV – Examinar relatórios das organizações internas, inclusive, do pastor da\nigreja;\nVI – Participar do estreitamento dos laços fraternais entre igrejas filiadas à\nALIANÇA;\nVII – Cooperar nas atividades que promovam o crescimento do Reino de Deus\nno setor denominacional;\nVIII – Fazer-se representar nos Concílios Nacionais e Regionais, com direito a\nvoto;\na) As igrejas classificadas como filiadas temporárias não poderão ser\nrepresentadas nos Concílios da denominação.\nb) As igrejas que não estiverem classificadas como regular, não poderão fazer\npropostas, nem exercer o direito de voto nos Concílios da denominação.\nIX – Ser assistida e socorrida pelas demais igrejas filiadas da denominação e\npela Região Administrativa correspondente, nas crises internas, espirituais ou\nmateriais;\nX – Ficar sob a tutela da Região Administrativa correspondente, quando estiver\nsem pastor.\n\nArt. 20. É dever de uma igreja local:\nI – Doutrinar cuidadosamente os seus membros e congregados;\nII – Criar condições para que seus membros e congregados desenvolvam\ntalentos no serviço do Senhor;\nIII – Buscar continuamente, através da oração, a orientação do Espírito Santo\npara o desempenho de sua missão;\nIV – Cuidar condignamente dos seus obreiros;\nV – Cooperar espiritualmente com todas as organizações da ALIANÇA;\nVI – Contribuir mensalmente para a ALIANÇA, com o percentual mínimo de 7%\n(sete por cento) de sua receita bruta, consoante disposição constante no artigo\n18 da Constituição da ALIANÇA;\nVII – Atender às necessidades dos órfãos e a das viúvas;",
+      "char_count": 2411,
+      "source_char_count": 2469,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 7,
+      "text": "VIII – Comemorar as datas magnas da ALIANÇA.\n\nArt. 21. A liturgia de uma igreja congregacional filiada à ALIANÇA é de sua\ninteira responsabilidade, devendo-se observar, no entanto, os critérios básicos\nde ênfase na oração, louvor, leitura e exposição das Sagradas Escrituras.\n\nCAPÍTULO II\nDOS OFICIAIS ECLESIÁSTICOS DA IGREJA\n\nSEÇÃO I\nDA DEFINIÇÃO, ELEIÇÃO, CONSAGRAÇÃO, ORDENAÇÃO E POSSE\n\nArt. 22. Os oficiais eclesiásticos são ministros do Evangelho, presbíteros e\ndiáconos.\n§ 1º. Ministro do Evangelho é o ofício perpétuo para o qual são consagrados os\nchamados por Deus, formados em teologia, ou não, com privilégios e deveres\nespecíficos, sendo este ofício o primeiro em dignidade e utilidade na igreja.\n§ 2º. Presbítero é o oficial auxiliar do pastor na administração e nos interesses\nespirituais da igreja.\n§ 3º. Diácono é o oficial que coopera com o pastor nas atividades temporais da\nigreja.\n\nArt. 23. O ofício é perpétuo, mas o seu exercício é temporário e local.\n§ 1º. Só deverá ser eleito e empossado para o cargo de pastor o ministro\npertencente ao quadro de ministros da ALIANÇA, ou de denominação que\nmantenha modus vivendi celebrado entre as duas instituições.\n\nI – As igrejas da ALIANÇA, por ocasião da escolha de seus pastores, devem\nobservar os seguintes procedimentos:\na) Sob a tutela de sua respectiva Região Administrativa, ouvir os convidados\npara participar do processo;\nb) Uma vez ouvidos os pastores convidados pela igreja, a assembleia geral\ndeve deliberar e por votação, escolher aquele que ela deseja ter como seu\nministro;\nc) Feita a escolha por votação, segundo o que preconize o seu estatuto, a\nigreja encaminhará carta chamado ao pastor escolhido, que, aceitando o\nchamado, será empossado pela respectiva Região Administrativa como\nministro da igreja;\nd) Caso o pastor escolhido não aceite o chamado, a igreja continuará o\nprocesso até que eleja seu próximo ministro.\n\n§ 2º. A eleição de presbítero e diácono só se dará entre os membros de uma\nigreja local, independentemente de ordenação prévia.\n§ 3º. Será empossado para o exercício do ofício o membro devidamente\nordenado para o respectivo ofício.\n\nArt. 24. O ministro deverá, obrigatoriamente, ser membro da igreja que\npastoreia.\nParágrafo único. Os ministros da ALIANÇA, mesmo sem estarem exercendo o\npastorado, terão de fazer parte da membresia de uma igreja filiada.",
+      "char_count": 2356,
+      "source_char_count": 2412,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 8,
+      "text": "Art. 25. Para o oficialato só poderão ser votados homens civilmente capazes e\nvocacionados.\n\nArt. 26. A admissão para qualquer dos ofícios referidos no artigo 22 deste\nRegimento será feita com ordenação e investidura solene, de acordo com as\nnormas cerimoniais constantes no Manual Litúrgico da ALIANÇA.\n§ 1º. A cerimônia de ordenação de ministros do Evangelho será presidida por:\nmembros das diretorias da ALIANÇA ou ministro por estes indicados.\n§ 2º. No caso de presbíteros e diáconos, a cerimônia será presidida pelo pastor\nda igreja ou por um pastor designado pela Região Administrativa que exerce\njurisdição sobre a igreja, se esta estiver sem pastor, ou se este estiver\nimpossibilitado.\n\nSEÇÃO II\nDO MINISTÉRIO DA ALIANÇA E COMPROMISSOS DOS MINISTROS\n\nArt. 27. O quadro de ministros da ALIANÇA é constituído de pastores\nordenados nos termos do artigo 26, ou aceitos pela ALIANÇA, quando oriundos\nde outras denominações, devendo eles se comprometerem a:\nI – Dignificar e honrar, com sua atuação, o ministério recebido de Deus e\nexercido em igreja filiada à ALIANÇA;\nII – Exercer com dedicação e amor os cargos que vierem a ocupar no âmbito\nnacional, regional ou distrital da ALIANÇA;\nIII – Participar dos Concílios Nacionais e Regionais e dos encontros distritais,\ncongressos e outros eventos afins, devendo, em caso de ausências, justificálas.\n§ 1º. A situação dos pastores filiados ao quadro de ministros da ALIANÇA será\nclassificada em regular e irregular, a saber:\nI) Regular: quando o pastor não estiver afastado de suas atividades pastorais\npor qualquer das razões previstas nos documentos normativos da\ndenominação;\nII) Irregular: Quando o pastor não estiver arrolado como membro de uma igreja\nfiliada à ALIANÇA, nos termos do parágrafo único do art. 24 deste Regimento\nou, ainda, quando estiver pastoreando igreja que não esteja classificada como\nregular, nos termos do art. 7º, § 4º, alínea a deste Regimento e não justificar os\nmotivos que ensejaram a inadimplência;\n§ 2º. O pastor que for considerado em situação irregular terá prazo fixado pela\nDiretoria Nacional, para regularização da situação, findo o qual, sem\ncumprimento justificável das determinações, será desligado do quadro de\nministros.\n§ 3º. O pastor em situação irregular não poderá votar, ser votado para qualquer\ncargo na denominação, fazer propostas nos Concílios Nacionais ou Regionais,\nnem concorrer ao pastorado de igrejas cujo cargo de pastor esteja vago.\n§ 4º. O pastor em situação regular receberá a credencial expedida pela\nALIANÇA, cuja emissão, respeitadas as normas constantes neste Regimento,\nserá regulada por meio de Resolução da Diretoria Nacional.\n\nArt. 28. O ministro do Evangelho deve possuir elevado grau de conhecimento\nda Bíblia e de teologia, ser apto para ensinar, irrepreensível no testemunho,",
+      "char_count": 2800,
+      "source_char_count": 2861,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 9,
+      "text": "são na fé, consagrado, piedoso, corajoso, humilde, ter respeito à justiça e amor\nà verdade.\nParágrafo único. É vedado ao ministro da ALIANÇA participar de instituições\nde práticas secretas.\n\nArt. 29. O ministro é responsável por todos os deveres e atribuições do cargo,\nautônomo no exercício de suas funções ministeriais, mas, como parte\nintegrante do ministério da ALIANÇA, obrigado a aceitar o conselho e até a\ndisciplina aplicada pela denominação.\nParágrafo único. O pastor titular da igreja responde por esta perante a\nALIANÇA.\n\nSEÇÃO III\nDAS ATRIBUIÇÕES E PRERROGATIVAS DO MINISTRO\n\nArt. 30. São atribuições do pastor:\nI – Realizar batismos e ministrar a ceia do Senhor;\nII – Impetrar a bênção apostólica;\nIII – Celebrar matrimônio;\nIV – Ensinar a sã doutrina, instruir os novos conversos e cuidar especialmente\nda infância, dos jovens, dos idosos e das viúvas;\nV – Realizar cerimônias fúnebres;\nVI – Apresentar crianças ao Senhor;\nVII – Orar com o rebanho e por ele, e apascentá-lo na doutrina cristã,\nassistindo pastoralmente aos crentes e suas famílias;\nVIII – Zelar pelo exercício de seu ministério, sendo exemplo dos fiéis,\nmantendo em dia os seus compromissos particulares e evitando as aparências\ndo mal;\nIX – Apascentar o rebanho de Deus, dedicando especial atenção aos\nnecessitados, aflitos, enfermos e desviados;\nX – Incentivar, instrumentalizar, implementar e participar ativamente das\natividades missionárias e evangelísticas da igreja.\nParágrafo único. Os pastores titulares poderão delegar aos presbíteros,\nquando necessário, o cumprimento de atos ministeriais inerentes às suas\nfunções.\n\nArt. 31. São prerrogativas do pastor:\nI – Liderar e supervisionar as atividades espirituais e administrativas da igreja;\nII – Usar e ceder o púlpito da igreja;\nIII – Presidir ex-officio todos os departamentos internos da igreja;\nIV – Receber remuneração condigna.\n\nSEÇÃO IV\nDO SUSTENTO DOS PASTORES E MISSIONÁRIAS\n\nArt. 32. O sustento dos pastores cabe às igrejas, que fixarão seus vencimentos\nde acordo com as necessidades impostas pelo padrão de vida local, tendo em\nvista, também, as condições da família, proporcionando remuneração\ncondigna, devendo ser asseguradas suas necessidades de seguridade social,\nférias, décimo terceiro salário e plano de saúde.",
+      "char_count": 2267,
+      "source_char_count": 2321,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 10,
+      "text": "§ 1º. A remuneração mensal de um pastor titular não será inferior a cinco\nsalários-mínimos, porém, em havendo dificuldades financeiras na igreja, a dita\nremuneração poderá ser negociada, respeitando-se os critérios insculpidos no\ncaput deste artigo;\n§ 2º. A igreja, tendo condições, e em havendo necessidade, deverá\nproporcionar moradia ao seu pastor;\n§ 3º. Além do sustento pastoral, a igreja deverá depositar, mensalmente, em\nconta poupança, em nome do pastor beneficiário, o porcentual correspondente\na 8% do seu sustento, para saque futuro em casos de doença grave, invalidez,\naquisição de casa própria, jubilação ou saída do pastorado, ocasião em que o\nsaque será autorizado pela igreja.\n§ 4º. Se a saída do pastor se der por improbidade administrativa, causando\nprejuízos à igreja, ou, se por este motivo for afastado, a igreja descontará, do\nmontante do depósito de que trata o parágrafo anterior, o valor do prejuízo\ncausado.\n\nArt. 33. As igrejas devem sustentar os missionários e missionárias que lhe\ndedicam tempo integral, no exercício da função, fixando seus vencimentos de\nacordo com as necessidades impostas pelo padrão de vida local,\nproporcionando-lhes remuneração condigna, devendo ser asseguradas suas\nnecessidades de seguridade social, férias, décimo terceiro salário, FGTM e\nplano de saúde.\n§ 1º. A remuneração mensal de um missionário ou missionária não será inferior\na dois salários-mínimos, porém, em havendo dificuldades financeiras na igreja,\na referida remuneração poderá ser negociada, respeitando-se os critérios\ninsculpidos no caput deste artigo.\n\nSEÇÃO V\nDA ORDENAÇÃO DE MINISTROS E CREDENCIAMENTO DE\nMISSIONÁRIOS E MISSIONÁRIAS\n\nArt. 34. Serão ordenados ministros os formados em teologia por seminário da\nALIANÇA ou por outros reconhecidos pelo Departamento Teológico da\ndenominação.\n\nArt. 35. O candidato ao ministério poderá ser ordenado em um dos Concílios\nNacional ou Regional, ou nas próprias igrejas da Região Administrativa.\n\nArt. 36. O processo para ordenação de um ministro do Evangelho obedecerá\naos seguintes critérios:\nI – A igreja interessada na ordenação enviará ofício à Diretoria Nacional\nrequerendo a ordenação do candidato;\nII – A Diretoria Nacional, após o recebimento do pedido, instaurará o processo\nde ordenação, que tramitará de acordo com as disposições constantes no art.\n37 deste Regimento.\n\nArt. 37. O processo de ordenação ocorrerá em quatro fases, obedecendo-se a\nseguinte sequência:",
+      "char_count": 2443,
+      "source_char_count": 2497,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 11,
+      "text": "I – A primeira fase constará de avaliação psicológica, por psicólogo indicado\npelo Conselho de Pastores;\nII – A segunda fase constará de avaliação oral pelo Conselho de Pastores, na\nqual deverão ser abordados os seguintes temas:\na) Experiência de conversão e vocação do candidato;\nb) Vida familiar e pessoal;\nc) Aceitação e fidelidade às Sagradas Escrituras e aos Documentos\nNormativos da ALIANÇA;\nd) Questões éticas e eclesiásticas;\nIII – A terceira fase constará de avaliação escrita, pelo Departamento\nTeológico, na qual o candidato deverá ser avaliado quanto aos conhecimentos\nbíblicos, teológicos, doutrinários, históricos e eclesiástico-denominacionais;\nIV – Na quarta fase o candidato deverá defender monografia, perante o\nDepartamento Teológico, abordando, necessariamente, assunto teológico;\n\n§ 1º. Na primeira fase o psicólogo indicado, a fim de subsidiar o exame pelo\nConselho de Pastores, deverá produzir laudo escrito no qual conste o método\nda avaliação, bem como as suas conclusões sobre a aptidão do candidato para\no exercício do ministério pastoral;\n§ 2º. Na segunda fase, além da oitiva do postulante à ordenação, o Conselho\nde Pastores deverá ouvir a esposa do referido postulante – se for casado –,\nbem como atribuir a nota da avaliação, sendo aprovado o candidato que obtiver\na nota mínima de 7,0 (sete);\n§ 3º. Nas terceira e quarta fases o candidato será considerado aprovado se\nalcançar a nota mínima de 7 (sete) na prova escrita e 7 (sete) na defesa da\nmonografia;\n§ 4º. Para que o candidato seja ordenado, a Diretoria Nacional deverá\nhomologar os pareceres do Conselho de Pastores e do DET;\n§ 5º. Além de submeter-se às avaliações elencadas neste artigo, o candidato\ndeverá apresentar, juntamente com as certidões negativas de cadastros de\nrestrição ao crédito exigidas pelo art. 5º, § 2º, VI, da Constituição da ALIANÇA,\ncertidões negativas emitidas pela Polícia Civil, Polícia Federal, Justiça\nEstadual, Justiça do Trabalho e Justiça Federal.\n\nArt. 38. A cerimônia de ordenação será realizada nos termos do art. 26, § 1º\ndeste Regimento Interno.\nParágrafo único. A imposição de mãos, por ocasião da ordenação, será\nprocedida apenas por pastores.\n\nArt. 39. O ministro ordenado será inscrito no quadro de ministros da ALIANÇA.\n\nArt. 40. A solicitação para o credenciamento de missionários ou missionárias\nenviados por uma igreja deverá estar acompanhada da documentação exigida\nno art. 5º, § 4º da Constituição da ALIANÇA.\n§ 1º. Além da apresentação da documentação exigida, os candidatos serão\nsubmetidos à avaliação psicológica, adotando-se o procedimento previsto no\nart. 37, inciso I e § 1º deste Regimento;\n§ 2º. Uma vez aprovados na avaliação psicológica, os candidatos se\nsubmeterão à avaliação oral, perante o Conselho de Pastores, nos termos do\ninciso II e § 2º do art. 37 deste Regimento;",
+      "char_count": 2823,
+      "source_char_count": 2883,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 12,
+      "text": "§ 3º. Se aprovados no exame do Conselho de Pastores os candidatos farão\nprova escrita, realizada pelo DET, a qual constará de questões que versem\nsobre conhecimentos bíblicos, teológicos, doutrinários, históricos e eclesiásticodenominacionais.\n§ 4º. Os candidatos serão considerados aprovados se obtiverem parecer\nfavorável ao exercício do ministério pastoral no exame psicológico, alcançarem\nnota 7,0 (sete) na avaliação oral perante o Conselho de Pastores e nota 7,0\n(sete) na prova escrita realizada pelo Departamento Teológico;\n§ 5º. Para que os candidatos sejam credenciados, a Diretoria Nacional deverá\nhomologar os pareceres do Psicólogo, do Conselho de Pastores e do DET.\n\nSEÇÃO VI\nDA INCLUSÃO DE MINISTROS PROCEDENTES DE OUTRAS\nDENOMINAÇÕES\n\nArt. 41. Um ministro procedente de outra comunidade evangélica que queira\nser admitido no quadro de ministros da ALIANÇA deverá cumprir as seguintes\nexigências:\nI – Ser membro de uma igreja filiada à ALIANÇA há, no mínimo, um ano.\nII – Formalizar pedido à ALIANÇA, através da igreja da qual é membro;\nII – Apresentar curriculum vitae e cópia da documentação pessoal (CPF, RG,\nTítulo de Eleitor, reservista) e 02 fotos atualizadas;\nIII – Apresentar documentos comprobatórios de exercício ativo das funções de\nministro;\n\nIV – Apresentar certidões negativas de cadastros de restrição ao crédito,\nPolícia Civil, Polícia Federal, Justiça Estadual e Justiça Federal.\nV – Comprovar a inexistência de fatos impeditivos à recepção pela ALIANÇA,\ndevendo constar os seguintes aspectos:\na) Motivos que determinaram a saída da comunidade a que pertencia;\nb) Experiência da vocação ministerial;\nc) Posições teológicas;\nVI – Apresentar declaração de conhecimento e aceitação da Constituição da\nALIANÇA, deste Regimento Interno, da Confissão de fé da ALIANÇA, do\nCódigo de Ética do Ministro Congregacional, das Decisões conciliares e\nResoluções da diretoria Nacional.\nVII – Ser aprovado pelo Departamento Teológico e pelo Conselho de Pastores,\nconforme procedimento previsto nos artigos 36 e 37 deste Regimento.\n\n§ 1º. O ministro oriundo de outra denominação não poderá dirigir congregações\nde igrejas filiadas à ALIANÇA, sem que antes seja aprovado pelo\nDepartamento Teológico e pelo Conselho de Pastores.\n§ 2º. Os ministros oriundos da União das Igrejas Evangélicas Congregacionais\ndo Brasil ou de outras denominações com as quais a ALIANÇA mantenha\nmodus vivendi não se submeterão à prova aplicada pelo Departamento\nTeológico, mas deverão ser ouvidos pelo referido departamento sobre suas\nposições teológicas.\n§ 3º. O ministro que for divorciado por motivos não contemplados no art. 65\ndeste regimento não será recebido no quadro de ministros da ALIANÇA.\n\nSEÇÃO VII",
+      "char_count": 2703,
+      "source_char_count": 2763,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 13,
+      "text": "DA JUBILAÇÃO E CONCESSÃO DE TÍTULOS\n\nArt. 42. Os ministros que por motivo de saúde, idade, tempo de trabalho ou\ninvalidez não tiverem mais condições de exercer o ministério, ouvida a Diretoria\nNacional e a assembleia geral da igreja, poderão ser jubilados.\n§ 1º. O ministro será jubilado pela ALIANÇA, a pedido, a partir de setenta anos\nde idade.\n§ 2º. A critério da igreja, o pastor jubilado poderá continuar exercendo o seu\nministério pastoral.\n\nArt. 43. A ALIANÇA poderá conceder o título de Ministro Benemérito, por\ndecisão conciliar, a ministros de outras denominações que lhe tenham prestado\nrelevantes serviços.\n§ 1º. Qualquer igreja filiada poderá conceder o título de Pastor Honorífico a\nministro da ALIANÇA, que tenha sido seu pastor.\n§ 2º. A ALIANÇA e qualquer de suas igrejas filiadas poderão conceder títulos\nhonoríficos aos seus missionários.\n§ 3º. A concessão de título honorífico não cria direitos nem imputa deveres.\n\nCAPÍTULO III\nDAS CERIMÔNIAS RELIGIOSAS\n\nArt. 44. Cabe à ALIANÇA organizar e disponibilizar o Manual de Cerimônias\nReligiosas para orientar os ministros e as igrejas filiadas.\n\nArt. 45. O culto público é um ato religioso de adoração, quando a congregação\nem comunhão com Deus, faz confissão de pecados, súplicas, oferece a Deus\nlouvores, ofertas e dízimos, dá testemunho da fraternidade e comunhão\nespiritual dos crentes e proclama a mensagem redentora do Evangelho de\nCristo, para a salvação dos pecadores e a edificação dos crentes.\n\nArt. 46. As igrejas da ALIANÇA admitirão, para a profissão de fé e batismo, os\ncandidatos previamente examinados sobre a fé em Cristo, conhecimento da\nPalavra de Deus e experiência religiosa.\nParágrafo único. A profissão de fé e o batismo serão realizados após os\ncandidatos terem seus nomes referendados pela igreja em assembleia geral.\n\nArt. 47. As igrejas da ALIANÇA batizarão as pessoas maiores de dezesseis\nanos, em pleno gozo de suas razões, que declararem crer em Cristo, dando\nprovas de estarem convertidas.\n§ 1º. As igrejas poderão batizar pessoas menores de 16 anos e maiores de 13\nanos, desde que tais pessoas tenham autorização formal dos pais ou\nresponsáveis.\n§ 2º. As pessoas que vivem em união estável poderão ser batizadas, desde\nque a referida união ocorra por motivos alheios à vontade da pessoa que\ndeseja se batizar e não contrarie as leis do país nem os princípios cristãos\ninsculpidos na Bíblia Sagrada.\n\nArt. 48. As igrejas da ALIANÇA realizarão cerimônias de apresentação de\ncrianças ao Senhor, ocasião oportuna para que orientem os pais na educação\ndos filhos e para que orem publicamente em favor deles e de seus filhos.",
+      "char_count": 2616,
+      "source_char_count": 2676,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 14,
+      "text": "Art. 49. A Ceia do Senhor deve ser celebrada em memória do sacrifício vicário\nde Cristo, para proveito dos crentes e edificação espiritual da Igreja.\n§ 1º. A Ceia do Senhor será celebrada pelo pastor, auxiliado pelos oficiais da\nigreja;\nI – No impedimento do pastor, e sob o critério deste, a Ceia do Senhor poderá\nser ministrada por um presbítero;\n§ 2º – Será permitida a participação na Ceia do Senhor de membros da igreja\nlocal ou de igrejas reconhecidamente evangélicas, desde que estejam em\ncomunhão com Deus e com a igreja a que pertencem.\n\nCAPÍTULO IV\nDA DISCIPLINA DENOMINACIONAL\n\nArt. 50. Visando a edificação do povo de Deus, correção de escândalos, de\nerros ou faltas, promoção da honra de Deus e da glória de nosso Senhor Jesus\nCristo, a ALIANÇA exerce ação disciplinar sobre pastores, missionários e\nmissionárias a ela filiados, bem como sobre igrejas a ela jurisdicionadas.\n\nArt. 51. A igreja reconhece o foro íntimo da consciência, que escapa à sua\njurisdição, e da qual só Deus é Juiz, mas reconhece também o foro externo que\nestá sujeito à sua vigilância e observação.\n\nSEÇÃO I\nDAS FALTAS\n\nArt. 52. Falta é tudo que não esteja em conformidade com os ensinos das\nSagradas Escrituras, ou transgrida e prejudique a paz, a unidade, a pureza, a\nordem e a boa administração da comunidade cristã, no seu relacionamento\ncom a ALIANÇA.\nParágrafo único. a ALIANÇA ou as igrejas a ela filiadas não poderão\nconsiderar como falta, ou admitir como matéria de acusação o que não possa\nser provado, à luz das Escrituras e segundo a interpretação dos documentos\nnormativos da ALIANÇA.\n\nArt. 53. A transgressão ou omissão dos deveres preconizados na Constituição\nda ALIANÇA, neste Regimento Interno, na Confissão de fé da denominação, no\nCódigo de Ética do Ministro Congregacional, nas Decisões conciliares e nas\nResoluções administrativas emanadas da diretoria nacional constitui falta\npassível de pena.\n\nArt. 54. As faltas são de ação ou de omissão\nI – Entende-se por ação a prática de atos pecaminosos, e, por omissão, a\nabstenção de deveres cristãos;\nParágrafo único. As faltas serão consideradas pessoais se atingirem aos\nindivíduos; gerais, se atingirem a coletividade; públicas, quando se fizerem\nnotórias; veladas quando desconhecidas da comunidade.\n\nArt. 55. Os ministros que desabonarem a conduta do Evangelho serão julgados\ne disciplinados pela ALIANÇA.\n§ 1º. Caberá à igreja da qual faz parte o ministro infrator, fazer a denúncia do\nfato à ALIANÇA, devidamente justificada, através de documento assinado\npelos oficiais eclesiásticos.",
+      "char_count": 2545,
+      "source_char_count": 2612,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 15,
+      "text": "§ 2º. O direito de denúncia decairá em dois anos, contados da data do\nconhecimento do fato.\n§ 3º. A falta de denúncia, pela igreja, no prazo previsto no parágrafo anterior,\nnão impedirá a ALIANÇA de apurar, de ofício, mesmo após o decurso do prazo\ndecadencial, os fatos que deveriam ter sido denunciados, se houver indícios da\nocorrência deles.\n§ 4º. Se a igreja estiver sendo pastoreada por ministro da UIECB, a ALIANÇA,\nao receber a denúncia, deverá encaminhá-la ao Departamento de Atividades\nMinisteriais daquela denominação, que, por sua vez, informará, tanto à\nALIANÇA quanto à Igreja, a conclusão do Processo e as penalidades\naplicadas.\n\nArt. 56. Recebida a denúncia a diretoria da ALIANÇA, acionará o Conselho de\npastores para que este apure os fatos.\n§ 1º. O Conselho de Pastores poderá, por meio de despacho fundamentado,\nopinar pelo arquivamento da denúncia, caso esta não seja verossimilhante, ou,\nnão esteja de acordo com as exigências previstas na Constituição da ALIANÇA\ne/ou neste Regimento Interno;\n§ 2º. Em caso de o Conselho de Pastores opinar pelo arquivamento, a Diretoria\nNacional, ou a igreja acusadora poderão recorrer ao Concílio Nacional ou\nRegional – o que ocorrer primeiro.\n§ 3º. O Conselho de Pastores, uma vez acionado pela Diretoria para apurar os\nfatos, e não opinando pelo arquivamento da denúncia, deverá iniciar a dita\napuração no prazo máximo de até 30 dias\n\nArt. 57. Não opinando, o Conselho de Pastores, pelo arquivamento da\ndenúncia, deverá notificar o acusado, por escrito, para ser ouvido em dia, hora\ne local previamente estabelecidos;\n\nArt. 58. Após a oitiva do acusado, este terá o prazo de dez dias para\napresentar defesa escrita, se assim o desejar, indicando, inclusive,\ntestemunhas em número máximo de três;\n\nArt. 59. Exaurido o prazo para defesa escrita, previsto no artigo anterior, o\nconselho de Pastores marcará, com antecedência mínima de cinco dias, dia,\nhora e local para oitiva dos acusadores e das testemunhas por estes arroladas,\nem número máximo de três.\n\nArt. 60. Ouvida a acusação e suas testemunhas, o Conselho de Pastores\nouvirá as testemunhas de defesa, designando, para tanto, dia, hora e local,\ncom antecedência mínima de cinco dias.\n\nArt. 61. Todas as notificações previstas nos artigos 59 e 60 serão feitas por\nescrito, com comprovação de recebimento pelos notificados, sob pena de\nnulidade.\n\nArt. 62. Concluída a instrução processual, o Conselho de Pastores terá o prazo\nde quinze dias para emitir parecer sobre o assunto.\n\nArt. 63. Comprovadas as acusações, as penalidades aplicadas serão as\nseguintes:",
+      "char_count": 2571,
+      "source_char_count": 2634,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 16,
+      "text": "a) faltas morais – de um a dois anos de afastamento das funções pastorais,\nficando a igreja desobrigada de oferecer remuneração;\nb) faltas administrativas – de seis meses a um ano de afastamento das funções\npastorais, ficando a igreja desobrigada de oferecer remuneração;\nc) faltas por omissão – advertência por escrito;\n\n§ 1º. Entende-se por “falta moral” a prática de atos pecaminosos que atentem\ncontra a moral e os bons costumes e que maculem a imagem do evangelho e\nda igreja à luz das Escrituras Sagradas.\n§ 2º. Entende-se por “falta administrativa” a prática de atos que atentem contra\na administração da igreja ou da denominação, que não sejam conhecidos pela\nsociedade em geral e não sejam enquadrados como faltas morais.\n§ 3º. Entende-se por “faltas por omissão” toda e qualquer abstenção de adoção\nde medidas que devem ser aplicadas no exercício da função pastoral.\n§ 4º. Em caso de reincidência por faltas morais, sobretudo, de caso\nextraconjugal, o ministro será desligado do Quadro de Ministros da ALIANÇA.\n\nArt. 64. Das penalidades impostas pela ALIANÇA, caberá recurso, em última\ninstância, ao Concílio Nacional ou Regional, o que ocorrer primeiro.\n§ 1º. O recurso de que trata o caput deste artigo deverá ser apresentado no\nprazo máximo de seis meses, contado da publicação da decisão que deliberou\npela penalidade;\n§ 2º. As decisões conciliares ou da Diretoria Nacional que deliberarem por\naplicação de penalidades, poderão ser revistas, por meio de embargos\ndeclaratórios, apenas para que sejam supridas possíveis omissões,\ncontradições ou obscuridades.\n\nSEÇÃO II\nDO DIVÓRCIO E DO NOVO CASAMENTO\n\nArt. 65. O casamento é uma instituição divina e indissolúvel que deve ser\nsantificada e reverenciada por todos, especialmente pelos crentes no Senhor\nJesus Cristo.\n§ 1º. Um novo casamento só será permitido mediante a morte de um dos\ncônjuges, ou, em casos em que o divórcio for legitimamente permitido pela\nBíblia Sagrada.\n§ 2º. O divórcio será permitido apenas quando:\nI – Houver comprovado caso de adultério;\nII – Houver caso de deserção tão obstinada que não possa ser remediada nem\npela igreja, nem pelo estado;\nIII – Houver comprovados casos de humilhação, estupro e violência tais, que\nponham em risco a vida do cônjuge.\n§ 3º. Se o divórcio tiver ocorrido por motivos não contemplados no parágrafo\nanterior, o novo casamento constituirá adultério para o cônjuge que tiver dado\ncausa ao divórcio.\n\nArt. 66. O cristão que se divorciar por motivos não contemplados no artigo\nanterior e contrair novo casamento, deverá ser confrontado e disciplinado com\namor pela igreja, visando seu arrependimento e restauração.",
+      "char_count": 2631,
+      "source_char_count": 2693,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 17,
+      "text": "§ 1º. Nos casos em que o membro houver constituído nova família, depois de\nconscientizar-se de seu grave erro e arrepender-se verdadeiramente de seu\npecado, deverá ser recebido(a) pela igreja à sua comunhão, não podendo,\nentretanto, ser eleito para cargos e ofícios de ensino e autoridade na igreja.\n§ 2º. Membros divorciados por motivos divergentes dos preceitos escriturísticos\nexpostos no art. 65, não devem ser admitidos como candidatos à ordenação ao\nofício do sagrado ministério.\n§ 3º. O ministro que se divorciar por motivos que não estejam explicitados\nneste regimento e contrair novo casamento, tornar-se-á inapto para o exercício\ndo ministério.\n\nCAPÍTULO V\nDA ADMINISTRAÇÃO GERAL\n\nSEÇÃO I\nDA PERIODICIDADE, CONVOCAÇÃO E FUNCIONAMENTO DOS\nCONCÍLIOS\n\nArt. 67. A ALIANÇA não tem organização eclesiástica e, para dar cumprimento\naos seus objetivos, exerce sua atuação por meio dos Concílios, conforme\ndisposto no capítulo V de sua Constituição.\nParágrafo único. A Diretoria Nacional, como órgão administrativo da\nALIANÇA, exerce seu mandato respeitando a competência específica dos\nConcílios de que trata o Art. 31 da sua Constituição.\n\nArt. 68. O Concílio Nacional reunir-se-á, ordinariamente, a cada dois anos, ou\nextraordinariamente se um fato urgente o exigir, em data e local previamente\nanunciados pela Diretoria Nacional.\nParágrafo único. A convocação do Concílio Nacional deve ser amplamente\ndivulgada por todos os meios, e ser comunicada, por ofício circular às igrejas e\nobreiros filiados, pelo menos noventa dias antes da data prevista para a sua\ninstalação.\n\nArt. 69. Os Concílios Regionais reunir-se-ão, ordinariamente, a cada dois anos,\nem anos que não ocorram Concílio Nacional, ou extraordinariamente quando\num fato o exigir.\n\nParágrafo único. A convocação do Concílio Regional deve ser feita com\nantecedência mínima de sessenta dias da sua instalação.\n\nArt. 70. Cada igreja filiada à ALIANÇA credenciará delegados para representála nos concílios, em número proporcional à quantidade de seus membros,\ndevendo a Assembleia Geral designar os ditos delegados.\n\n§ 1º. As igrejas com menor número de membros poderão credenciar até 5\n(cinco) delegados e as igrejas com maior número de membros poderão\ncredenciar até 15 delegados, observando-se as regras a seguir:\nI – As igrejas que tiverem até 200 (duzentos) membros arrolados, poderão\ncredenciar até cinco (cinco) delegados;",
+      "char_count": 2392,
+      "source_char_count": 2449,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 18,
+      "text": "II – As igrejas que tiverem acima de 200 (duzentos) membros arrolados,\npoderão credenciar um delegado a mais, por cada múltiplo de 200 (duzentos)\nmembros, limitados ao número máximo previsto no § 1º deste artigo, a saber:\na) entre 200 e 400 membros – até seis delegados;\nb) entre 400 e 600 membros – até sete delegados;\nc) entre 600 e 800 membros – até oito delegados;\nd) entre 800 e 1.000 membros – até nove delegados;\ne) entre 1.000 e 1.200 membros – até dez delegados;\nf) entre 1.200 e 1.400 membros – até onze delegados;\ng) entre 1.400 e 1.600 membros – até doze delegados;\nh) entre 1.600 e 1.800 membros – até treze delegados;\ni) entre 1.800 e 2.000 membros – até quatorze delegados;\nj) a partir de 2.000 membros – 15 delegados.\n\n§ 2º. O credenciamento dos delegados deverá ser enviado à ALIANÇA até a\ndata do concílio, acompanhado da ata da Assembleia que deliberou sobre a\ndelegação, devendo constar, na referida ata, o número de membros arrolados\nna igreja;\n\n§ 3º. Os pastores, presbíteros, diáconos, missionários e missionárias das\nigrejas que não forem delegados, terão direito à voz nos Concílios, mas a igreja\nterá computado apenas os votos dos delegados.\n\n§ 4º. No caso de eleição da Diretoria Executiva, Conselho de Pastores e\nConselho Fiscal, os membros do quadro de ministros, presbíteros, diáconos,\nmissionários e missionárias que estiverem em situação regular poderão exercer\no direito de voto.\n\nArt. 71. Terão assento nos Concílios, podendo usar da palavra, membros\nconsultivos da Diretoria Nacional, relacionados no Art. 43, § 3º, da Constituição\nda ALIANÇA.\n\nArt. 72. Terão assento no concílio Regional, com direito a voto, membros da\nDiretoria Nacional oficialmente designados para representá-la.\n\nArt. 73. Terão assento no Concílio Regional, sem direito a voto, os membros\nvogais e consultivos da Diretoria Nacional que não sejam pastores ou\ndelegados das Igrejas da Região.\n\nArt. 74. Designam-se delegados todos os que têm assento nas assembléias,\npodendo ser efetivos e consultivos,\n§ 1º. Designam-se delegados efetivos os participantes das assembléias com\ndireito a voto.\n§ 2º. Designam-se delegados consultivos os participantes das assembléias\nsem direito a voto;\nArt. 75. Os Concílios funcionarão com 2/3 das igrejas filiadas em primeira\nconvocação e com 1/3 do total das Igrejas, em segunda convocação, de acordo\ncom o previsto no Art. 28 da Constituição da ALIANÇA.\n\nParágrafo único. Os Concílios se reunirão extraordinariamente em assembléia\ngeral, em qualquer tempo, quando do surgimento de fatos que exijam",
+      "char_count": 2539,
+      "source_char_count": 2597,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 19,
+      "text": "decisão urgente, sendo necessário para sua realização, o comparecimento de\nno mínimo 1/3 (um terço) do total das igrejas filiadas, conforme previsto no art.\n28, III, da Constituição da ALIANÇA.\n\nArt. 76. As mesas dos Concílios da ALIANÇA serão compostas pelo\npresidente, vice-Presidente, secretários, diretor do Conselho de Pastores e\npelos assessores dentro da conveniência dos trabalhos.\n\nArt. 77. Nos Concílios só poderão ser discutidos assuntos que constarem na\nconvocação previamente publicada.\n\nParágrafo único. Um assunto não constante da convocação poderá ser posto\nem discussão, desde que tenha representação, por escrito, de um terço dos\ndelegados presentes ao Concílio.\n\nSEÇÃO II\nDAS NORMAS PARLAMENTARES\n\nArt. 78. Nos Concílios serão obedecidas as seguintes normas parlamentares:\nI – A Mesa apresentará, na primeira plenária, a pauta da Assembleia, que não\npoderá ser alterada sem a anuência dos conciliares;\nII – Os delegados com assento no Concílio poderão falar, votar e ser votados,\nrespeitando-se o disposto nos artigos 70 e 74 deste regimento;\nIII – O orador sempre se dirigirá à mesa;\nIV – Não serão permitidos diálogos ou discursos paralelos;\nV – A palavra, pela ordem, será concedida pela mesa imediatamente ao\nsolicitante, que, porém, só poderá usá-la para lembrar questões de ordem que\nestejam sendo ignoradas;\nVI – O presidente poderá cassar a palavra nos seguintes casos:\na) Quando alguém pedir a palavra, pela ordem, mas usá-la para discutir o\nassunto;\nb) Quando o orador tratar de assunto estranho ao discutido;\nc) Quando forem usados termos ofensivos, contra qualquer pessoa, a critério\nda mesa;\nd) Quando for usada linguagem incompatível com o ensino bíblico;\nVII – Durante a sessão qualquer delegado poderá entrar ou sair da sala com o\nconsentimento da mesa, devendo o consentimento ser solicitado pelo levantar\nde um braço ou outro sinal previamente fixado pela mesa;\nVIII – Toda proposta deverá ser apresentada à mesa por escrito, na forma por\nela estabelecida;\nIX – A proposta com assinatura singular só poderá ser posta em discussão\ncaso seja apoiada, depois de lida pela mesa;\nX – Propostas oriundas de comissões serão postas em discussão\nimediatamente, pela mesa, sem necessidade de apoio;\nXI – Cada orador terá direito a usar a palavra por, no máximo, três vezes, sobre\nqualquer assunto em discussão, desde que as três falas não ultrapassem o\ntempo total de cinco minutos, que será cronometrado por um membro da mesa\nnomeado pelo presidente desta;\nXII – A mesa poderá prorrogar o tempo limitado no inciso anterior, caso haja\ngrande interesse em ouvir a palavra do orador;",
+      "char_count": 2608,
+      "source_char_count": 2665,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 20,
+      "text": "XIII – O relator de comissão e os presidentes regionais ou diretores de\ndepartamentos da ALIANÇA, ao usarem da palavra nesta condição, não\nestarão sujeitos à limitação de tempo;\nXIV – O presidente da Assembleia será o juiz desta;\nXV – O presidente da Assembleia não poderá emitir opinião a respeito do\nassunto em discussão, e, se desejar fazê-lo, deverá passar a presidência até a\nvotação da matéria.\nParágrafo único. Quando na Assembleia funcionar uma comissão de\nconsultas e pareceres, todas as propostas que não procederem de outras\ncomissões deverão, antes de serem postas em discussão, serem submetidas\nàquela Comissão.\n\nSEÇÃO III\nDA COMPETÊNCIA DA DIRETORIA EXECUTIVA DA ALIANÇA\n\nArt. 79. Compete ao presidente:\nI – Presidir o Concílio Nacional;\nII – Presidir as reuniões da Diretoria Nacional;\nIII – Convocar as reuniões ordinárias e extraordinárias;\nIV – Autorizar o pagamento das despesas eventuais não discriminadas no\nplano diretor da ALIANÇA;\nV – Representar legal, ativa, passiva e judicialmente a ALIANÇA;\nVI – Conceder mandatos com poderes específicos, sempre que necessário;\nVII – Nomear as comissões que se fizerem necessárias e diretores dos\ndepartamentos da ALIANÇA que independam de eleição.\nVIII – Decidir sobre todas as questões rotineiras do interesse da ALIANÇA, que\nnão representem matéria nova;\nIX – Apresentar ao Concílio o relatório sobre execução do plano diretor da\nALIANÇA;\nX – Assinar as atas dos Concílios e das Reuniões da Diretoria Nacional, depois\nde aprovadas;\nXI – Ser elemento de ligação entre a ALIANÇA e as regiões administrativas,\nbem como entre a ALIANÇA e as instituições cooperativas;\nXII – Elaborar e submeter à Diretoria Nacional os planos de convocação e\ninstalação dos Concílios, inclusive o programa, o local, a data e as demais\ncondições de realização;\nXIII – Coordenar o preparo do plano diretor da ALIANÇA para o exercício\nseguinte;\nXIV – Apresentar o plano diretor da ALIANÇA, no Concílio;\nXV – Dar conhecimento às Regiões Administrativas e aos Concílios Regionais,\ndas decisões e realizações da Diretoria Nacional;\nXVI – Assinar, juntamente com o tesoureiro, os documentos bancários\nnecessários à movimentação das contas da ALIANÇA;\nXVII – Delegar, por escrito, ao vice-presidente, atribuições específicas;\nXVIII – Supervisionar, em todos os casos, as iniciativas, as programações, as\nrealizações e as atividades da Diretoria Nacional como órgão administrativo da\nALIANÇA, inclusive a execução do Plano Diretor.\n\nArt. 80. Compete ao vice-presidente:\nI – Substituir o presidente em todos os seus impedimentos e nas ausências\neventuais e auxiliá-lo nas suas funções;",
+      "char_count": 2619,
+      "source_char_count": 2676,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 21,
+      "text": "II – Exercer as atribuições que lhe forem delegadas pelo presidente.\n\nArt. 81. Compete ao 1º secretário:\nI – Secretariar as sessões dos Concílios e da Diretoria Nacional, lavrando as\natas e assinando-as;\nII – Cuidar da correspondência da ALIANÇA, em todos os seus aspectos, como\nofícios, cartas, mensagens, e-mails, entre outros;\nIII – Organizar e manter em ordem e atualizados os arquivos da ALIANÇA.\n\nArt. 82. Compete ao 2º secretário:\n\nI – Substituir o 1º secretário nos seus impedimentos destes e nas ausências\neventuais e auxiliá-lo nas suas funções;\nII – Exercer as atribuições que lhe forem delegadas pelo presidente.\n\nArt. 83. Compete ao 1º tesoureiro:\nI – Receber e registrar em livro próprio, todas as contribuições previstas no\nplano diretor da ALIANÇA, bem como ofertas, doações ou donativos\ndestinados à ALIANÇA;\nII – Depositar em banco os valores recebidos pela ALIANÇA;\nIII – Manter em seu poder, em moeda corrente, quantia não superior a quatro\nvezes o salário-mínimo vigente no País, para o pagamento de pequenas\ndespesas;\nIV – Abrir, movimentar e encerrar as contas bancárias da ALIANÇA, juntamente\ncom o presidente, assinando cheques, cartas de créditos e outros documentos\nque se fizer necessária;\nV – Prestar contas ao Conselho Fiscal, sempre que solicitado;\n\nArt. 84. Compete ao 2º tesoureiro:\n\nI – Substituir o 1º tesoureiro nos seus impedimentos e nas ausências eventuais\ne auxiliá-lo nas suas funções;\nII – Exercer as atribuições que lhe forem delegadas pelo presidente.\n\nArt. 85. Compete ao secretário executivo:\nI – Dinamizar o cumprimento do plano diretor da ALIANÇA, concorrendo para\nque seus alvos sejam alcançados;\nII – Acompanhar a execução do programa previsto no referido plano dentro do\nestabelecido pelo Concílio;\nIII – Auxiliar o presidente da ALIANÇA na administração do escritório sede;\nIV – Auxiliar os outros diretores da Diretoria Nacional no cumprimento de suas\natribuições, segundo critérios estabelecidos pelo presidente;\nV – Dar conhecimento imediato ao presidente da ALIANÇA de todos os fatos\nimportantes no campo denominacional;\nVII – Cumprir todas as tarefas designadas pelo presidente da Diretoria\nNacional.\n\nSEÇÃO IV\nDA COMPETÊNCIA DAS DIRETORIAS DAS REGIÕES ADMINISTRATIVAS",
+      "char_count": 2225,
+      "source_char_count": 2282,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 22,
+      "text": "Art. 86. Compete aos presidentes da Regiões Administrativas:\nI – Presidir o Concílio Regional;\nII – Convocar as reuniões ordinárias e extraordinárias;\nIII – Autorizar o pagamento das despesas eventuais não discriminadas no\nplano diretor Regional;\nIV – Nomear as comissões que se fizerem necessárias;\nV – Decidir sobre toda questão regional que não represente matéria nova;\nVI – Apresentar ao Concílio Regional relatório final sobre a execução do plano\ndiretor regional;\nVII – Visitar as igrejas da região;\nVIII – Representar a região nas reuniões da Diretoria Nacional ou nomear um\nrepresentante;\nIX – Submeter à Região Administrativa os planos de convocação e de\ninstalação dos Concílios Regionais, inclusive o programa, o local, a data e as\ndemais condições de realização;\nX – Coordenar o preparo do plano diretor regional para o exercício seguinte;\nXI – Apresentar o plano diretor regional no Concílio Regional;\nXII – Dar conhecimento às igrejas jurisdicionadas, das decisões do Concílio\nRegional;\nXIII – Assinar junto com o tesoureiro os documentos bancários necessários à\nmovimentação das contas da região, dentro dos poderes delegados no\nmandato procuratório;\nXIV – Assinar as atas do Concílio Regional e das reuniões da Região\nAdministrativa, depois de aprovadas;\nXV – Delegar, por escrito, ao vice-presidente, atribuições específicas;\nXVI – Supervisionar, em todos os casos, as iniciativas, as programações, as\nrealizações e as atividades da Região Administrativa e a execução do plano\ndiretor regional.\nXVII – Presidir ou delegar a um membro da diretoria as eleições para escolha\ndas diretorias das distritais.\nXVIII – Nomear, em casos extraordinários, os membros das diretorias distritais.\n\nArt. 87. Compete ao vice-presidente:\nI – Substituir o presidente em todos os seus impedimentos e nas ausências\neventuais; e auxiliá-lo nas suas funções;\nII – Exercer as atribuições que lhe forem delegadas pelo presidente.\n\nArt. 88. Compete ao 1º secretário:\nI – Secretariar as sessões do Concílio e da Diretoria Regional, lavrando as atas\ne assinando-as;\nII – Cuidar da correspondência da Região Administrativa, em todos os seus\naspectos, como ofícios, cartas, mensagens, e-mails, entre outros;\nIII – Organizar e manter em ordem e atualizados os arquivos da Região\nAdministrativa.\n\nArt. 89. Compete ao 2º secretário substituir o primeiro secretário nos\nimpedimentos deste.\n\nArt. 90. Compete ao tesoureiro:\nI – Receber e registrar em livro próprio, os repasses da Diretoria Nacional;",
+      "char_count": 2483,
+      "source_char_count": 2538,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 23,
+      "text": "II – Depositar em banco os valores recebidos do caixa central da ALIANÇA;\nIII – Manter em seu poder, em moeda corrente, valor não superior a um saláriomínimo vigente no País, para o pagamento de pequenas despesas;\nIV – Movimentar conta bancária específica em nome da ALIANÇA, junto com o\nPresidente, assinando cheques e outros documentos nos quais se faça\nnecessária;\nV – Prestar contas ao Conselho Fiscal, sempre que solicitado;\n\nArt. 91. Compete ao secretário regional de missões promover a obra\nmissionária conforme orientação do diretor do Departamento de Orientação\nMissionária.\n\nArt. 92. O voto do presidente da Diretoria Regional, nas reuniões da Diretoria\nNacional, deve refletir o pensamento da região que representa.\n\nSEÇÃO V\nDA COMPETÊNCIA DAS DIRETORIAS DAS DISTRITAIS\n\nArt. 93. Compete ao presidente:\nI – Convocar reuniões da diretoria;\nII – Visitar as igrejas da distrital;\nIII – Dar conhecimento às igrejas jurisdicionadas, das decisões da Diretoria\nRegional;\nIV – Presidir as reuniões distritais;\nV – Assinar as atas das reuniões da Diretoria Distrital juntamente com o\nsecretário;\nVI – Delegar, por escrito, ao vice-presidente, atribuições específicas;\nVII – Presidir, quando delegado pelo presidente da Região Administrativa, as\neleições para escolha das diretorias das distritais.\nVIII – Representar o distrito no Concílio Regional;\nIX – Coordenar as atividades relacionadas ao distrito sob sua jurisdição;\nX – Prestar relatórios das atividades de seu distrito à Diretoria Regional\ncorrespondente;\nXI – Submeter à Diretoria Regional o plano de trabalho do distrito sob a sua\njurisdição.\n\nArt. 94. Compete ao vice-presidente:\nI – Substituir o presidente em todos os seus impedimentos e nas ausências\neventuais; e auxiliá-lo nas suas funções;\nII – Exercer as atribuições que lhe forem delegadas pelo presidente.\n\nArt. 95. Compete ao secretário:\nI – Secretariar as reuniões da diretoria, lavrando as atas e assinando-as\njuntamente com o presidente;\nII – Cuidar da correspondência do distrito, em todos os seus aspectos, como\nofícios, cartas, mensagens, e-mails, entre outros;\nIII – Organizar e manter em ordem e atualizados os arquivos do distrito.\n\nArt. 96. Compete ao tesoureiro:\nI – Receber e registrar em livro próprio, as receitas do distrito;",
+      "char_count": 2264,
+      "source_char_count": 2328,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "recomposed_safe_hyphenation",
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 24,
+      "text": "II – Prestar contas ao Conselho Fiscal, sempre que solicitado;\n\nArt. 97. Compete ao secretário distrital de missões promover a obra\nmissionária conforme orientação do Diretor do Departamento de Orientação\nMissionária.\n\nSEÇÃO VI\nDAS REUNIÕES DAS DIRETORIAS\n\nArt. 98. A Diretoria Nacional reunir-se-á em caráter ordinário trimestralmente,\nem dia, hora e local previamente fixados.\nParágrafo único. As reuniões extraordinárias da Diretoria Nacional serão\nconvocadas, a qualquer tempo, sempre que um fato exigir um posicionamento\nurgente da Diretoria.\n\nArt. 99. As Regiões Administrativas reunir-se-ão em caráter ordinário\ntrimestralmente, em dia, hora e local previamente fixados.\nParágrafo único. As reuniões extraordinárias das Regiões Administrativas\nserão convocadas, a qualquer tempo, sempre que um fato exigir um\nposicionamento urgente dessas Diretorias.\n\nArt. 100. Os membros das diretorias da ALIANÇA que faltarem por mais de\ntrês vezes consecutivas às reuniões ordinárias, sem justificativa plausível,\nserão considerados como renunciantes ao cargo.\n\nSEÇÃO VII\nDO CONSELHO FISCAL\n\nArt. 101. O Conselho Fiscal é o órgão fiscalizador das finanças da ALIANÇA\nem todos os níveis.\nParágrafo único. O Conselho Fiscal tem a autoridade de auditar,\ntrimestralmente, ou, a qualquer tempo, em casos extraordinários, as contas da\nALIANÇA, compreendidas nestas as da Diretoria Nacional, Regionais,\ndepartamentos, seminários e outros órgãos,\n\nArt. 102. O Conselho Fiscal é composto por três membros efetivos e três\nsuplentes eleitos em Concílio Nacional com mandato de quatro anos.\nParágrafo Único – Dentre os membros efetivos do Conselho Fiscal um será\nescolhido, na primeira reunião do colegiado, para a função de presidente e\noutro para a função de secretário.\n\nArt. 103. É vedada a participação no Conselho Fiscal de membros, que tenham\nparentesco com membros da diretoria da ALIANÇA, até o 3º grau,\nconsanguíneo ou afim,\nParágrafo único. Se ocorrer parentesco entre membros do Conselho Fiscal e\nmembros de órgãos auditados, aqueles serão substituídos por outros membros\ndo Conselho.\n\nSEÇÃO VIII\nDO PROCESSO ELEITORAL",
+      "char_count": 2112,
+      "source_char_count": 2170,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 25,
+      "text": "Art. 104. Os cargos eletivos da ALIANÇA são:\na) Diretoria Executiva Nacional: presidente, vice-presidente, 1º secretário, 2º\nsecretário, 1º tesoureiro e 2º tesoureiro;\nb) Diretorias Regionais Administrativas: presidente, vice-presidente, 1º\nsecretário, 2º secretário, tesoureiro e secretário regional de missões;\nc) Conselho de pastores: presidente e vice-presidente;\nd) Conselho Fiscal: Todos os membros;\ne) Departamentos: diretor, vice-diretor, secretário e tesoureiro;\nf) Diretorias distritais: presidente, vice-presidente, secretário, tesoureiro e\nsecretário distrital de missões;\n\n§ 1º. Os departamentos referidos na alínea e, são DENAEC, DEMEC, DEMIC,\nDHEC, DAC cujas diretorias serão eleitas em seus congressos respectivos.\n§ 2º. A eleição da Diretoria dos Departamentos citados no parágrafo anterior,\ndeverá ser homologada pela Diretoria Nacional;\n\nArt. 105. Serão nomeadas pelos Concílios ou Congressos correspondentes,\ncomissões eleitorais para gerir o processo de eleição dos cargos elencados no\nArtigo 104 deste Regimento.\n\nArt. 106. A eleição dar-se-á por escrutínio secreto e será considerada eleita a\nchapa que obtiver maioria simples de votos.\n§ 1º. Havendo empate na votação será considerada eleita a chapa cujo\ncandidato à presidência for mais idoso.\n§ 2º. A duração dos mandatos será de quatro anos para todos os cargos\neletivos.\n\nSEÇÃO IX\nDO PREENCHIMENTO DE CARGOS VAGOS\n\nArt. 107. Em caso de vacância do cargo de presidente da Diretoria Nacional\nassumirá, cumulativamente, o Vice-presidente.\n\nArt. 108. Em caso de vacância do cargo de vice-presidente, o 1º secretário\nassumirá, cumulativamente, a vice-presidência.\n\nArt. 109. Em caso de vacância dos cargos de presidente e vice-presidente, o\n1º secretário assumirá a presidência e convocará, imediatamente, um Concílio\nNacional Extraordinário para suprir os cargos vagos.\n§ 1º. O concílio extraordinário de que trata o caput deste artigo deverá ser\nrealizado em até 90 (noventa) dias contados da data da vacância\n§ 2º. Caso a vacância dos cargos se dê nos últimos noventa dias do mandato,\no 1º secretário assumirá a presidência até a posse do novo presidente.\n\nArt. 110. O mesmo procedimento previsto nesta seção ocorrerá quando da\nvacância dos cargos das diretorias regionais, distritais e departamentais.\n\nSEÇÃO X\nDOS DEPARTAMENTOS E OUTRAS ORGANIZAÇÕES DA ALIANÇA",
+      "char_count": 2338,
+      "source_char_count": 2398,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 26,
+      "text": "Art. 111. Os departamentos são órgãos auxiliares da ALIANÇA, que exercem\ntarefas específicas em cada área, de forma planejada e são diretamente\nsubordinados à Diretoria Nacional.\n\nArt. 112. São Departamentos da ALIANÇA:\nI – Departamento de Orientação Missionária – DOM;\nII – Departamento Teológico – DET;\nIII – Departamento de Educação Religiosa e Publicações – DERP;\nIV – Departamento Jurídico – DJU;\nV – Departamento Contábil/Financeiro – DCF;\nVI – Departamento Nacional de Mocidades Congregacionais – DEMEC;\nVII – Departamento Nacional de Auxiliadoras Congregacionais – DAC;\nVIII – Departamento Nacional de Adolescentes Congregacionais – DNAEC;\nIX – Departamento Nacional de Homens Congregacionais – DHEC;\nX – Departamento Nacional de Missionárias Congregacionais – DEMIC;\nXI – Departamento Soldados de Cristo – DSC;\nXII – Departamento de Música – DEMUSI;\nXIII – Outros, a critério da Diretoria Nacional, homologados em Concílio\nNacional.\n\nArt. 113. Cada departamento terá um Regimento Interno, aprovado pela\nDiretoria Nacional.\n\nArt. 114. Todos os departamentos apresentarão à Diretoria Nacional, nas\nreuniões programadas, um relatório pormenorizado da parte que lhe couber na\nexecução do plano diretor da ALIANÇA, dentro do prazo fixado pelo presidente\nda Diretoria Nacional.\n\nArt. 115. Cada departamento terá uma conta corrente em nome da ALIANÇA,\nque será movimentada pelo presidente e pelo tesoureiro, em conjunto,\nmediante procuração por prazo determinado, emitida em cartório pela\npresidência da denominação.\n\nArt. 116. Todos os departamentos disponibilizarão balancetes trimestrais para\nacompanhamento da Diretoria Nacional.\n\nArt. 117. Os departamentos deverão transferir para o caixa central os recursos\nexcedentes à receita que atingir duas vezes o valor das despesas mensais.\n\nArt. 118. O presidente da ALIANÇA nomeará conselheiros para os\ndepartamentos DEMEC, DAC, DEMIC, DNAEC, e DHEC, que terão assento\ngarantido nas reuniões do respectivo departamento, com as seguintes\natribuições:\nI – Orientar as atividades dos departamentos em função do planejamento\nglobal da ALIANÇA;\nII – Diligenciar para que os eventos do respectivo departamento tenham\nobjetivos que não contrariem os princípios e doutrina congregacional, cuidando\npara que os preletores convidados e práticas adotadas não se choquem com\nreferidos princípios e doutrina;",
+      "char_count": 2346,
+      "source_char_count": 2405,
+      "page_zone": "normative_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 27,
+      "text": "III – Diligenciar para que o departamento cumpra as determinações dos artigos\n112 a 117.\n\nArt. 119. Compete ao Departamento de Orientação Missionária (DOM):\nI – Coordenar o trabalho missionário da ALIANÇA no âmbito do País ou fora\ndele;\nII – Coordenar os projetos missionários Robert Reid Kalley, José Quaresma de\nMendonça e Antônio Almeida de Menezes, além de outros que vierem a ser\ncriados;\nIII – Agenciar a manutenção e ampliação dos campos missionários da\nALIANÇA;\nIV – Motivar as igrejas para a evangelização e abertura de novos trabalhos;\nV – Confeccionar e distribuir material próprio para o trabalho missionário;\nVI – Fazer parceria com igrejas, Regiões Administrativas e com as Distritais\npara abertura de novos trabalhos e campos missionários;\nVII – Envidar esforços para que todas as igrejas filiadas enviem a oferta\nmissionária.\nParágrafo único. A parceria prevista no inciso VI, somente poderá ser feita\ncom igrejas que tiverem contribuído para a ALIANÇA fiel e ininterruptamente,\nno mínimo, durante os últimos seis meses.\n\nArt. 120. Compete ao Departamento Teológico (DET):\nI – Organizar, coordenar e supervisionar o ensino de Educação Teológica da\nALIANÇA, através de seminários, institutos bíblicos e congêneres;\nII – Promover simpósios e eventos similares visando a preparação e\natualização dos professores dos seminários;\nIII - Avaliar os candidatos à ordenação pastoral e ao credenciamento de\nmissionários e missionárias;\nIV – Pesquisar, analisar e dar parecer sobre assuntos doutrinários complexos,\nharmonizando-os à Confissão de Fé da ALIANÇA;\nV – Nomear, empossar, e exonerar os diretores dos seminários teológicos da\ndenominação;\nVI – Emitir parecer sobre a participação de ministros da ALIANÇA em cursos\nde pós-graduação, indicando as instituições de ensino nas quais os cursos\ndevem ser realizados;\na) Os cursos referidos neste inciso devem atender aos critérios da\ndenominação;\nb) Os candidatos indicados pelo DET poderão receber auxílio financeiro da\nALIANÇA.\n\nArt. 121. Compete ao Departamento de Educação Religiosa e Publicações\n(DERP):\nI – Programar, elaborar e coordenar o material de ensino religioso para as\nIgrejas da denominação;\nII – Promover simpósios e eventos similares visando a preparação e\natualização dos professores de escola dominical;\nIII – Responsabilizar-se pela editoração, impressão gráfica e expedição do\nJornal Aliança Congregacional, Revista Aliança Missionária e das revistas da\nescola dominical;\nIV – Fazer publicações diversas de interesse denominacional;",
+      "char_count": 2512,
+      "source_char_count": 2569,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 28,
+      "text": "V – Supervisionar todas as atividades da Editora Aliança;\nVI – Nomear um conselho editorial que terá a função de emitir parecer sobre as\npublicações da Editora Aliança.\n\nArt. 122. Compete ao Departamento Contábil/Financeiro (DCF):\nI – Responsabilizar-se pela contabilidade geral da ALIANÇA;\nII – Fazer balancetes mensais do caixa central com demonstrativos de receitas\ne despesas, a serem encaminhados a todos os diretores e organizações da\nALIANÇA;\nIII – Fazer o balanço anual da ALIANÇA, exigido por lei;\nIV – Assessorar as Igrejas na área de sua especialização, inclusive\npromovendo cursos para a contabilização adequada, exigida por lei;\nV – Controlar e providenciar os pagamentos de obrigações e débitos da\nALIANÇA, inclusive impostos e taxas;\n\nArt. 123. Compete aos departamentos de auxiliadoras, de homens, de\nmocidades, de missionários/missionárias e de adolescentes:\nI – Coordenar nacionalmente as atividades dos departamentos das Igrejas\nlocais;\nII – Promover eventos que possibilitem maios integração dos segmentos\ncorrespondentes dentro das igrejas locais;\nIII – Assessorar os departamentos locais das igrejas no exercício de suas\natividades.\nIV – Convergir todas as suas atividades para auxílio da Diretoria Nacional na\nexecução do plano diretor.\n\nArt. 124. Todas as organizações da ALIANÇA enviarão as informações\ncontábeis (recibos, comprovantes de despesas, notas fiscais etc.) para o\nDepartamento Contábil/Financeiro, por meio de documentos físicos ou\neletrônicos, para a confecção dos balancetes trimestrais e para a confecção do\nbalanço anual da Instituição, até 15 dias após o encerramento de cada\ntrimestre.\n\nArt. 125. Em havendo necessidade, o Presidente da ALIANÇA poderá nomear\nassessores para as áreas de imprensa e radiodifusão, história e estatística,\nação social e beneficente, relações públicas e outros que se fizerem\nnecessários.\n\nSEÇÃO XI\nDO CONSELHO DE PASTORES\n\nArt. 126. O Conselho de Pastores é um órgão da ALIANÇA, autônomo, mas\nnão independente da Diretoria Nacional, tendo como finalidade precípua tratar\ndas questões éticas e morais dos ministros e igrejas da ALIANÇA, e apoiá-los\natravés de um trabalho de apascentamento e acompanhamento preventivo.\n\nArt. 127. O Conselho de Pastores, no exercício da competência preconizada\nno artigo 60 da Constituição, deverá orientar, assistir, coordenar e disciplinar o\nexercício do Ministério Pastoral das Igrejas associadas à ALIANÇA, zelando",
+      "char_count": 2423,
+      "source_char_count": 2478,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 29,
+      "text": "pelas condições espirituais, familiares, sociais e econômicas dos seus\nMinistros.\n\nArt. 128. O Conselho de Pastores é constituído de cinco membros, com\nmandato de quatro anos, sendo um diretor, um vice-diretor e três vogais.\n§ 1º. O Diretor e o vice-diretor serão eleitos, pelo Concílio Nacional e os três\nvogais, serão nomeados pelo diretor do Conselho de Pastores.\n§ 2º. Dentre os vogais, um será nomeado pelo diretor do Conselho de Pastores\npara a função de secretário.\n\nArt. 129. O Conselho de Pastores atuará todas as vezes que surgirem\nproblemas de natureza ética e/ou moral no âmbito da denominação, sendo\ndesignado pelo presidente da ALIANÇA para tratar dos referidos problemas.\n§ 1º. As despesas dos membros do Conselho de Pastores, quando a serviço\nda ALIANÇA, serão custeadas, em princípio, pela Tesouraria Nacional.\n§ 2º. As Igrejas que solicitarem a presença do Conselho de Pastores para\narbitrar questões internas relacionadas a elas, deverão pagar as despesas de\nlocomoção, hospedagem e alimentação dos membros do Conselho.\n\nArt. 130. os pareceres do Conselho de Pastores terão caráter recomendatório\ne serão encaminhados para a Diretoria Nacional e/ou Concílios para\napreciação.\nParágrafo único. O Conselho de Pastores reunir-se-á trimestralmente, em\ndata por ele fixada ou por convocação do seu diretor, quando necessário, para\ndeliberar sobre assuntos especificados na convocação, que deverá ser feita\ncom antecedência mínima de 15 (quinze) dias;\n\nArt. 131. Os membros do Conselho de Pastores, no exercício de suas\natividades, deverão desempenhar as funções previstas no art. 66 da\nConstituição da ALIANÇA.\n\nSEÇÃO XII\nDO ANTEPROJETO DO PLANO DIRETOR\n\nArt. 132. O anteprojeto do plano diretor da ALIANÇA será organizado sob a\ndireção do presidente da Diretoria Nacional, baseando-se na experiência do\nplano em curso.\n§ 1º. Caberá à Diretoria Nacional aprovar o anteprojeto que o presidente\napresentará ao Concílio Nacional para a aprovação definitiva, transformando-o\nem plano diretor da ALIANÇA, para o período pré-estabelecido.\n§ 2º. Às diretorias regionais aplicam-se as disposições do parágrafo anterior.\n\nArt. 133. A Diretoria Nacional, por meio de comissão, ao elaborar o anteprojeto\ndo plano diretor deverá consultar os diretores dos departamentos e as\npresidências regionais com a antecedência mínima de três meses.\nParágrafo único. O plano diretor regional deverá ser organizado à semelhança\ndo plano diretor da ALIANÇA, no que for aplicável à Região.\n\nSEÇÃO XIII\nDA REALIZAÇÃO DE EVENTOS DENOMINACIONAIS",
+      "char_count": 2530,
+      "source_char_count": 2593,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 30,
+      "text": "Art. 134. Os eventos denominacionais serão realizados em parceria com as\nIgrejas filiadas ou com outros departamentos da denominação.\n§ 1º. Os responsáveis pela realização de eventos denominacionais deverão\nbuscar sempre a autossuficiência financeira visando não onerar as finanças da\nALIANÇA.\n§ 2º. Terminados os eventos, os responsáveis farão um relatório detalhado,\ninclusive com demonstração financeira para a Diretoria Nacional.\n§ 3º. As igrejas filiadas, ao realizarem seus eventos locais, deverão observar o\ncalendário de eventos da denominação de modo que sejam evitadas\ncoincidências de datas entre os seus eventos e os da denominação.\n\nSEÇÃO XIV\nDA CONTABILIZAÇÃO DAS RECEITAS E DESPESAS\n\nArt. 135. As receitas da ALIANÇA são oriundas das contribuições e ofertas das\nIgrejas filiadas, das ofertas voluntárias e das taxas de filiação e renovação de\ncredenciais dos pastores, presbíteros, diáconos, missionários e missionárias.\n§ 1º. Mensalmente será feito o levantamento das receitas, e, em seguida, o\nTesoureiro da Diretoria Nacional fará a transferência para os títulos, previstos\nno plano diretor, das dotações orçamentárias, na proporção fixada pelo referido\nplano.\n§ 2º. A tesouraria repassará essas contribuições de acordo com critérios\nestabelecidos pela Diretoria Nacional, pelos instrumentos normativos e pelas\ndecisões conciliares.\n§ 3º. A Diretoria Nacional regulará, por meio de resolução, o valor das taxas de\nfiliação e a periodicidade e valor da renovação de credenciamento.\n\nArt. 136. A contabilidade das Regiões Administrativas e dos departamentos da\nALIANÇA\ndeve\nser\napresentada,\ntrimestralmente,\nao\ndepartamento\ncontábil/financeiro e, ao conselho fiscal sempre que for solicitada.\n\nArt. 137. Todas as despesas realizadas por órgãos da ALIANÇA devem ser\ncomprovadas para a contabilização adequada.\n\nSEÇÃO XV\nDAS DATAS COMEMORATIVAS DA ALIANÇA\n\nArt. 138. São datas especiais a serem comemoradas pelas igrejas filiadas à\nALIANÇA, com cultos em ações de graças:\nI – 10 de agosto – Dia da Denominação (ALIANÇA);\nII – 19 de agosto – Dia do Congregacionalismo;\nIII – 3º domingo de agosto – Dia da Escola Bíblica Dominical;\nIV – 02 de outubro – Dia do Pastor Congregacional;\nV – 2º domingo de outubro – Dia Nacional de Missões;\nVI – 31 de outubro – Dia da Reforma Protestante\nVII – 2º domingo de dezembro – Dia da Bíblia;\nVIII – 25 de dezembro – Dia do Natal.\n§ 1º. No culto de ações de graças pelo dia da denominação, a igreja deverá\nfazer um retrospecto da história do congregacionalismo e da ALIANÇA.",
+      "char_count": 2523,
+      "source_char_count": 2591,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 31,
+      "text": "§ 2º. No Dia de Missões haverá uma campanha de âmbito nacional, com alvo\nprevisto no plano diretor da ALIANÇA, devendo toda a receita alcançada ser\ndestinada ao Departamento de Orientação Missionária.\n§ 3º. No Dia do pastor congregacional os pastores que fazem parte do quadro\nde ministros da ALIANÇA deverão ser homenageados pelas suas Igrejas, que\noferecerão cultos em ação de graças pelas suas vidas e ministérios.\nI – O dia do pastor congregacional foi instituído em homenagem póstuma ao\nRev. Robert Reid Kalley, que no dia 02 de outubro de 1863, foi eleito pastor da\nIgreja Evangélica Fluminense.\n\nArt. 139. São datas importantes para a denominação que poderão ser\ncomemoradas pelas Igrejas com a colaboração dos departamentos da\nALIANÇA:\nI – 2º domingo de fevereiro – dia do homem congregacional;\nII – 1º de Maio – dia do jovem congregacional;\nIII – 2º domingo de junho – dia dos oficiais;\nIV – 11 de julho - dia da mulher congregacional;\nV – 1º domingo de setembro – dia do seminarista;\nVI – 2º sábado de setembro - dia do adolescente congregacional;\nVII – 2º domingo de outubro – dia do(a) missionário(a).\n\nSEÇÃO XVI\nDO JORNAL ALIANÇA CONGREGACIONAL\n\nArt. 140. O jornal ALIANÇA CONGREGACIONAL é um dos veículos oficiais de\nnotícia da ALIANÇA, para divulgar os atos da denominação, notícias das\nigrejas e obreiros em geral e para edificação espiritual das igrejas afiliadas.\nParágrafo único. Caberá ao DERP tornar o jornal autossustentável através de\nofertas voluntárias e patrocínios, desde que estes não firam os princípios\ndefendidos pela denominação.\n\nSEÇÃO XVII\nDOS SEMINÁRIOS DA ALIANÇA\n\nArt. 141. Os seminários teológicos congregacionais da ALIANÇA são os\nórgãos de educação teológica e de preparação de obreiros para as Igrejas\nafiliadas.\nParágrafo único. Os seminários teológicos são subordinados ao DET que tem\nas atribuições de supervisioná-los e de nomear os seus diretores.\n\nArt. 142. Os seminários terão a sua instalação autorizada por um Concilio\nNacional ou por decisão da Diretoria Nacional, após emissão de parecer\nemitido pelo Departamento Teológico no qual devem ser abordados aspectos\ntécnicos e administrativos.\nParágrafo único. Os critérios para implantação de seminários constarão no\nRegimento Interno do DET\n\nArt. 143. Os Seminários Teológicos da Denominação têm, na estrutura\nadministrativa, os cargos de: Diretor, Vice-Diretor, Secretário, Tesoureiro,\nCoordenador Pedagógico, Bibliotecário e Deão.",
+      "char_count": 2431,
+      "source_char_count": 2489,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 32,
+      "text": "§ 1º. O mandato da diretoria será de quatro anos.\n§ 2º. As funções constantes no caput deste artigo poderão ser gratificadas\napós constatada, pelo DET e pela direção do seminário, a viabilidade financeira\npara tal.\n\nArt. 144. Os cursos oferecidos pelos Seminários da ALIANÇA terão matriz\ncurricular definida pelo DET.\nParágrafo único. Não poderá haver mudanças na matriz curricular dos\nseminários sem a devida autorização do DET.\n\nArt. 145. As previsões orçamentárias destinadas à ampliação da assistência\naos Seminários, mormente no que se refere à vitalização de suas Bibliotecas, à\ninformatização de seus procedimentos operacionais e aparelhamento de suas\nsalas de aulas, estarão fixadas em rubrica própria no Plano Diretor da\nALIANÇA.\n\nCAPÍTULO VI\nDAS DISPOSIÇÕES GERAIS E TRANSITÓRIAS\n\nArt. 146. As igrejas que tiverem parceria com o DOM e não estiverem de\nacordo com a previsão constante no Parágrafo Único do art. 119, terão o prazo\nde três meses para se adequarem às prescrições do referido dispositivo,\ncontados da aprovação deste regimento pelo Concílio Nacional.\n\nArt. 147. A inclusão do segundo tesoureiro na Diretoria nacional se dará\nquando da eleição da próxima diretoria.\n\nArt. 148. Qualquer reforma ou alteração nos artigos deste Regimento só\npoderá ser efetuada por maioria simples dos votos em um Concilio Nacional,\ncom pauta previamente anunciada para este fim.\n§ 1º. As propostas para reforma ou alteração deste Regimento serão enviadas\npelas Igrejas, antes do Concílio convocado nos termos do caput deste artigo, à\nDiretoria Nacional, em prazo por esta fixado, para que possam ser apreciadas.\n§ 2º. Só serão apreciados pela Assembléia Geral os artigos do Regimento\nconstantes no Edital de Convocação;\n§ 3º. Qualquer dispositivo deste Regimento apreciado por um Concílio, não\npoderá voltar a ser apreciado no Concílio imediatamente subseqüente.\n\nArt. 149. Os Regimentos Internos dos Departamentos constarão como anexos\ndeste Regimento.\n\nArt. 150. O presente Regimento Interno entrará em vigor na data de sua\naprovação pelo Concílio Nacional.\n\nArt. 151. Os casos omissos neste Regimento serão decididos pela Diretoria\nNacional conforme disposição do art. 44, VI da Constituição da ALIANÇA.",
+      "char_count": 2209,
+      "source_char_count": 2268,
+      "page_zone": "normative_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "removed_isolated_page_number",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    }
+  ],
+  "marker_validation": {
+    "CAPÍTULO I": true,
+    "SEÇÃO I": true,
+    "Art. 1º": true
+  },
+  "document_warnings": []
+}

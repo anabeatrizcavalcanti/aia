@@ -1,0 +1,80 @@
+{
+  "document_id": "resolucao-alianca-01-2020",
+  "doc_id": "resolucao-alianca-01-2020",
+  "title": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+  "subtitle": null,
+  "document_title": "Resolução Aliança nº 01, de 23 de novembro de 2020",
+  "corpus_id": "congregational_normative",
+  "denomination": "Aliança das Igrejas Evangélicas Congregacionais do Brasil",
+  "tradition": "congregacional",
+  "tradition_family": "Protestant",
+  "tradition_branch": "Congregational",
+  "document_type": "administrative_resolution",
+  "source_category": "denominational_normative_document",
+  "year": 2020,
+  "resolution_number": "01/2020",
+  "resolution_date": "23 de novembro de 2020",
+  "language": "pt",
+  "raw_path": "corpus/raw/normative/Resolução_aliança.pdf",
+  "input_extraction_file": "corpus/processed/extracted/normative/resolucao-alianca-01-2020.extracted.json",
+  "normalization_strategy": "normative_mechanical_safe_normalization_v001",
+  "pages_count": 4,
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "",
+      "char_count": 0,
+      "source_char_count": 0,
+      "page_zone": "empty",
+      "normalization_actions": [
+        "no_changes"
+      ],
+      "warnings": [
+        "empty_page_text",
+        "empty_after_normalization"
+      ]
+    },
+    {
+      "page_number": 2,
+      "text": "RESOLUÇÃO ALIANÇA Nº 01, de 23 de novembro de 2020.\nDISPÕE SOBRE O PLANO DE INCENTIVO\nÀ\nEMANCIPAÇÃO\nDE\nCAMPOS\nMISSIONÁRIOS E CONGREGAÇÕES E\nSOBRE A ORDENAÇÃO AO SAGRADO\nMINISTÉRIO\nA ALIANÇA DAS IGREJAS EVANGÉLICAS CONGREGACIONAIS DO\nBRASIL, em sessão ordinária da Diretoria Nacional realizada em 23 de\nnovembro de 2020, e no uso de suas atribuições constitucionais, legais\ne regimentais, especialmente no disposto no inciso I, parágrafo 1º do\nArtigo 3º e Artigo 7º, ambos do Regimento Interno;\nCONSIDERANDO a existência de diversos campos missionários e\ncongregações que possuem capacidade plena para a emancipação\ncomo Igrejas, bem como a grande quantidade de obreiros vinculados\naos referidos campos e congregações que já exercem de fato as\natribuições de pastores;\nCONSIDERANDO a importância da emancipação desses campos\nmissionários e congregações, não apenas para o crescimento\ndenominacional, mas para a implementação da atividade missionária;\nCONSIDERANDO a importância da consagração ao sagrado ministério\ndos obreiros vinculados a esses campos missionários e congregações\na fim de que aqueles possam exercer de maneira plena o ministério\npastoral;\nRESOLVE:\nCAPÍTULO I\nDAS DISPOSIÇÕES GERAIS\nArt. 1º O PLANO DE INCENTIVO à EMANCIPAÇÃO e à\nORDENAÇÃO AO SAGRADO MINISTÉRIO terá o prazo de 06 (seis)\nmeses para adesão da Igreja Mãe para a emancipação dos Pontos de\nPregação, Congregações e Campos Missionários, bem como para a\nordenação dos obreiros a esses vinculados, podendo ser prorrogado a\ncritério da Diretoria Nacional.\nCAPÍTULO II",
+      "char_count": 1543,
+      "source_char_count": 1578,
+      "page_zone": "resolution_body",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 3,
+      "text": "DO INCENTIVO À EMANCIPAÇÃO\nArt. 2º Os Pontos de Pregação, Congregações e Campos\nMissionários sem prejuízo ao estabelecido no Art. 6º do Regimento\nInterno e Art. 5º, § 1º, da Constituição da ALIANÇA deverão se\nenquadrar nos seguintes critérios no ato da adesão:\nI- Mínimo de 40 (quarenta) membros capazes, dentre eles um Pastor\neleito ou em Processo de Ordenação como ministro da ALIANÇA, e mais\ntrês oficiais, sendo um Presbítero e dois Diáconos;\nII- Capacidade financeira plena ou situação considerada plenamente\nviável a partir de análise Financeira e Contábil efetivada pela ALIANÇA;\nIII- Assumir o compromisso de emancipação e filiação à ALIANÇA ao\nfinal de 12 (doze) meses a partir da adesão ao Plano, sem prejuízo no\ndisposto no caput;\nIV- Receber mensalmente orientação para o controle contábil e\nfinanceiro enviando inclusive os relatórios mensais para verificação e\nadequação às normas legais para emancipação.\nCAPÍTULO III\nDO INCENTIVO À ORDENAÇÃO\nArt. 3º Os Obreiros vinculados aos Pontos de Pregação,\nCongregações e Campos Missionários enquadrados no Art. 1º desta\nResolução, poderão aderir ao Processo de Ordenação conforme os\nseguintes critérios:\nI- Estar vinculado há mais de 5 (cinco) anos ao Ponto de Pregação,\nCongregação ou Campo Missionário enquadrado no Art. 1º desta\nResolução e ter o seu processo de ordenação encaminhado pela Igreja\nMãe;\nII- Ter o Ponto de Pregação, Congregação ou Campo Missionário\ndevidamente emancipado e filiado à ALIANÇA conforme Capítulo I;\nIII- Ter concluído curso em Teologia em Seminário da ALIANÇA ou em\noutros reconhecidos pelo DET;\nIV-\nParticipar\nde\ncurso\nbásico\nde\nTeologia,\nHistória\ndo\nCongregacionalismo e normas da ALIANÇA;\nV- Passar por avaliação oral efetivada pelo Conselho de Pastores de\nacordo com o Art. 37º, I, do Regimento Interno da ALIANÇA;\nVI- Passar por avaliação escrita pelo Departamento Teológico com base\nno conteúdo do curso elencado no inciso IV;\nVII- Apresentar monografia que consistirá em sermão escrito com base\nem um dos conhecimentos elencados no inciso IV;",
+      "char_count": 2038,
+      "source_char_count": 2056,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    },
+    {
+      "page_number": 4,
+      "text": "VIII- Ter avaliação psicotécnica efetivada por psicólogo indicado pelo\nDET;\nIX- Ter o parecer do DET, onde será considerado aprovado se alcançar\na nota mínima de 7,0 (sete) pontos na avaliação escrita, com base no\nconteúdo do curso e na monografia;\nX- Ter parecer favorável do Conselho de Pastores;\nXI- Apresentar, juntamente com as certidões negativas de cadastros\nde restrição ao crédito exigidas pelo art. 5º, § 2º, IV, da Constituição\nda ALIANÇA, certidões negativas emitidas pela Polícia Civil, Polícia\nFederal, Justiça Estadual e Justiça Federal, conforme Art. 37º, § 3º, do\nRegimento Interno.\n§ 1º - A avaliação escrita será efetivada ao final do curso previsto no\ninciso IV, sendo considerado aprovado o candidato que obtiver, no\nmínimo, a nota 7,0 (sete);\n§ 2º - A avaliação da monografia será efetivada pelo Departamento\nTeológico após apresentação oral do sermão pelo candidato, sendo\nconsiderado aprovado o candidato que obtiver, no mínimo, a nota 7,0\n(sete);\n§\n3º - Os pareceres previstos nos incisos IX e X devem ser\nhomologados pela Diretoria Nacional.\nArt. 4º Esta resolução entra em vigor em 04 de janeiro de 2021.\nRecife/PE, 23 de novembro de 2020.\nPr. Ismael Ornilo da Silva Júnior\nPresidente da ALIANÇA",
+      "char_count": 1222,
+      "source_char_count": 1227,
+      "page_zone": "unknown",
+      "normalization_actions": [
+        "normalized_whitespace",
+        "normalized_excess_blank_lines"
+      ],
+      "warnings": []
+    }
+  ],
+  "marker_validation": {
+    "RESOLUÇÃO ALIANÇA Nº 01": true,
+    "CONSIDERANDO": true,
+    "RESOLVE:": true
+  },
+  "document_warnings": []
+}
