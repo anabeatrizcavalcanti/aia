@@ -1,0 +1,26 @@
+generation:
+  provider: openai
+  model_env_var: OPENAI_CHAT_MODEL
+  default_model: gpt-5.4-mini
+  temperature: 0.1
+  max_output_tokens: 1200
+  require_citations: true
+  answer_language: pt-BR
+  use_retrieval_pipeline: true
+
+evidence_policy:
+  enabled: true
+  min_contexts_required: 1
+  min_total_context_chars: 500
+  allow_answer_with_anchor_only: false
+  require_source_map: true
+  require_documentary_evidence: true
+  refuse_when_no_context: true
+  refuse_when_context_is_only_introductory: true
+
+answer_format:
+  include_short_answer: true
+  include_documentary_basis: true
+  include_sources_section: true
+  include_limitations_note: true
+  max_sources: 5
