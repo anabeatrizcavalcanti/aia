@@ -22,7 +22,7 @@ services:
       - key: RERANKER_ENABLED
         value: "true"
       - key: RERANKER_MODEL
-        value: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+        value: cross-encoder/ms-marco-TinyBERT-L2-v2
       - key: RERANKED_TOP_K
         value: "12"
       - key: HYBRID_CANDIDATE_K

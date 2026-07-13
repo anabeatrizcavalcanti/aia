@@ -13,7 +13,7 @@ services:
       RAG_CHUNKS_PATH: /app/storage/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
       HF_HOME: /app/storage/huggingface
       RERANKER_ENABLED: "true"
-      RERANKER_MODEL: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+      RERANKER_MODEL: cross-encoder/ms-marco-TinyBERT-L2-v2
       RERANKED_TOP_K: "12"
       HYBRID_CANDIDATE_K: "16"
       RERANKER_MAX_TEXT_CHARS: "1800"
