@@ -43,6 +43,7 @@ jobs:
         run: |
           EC2_USER="${EC2_USER:-ubuntu}"
           APP_DIR="/home/$EC2_USER/sola-bot"
+          ARCHIVE_PATH="/tmp/solabot-source.tar.gz"
 
           tar \
             --exclude='.git' \
@@ -53,9 +54,9 @@ jobs:
             --exclude='runtime_logs' \
             --exclude='.pytest_cache' \
             --exclude='.ruff_cache' \
-            -czf solabot-source.tar.gz .
+            -czf "$ARCHIVE_PATH" .
 
-          scp -i ~/.ssh/solabot_ec2_key solabot-source.tar.gz "$EC2_USER@$EC2_HOST:/tmp/solabot-source.tar.gz"
+          scp -i ~/.ssh/solabot_ec2_key "$ARCHIVE_PATH" "$EC2_USER@$EC2_HOST:/tmp/solabot-source.tar.gz"
 
           ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
             "APP_DIR='$APP_DIR' bash -s" <<'REMOTE'
