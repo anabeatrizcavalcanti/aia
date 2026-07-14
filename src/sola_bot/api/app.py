@@ -81,11 +81,15 @@ def serve_web_index():
     """Retorna o index.html buildado pelo Vite."""
     index_path = WEB_DIST_DIR / "index.html"
     if not index_path.exists():
-        index_path = WEB_DIR / "index.html"
-    if not index_path.exists():
         return JSONResponse(
-            status_code=404,
-            content={"status": "error", "message": "web/index.html não foi encontrado."},
+            status_code=503,
+            content={
+                "status": "error",
+                "message": (
+                    "Frontend buildado não foi encontrado. Rode `npm run build` "
+                    "dentro de `web/` ou use o Vite em modo desenvolvimento."
+                ),
+            },
         )
     return FileResponse(index_path)
 
@@ -178,7 +182,7 @@ def suggestions(request: SuggestionRequest) -> JSONResponse:
 @app.get("/{path:path}", response_model=None)
 def web_fallback(path: str):
     """Serve a interface React para rotas do frontend."""
-    if path.startswith("api/") or path.startswith("assets/") or path.startswith("static/"):
+    if path.startswith(("api/", "assets/", "static/", "src/")):
         return JSONResponse(status_code=404, content={"detail": "Not Found"})
     return serve_web_index()
 
