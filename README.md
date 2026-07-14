@@ -186,7 +186,7 @@ tar -xzf runtime_artifacts/solabot-runtime-corpus.tar.gz
 
 ## Docker
 
-Docker não é obrigatório para desenvolver, mas é o caminho recomendado para rodar a stack completa de forma reproduzível. A imagem Docker:
+Use Docker quando quiser executar a aplicação completa em um ambiente reproduzível. A imagem Docker:
 
 - instala dependências Python e Node;
 - builda o frontend;
@@ -315,14 +315,6 @@ Perguntas úteis para validação manual:
 
 ## Versionamento
 
-Não commitar:
+As regras para arquivos locais, dependências, builds, logs e índices gerados ficam centralizadas no `.gitignore`.
 
-- `.env`
-- `node_modules/`
-- `web/node_modules/`
-- `web/dist/`
-- `runtime_logs/`
-- `corpus/indexes/chroma/`
-- `corpus/processed/embeddings/**/openai_embeddings.jsonl`
-
-O pacote `runtime_artifacts/solabot-runtime-corpus.tar.gz` é versionado porque permite reconstruir a imagem Docker com o corpus consolidado sem depender de disco persistente externo.
+O artefato `runtime_artifacts/solabot-runtime-corpus.tar.gz` é mantido no repositório para que a imagem Docker possa ser reconstruída com o corpus consolidado, sem depender de um disco persistente externo.
