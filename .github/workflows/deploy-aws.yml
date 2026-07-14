@@ -1,0 +1,101 @@
+name: Deploy AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-aws-ec2
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build and restart Docker app
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure SSH
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          test -n "$EC2_HOST"
+          test -n "$EC2_SSH_KEY"
+
+          mkdir -p ~/.ssh
+          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/solabot_ec2_key
+          chmod 600 ~/.ssh/solabot_ec2_key
+          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+
+      - name: Update repository on EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          DEPLOY_BRANCH: ${{ github.ref_name }}
+          REPO_URL: https://github.com/${{ github.repository }}.git
+        run: |
+          EC2_USER="${EC2_USER:-ubuntu}"
+          APP_DIR="/home/$EC2_USER/sola-bot"
+
+          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+            "APP_DIR='$APP_DIR' DEPLOY_BRANCH='$DEPLOY_BRANCH' REPO_URL='$REPO_URL' bash -s" <<'REMOTE'
+          set -euo pipefail
+
+          if [ ! -d "$APP_DIR/.git" ]; then
+            git clone --branch "$DEPLOY_BRANCH" "$REPO_URL" "$APP_DIR"
+          fi
+
+          cd "$APP_DIR"
+          git fetch origin "$DEPLOY_BRANCH"
+          git checkout "$DEPLOY_BRANCH"
+          git pull --ff-only origin "$DEPLOY_BRANCH"
+          REMOTE
+
+      - name: Sync production env
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          PRODUCTION_ENV: ${{ secrets.PRODUCTION_ENV }}
+        run: |
+          if [ -z "$PRODUCTION_ENV" ]; then
+            echo "PRODUCTION_ENV is empty; keeping the .env file already present on EC2."
+            exit 0
+          fi
+
+          EC2_USER="${EC2_USER:-ubuntu}"
+          APP_DIR="/home/$EC2_USER/sola-bot"
+
+          printf '%s\n' "$PRODUCTION_ENV" > .env.production
+          scp -i ~/.ssh/solabot_ec2_key .env.production "$EC2_USER@$EC2_HOST:$APP_DIR/.env"
+
+      - name: Rebuild and restart container
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          EC2_USER="${EC2_USER:-ubuntu}"
+          APP_DIR="/home/$EC2_USER/sola-bot"
+
+          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+            "APP_DIR='$APP_DIR' bash -s" <<'REMOTE'
+          set -euo pipefail
+
+          cd "$APP_DIR"
+          test -f .env
+          docker compose up -d --build
+          docker image prune -f
+          docker compose ps
+          REMOTE
+
+      - name: Health check
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          EC2_USER="${EC2_USER:-ubuntu}"
+
+          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+            "sleep 8 && curl -fsS http://127.0.0.1:8000/api/health"
