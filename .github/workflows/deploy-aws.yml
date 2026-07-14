@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - dev
   workflow_dispatch:
 
 concurrency:
@@ -15,8 +14,15 @@ jobs:
   deploy:
     name: Build and restart Docker app
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
       - name: Configure SSH
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
@@ -30,28 +36,35 @@ jobs:
           chmod 600 ~/.ssh/solabot_ec2_key
           ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
 
-      - name: Update repository on EC2
+      - name: Upload source to EC2
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USER: ${{ secrets.EC2_USER }}
-          DEPLOY_BRANCH: ${{ github.ref_name }}
-          REPO_URL: https://github.com/${{ github.repository }}.git
         run: |
           EC2_USER="${EC2_USER:-ubuntu}"
           APP_DIR="/home/$EC2_USER/sola-bot"
 
+          tar \
+            --exclude='.git' \
+            --exclude='.env' \
+            --exclude='node_modules' \
+            --exclude='web/node_modules' \
+            --exclude='web/dist' \
+            --exclude='runtime_logs' \
+            --exclude='.pytest_cache' \
+            --exclude='.ruff_cache' \
+            -czf solabot-source.tar.gz .
+
+          scp -i ~/.ssh/solabot_ec2_key solabot-source.tar.gz "$EC2_USER@$EC2_HOST:/tmp/solabot-source.tar.gz"
+
           ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
-            "APP_DIR='$APP_DIR' DEPLOY_BRANCH='$DEPLOY_BRANCH' REPO_URL='$REPO_URL' bash -s" <<'REMOTE'
+            "APP_DIR='$APP_DIR' bash -s" <<'REMOTE'
           set -euo pipefail
 
-          if [ ! -d "$APP_DIR/.git" ]; then
-            git clone --branch "$DEPLOY_BRANCH" "$REPO_URL" "$APP_DIR"
-          fi
-
-          cd "$APP_DIR"
-          git fetch origin "$DEPLOY_BRANCH"
-          git checkout "$DEPLOY_BRANCH"
-          git pull --ff-only origin "$DEPLOY_BRANCH"
+          mkdir -p "$APP_DIR"
+          find "$APP_DIR" -mindepth 1 -maxdepth 1 ! -name ".env" -exec rm -rf {} +
+          tar -xzf /tmp/solabot-source.tar.gz -C "$APP_DIR"
+          rm -f /tmp/solabot-source.tar.gz
           REMOTE
 
       - name: Sync production env
