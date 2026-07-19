@@ -99,6 +99,8 @@ jobs:
 
           cd "$APP_DIR"
           test -f .env
+          docker rm -f solabot 2>/dev/null || true
+          docker compose down --remove-orphans || true
           docker compose up -d --build
           docker image prune -f
           docker compose ps
