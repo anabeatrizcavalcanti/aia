@@ -1,6 +1,6 @@
 # Arquitetura
 
-O SolaBot será organizado em três fluxos principais: o pipeline documental próprio, o pipeline de recuperação e ranqueamento, e a camada de orquestração RAG. Essa separação preserva o controle metodológico sobre o corpus e evita delegar a preparação dos documentos a componentes externos de orquestração.
+O AIA será organizado em três fluxos principais: o pipeline documental próprio, o pipeline de recuperação e ranqueamento, e a camada de orquestração RAG. Essa separação preserva o controle metodológico sobre o corpus e evita delegar a preparação dos documentos a componentes externos de orquestração.
 
 ## Pipeline documental
 
@@ -22,7 +22,7 @@ Quando não houver evidência documental suficiente, o sistema deverá ser capaz
 
 ## Papel do LangChain
 
-LangChain aparecerá explicitamente na arquitetura como camada de orquestração RAG. Ele poderá integrar retriever, contexto, template de prompt e chamada ao LLM, mas não substituirá o pipeline documental próprio do SolaBot.
+LangChain aparecerá explicitamente na arquitetura como camada de orquestração RAG. Ele poderá integrar retriever, contexto, template de prompt e chamada ao LLM, mas não substituirá o pipeline documental próprio do AIA.
 
 ## Corpus principal e conjuntos de avaliação
 

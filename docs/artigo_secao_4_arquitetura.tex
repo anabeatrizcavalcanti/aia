@@ -1,0 +1,124 @@
+% Para usar o diagrama abaixo no artigo, adicione no preambulo:
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,backgrounds}
+
+\section{ARQUITETURA}
+
+A arquitetura adotada foi organizada como um fluxo modular de consulta documental baseado em Retrieval-Augmented Generation (RAG). O objetivo principal da solução é responder perguntas em linguagem natural a partir de um corpus fechado de documentos doutrinários e normativos, preservando a rastreabilidade das fontes e evitando que o modelo de linguagem atue como fonte autônoma de informação. Por essa razão, o desenho arquitetural separa explicitamente a preparação do corpus, a recuperação de evidências, a geração condicionada ao contexto e a apresentação da resposta ao usuário.
+
+A Figura~\ref{fig:arquitetura-modular} apresenta uma visão geral da arquitetura. O fluxo online começa na interface web, passa pela API da aplicação e aciona o pipeline RAG responsável por normalizar a pergunta, recuperar trechos relevantes, aplicar reordenação e verificar se existe evidência documental suficiente para sustentar a resposta. Em paralelo, o fluxo offline prepara os documentos do corpus, gerando chunks estruturais, metadados e índices de busca que são consumidos no momento da consulta.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+    font=\scriptsize,
+    box/.style={draw, rounded corners=2pt, align=center, minimum width=2.7cm, minimum height=0.82cm, fill=white},
+    group/.style={draw, rounded corners=2pt, inner sep=7pt, fill=#1},
+    arrow/.style={-{Latex[length=2mm]}, thick},
+    data/.style={draw, cylinder, shape border rotate=90, aspect=0.23, align=center, minimum height=1.1cm, minimum width=1.45cm, fill=green!8}
+]
+
+\node[box, fill=blue!8] (user) {Usuário\\pergunta em linguagem natural};
+\node[box, fill=blue!8, right=0.9cm of user] (front) {Frontend web\\React + Vite};
+\node[box, fill=purple!10, right=0.9cm of front] (api) {API backend\\FastAPI + Uvicorn};
+\node[box, fill=purple!10, right=0.9cm of api] (rag) {Orquestração RAG\\Python};
+\node[box, fill=yellow!15, right=0.9cm of rag] (answer) {Resposta\\com fontes ou recusa};
+
+\node[box, fill=orange!12, below=1.15cm of rag, xshift=-3.25cm] (query) {Normalização\\da pergunta};
+\node[box, fill=orange!12, right=0.75cm of query] (retrieval) {Pipeline de\\recuperação};
+\node[box, fill=orange!12, right=0.75cm of retrieval] (evidence) {Política de\\evidência};
+\node[box, fill=orange!12, right=0.75cm of evidence] (prompt) {Prompt + citações\\contexto controlado};
+\node[box, fill=orange!12, right=0.75cm of prompt] (llm) {Modelo de linguagem\\OpenAI API};
+
+\node[data, below=1.2cm of retrieval, xshift=-1.35cm] (chroma) {ChromaDB\\índice vetorial};
+\node[data, right=0.65cm of chroma] (bm25) {BM25\\índice lexical};
+\node[box, fill=green!10, right=0.65cm of bm25] (rerank) {Fusão híbrida\\RRF + reranking};
+\node[box, fill=green!10, right=0.65cm of rerank] (hier) {Recuperação\\hierárquica};
+
+\node[box, fill=gray!10, below=1.25cm of chroma, xshift=-1.4cm] (pdfs) {PDFs do corpus\\controlado};
+\node[box, fill=gray!10, right=0.55cm of pdfs] (extract) {Extração\\PyMuPDF};
+\node[box, fill=gray!10, right=0.55cm of extract] (chunk) {Normalização e\\chunking estrutural};
+\node[box, fill=gray!10, right=0.55cm of chunk] (meta) {Chunks JSONL\\metadados e fontes};
+\node[box, fill=gray!10, right=0.55cm of meta] (embed) {Embeddings\\e índices};
+
+\node[box, fill=red!8, below=1.2cm of prompt] (audit) {Relatórios e auditoria\\recuperação, geração e fontes};
+\node[box, fill=red!8, right=0.65cm of audit] (deploy) {Infraestrutura\\Docker + ambiente de execução};
+
+\draw[arrow] (user) -- (front);
+\draw[arrow] (front) -- node[above]{HTTP/JSON} (api);
+\draw[arrow] (api) -- (rag);
+\draw[arrow] (rag) -- (answer);
+\draw[arrow] (answer) .. controls +(0,1.2) and +(0,1.2) .. (front);
+
+\draw[arrow] (rag) -- (query);
+\draw[arrow] (query) -- (retrieval);
+\draw[arrow] (retrieval) -- (evidence);
+\draw[arrow] (evidence) -- (prompt);
+\draw[arrow] (prompt) -- (llm);
+\draw[arrow] (llm) -- (answer);
+
+\draw[arrow] (retrieval) -- (chroma);
+\draw[arrow] (retrieval) -- (bm25);
+\draw[arrow] (chroma) -- (rerank);
+\draw[arrow] (bm25) -- (rerank);
+\draw[arrow] (rerank) -- (hier);
+\draw[arrow] (hier) -- (evidence);
+
+\draw[arrow] (pdfs) -- (extract);
+\draw[arrow] (extract) -- (chunk);
+\draw[arrow] (chunk) -- (meta);
+\draw[arrow] (meta) -- (embed);
+\draw[arrow] (embed) -- (chroma);
+\draw[arrow] (embed) -- (bm25);
+
+\draw[arrow] (rag) -- (audit);
+\draw[arrow] (api) |- (deploy);
+
+\begin{scope}[on background layer]
+\node[group=blue!3, fit=(user)(front)] (gfront) {};
+\node[group=purple!4, fit=(api)(rag)(answer)(query)(retrieval)(evidence)(prompt)(llm)] (gback) {};
+\node[group=green!3, fit=(chroma)(bm25)(rerank)(hier)] (gret) {};
+\node[group=gray!4, fit=(pdfs)(extract)(chunk)(meta)(embed)] (goff) {};
+\node[group=red!3, fit=(audit)(deploy)] (gops) {};
+\end{scope}
+
+\node[above=0.05cm of gfront] {Camada de interação};
+\node[above=0.05cm of gback] {Backend e orquestração};
+\node[above=0.05cm of gret] {Recuperação e ranqueamento};
+\node[above=0.05cm of goff] {Preparação offline do corpus};
+\node[above=0.05cm of gops] {Operação e rastreabilidade};
+
+\end{tikzpicture}
+\caption{Visão geral da arquitetura modular do sistema proposto.}
+\label{fig:arquitetura-modular}
+\end{figure*}
+
+\subsection{Visão geral da solução}
+
+O sistema foi estruturado em três camadas principais: interface, backend e pipeline RAG. A interface web permite que o usuário formule perguntas e visualize a resposta acompanhada de fontes. O backend, implementado como uma API, centraliza os endpoints de consulta e encaminha as requisições para a camada de geração. Essa camada não envia a pergunta diretamente ao modelo de linguagem; antes disso, executa etapas de recuperação, filtragem e validação de evidências.
+
+Essa separação reduz o acoplamento entre a experiência conversacional e os componentes de inteligência artificial. Assim, mudanças no mecanismo de recuperação, no modelo de linguagem ou na política de citação podem ser feitas sem alterar a lógica central da interface. Além disso, a arquitetura favorece a manutenção do corpus como uma base controlada, evitando uploads livres ou fontes externas não verificadas durante a execução.
+
+\subsection{Preparação e indexação do corpus}
+
+A preparação do corpus ocorre em um fluxo offline. Os documentos em PDF são submetidos à extração textual, normalização e segmentação em chunks. Diferentemente de uma divisão puramente baseada em tamanho, a segmentação considera a estrutura dos documentos, como capítulos, seções, artigos, perguntas e respostas. Essa decisão é importante porque o significado de um trecho doutrinário ou normativo frequentemente depende da unidade documental em que ele aparece.
+
+Após a segmentação, cada chunk recebe metadados associados à sua origem, como documento, tipo de corpus, localização textual e referência de fonte. Esses metadados permitem rastrear a proveniência das respostas e também aplicar restrições durante a recuperação. Em seguida, os chunks são persistidos em arquivos estruturados e utilizados para alimentar dois índices complementares: um índice vetorial, voltado à recuperação semântica, e um índice lexical, voltado à correspondência de termos específicos.
+
+\subsection{Recuperação e ranqueamento}
+
+No momento da consulta, a pergunta do usuário passa por uma etapa de normalização leve e é encaminhada ao pipeline de recuperação. A arquitetura combina busca vetorial, baseada em embeddings, e busca lexical, baseada em BM25. A busca vetorial contribui para encontrar trechos semanticamente relacionados à pergunta, mesmo quando há diferença de vocabulário entre a consulta e o documento. A busca lexical, por sua vez, preserva a importância de termos técnicos, expressões doutrinárias e categorias normativas que não devem ser diluídas apenas por aproximação semântica.
+
+Os resultados das duas estratégias são combinados por fusão de rankings e, em seguida, reordenados por um modelo de reranking. Essa etapa busca priorizar os trechos que respondem mais diretamente à pergunta formulada. Depois do ranqueamento, a recuperação hierárquica expande os trechos selecionados para unidades documentais mais amplas quando necessário, preservando contexto suficiente para a geração da resposta.
+
+\subsection{Geração condicionada a evidências}
+
+A geração da resposta é condicionada aos contextos recuperados. Antes de construir o prompt final, uma política de evidência verifica se os trechos encontrados oferecem suporte suficiente para responder à pergunta. Quando a evidência é considerada adequada, o prompt inclui a pergunta do usuário, os trechos selecionados e instruções para produzir uma resposta vinculada às fontes. Quando a evidência é insuficiente, o sistema deve sinalizar a limitação em vez de produzir uma resposta especulativa.
+
+Essa política é central para o domínio do trabalho, pois impede que o modelo de linguagem seja tratado como autoridade independente. O modelo atua como componente de síntese textual: ele organiza e explica as evidências recuperadas, mas a validade da resposta depende dos documentos consultados. Ao final, as fontes utilizadas são formatadas e retornadas junto com a resposta, permitindo que o usuário verifique a origem da informação apresentada.
+
+\subsection{Implantação e rastreabilidade}
+
+A aplicação foi organizada para execução reprodutível por meio de empacotamento com Docker. O backend, a interface web e os artefatos necessários ao funcionamento do corpus podem ser executados como uma unidade de aplicação, reduzindo diferenças entre ambiente local e ambiente de implantação. As variáveis de ambiente controlam chaves de API, caminhos do corpus, diretórios do índice vetorial e parâmetros do pipeline.
+
+Além da execução, a arquitetura prevê relatórios e registros associados às etapas de preparação do corpus, recuperação e geração. Esses artefatos apoiam a auditoria do comportamento do sistema, pois permitem investigar quais documentos foram processados, quais trechos foram recuperados e quais fontes sustentaram determinada resposta. Dessa forma, a solução não se limita a entregar uma resposta conversacional, mas mantém mecanismos de rastreabilidade compatíveis com um domínio documental sensível.

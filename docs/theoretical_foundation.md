@@ -2,7 +2,7 @@
 
 ## Retrieval-Augmented Generation
 
-Retrieval-Augmented Generation será a arquitetura principal do SolaBot. O modelo de linguagem deverá responder a partir de trechos recuperados do corpus documental ativo, e não apenas com base em seu conhecimento paramétrico.
+Retrieval-Augmented Generation será a arquitetura principal do AIA. O modelo de linguagem deverá responder a partir de trechos recuperados do corpus documental ativo, e não apenas com base em seu conhecimento paramétrico.
 
 ## Chunking Estrutural em Documentos Confessionais
 
@@ -34,7 +34,7 @@ Parent Document Retrieval será previsto para recuperar chunks pequenos durante 
 
 ## Recusa Baseada em Evidência
 
-O SolaBot deverá recusar ou limitar respostas quando os trechos recuperados não forem suficientes para sustentar uma conclusão. A resposta deverá informar a ausência de base documental suficiente no corpus ativo.
+O AIA deverá recusar ou limitar respostas quando os trechos recuperados não forem suficientes para sustentar uma conclusão. A resposta deverá informar a ausência de base documental suficiente no corpus ativo.
 
 ## Avaliação de Sistemas RAG
 

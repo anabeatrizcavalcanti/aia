@@ -1,6 +1,6 @@
 # Metodologia de Avaliação
 
-A avaliação do SolaBot será feita a partir de um dataset de perguntas doutrinárias, respostas esperadas ou trechos documentais esperados, e critérios específicos para retrieval e geração.
+A avaliação do AIA será feita a partir de um dataset de perguntas doutrinárias, respostas esperadas ou trechos documentais esperados, e critérios específicos para retrieval e geração.
 
 ## Dados de avaliação
 

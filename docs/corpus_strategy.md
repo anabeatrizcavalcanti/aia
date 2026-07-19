@@ -1,6 +1,6 @@
 # Estratégia de Corpus
 
-O corpus inicial do SolaBot será reformado e controlado pela desenvolvedora/pesquisadora. O objetivo é manter um conjunto documental rastreável, revisável e adequado para avaliação metodológica.
+O corpus inicial do AIA será reformado e controlado pela desenvolvedora/pesquisadora. O objetivo é manter um conjunto documental rastreável, revisável e adequado para avaliação metodológica.
 
 Nesta fase inicial, o corpus será composto pelos seguintes documentos:
 

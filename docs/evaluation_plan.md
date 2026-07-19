@@ -1,6 +1,6 @@
 # Plano de Avaliação
 
-A avaliação do SolaBot deverá observar tanto a qualidade das respostas quanto a integridade do processo documental. Como o projeto é baseado em RAG, a resposta final será avaliada em relação aos documentos efetivamente recuperados e às fontes indicadas.
+A avaliação do AIA deverá observar tanto a qualidade das respostas quanto a integridade do processo documental. Como o projeto é baseado em RAG, a resposta final será avaliada em relação aos documentos efetivamente recuperados e às fontes indicadas.
 
 Os principais critérios de avaliação serão:
 

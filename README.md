@@ -1,6 +1,6 @@
-# FonteAliança / SolaBot
+# AIA (Assistente Inteligente da Aliança)
 
-Assistente documental baseado em RAG para consulta a documentos doutrinários, confessionais e normativos da Aliança. O objetivo não é responder a partir do conhecimento geral do modelo, mas a partir de um corpus controlado, com recuperação rastreável, citações documentais e recusa quando a evidência recuperada não sustenta uma resposta.
+Assistente Inteligente da ALIANÇA baseado em RAG para consulta a documentos doutrinários, confessionais e normativos da Aliança. O objetivo não é responder a partir do conhecimento geral do modelo, mas a partir de um corpus controlado, com recuperação rastreável, citações documentais e recusa quando a evidência recuperada não sustenta uma resposta.
 
 ## Aplicação Publicada
 
@@ -18,8 +18,8 @@ O corpus ativo consolidado usa documentos doutrinários/confessionais e document
 
 - Chunks unificados: `corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl`
 - Índice ChromaDB: `corpus/indexes/chroma/alliance/`
-- Collection ChromaDB: `solabot_alliance_v1`
-- Pacote de runtime para Docker: `runtime_artifacts/solabot-runtime-corpus.tar.gz`
+- Collection ChromaDB: `aia_alliance_v1`
+- Pacote de runtime para Docker: `runtime_artifacts/aia-runtime-corpus.tar.gz`
 
 Documentos doutrinários/confessionais:
 
@@ -77,7 +77,7 @@ flowchart TD
 ## Estrutura
 
 ```txt
-sola-bot/
+aia/
 ├── config/
 ├── corpus/
 │   ├── raw/
@@ -89,7 +89,7 @@ sola-bot/
 │   ├── deployment/
 │   └── pipeline/
 ├── src/
-│   └── sola_bot/
+│   └── aia/
 │       ├── api/
 │       ├── generation/
 │       ├── retrieval/
@@ -121,7 +121,7 @@ OPENAI_CHAT_MODEL=gpt-5.4-mini
 RAG_CORPUS_DIR=corpus
 RAG_CHUNKS_PATH=corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
 CHROMA_PERSIST_DIRECTORY=corpus/indexes/chroma/alliance
-CHROMA_COLLECTION_NAME=solabot_alliance_v1
+CHROMA_COLLECTION_NAME=aia_alliance_v1
 
 RERANKER_ENABLED=true
 RERANKER_MODEL=cross-encoder/ms-marco-TinyBERT-L2-v2
@@ -181,7 +181,7 @@ http://127.0.0.1:8000
 Se estiver em um clone limpo e o índice Chroma não existir, extraia o pacote de runtime antes de iniciar:
 
 ```bash
-tar -xzf runtime_artifacts/solabot-runtime-corpus.tar.gz
+tar -xzf runtime_artifacts/aia-runtime-corpus.tar.gz
 ```
 
 ## Docker
@@ -191,14 +191,14 @@ Use Docker quando quiser executar a aplicação completa em um ambiente reproduz
 - instala dependências Python e Node;
 - builda o frontend;
 - baixa o modelo leve do reranker durante o build;
-- extrai `runtime_artifacts/solabot-runtime-corpus.tar.gz` para `/app/corpus`;
+- extrai `runtime_artifacts/aia-runtime-corpus.tar.gz` para `/app/corpus`;
 - expõe a aplicação em `:8000`.
 
 Com Compose:
 
 ```bash
 docker compose up -d --build
-docker compose logs -f solabot
+docker compose logs -f aia
 ```
 
 Acesse:
@@ -210,14 +210,14 @@ http://127.0.0.1:8000
 Execução direta equivalente:
 
 ```bash
-docker build -t solabot .
-docker run -d --name solabot --restart unless-stopped --env-file .env -p 8000:8000 solabot
+docker build -t aia .
+docker run -d --name aia --restart unless-stopped --env-file .env -p 8000:8000 aia
 ```
 
 Para parar:
 
 ```bash
-docker stop solabot
+docker stop aia
 ```
 
 Para atualizar o corpus usado pela imagem:
@@ -235,18 +235,18 @@ A integração é opcional. Para ativar traces:
 LANGSMITH_TRACING=true
 LANGSMITH_ENDPOINT=https://api.smith.langchain.com
 LANGSMITH_API_KEY=lsv2_sua_chave_aqui
-LANGSMITH_PROJECT=solabot-local
+LANGSMITH_PROJECT=aia-local
 ```
 
 No LangSmith, crie a chave em `Settings > API Keys`. Para uso local, um Personal Access Token é suficiente. Em um ambiente publicado como serviço, uma Service Key também é adequada.
 
 Quando ativado, o projeto mostra traces como:
 
-- `SolaBot RAG answer`
-- `SolaBot retrieval`
-- `SolaBot evidence policy`
-- `SolaBot prompt builder`
-- `SolaBot suggested questions`
+- `AIA RAG answer`
+- `AIA retrieval`
+- `AIA evidence policy`
+- `AIA prompt builder`
+- `AIA suggested questions`
 
 ## Reprocessamento do Corpus
 
@@ -317,4 +317,4 @@ Perguntas úteis para validação manual:
 
 As regras para arquivos locais, dependências, builds, logs e índices gerados ficam centralizadas no `.gitignore`.
 
-O artefato `runtime_artifacts/solabot-runtime-corpus.tar.gz` é mantido no repositório para que a imagem Docker possa ser reconstruída com o corpus consolidado, sem depender de um disco persistente externo.
+O artefato `runtime_artifacts/aia-runtime-corpus.tar.gz` é mantido no repositório para que a imagem Docker possa ser reconstruída com o corpus consolidado, sem depender de um disco persistente externo.

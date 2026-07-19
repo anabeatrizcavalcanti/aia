@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="860" viewBox="0 0 1100 860">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #111827; }
+      .title { font-size: 15px; font-weight: 700; }
+      .label { font-size: 13px; font-weight: 700; }
+      .small { font-size: 12px; }
+      .box { stroke: #1f2937; stroke-width: 1.6; rx: 4; ry: 4; }
+      .group { fill: none; stroke: #1f2937; stroke-width: 1.7; }
+      .arrow { stroke: #111827; stroke-width: 1.7; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+
+  <rect x="18" y="18" width="1064" height="822" class="group" fill="#fafafa"/>
+  <text x="550" y="42" text-anchor="middle" class="title">Visão geral da arquitetura modular do sistema proposto</text>
+
+  <rect x="52" y="68" width="258" height="135" class="group" fill="#f7fbff"/>
+  <text x="181" y="90" text-anchor="middle" class="small">Camada de interação</text>
+  <rect x="78" y="112" width="88" height="58" class="box" fill="#e8f2ff"/>
+  <text x="122" y="134" text-anchor="middle" class="label">Usuário</text>
+  <text x="122" y="152" text-anchor="middle" class="small">pergunta</text>
+  <rect x="194" y="112" width="90" height="58" class="box" fill="#e8f2ff"/>
+  <text x="239" y="134" text-anchor="middle" class="label">Frontend</text>
+  <text x="239" y="152" text-anchor="middle" class="small">React + Vite</text>
+
+  <rect x="336" y="68" width="710" height="330" class="group" fill="#fbf9ff"/>
+  <text x="691" y="90" text-anchor="middle" class="small">Backend e pipeline online</text>
+  <rect x="362" y="112" width="108" height="58" class="box" fill="#f1ecff"/>
+  <text x="416" y="134" text-anchor="middle" class="label">API</text>
+  <text x="416" y="152" text-anchor="middle" class="small">FastAPI</text>
+  <rect x="498" y="112" width="120" height="58" class="box" fill="#f1ecff"/>
+  <text x="558" y="134" text-anchor="middle" class="label">Orquestração</text>
+  <text x="558" y="152" text-anchor="middle" class="small">RAG / Python</text>
+  <rect x="646" y="112" width="118" height="58" class="box" fill="#fff7df"/>
+  <text x="705" y="134" text-anchor="middle" class="label">Resposta</text>
+  <text x="705" y="152" text-anchor="middle" class="small">fontes ou recusa</text>
+
+  <rect x="380" y="222" width="108" height="58" class="box" fill="#fff1dc"/>
+  <text x="434" y="244" text-anchor="middle" class="label">Normalização</text>
+  <text x="434" y="262" text-anchor="middle" class="small">da pergunta</text>
+  <rect x="516" y="222" width="108" height="58" class="box" fill="#fff1dc"/>
+  <text x="570" y="244" text-anchor="middle" class="label">Pipeline</text>
+  <text x="570" y="262" text-anchor="middle" class="small">recuperação</text>
+  <rect x="652" y="222" width="108" height="58" class="box" fill="#fff1dc"/>
+  <text x="706" y="244" text-anchor="middle" class="label">Política</text>
+  <text x="706" y="262" text-anchor="middle" class="small">de evidência</text>
+  <rect x="788" y="222" width="108" height="58" class="box" fill="#fff1dc"/>
+  <text x="842" y="244" text-anchor="middle" class="label">Prompt</text>
+  <text x="842" y="262" text-anchor="middle" class="small">contexto + fontes</text>
+  <rect x="924" y="222" width="96" height="58" class="box" fill="#fff1dc"/>
+  <text x="972" y="244" text-anchor="middle" class="label">LLM</text>
+  <text x="972" y="262" text-anchor="middle" class="small">OpenAI API</text>
+
+  <rect x="444" y="320" width="118" height="58" class="box" fill="#eaf7ed"/>
+  <text x="503" y="342" text-anchor="middle" class="label">ChromaDB</text>
+  <text x="503" y="360" text-anchor="middle" class="small">índice vetorial</text>
+  <rect x="588" y="320" width="110" height="58" class="box" fill="#eaf7ed"/>
+  <text x="643" y="342" text-anchor="middle" class="label">BM25</text>
+  <text x="643" y="360" text-anchor="middle" class="small">índice lexical</text>
+  <rect x="724" y="320" width="118" height="58" class="box" fill="#eaf7ed"/>
+  <text x="783" y="342" text-anchor="middle" class="label">RRF +</text>
+  <text x="783" y="360" text-anchor="middle" class="small">reranking</text>
+  <rect x="868" y="320" width="126" height="58" class="box" fill="#eaf7ed"/>
+  <text x="931" y="342" text-anchor="middle" class="label">Recuperação</text>
+  <text x="931" y="360" text-anchor="middle" class="small">hierárquica</text>
+
+  <rect x="52" y="444" width="666" height="182" class="group" fill="#f9fafb"/>
+  <text x="385" y="466" text-anchor="middle" class="small">Preparação offline do corpus</text>
+  <rect x="78" y="504" width="92" height="58" class="box" fill="#f3f4f6"/>
+  <text x="124" y="526" text-anchor="middle" class="label">PDFs</text>
+  <text x="124" y="544" text-anchor="middle" class="small">corpus</text>
+  <rect x="198" y="504" width="106" height="58" class="box" fill="#f3f4f6"/>
+  <text x="251" y="526" text-anchor="middle" class="label">Extração</text>
+  <text x="251" y="544" text-anchor="middle" class="small">PyMuPDF</text>
+  <rect x="332" y="504" width="116" height="58" class="box" fill="#f3f4f6"/>
+  <text x="390" y="526" text-anchor="middle" class="label">Chunking</text>
+  <text x="390" y="544" text-anchor="middle" class="small">estrutural</text>
+  <rect x="476" y="504" width="106" height="58" class="box" fill="#f3f4f6"/>
+  <text x="529" y="526" text-anchor="middle" class="label">Chunks</text>
+  <text x="529" y="544" text-anchor="middle" class="small">metadados</text>
+  <rect x="610" y="504" width="82" height="58" class="box" fill="#f3f4f6"/>
+  <text x="651" y="526" text-anchor="middle" class="label">Índices</text>
+  <text x="651" y="544" text-anchor="middle" class="small">embeddings</text>
+
+  <rect x="750" y="444" width="296" height="182" class="group" fill="#fff8f0"/>
+  <text x="898" y="466" text-anchor="middle" class="small">Operação e rastreabilidade</text>
+  <rect x="782" y="504" width="110" height="58" class="box" fill="#fff1e6"/>
+  <text x="837" y="526" text-anchor="middle" class="label">Relatórios</text>
+  <text x="837" y="544" text-anchor="middle" class="small">auditoria</text>
+  <rect x="916" y="504" width="102" height="58" class="box" fill="#fff1e6"/>
+  <text x="967" y="526" text-anchor="middle" class="label">Infra</text>
+  <text x="967" y="544" text-anchor="middle" class="small">Docker</text>
+
+  <path class="arrow" d="M166 141 L194 141"/>
+  <path class="arrow" d="M284 141 L362 141"/>
+  <path class="arrow" d="M470 141 L498 141"/>
+  <path class="arrow" d="M618 141 L646 141"/>
+  <path class="arrow" d="M558 170 L434 222"/>
+  <path class="arrow" d="M488 251 L516 251"/>
+  <path class="arrow" d="M624 251 L652 251"/>
+  <path class="arrow" d="M760 251 L788 251"/>
+  <path class="arrow" d="M896 251 L924 251"/>
+  <path class="arrow" d="M972 280 C972 300 740 302 705 170"/>
+  <path class="arrow" d="M570 280 L503 320"/>
+  <path class="arrow" d="M570 280 L643 320"/>
+  <path class="arrow" d="M562 349 L724 349"/>
+  <path class="arrow" d="M698 349 L724 349"/>
+  <path class="arrow" d="M842 349 L868 349"/>
+  <path class="arrow" d="M931 320 C924 290 760 290 706 280"/>
+  <path class="arrow" d="M705 170 C690 190 690 205 706 222"/>
+  <path class="arrow" d="M170 533 L198 533"/>
+  <path class="arrow" d="M304 533 L332 533"/>
+  <path class="arrow" d="M448 533 L476 533"/>
+  <path class="arrow" d="M582 533 L610 533"/>
+  <path class="arrow dash" d="M651 504 C650 430 530 420 503 378"/>
+  <path class="arrow dash" d="M651 504 C680 440 655 414 643 378"/>
+  <path class="arrow dash" d="M529 504 C700 455 850 438 931 378"/>
+  <path class="arrow" d="M558 170 C540 430 770 455 837 504"/>
+  <path class="arrow" d="M416 170 C470 610 850 620 967 562"/>
+
+  <text x="323" y="130" class="small">HTTP/JSON</text>
+  <text x="769" y="218" class="small">suficiente</text>
+  <text x="682" y="300" class="small">insuficiente: recusa</text>
+</svg>

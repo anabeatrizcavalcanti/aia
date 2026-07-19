@@ -1,0 +1,56 @@
+flowchart TD
+    U["Usuário<br/>pergunta em linguagem natural"] --> F["Frontend web<br/>React + Vite"]
+    F -->|"HTTP/JSON"| A["API backend<br/>FastAPI + Uvicorn"]
+    A --> R["Orquestração RAG<br/>Python"]
+
+    subgraph ONLINE["Backend e pipeline online"]
+        R --> Q["Normalização<br/>da pergunta"]
+        Q --> P["Pipeline de<br/>recuperação"]
+        P --> V["ChromaDB<br/>índice vetorial"]
+        P --> B["BM25<br/>índice lexical"]
+        V --> H["Busca híbrida<br/>RRF"]
+        B --> H
+        H --> C["Cross-Encoder<br/>reranking"]
+        C --> G["Recuperação<br/>hierárquica"]
+        G --> E["Política de<br/>evidência"]
+        E -->|"evidência suficiente"| T["Prompt controlado<br/>contexto + fontes"]
+        E -->|"evidência insuficiente"| N["Resposta de recusa"]
+        T --> L["Modelo de linguagem<br/>OpenAI API"]
+        L --> S["Resposta com citações"]
+        N --> S
+    end
+
+    S --> A
+    A --> F
+    F --> U
+
+    subgraph OFFLINE["Preparação offline do corpus"]
+        D["PDFs do corpus<br/>controlado"] --> X["Extração textual<br/>PyMuPDF"]
+        X --> M["Normalização e<br/>chunking estrutural"]
+        M --> J["Chunks JSONL<br/>metadados + fontes"]
+        J --> O["Embeddings<br/>e índices"]
+    end
+
+    O -. alimenta .-> V
+    O -. alimenta .-> B
+    J -. contexto pai .-> G
+
+    subgraph OPS["Operação e rastreabilidade"]
+        K["Relatórios e auditoria<br/>corpus, retrieval e geração"]
+        I["Infraestrutura<br/>Docker + ambiente de execução"]
+    end
+
+    R --> K
+    A --> I
+
+    classDef front fill:#e8f2ff,stroke:#2f4a6d,color:#111827;
+    classDef back fill:#f1ecff,stroke:#4b3f72,color:#111827;
+    classDef retrieval fill:#eaf7ed,stroke:#2f5f3c,color:#111827;
+    classDef offline fill:#f3f4f6,stroke:#4b5563,color:#111827;
+    classDef ops fill:#fff1e6,stroke:#8a4b12,color:#111827;
+
+    class U,F front;
+    class A,R,Q,P,E,T,L,S,N back;
+    class V,B,H,C,G retrieval;
+    class D,X,M,J,O offline;
+    class K,I ops;
