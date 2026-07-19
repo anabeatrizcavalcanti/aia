@@ -1,14 +1,10 @@
 # AIA (Assistente Inteligente da Aliança)
 
-Assistente Inteligente da ALIANÇA baseado em RAG para consulta a documentos doutrinários, confessionais e normativos da Aliança. O objetivo não é responder a partir do conhecimento geral do modelo, mas a partir de um corpus controlado, com recuperação rastreável, citações documentais e recusa quando a evidência recuperada não sustenta uma resposta.
+AIA é uma assistente documental baseada em RAG para consulta a documentos doutrinários, confessionais e normativos da Aliança. O sistema recupera trechos de um corpus controlado, gera respostas com citações documentais e sinaliza quando a evidência recuperada não sustenta uma resposta segura.
 
-## Aplicação Publicada
+## Acesso ao Sistema
 
-Deploy atual:
-
-```txt
-http://56.125.22.78:8000
-```
+O sistema está disponível em: [http://56.125.22.78:8000](http://56.125.22.78:8000)
 
 O deploy atual roda em uma VM AWS EC2 com Docker. Se a instância for parada e não houver Elastic IP configurado, o IP público pode mudar quando ela for iniciada novamente.
 
@@ -49,7 +45,6 @@ Upload livre de documentos pelo usuário final não faz parte do escopo atual.
 | Lexical | rank-bm25 | Busca por termos exatos |
 | Reranking | sentence-transformers CrossEncoder | Reordenação neural dos candidatos |
 | Modelo | OpenAI API | Embeddings de pergunta e resposta final |
-| Observabilidade | LangSmith | Traces opcionais do fluxo RAG |
 | Empacotamento | Docker | Imagem única com backend, frontend e corpus de runtime |
 
 ## Arquitetura
@@ -135,36 +130,10 @@ Não versione `.env` nem chaves reais.
 
 ## Como Rodar Localmente
 
-### Opção 1: backend FastAPI + frontend Vite
-
-Use este modo para desenvolvimento visual.
+Instale as dependências e inicie a aplicação:
 
 ```bash
 pip install -r requirements.txt
-python scripts/run_web_chat.py
-```
-
-Em outro terminal:
-
-```bash
-cd web
-npm install
-npm run dev
-```
-
-Acesse:
-
-```txt
-http://127.0.0.1:5173
-```
-
-O Vite encaminha `/api/*` para `http://127.0.0.1:8000`.
-
-### Opção 2: FastAPI servindo o frontend buildado
-
-Use este modo para simular o deploy em uma única porta.
-
-```bash
 cd web
 npm install
 npm run build
@@ -226,27 +195,6 @@ Para atualizar o corpus usado pela imagem:
 python scripts/deployment/create_runtime_corpus_archive.py
 docker compose up -d --build
 ```
-
-## LangSmith
-
-A integração é opcional. Para ativar traces:
-
-```env
-LANGSMITH_TRACING=true
-LANGSMITH_ENDPOINT=https://api.smith.langchain.com
-LANGSMITH_API_KEY=lsv2_sua_chave_aqui
-LANGSMITH_PROJECT=aia-local
-```
-
-No LangSmith, crie a chave em `Settings > API Keys`. Para uso local, um Personal Access Token é suficiente. Em um ambiente publicado como serviço, uma Service Key também é adequada.
-
-Quando ativado, o projeto mostra traces como:
-
-- `AIA RAG answer`
-- `AIA retrieval`
-- `AIA evidence policy`
-- `AIA prompt builder`
-- `AIA suggested questions`
 
 ## Reprocessamento do Corpus
 
