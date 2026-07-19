@@ -19,9 +19,9 @@ Esta etapa não gera resposta ao usuário e não chama modelo de chat.
 
 ## Código
 
-- `src/sola_bot/retrieval/final_context.py`
-- `src/sola_bot/retrieval/context_consolidator.py`
-- `src/sola_bot/retrieval/retrieval_pipeline.py`
+- `src/aia/retrieval/final_context.py`
+- `src/aia/retrieval/context_consolidator.py`
+- `src/aia/retrieval/retrieval_pipeline.py`
 - `scripts/pipeline/query_retrieval_pipeline.py`
 
 ## Estratégia

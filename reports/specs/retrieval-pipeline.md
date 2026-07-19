@@ -17,9 +17,9 @@ PASS
 
 ## Código
 
-- `src/sola_bot/retrieval/final_context.py`
-- `src/sola_bot/retrieval/context_consolidator.py`
-- `src/sola_bot/retrieval/retrieval_pipeline.py`
+- `src/aia/retrieval/final_context.py`
+- `src/aia/retrieval/context_consolidator.py`
+- `src/aia/retrieval/retrieval_pipeline.py`
 - `scripts/pipeline/query_retrieval_pipeline.py`
 
 ## Configuração
@@ -67,9 +67,9 @@ python scripts/pipeline/query_retrieval_pipeline.py "O que é eleição?"
 python scripts/pipeline/query_retrieval_pipeline.py "O que é justificação?"
 python scripts/pipeline/query_retrieval_pipeline.py "O que é expiação?"
 python scripts/pipeline/query_retrieval_pipeline.py --write-report
-python -m py_compile src/sola_bot/retrieval/final_context.py
-python -m py_compile src/sola_bot/retrieval/context_consolidator.py
-python -m py_compile src/sola_bot/retrieval/retrieval_pipeline.py
+python -m py_compile src/aia/retrieval/final_context.py
+python -m py_compile src/aia/retrieval/context_consolidator.py
+python -m py_compile src/aia/retrieval/retrieval_pipeline.py
 python -m py_compile scripts/pipeline/query_retrieval_pipeline.py
 python -m pytest tests/test_retrieval_pipeline.py
 ```

@@ -17,7 +17,7 @@ PASS
 
 - Chunks: `corpus/processed/chunks/reformed/all_chunks_for_embeddings.jsonl`.
 - Índice ChromaDB: `corpus/indexes/chroma/reformed/`.
-- Collection: `solabot_reformed_v1`.
+- Collection: `aia_reformed_v1`.
 - BM25: `rank-bm25` / `BM25Okapi`, `580` chunks carregados.
 - Modelo de embedding da pergunta: `text-embedding-3-large`.
 

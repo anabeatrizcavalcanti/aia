@@ -18,8 +18,8 @@ Camada de expansão estrutural aplicada após o reranking neural. A entrada oper
 
 ## Código
 
-- `src/sola_bot/retrieval/parent_context.py`
-- `src/sola_bot/retrieval/hierarchical_retriever.py`
+- `src/aia/retrieval/parent_context.py`
+- `src/aia/retrieval/hierarchical_retriever.py`
 - `scripts/pipeline/query_hierarchical_retriever.py`
 
 ## Estratégia

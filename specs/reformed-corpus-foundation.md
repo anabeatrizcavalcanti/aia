@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Registrar a primeira organização do corpus reformado do SolaBot. Nesta etapa, os PDFs colocados manualmente em `corpus/raw/reformed/` são validados, associados aos identificadores oficiais do projeto e descritos no manifesto do corpus.
+Registrar a primeira organização do corpus reformado do AIA. Nesta etapa, os PDFs colocados manualmente em `corpus/raw/reformed/` são validados, associados aos identificadores oficiais do projeto e descritos no manifesto do corpus.
 
 ## Escopo
 

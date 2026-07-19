@@ -17,8 +17,8 @@
 
 ## Saídas
 
-- `src/sola_bot/retrieval/cross_encoder_reranker.py`
-- `src/sola_bot/retrieval/reranked_retriever.py`
+- `src/aia/retrieval/cross_encoder_reranker.py`
+- `src/aia/retrieval/reranked_retriever.py`
 - `scripts/pipeline/query_reranked_retriever.py`
 - `reports/specs/reranker-retrieval.md`
 - `corpus/reports/retrieval/reranker-retrieval-report.md`
@@ -26,7 +26,7 @@
 
 ## Parâmetros padrão
 
-- `model_name`: `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`
+- `model_name`: `cross-encoder/ms-marco-TinyBERT-L2-v2`
 - `hybrid_candidate_k`: 20
 - `final_top_k`: 5
 - `max_text_chars`: 3500

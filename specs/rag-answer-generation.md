@@ -19,11 +19,11 @@ A geração usa OpenAI apenas depois da política de evidência permitir respost
 
 ## Código
 
-- `src/sola_bot/generation/prompt_builder.py`
-- `src/sola_bot/generation/evidence_policy.py`
-- `src/sola_bot/generation/citation_formatter.py`
-- `src/sola_bot/generation/rag_answer.py`
-- `src/sola_bot/generation/rag_generator.py`
+- `src/aia/generation/prompt_builder.py`
+- `src/aia/generation/evidence_policy.py`
+- `src/aia/generation/citation_formatter.py`
+- `src/aia/generation/rag_answer.py`
+- `src/aia/generation/rag_generator.py`
 - `scripts/pipeline/query_rag_generator.py`
 
 ## Configuração

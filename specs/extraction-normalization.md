@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Implementar a extração textual e a normalização inicial dos quatro documentos do corpus reformado do SolaBot, preservando rastreabilidade por página e metadados documentais suficientes para a etapa posterior de chunking estrutural.
+Implementar a extração textual e a normalização inicial dos quatro documentos do corpus reformado do AIA, preservando rastreabilidade por página e metadados documentais suficientes para a etapa posterior de chunking estrutural.
 
 ## Entradas
 

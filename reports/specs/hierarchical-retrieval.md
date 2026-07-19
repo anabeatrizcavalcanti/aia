@@ -18,8 +18,8 @@ PASS
 
 ## Código
 
-- `src/sola_bot/retrieval/parent_context.py`
-- `src/sola_bot/retrieval/hierarchical_retriever.py`
+- `src/aia/retrieval/parent_context.py`
+- `src/aia/retrieval/hierarchical_retriever.py`
 - `scripts/pipeline/query_hierarchical_retriever.py`
 
 ## Configuração
@@ -66,8 +66,8 @@ python scripts/pipeline/query_hierarchical_retriever.py "O que é o batismo?" --
 python scripts/pipeline/query_hierarchical_retriever.py "O que é eleição?" --top-k 5
 python scripts/pipeline/query_hierarchical_retriever.py "O que é justificação?" --top-k 5
 python scripts/pipeline/query_hierarchical_retriever.py --write-report
-python -m py_compile src/sola_bot/retrieval/parent_context.py
-python -m py_compile src/sola_bot/retrieval/hierarchical_retriever.py
+python -m py_compile src/aia/retrieval/parent_context.py
+python -m py_compile src/aia/retrieval/hierarchical_retriever.py
 python -m py_compile scripts/pipeline/query_hierarchical_retriever.py
 python -m pytest tests/test_hierarchical_retriever.py
 ```

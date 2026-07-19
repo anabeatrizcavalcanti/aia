@@ -3,7 +3,7 @@
   "embeddings_path": "corpus/processed/embeddings/alliance/openai_embeddings.jsonl",
   "chunks_path": "corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl",
   "persist_directory": "corpus/indexes/chroma/alliance",
-  "collection_name": "solabot_alliance_v1",
+  "collection_name": "aia_alliance_v1",
   "distance_metric": "cosine",
   "embedding_provider": "openai",
   "embedding_model": "text-embedding-3-large",

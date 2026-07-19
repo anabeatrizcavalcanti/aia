@@ -19,7 +19,7 @@ corpus/indexes/chroma/reformed/
 ## Collection
 
 ```txt
-solabot_reformed_v1
+aia_reformed_v1
 ```
 
 ## Escopo

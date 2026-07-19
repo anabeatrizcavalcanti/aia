@@ -16,9 +16,9 @@
 
 ## Saídas
 
-- `src/sola_bot/retrieval/bm25_retriever.py`
-- `src/sola_bot/retrieval/rrf.py`
-- `src/sola_bot/retrieval/hybrid_retriever.py`
+- `src/aia/retrieval/bm25_retriever.py`
+- `src/aia/retrieval/rrf.py`
+- `src/aia/retrieval/hybrid_retriever.py`
 - `scripts/pipeline/query_hybrid_retriever.py`
 - `reports/specs/hybrid-retrieval.md`
 - `corpus/reports/retrieval/hybrid-retrieval-report.md`

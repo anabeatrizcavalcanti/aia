@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "persist_directory": "corpus/indexes/chroma/reformed",
-  "collection_name": "solabot_reformed_v1",
+  "collection_name": "aia_reformed_v1",
   "embedding_provider": "openai",
   "embedding_model": "text-embedding-3-large",
   "top_k": 5,

@@ -17,11 +17,11 @@ PASS
 
 ## Código
 
-- `src/sola_bot/generation/prompt_builder.py`
-- `src/sola_bot/generation/evidence_policy.py`
-- `src/sola_bot/generation/citation_formatter.py`
-- `src/sola_bot/generation/rag_answer.py`
-- `src/sola_bot/generation/rag_generator.py`
+- `src/aia/generation/prompt_builder.py`
+- `src/aia/generation/evidence_policy.py`
+- `src/aia/generation/citation_formatter.py`
+- `src/aia/generation/rag_answer.py`
+- `src/aia/generation/rag_generator.py`
 - `scripts/pipeline/query_rag_generator.py`
 
 ## Configuração
@@ -74,13 +74,13 @@ python scripts/pipeline/query_rag_generator.py "O que é eleição?"
 python scripts/pipeline/query_rag_generator.py "O que é justificação?"
 python scripts/pipeline/query_rag_generator.py "Segundo os documentos reformados disponíveis, qual é a doutrina da assunção de Maria?"
 python scripts/pipeline/query_rag_generator.py --write-report
-python -m py_compile src/sola_bot/generation/prompt_builder.py
-python -m py_compile src/sola_bot/generation/evidence_policy.py
-python -m py_compile src/sola_bot/generation/citation_formatter.py
-python -m py_compile src/sola_bot/generation/rag_answer.py
-python -m py_compile src/sola_bot/generation/rag_generator.py
-python -m py_compile src/sola_bot/generation/rag_chain.py
-python -m py_compile src/sola_bot/generation/source_grounded_prompt.py
+python -m py_compile src/aia/generation/prompt_builder.py
+python -m py_compile src/aia/generation/evidence_policy.py
+python -m py_compile src/aia/generation/citation_formatter.py
+python -m py_compile src/aia/generation/rag_answer.py
+python -m py_compile src/aia/generation/rag_generator.py
+python -m py_compile src/aia/generation/rag_chain.py
+python -m py_compile src/aia/generation/source_grounded_prompt.py
 python -m py_compile scripts/pipeline/query_rag_generator.py
 python -m pytest tests/test_rag_answer_generation.py
 ```

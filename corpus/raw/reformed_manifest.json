@@ -1,7 +1,7 @@
 {
   "corpus_id": "reformed",
   "corpus_name": "Corpus Confessional Reformado",
-  "description": "Corpus principal do SolaBot, composto por documentos confessionais da tradição reformada.",
+  "description": "Corpus principal do AIA, composto por documentos confessionais da tradição reformada.",
   "documents": [
     {
       "document_id": "confissao-fe-westminster",

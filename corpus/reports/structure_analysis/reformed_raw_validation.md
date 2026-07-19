@@ -6,7 +6,7 @@ PASS
 
 ## O que foi analisado
 
-A validação examinou os arquivos PDF presentes em `corpus/raw/reformed/` e tentou associá-los aos quatro documentos esperados do corpus reformado principal do SolaBot.
+A validação examinou os arquivos PDF presentes em `corpus/raw/reformed/` e tentou associá-los aos quatro documentos esperados do corpus reformado principal do AIA.
 
 ## PDFs encontrados
 

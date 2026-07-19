@@ -6,7 +6,7 @@ PASS
 
 ## Configuração consultada
 
-- Collection: `solabot_reformed_v1`
+- Collection: `aia_reformed_v1`
 - Diretório ChromaDB: `corpus/indexes/chroma/reformed`
 - Modelo para embedding da pergunta: `text-embedding-3-large`
 - Filtros padrão: `{'corpus_id': 'reformed', 'retrieval_namespace': 'reformed_confessional'}`

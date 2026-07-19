@@ -6,11 +6,11 @@ PASS
 
 ## Síntese
 
-A collection `solabot_alliance_v1` foi criada em `corpus/indexes/chroma/alliance` com 1115 chunks indexados a partir dos embeddings OpenAI disponíveis.
+A collection `aia_alliance_v1` foi criada em `corpus/indexes/chroma/alliance` com 1115 chunks indexados a partir dos embeddings OpenAI disponíveis.
 
 ## Índice ChromaDB
 
-- Collection: `solabot_alliance_v1`
+- Collection: `aia_alliance_v1`
 - Diretório persistente: `corpus/indexes/chroma/alliance`
 - Métrica: `cosine`
 - Embeddings lidos: 1115

@@ -17,7 +17,7 @@ Criar uma collection ChromaDB persistente para o corpus doutrinário e normativo
 
 ## Índice ChromaDB
 
-- Collection: `solabot_alliance_v1`
+- Collection: `aia_alliance_v1`
 - Diretório persistente: `corpus/indexes/chroma/alliance`
 - Métrica: `cosine`
 - Embeddings lidos: 1115

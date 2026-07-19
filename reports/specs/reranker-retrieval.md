@@ -17,15 +17,15 @@ PASS
 
 ## Código
 
-- `src/sola_bot/retrieval/cross_encoder_reranker.py`
-- `src/sola_bot/retrieval/reranked_retriever.py`
+- `src/aia/retrieval/cross_encoder_reranker.py`
+- `src/aia/retrieval/reranked_retriever.py`
 - `scripts/pipeline/query_reranked_retriever.py`
 
 ## Configuração
 
 - Hybrid candidate k: `20`
 - Final top-k: `5`
-- Reranker model: `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`
+- Reranker model: `cross-encoder/ms-marco-TinyBERT-L2-v2`
 - Max text chars: `3500`
 - Filtros: `{'corpus_id': 'reformed', 'retrieval_namespace': 'reformed_confessional'}`
 
@@ -62,8 +62,8 @@ python scripts/pipeline/query_reranked_retriever.py "O que é o batismo?" --top-
 python scripts/pipeline/query_reranked_retriever.py "O que é eleição?" --top-k 5
 python scripts/pipeline/query_reranked_retriever.py "O que é justificação?" --top-k 5
 python scripts/pipeline/query_reranked_retriever.py --write-report
-python -m py_compile src/sola_bot/retrieval/cross_encoder_reranker.py
-python -m py_compile src/sola_bot/retrieval/reranked_retriever.py
+python -m py_compile src/aia/retrieval/cross_encoder_reranker.py
+python -m py_compile src/aia/retrieval/reranked_retriever.py
 python -m py_compile scripts/pipeline/query_reranked_retriever.py
 python -m pytest tests/test_reranker_retriever.py
 ```

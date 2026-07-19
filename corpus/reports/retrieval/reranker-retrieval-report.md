@@ -17,7 +17,7 @@ PASS
 - Hybrid report: `corpus/reports/retrieval/hybrid-retrieval-report.json`.
 - Chunks: `corpus/processed/chunks/reformed/all_chunks_for_embeddings.jsonl`.
 - Índice ChromaDB: `corpus/indexes/chroma/reformed/`.
-- Collection: `solabot_reformed_v1`.
+- Collection: `aia_reformed_v1`.
 
 ## Dependências
 

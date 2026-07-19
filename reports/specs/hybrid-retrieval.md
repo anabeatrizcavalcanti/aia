@@ -15,9 +15,9 @@ PASS
 
 ## Código
 
-- `src/sola_bot/retrieval/bm25_retriever.py`
-- `src/sola_bot/retrieval/rrf.py`
-- `src/sola_bot/retrieval/hybrid_retriever.py`
+- `src/aia/retrieval/bm25_retriever.py`
+- `src/aia/retrieval/rrf.py`
+- `src/aia/retrieval/hybrid_retriever.py`
 - `scripts/pipeline/query_hybrid_retriever.py`
 
 ## Configuração
@@ -55,9 +55,9 @@ python scripts/pipeline/query_hybrid_retriever.py "O que é o batismo?" --top-k 
 python scripts/pipeline/query_hybrid_retriever.py "O que é eleição?" --top-k 5
 python scripts/pipeline/query_hybrid_retriever.py "O que é justificação?" --top-k 5
 python scripts/pipeline/query_hybrid_retriever.py --write-report
-python -m py_compile src/sola_bot/retrieval/bm25_retriever.py
-python -m py_compile src/sola_bot/retrieval/rrf.py
-python -m py_compile src/sola_bot/retrieval/hybrid_retriever.py
+python -m py_compile src/aia/retrieval/bm25_retriever.py
+python -m py_compile src/aia/retrieval/rrf.py
+python -m py_compile src/aia/retrieval/hybrid_retriever.py
 python -m py_compile scripts/pipeline/query_hybrid_retriever.py
 python -m pytest tests/test_hybrid_retriever.py
 ```

@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Implementar a primeira camada de recuperação documental do SolaBot, capaz de receber uma pergunta doutrinária, gerar o embedding da consulta com OpenAI, consultar a collection ChromaDB do corpus reformado e retornar chunks relevantes com metadados e fontes rastreáveis.
+Implementar a primeira camada de recuperação documental do AIA, capaz de receber uma pergunta doutrinária, gerar o embedding da consulta com OpenAI, consultar a collection ChromaDB do corpus reformado e retornar chunks relevantes com metadados e fontes rastreáveis.
 
 ## Escopo
 
@@ -18,9 +18,9 @@ Esta etapa trabalha apenas com retrieval vetorial simples. Ela não implementa b
 
 ## Saídas
 
-- `src/sola_bot/retrieval/query_embedder.py`
-- `src/sola_bot/retrieval/retrieval_result.py`
-- `src/sola_bot/retrieval/vector_retriever.py`
+- `src/aia/retrieval/query_embedder.py`
+- `src/aia/retrieval/retrieval_result.py`
+- `src/aia/retrieval/vector_retriever.py`
 - `scripts/pipeline/query_vector_retriever.py`
 - `config/retrieval_config.example.yaml`
 - `reports/specs/vector-retrieval.md`
@@ -30,7 +30,7 @@ Esta etapa trabalha apenas com retrieval vetorial simples. Ela não implementa b
 
 ## Configuração
 
-O retriever usa a collection `solabot_reformed_v1`, persistida em `corpus/indexes/chroma/reformed/`. O embedding das perguntas é gerado com `text-embedding-3-large`, mantendo compatibilidade com os embeddings já indexados.
+O retriever usa a collection `aia_reformed_v1`, persistida em `corpus/indexes/chroma/reformed/`. O embedding das perguntas é gerado com `text-embedding-3-large`, mantendo compatibilidade com os embeddings já indexados.
 
 ## Filtros obrigatórios
 
