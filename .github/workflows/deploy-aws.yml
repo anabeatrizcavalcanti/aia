@@ -114,4 +114,20 @@ jobs:
           EC2_USER="${EC2_USER:-ubuntu}"
 
           ssh -i ~/.ssh/aia_ec2_key "$EC2_USER@$EC2_HOST" \
-            "sleep 8 && curl -fsS http://127.0.0.1:8000/api/health"
+            "bash -s" <<'REMOTE'
+          set -euo pipefail
+
+          for attempt in $(seq 1 12); do
+            if curl -fsS http://127.0.0.1:8000/api/health; then
+              exit 0
+            fi
+            echo "Health check ainda indisponível; tentativa ${attempt}/12."
+            sleep 5
+          done
+
+          echo "Health check falhou após 60s. Estado dos containers:"
+          docker compose ps || true
+          echo "Logs recentes do container:"
+          docker compose logs --tail=120 aia || true
+          exit 1
+          REMOTE
