@@ -1,6 +1,6 @@
 vector_store: chromadb
 persist_directory: corpus/indexes/chroma/alliance
-collection_name: solabot_alliance_v1
+collection_name: aia_alliance_v1
 distance_metric: cosine
 embedding_provider: openai
 embedding_model: text-embedding-3-large

@@ -12,11 +12,11 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 REQUIRED_FILES = [
-    Path("src/sola_bot/generation/prompt_builder.py"),
-    Path("src/sola_bot/generation/evidence_policy.py"),
-    Path("src/sola_bot/generation/citation_formatter.py"),
-    Path("src/sola_bot/generation/rag_answer.py"),
-    Path("src/sola_bot/generation/rag_generator.py"),
+    Path("src/aia/generation/prompt_builder.py"),
+    Path("src/aia/generation/evidence_policy.py"),
+    Path("src/aia/generation/citation_formatter.py"),
+    Path("src/aia/generation/rag_answer.py"),
+    Path("src/aia/generation/rag_generator.py"),
     Path("scripts/pipeline/query_rag_generator.py"),
 ]
 REQUIRED_INPUTS = [
@@ -47,7 +47,7 @@ def make_package(
     source_map=None,
     total_chars: int | None = None,
 ):
-    from sola_bot.retrieval.final_context import FinalContext, RetrievalContextPackage
+    from aia.retrieval.final_context import FinalContext, RetrievalContextPackage
 
     if contexts is None:
         context_text = "O batismo é tratado como ordenança do Novo Testamento no corpus reformado. " * 10
@@ -103,9 +103,11 @@ class FakeRetrievalPipeline:
     def __init__(self, package):
         self.package = package
         self.called = False
+        self.query = None
 
     def retrieve(self, query, filters=None):
         self.called = True
+        self.query = query
         return self.package
 
 
@@ -142,7 +144,7 @@ def test_generation_inputs_exist():
 
 
 def test_citation_formatter_preserves_source_data_and_missing_pages():
-    from sola_bot.generation.citation_formatter import citations_from_source_map, format_citations
+    from aia.generation.citation_formatter import citations_from_source_map, format_citations
 
     package = make_package()
     package.source_map["source_2"] = {
@@ -166,8 +168,8 @@ def test_citation_formatter_preserves_source_data_and_missing_pages():
 
 
 def test_evidence_policy_refuses_and_allows_expected_packages():
-    from sola_bot.generation.evidence_policy import EvidencePolicy
-    from sola_bot.retrieval.final_context import FinalContext
+    from aia.generation.evidence_policy import EvidencePolicy
+    from aia.retrieval.final_context import FinalContext
 
     policy = EvidencePolicy()
     empty_package = make_package(contexts=[], source_map={}, total_chars=0)
@@ -310,7 +312,6 @@ def test_evidence_policy_refuses_and_allows_expected_packages():
     outside_corpus_package = make_package(
         query="Qual é a posição sobre um documento não está disponível no corpus?",
     )
-
     assert policy.evaluate(empty_package).reason == "no_context"
     assert policy.evaluate(no_source).reason == "missing_source_map"
     assert policy.evaluate(allowed).can_answer is True
@@ -325,14 +326,26 @@ def test_evidence_policy_refuses_and_allows_expected_packages():
 
 
 def test_prompt_builder_includes_query_context_sources_and_rules():
-    from sola_bot.generation.citation_formatter import citations_from_source_map
-    from sola_bot.generation.prompt_builder import build_rag_prompt
+    from aia.generation.citation_formatter import citations_from_source_map
+    from aia.generation.prompt_builder import build_rag_prompt
 
     package = make_package()
-    prompt = build_rag_prompt(package.query, package, citations_from_source_map(package))
+    prompt = build_rag_prompt(
+        package.query,
+        package,
+        citations_from_source_map(package),
+        chat_history=[
+            {"role": "user", "content": "O que é o batismo?"},
+            {"role": "assistant", "content": "O batismo é apresentado no contexto recuperado."},
+        ],
+        retrieval_query="Explique novamente, em linguagem mais simples, a resposta documental sobre: O que é o batismo?",
+    )
 
-    assert "Pergunta:" in prompt
+    assert "Pergunta atual do usuário:" in prompt
     assert "O que é o batismo?" in prompt
+    assert "Pergunta contextualizada para recuperação:" in prompt
+    assert "Histórico recente do chat:" in prompt
+    assert "Use o histórico recente apenas para entender referências" in prompt
     assert "Contextos:" in prompt
     assert "Fontes disponíveis:" in prompt
     assert "Use apenas os contextos documentais fornecidos." in prompt
@@ -340,10 +353,35 @@ def test_prompt_builder_includes_query_context_sources_and_rules():
     assert "Se a evidência for insuficiente" in prompt
     assert "Separe mudanças de tópico" in prompt
     assert "Não coloque a resposta principal inteira em um único parágrafo" in prompt
+    assert "Em perguntas de sim/não" in prompt
+    assert "Em perguntas abertas" in prompt
+    assert "nunca comece com 'Sim' ou 'Não'" in prompt
+    assert "Nunca comece com 'Sim'" in prompt
+    assert "enumere cada documento ou requisito documental em item próprio" in prompt
+    assert "quóruns, quantidades, prazos, capacidade civil, cargos exigidos" in prompt
+    assert "assinaturas exigidas" in prompt
+
+
+def test_prompt_builder_guides_broad_church_questions_without_refusing():
+    from aia.generation.citation_formatter import citations_from_source_map
+    from aia.generation.prompt_builder import build_broad_query_guidance, build_rag_prompt
+
+    package = make_package(query="O que os documentos dizem sobre igreja?")
+    prompt = build_rag_prompt(package.query, package, citations_from_source_map(package))
+    guidance = build_broad_query_guidance(package.query)
+
+    assert "Orientação para perguntas amplas ou ambíguas:" in prompt
+    assert "A pergunta parece ampla" in prompt
+    assert "igreja em sentido doutrinário/confessional" in prompt
+    assert "igreja local ou filiada em sentido institucional" in prompt
+    assert "responda normalmente" in prompt
+    assert "peça esclarecimento apenas quando" in prompt
+    assert guidance in prompt
+    assert build_broad_query_guidance("Quais documentos são exigidos para filiação?") == "Não aplicada."
 
 
 def test_rag_generator_answers_with_fake_openai_client():
-    from sola_bot.generation.rag_generator import RagGenerator
+    from aia.generation.rag_generator import RagGenerator
 
     package = make_package()
     fake_pipeline = FakeRetrievalPipeline(package)
@@ -364,8 +402,35 @@ def test_rag_generator_answers_with_fake_openai_client():
     assert answer.used_documents == ["confissao-batista-londres-1689"]
 
 
+def test_rag_generator_contextualizes_followup_questions_with_chat_history():
+    from aia.generation.rag_generator import RagGenerator
+
+    package = make_package(query="Explique novamente, em linguagem mais simples, a resposta documental sobre: O que é o batismo?")
+    fake_pipeline = FakeRetrievalPipeline(package)
+    fake_client = FakeOpenAIClient()
+    generator = RagGenerator(
+        model="fake-model",
+        retrieval_pipeline=fake_pipeline,
+        client=fake_client,
+    )
+
+    answer = generator.answer(
+        "Não entendi a resposta anterior",
+        chat_history=[
+            {"role": "user", "content": "O que é o batismo?"},
+            {"role": "assistant", "content": "O batismo é apresentado no contexto recuperado."},
+        ],
+    )
+
+    assert fake_pipeline.query == "Explique novamente, em linguagem mais simples, a resposta documental sobre: O que é o batismo?"
+    assert answer.query == "Não entendi a resposta anterior"
+    assert answer.metadata["query_was_normalized"] is True
+    assert answer.metadata["normalized_query"] == fake_pipeline.query
+    assert answer.metadata["chat_history_count"] == 2
+
+
 def test_polish_generated_answer_capitalizes_sentence_starts():
-    from sola_bot.generation.rag_generator import polish_generated_answer
+    from aia.generation.rag_generator import polish_generated_answer
 
     polished = polish_generated_answer(
         "resposta principal.\n\nObservação:\nos contextos recuperados são limitados. ainda assim, há base [1].",
@@ -378,7 +443,7 @@ def test_polish_generated_answer_capitalizes_sentence_starts():
 
 
 def test_polish_generated_answer_spaces_discussed_topics():
-    from sola_bot.generation.rag_generator import polish_generated_answer
+    from aia.generation.rag_generator import polish_generated_answer
 
     raw = (
         "A regeneração é apresentada pelos Cânones de Dort como nova criação e vivificação que Deus opera em nós [1]. "
@@ -397,7 +462,7 @@ def test_polish_generated_answer_spaces_discussed_topics():
 
 
 def test_polish_generated_answer_preserves_markdown_lists():
-    from sola_bot.generation.rag_generator import polish_generated_answer
+    from aia.generation.rag_generator import polish_generated_answer
 
     raw = (
         "O Regimento Interno lista deveres da igreja local [1]. "
@@ -412,7 +477,7 @@ def test_polish_generated_answer_preserves_markdown_lists():
 
 
 def test_polish_generated_answer_removes_trailing_followup_offer():
-    from sola_bot.generation.rag_generator import polish_generated_answer
+    from aia.generation.rag_generator import polish_generated_answer
 
     polished = polish_generated_answer(
         "A justificação é ato gratuito de Deus [1].\n\nSe você quiser, posso comparar as confissões.",
@@ -422,9 +487,65 @@ def test_polish_generated_answer_removes_trailing_followup_offer():
     assert polished == "A justificação é ato gratuito de Deus [1]."
 
 
+def test_polish_generated_answer_corrects_salvation_loss_yes_no_polarity():
+    from aia.generation.rag_generator import polish_generated_answer
+
+    raw = (
+        "Sim. A Confissão de Fé Congregacional ensina que os verdadeiros crentes "
+        "não podem, nem totalmente nem finalmente, decair do estado da graça e que "
+        "serão eternamente salvos [1].\n\n"
+        "Ao mesmo tempo, a Confissão de Fé Congregacional afirma que a segurança da "
+        "salvação pode ser abalada [2]."
+    )
+
+    polished = polish_generated_answer(
+        raw,
+        [],
+        query="De acordo com a Confissão de Fé Congregacional, a salvação pode ser perdida?",
+    )
+
+    assert polished.startswith("Não.")
+    assert "segurança da salvação pode ser abalada" in polished
+
+
+def test_polish_generated_answer_removes_yes_no_opening_for_open_questions():
+    from aia.generation.rag_generator import polish_generated_answer
+
+    raw = (
+        "Sim. O Código de Ética do Ministro Congregacional atribui ao ministro "
+        "responsabilidades éticas na vida pessoal, familiar, ministerial e social [1]."
+    )
+
+    polished = polish_generated_answer(
+        raw,
+        [],
+        query="Quais responsabilidades éticas são atribuídas a um ministro?",
+    )
+
+    assert polished.startswith("O Código de Ética do Ministro Congregacional")
+    assert not polished.startswith("Sim.")
+
+
+def test_polish_generated_answer_preserves_yes_no_opening_for_closed_questions():
+    from aia.generation.rag_generator import polish_generated_answer
+
+    raw = (
+        "Não. A Confissão de Fé Congregacional ensina que os verdadeiros crentes "
+        "não podem decair total e definitivamente do estado da graça [1]."
+    )
+
+    polished = polish_generated_answer(
+        raw,
+        [],
+        query="De acordo com a Confissão de Fé Congregacional, a salvação pode ser perdida?",
+    )
+
+    assert polished.startswith("Não.")
+
+
 def test_compact_cited_sources_renumbers_used_references():
-    from sola_bot.generation.rag_answer import Citation
-    from sola_bot.generation.rag_generator import compact_cited_sources
+    from aia.generation.rag_answer import Citation
+    from aia.generation.rag_generator import compact_cited_sources
 
     citations = [
         Citation(
@@ -447,7 +568,7 @@ def test_compact_cited_sources_renumbers_used_references():
 
 
 def test_rag_generator_does_not_call_openai_when_evidence_is_refused():
-    from sola_bot.generation.rag_generator import RagGenerator
+    from aia.generation.rag_generator import RagGenerator
 
     package = make_package(contexts=[], source_map={}, total_chars=0)
     fake_pipeline = FakeRetrievalPipeline(package)
@@ -479,7 +600,7 @@ def test_rag_generator_real_execution_when_dependencies_are_available():
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.generation.rag_generator import RagGenerator
+    from aia.generation.rag_generator import RagGenerator
 
     answer = RagGenerator(max_output_tokens=400).answer("O que é justificação?")
 

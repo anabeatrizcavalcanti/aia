@@ -12,9 +12,9 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 REQUIRED_FILES = [
-    Path("src/sola_bot/retrieval/vector_retriever.py"),
-    Path("src/sola_bot/retrieval/query_embedder.py"),
-    Path("src/sola_bot/retrieval/retrieval_result.py"),
+    Path("src/aia/retrieval/vector_retriever.py"),
+    Path("src/aia/retrieval/query_embedder.py"),
+    Path("src/aia/retrieval/retrieval_result.py"),
     Path("scripts/pipeline/query_vector_retriever.py"),
 ]
 
@@ -45,7 +45,7 @@ def test_vector_retrieval_reports_exist():
 
 
 def test_optional_filters_are_preserved():
-    from sola_bot.retrieval.vector_retriever import VectorRetriever
+    from aia.retrieval.vector_retriever import VectorRetriever
 
     where = VectorRetriever.__new__(VectorRetriever).build_where_filter(
         {"document_id": "canones-de-dort"}
@@ -62,7 +62,7 @@ def test_vector_retriever_returns_results_when_dependencies_are_available():
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.retrieval.vector_retriever import VectorRetriever
+    from aia.retrieval.vector_retriever import VectorRetriever
 
     retriever = VectorRetriever()
     results = retriever.retrieve("O que é o batismo?", top_k=3)

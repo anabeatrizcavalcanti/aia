@@ -141,7 +141,7 @@ def build_manifest(matches: dict[str, Path]) -> dict[str, object]:
         "corpus_id": "reformed",
         "corpus_name": "Corpus Confessional Reformado",
         "description": (
-            "Corpus principal do SolaBot, composto por documentos confessionais "
+            "Corpus principal do AIA, composto por documentos confessionais "
             "da tradição reformada."
         ),
         "documents": documents,
@@ -180,7 +180,7 @@ def write_validation_report(
         (
             "A validação examinou os arquivos PDF presentes em "
             "`corpus/raw/reformed/` e tentou associá-los aos quatro documentos "
-            "esperados do corpus reformado principal do SolaBot."
+            "esperados do corpus reformado principal do AIA."
         ),
         "",
         "## PDFs encontrados",

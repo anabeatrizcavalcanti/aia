@@ -22,13 +22,13 @@ SRC_DIR = ROOT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from sola_bot.retrieval.cross_encoder_reranker import (  # noqa: E402
+from aia.retrieval.cross_encoder_reranker import (  # noqa: E402
     DEFAULT_MAX_TEXT_CHARS,
     DEFAULT_RERANKER_MODEL,
     CrossEncoderRerankerError,
 )
-from sola_bot.retrieval.reranked_retriever import RerankedRetriever  # noqa: E402
-from sola_bot.retrieval.retrieval_result import RetrievalResult  # noqa: E402
+from aia.retrieval.reranked_retriever import RerankedRetriever  # noqa: E402
+from aia.retrieval.retrieval_result import RetrievalResult  # noqa: E402
 
 
 REPORT_DIR = ROOT_DIR / "corpus" / "reports" / "retrieval"
@@ -350,7 +350,7 @@ def write_reports(report: dict[str, Any]) -> None:
         "- Hybrid report: `corpus/reports/retrieval/hybrid-retrieval-report.json`.",
         "- Chunks: `corpus/processed/chunks/reformed/all_chunks_for_embeddings.jsonl`.",
         "- Índice ChromaDB: `corpus/indexes/chroma/reformed/`.",
-        "- Collection: `solabot_reformed_v1`.",
+        "- Collection: `aia_reformed_v1`.",
         "",
         "## Dependências",
         "",
@@ -408,8 +408,8 @@ def write_reports(report: dict[str, Any]) -> None:
         "",
         "## Código",
         "",
-        "- `src/sola_bot/retrieval/cross_encoder_reranker.py`",
-        "- `src/sola_bot/retrieval/reranked_retriever.py`",
+        "- `src/aia/retrieval/cross_encoder_reranker.py`",
+        "- `src/aia/retrieval/reranked_retriever.py`",
         "- `scripts/pipeline/query_reranked_retriever.py`",
         "",
         "## Configuração",
@@ -443,8 +443,8 @@ def write_reports(report: dict[str, Any]) -> None:
         'python scripts/pipeline/query_reranked_retriever.py "O que é eleição?" --top-k 5',
         'python scripts/pipeline/query_reranked_retriever.py "O que é justificação?" --top-k 5',
         "python scripts/pipeline/query_reranked_retriever.py --write-report",
-        "python -m py_compile src/sola_bot/retrieval/cross_encoder_reranker.py",
-        "python -m py_compile src/sola_bot/retrieval/reranked_retriever.py",
+        "python -m py_compile src/aia/retrieval/cross_encoder_reranker.py",
+        "python -m py_compile src/aia/retrieval/reranked_retriever.py",
         "python -m py_compile scripts/pipeline/query_reranked_retriever.py",
         "python -m pytest tests/test_reranker_retriever.py",
         "```",

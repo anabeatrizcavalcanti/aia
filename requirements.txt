@@ -12,6 +12,7 @@ langchain-community
 langchain-openai
 ragas
 datasets
+pandas
 scikit-learn
 numpy
 pytest

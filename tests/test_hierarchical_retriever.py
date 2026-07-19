@@ -13,8 +13,8 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 REQUIRED_FILES = [
-    Path("src/sola_bot/retrieval/parent_context.py"),
-    Path("src/sola_bot/retrieval/hierarchical_retriever.py"),
+    Path("src/aia/retrieval/parent_context.py"),
+    Path("src/aia/retrieval/hierarchical_retriever.py"),
     Path("scripts/pipeline/query_hierarchical_retriever.py"),
 ]
 REQUIRED_INPUTS = [
@@ -72,7 +72,7 @@ def make_chunk(
 
 
 def make_result(chunk_id: str):
-    from sola_bot.retrieval.retrieval_result import RetrievalResult
+    from aia.retrieval.retrieval_result import RetrievalResult
 
     return RetrievalResult(
         chunk_id=chunk_id,
@@ -99,6 +99,138 @@ def make_result(chunk_id: str):
     )
 
 
+def make_normative_chunk(
+    chunk_id: str,
+    article_number: str,
+    text: str,
+    page: int,
+) -> dict:
+    return {
+        "chunk_id": chunk_id,
+        "corpus_id": "congregational_normative",
+        "retrieval_namespace": "congregational_normative",
+        "document_id": "codigo-etica-ministro-alianca",
+        "document": "Código de Ética do Ministro Congregacional",
+        "document_title": "Código de Ética do Ministro Congregacional",
+        "document_type": "normative_ethics",
+        "source_category": "denominational_normative_document",
+        "chunk_type": "ethics_article",
+        "content_role": "normative",
+        "section_title": "DOS PRINCÍPIOS GERAIS",
+        "section_reference": f"Código de Ética, Dos Princípios Gerais, Art. {article_number}",
+        "article_number": article_number,
+        "article_label": f"Art. {article_number}",
+        "full_reference": f"Código de Ética, Dos Princípios Gerais, Art. {article_number}",
+        "page_start": page,
+        "page_end": page,
+        "text": text,
+        "source_path": "corpus/raw/normative/Codigo de ética.pdf",
+        "normalized_source": "corpus/processed/normalized/normative/codigo-etica.normalized.json",
+        "text_hash": f"hash-{chunk_id}",
+    }
+
+
+def make_normative_result(chunk_id: str):
+    from aia.retrieval.retrieval_result import RetrievalResult
+
+    return RetrievalResult(
+        chunk_id=chunk_id,
+        document_id="codigo-etica-ministro-alianca",
+        document="Código de Ética do Ministro Congregacional",
+        chunk_type="ethics_article",
+        content_role="normative",
+        section_title="DOS PRINCÍPIOS GERAIS",
+        section_reference="Código de Ética, Dos Princípios Gerais, Art. 16",
+        chapter_title=None,
+        chapter_reference=None,
+        page_start=7,
+        page_end=8,
+        source_path="corpus/raw/normative/Codigo de ética.pdf",
+        text_hash=f"hash-{chunk_id}",
+        score=0.75,
+        distance=None,
+        text="Texto âncora.",
+        metadata={
+            "corpus_id": "congregational_normative",
+            "retrieval_namespace": "congregational_normative",
+            "document_type": "normative_ethics",
+            "source_category": "denominational_normative_document",
+            "pre_rerank_score": 0.03,
+        },
+    )
+
+
+def make_constitution_result(chunk_id: str):
+    from aia.retrieval.retrieval_result import RetrievalResult
+
+    return RetrievalResult(
+        chunk_id=chunk_id,
+        document_id="constituicao-alianca-2022",
+        document="Constituição da Aliança",
+        chunk_type="inciso",
+        content_role="normative",
+        section_title=None,
+        section_reference="Constituição da Aliança, Capítulo II, Art. 5º, § 1º, inciso I",
+        chapter_title="DO INGRESSO, DESLIGAMENTO E EXCLUSÃO DOS FILIADOS",
+        chapter_reference="Capítulo II",
+        page_start=4,
+        page_end=4,
+        source_path="corpus/raw/normative/Constituição da Aliança.pdf",
+        text_hash=f"hash-{chunk_id}",
+        score=0.88,
+        distance=None,
+        text="Texto âncora.",
+        metadata={
+            "corpus_id": "congregational_normative",
+            "retrieval_namespace": "congregational_normative",
+            "document_type": "constitution",
+            "source_category": "denominational_normative_document",
+            "pre_rerank_score": 0.03,
+        },
+    )
+
+
+def make_constitution_article5_paragraph1_chunk(
+    chunk_id: str,
+    text: str,
+    *,
+    inciso: str | None = None,
+    page: int = 4,
+) -> dict:
+    item_label = f"inciso {inciso}" if inciso else "§ 1º"
+    reference = f"Constituição da Aliança, Capítulo II, Art. 5º, § 1º"
+    if inciso:
+        reference = f"{reference}, inciso {inciso}"
+    return {
+        "chunk_id": chunk_id,
+        "corpus_id": "congregational_normative",
+        "retrieval_namespace": "congregational_normative",
+        "document_id": "constituicao-alianca-2022",
+        "document": "Constituição da Aliança",
+        "document_title": "Constituição da Aliança",
+        "document_type": "constitution",
+        "source_category": "denominational_normative_document",
+        "chunk_type": "inciso" if inciso else "paragraph",
+        "content_role": "normative",
+        "chapter_number": "II",
+        "chapter_title": "DO INGRESSO, DESLIGAMENTO E EXCLUSÃO DOS FILIADOS",
+        "chapter_reference": "Capítulo II",
+        "section_reference": reference,
+        "article_number": "5",
+        "article_label": "Art. 5º",
+        "paragraph_number": "1º",
+        "inciso": inciso,
+        "item_label": item_label,
+        "full_reference": reference,
+        "page_start": page,
+        "page_end": page,
+        "text": text,
+        "source_path": "corpus/raw/normative/Constituição da Aliança.pdf",
+        "normalized_source": "corpus/processed/normalized/normative/constituicao.normalized.json",
+        "text_hash": f"hash-{chunk_id}",
+    }
+
+
 def write_chunks(path: Path, chunks: list[dict]) -> None:
     path.write_text(
         "".join(json.dumps(chunk, ensure_ascii=False) + "\n" for chunk in chunks),
@@ -117,7 +249,7 @@ def test_hierarchical_inputs_exist():
 
 
 def test_build_parent_key_prioritizes_document_and_chapter():
-    from sola_bot.retrieval.parent_context import build_parent_key
+    from aia.retrieval.parent_context import build_parent_key
 
     chunk = make_chunk("a")
     fallback_chunk = make_chunk(
@@ -140,8 +272,26 @@ def test_build_parent_key_prioritizes_document_and_chapter():
     assert build_parent_key(catechism_chunk) == "catecismo-heidelberg::group::dia-do-senhor-16"
 
 
+def test_build_parent_key_keeps_normative_paragraphs_separate():
+    from aia.retrieval.parent_context import build_parent_key
+
+    paragraph_chunk = {
+        **make_normative_chunk("art-5-par-1", article_number="5", text="§ 1º. Texto.", page=4),
+        "document_id": "constituicao-alianca-2022",
+        "paragraph_number": "1º",
+    }
+    article_chunk = {
+        **make_normative_chunk("art-5", article_number="5", text="Art. 5º. Texto.", page=4),
+        "document_id": "constituicao-alianca-2022",
+        "paragraph_number": None,
+    }
+
+    assert build_parent_key(paragraph_chunk) == "constituicao-alianca-2022::article::5::paragraph::1o"
+    assert build_parent_key(article_chunk) == "constituicao-alianca-2022::article::5"
+
+
 def test_parent_context_builder_loads_chunks_and_groups_without_mixing_documents(tmp_path):
-    from sola_bot.retrieval.parent_context import ParentContextBuilder, build_parent_key
+    from aia.retrieval.parent_context import ParentContextBuilder, build_parent_key
 
     chunks_path = tmp_path / "chunks.jsonl"
     chunks = [
@@ -166,7 +316,7 @@ def test_parent_context_builder_loads_chunks_and_groups_without_mixing_documents
 
 
 def test_parent_context_expansion_with_simulated_data(tmp_path):
-    from sola_bot.retrieval.parent_context import ParentContextBuilder
+    from aia.retrieval.parent_context import ParentContextBuilder
 
     chunks_path = tmp_path / "chunks.jsonl"
     chunks = [
@@ -200,7 +350,7 @@ def test_parent_context_expansion_with_simulated_data(tmp_path):
 
 
 def test_parent_context_anchor_only_for_weak_metadata(tmp_path):
-    from sola_bot.retrieval.parent_context import ParentContextBuilder
+    from aia.retrieval.parent_context import ParentContextBuilder
 
     chunks_path = tmp_path / "chunks.jsonl"
     weak_chunk = make_chunk(
@@ -222,6 +372,132 @@ def test_parent_context_anchor_only_for_weak_metadata(tmp_path):
     assert context.included_chunk_ids == ["weak"]
 
 
+def test_parent_context_uses_overview_group_for_broad_structural_questions(tmp_path):
+    from aia.retrieval.parent_context import ParentContextBuilder
+
+    chunks_path = tmp_path / "chunks.jsonl"
+    chunks = [
+        make_normative_chunk(
+            "codigo-etica-ministro-alianca_artigo-007",
+            "7",
+            "Art. 7º. Em relação à sua vida pessoal o Pastor tem deveres de pureza, caráter e saúde.",
+            2,
+        ),
+        make_normative_chunk(
+            "codigo-etica-ministro-alianca_artigo-008",
+            "8",
+            "Art. 8º. O Pastor tem deveres em relação à família e ao cuidado do lar.",
+            3,
+        ),
+        make_normative_chunk(
+            "codigo-etica-ministro-alianca_artigo-009",
+            "9",
+            "Art. 9º. Na relação com a Igreja, o Pastor tem deveres ministeriais.",
+            4,
+        ),
+        make_normative_chunk(
+            "codigo-etica-ministro-alianca_artigo-016",
+            "16",
+            "Art. 16. Em relação à sociedade o Pastor tem deveres de prudência e cidadania.",
+            7,
+        ),
+        make_normative_chunk(
+            "codigo-etica-ministro-alianca_artigo-023",
+            "23",
+            "Art. 23. Sanções aplicáveis por infração ética.",
+            9,
+        )
+        | {"section_title": "DAS SANÇÕES APLICÁVEIS"},
+    ]
+    write_chunks(chunks_path, chunks)
+    builder = ParentContextBuilder(
+        chunks_path=str(chunks_path),
+        parent_context_max_chars=8000,
+        include_full_parent_when_small=False,
+    )
+
+    context = builder.build_contexts(
+        "Quais responsabilidades éticas são atribuídas a um ministro?",
+        [make_normative_result("codigo-etica-ministro-alianca_artigo-016")],
+    )[0]
+
+    assert context.parent_strategy == "overview_structural_group"
+    assert context.parent_expansion_status == "overview_expanded"
+    assert context.metadata["parent_expansion_reason"] == "overview_query_structural_group"
+    assert "codigo-etica-ministro-alianca_artigo-016" in context.included_chunk_ids
+    assert "codigo-etica-ministro-alianca_artigo-007" in context.included_chunk_ids
+    assert "codigo-etica-ministro-alianca_artigo-008" in context.included_chunk_ids
+    assert "codigo-etica-ministro-alianca_artigo-009" in context.included_chunk_ids
+    assert "codigo-etica-ministro-alianca_artigo-023" not in context.included_chunk_ids
+
+
+def test_parent_context_expands_normative_requirement_lists_with_all_items(tmp_path):
+    from aia.retrieval.parent_context import ParentContextBuilder
+
+    chunks_path = tmp_path / "chunks.jsonl"
+    chunks = [
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1",
+            "§ 1º. As igrejas candidatas devem apresentar a seguinte documentação:",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_i",
+            "I - Requerimento formal.",
+            inciso="I",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_ii",
+            "II - Ata da assembleia com assinatura de 2/3 dos membros.",
+            inciso="II",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_iii",
+            "III - Rol de membros atualizado.",
+            inciso="III",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_iv",
+            "IV - Estatuto registrado em cartório.",
+            inciso="IV",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_v",
+            "V - CNPJ.",
+            inciso="V",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_vi",
+            "VI - Alvará municipal.",
+            inciso="VI",
+        ),
+        make_constitution_article5_paragraph1_chunk(
+            "constituicao_art5_par1_vii",
+            "VII - Comprovante de abertura de conta bancária.",
+            inciso="VII",
+            page=5,
+        ),
+    ]
+    write_chunks(chunks_path, chunks)
+    builder = ParentContextBuilder(
+        chunks_path=str(chunks_path),
+        parent_context_max_chars=12000,
+        include_full_parent_when_small=False,
+        preserve_anchor_first=True,
+    )
+
+    context = builder.build_contexts(
+        "De acordo com a Constituição da Aliança, quais são os requisitos para ingresso de igrejas?",
+        [make_constitution_result("constituicao_art5_par1_i")],
+    )[0]
+
+    assert context.parent_strategy == "normative_unit_list"
+    assert context.metadata["parent_expansion_reason"] == "normative_unit_list_query"
+    assert context.included_chunk_ids == [chunk["chunk_id"] for chunk in chunks]
+    assert context.page_start == 4
+    assert context.page_end == 5
+    assert "Comprovante de abertura de conta bancária" in context.context_text
+
+
 def test_hierarchical_retriever_returns_contexts_when_dependencies_are_available():
     load_dotenv_if_available()
 
@@ -234,7 +510,7 @@ def test_hierarchical_retriever_returns_contexts_when_dependencies_are_available
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.retrieval.hierarchical_retriever import HierarchicalRetriever
+    from aia.retrieval.hierarchical_retriever import HierarchicalRetriever
 
     try:
         retriever = HierarchicalRetriever(reranked_top_k=1, parent_context_max_chars=9000)

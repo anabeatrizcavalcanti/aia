@@ -1,4 +1,4 @@
-"""Script para construção do índice vetorial do SolaBot."""
+"""Script para construção do índice vetorial do AIA."""
 
 
 def main() -> None:

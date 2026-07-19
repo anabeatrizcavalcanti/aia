@@ -22,9 +22,9 @@ SRC_DIR = ROOT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from sola_bot.generation.citation_formatter import format_citations  # noqa: E402
-from sola_bot.generation.rag_answer import RagAnswer  # noqa: E402
-from sola_bot.generation.rag_generator import DEFAULT_CHAT_MODEL, RagGenerator  # noqa: E402
+from aia.generation.citation_formatter import format_citations  # noqa: E402
+from aia.generation.rag_answer import RagAnswer  # noqa: E402
+from aia.generation.rag_generator import DEFAULT_CHAT_MODEL, RagGenerator  # noqa: E402
 
 
 REPORT_DIR = ROOT_DIR / "corpus" / "reports" / "generation"
@@ -304,11 +304,11 @@ def write_reports(report: dict[str, Any]) -> None:
         "",
         "## Código",
         "",
-        "- `src/sola_bot/generation/prompt_builder.py`",
-        "- `src/sola_bot/generation/evidence_policy.py`",
-        "- `src/sola_bot/generation/citation_formatter.py`",
-        "- `src/sola_bot/generation/rag_answer.py`",
-        "- `src/sola_bot/generation/rag_generator.py`",
+        "- `src/aia/generation/prompt_builder.py`",
+        "- `src/aia/generation/evidence_policy.py`",
+        "- `src/aia/generation/citation_formatter.py`",
+        "- `src/aia/generation/rag_answer.py`",
+        "- `src/aia/generation/rag_generator.py`",
         "- `scripts/pipeline/query_rag_generator.py`",
         "",
         "## Configuração",
@@ -348,13 +348,13 @@ def write_reports(report: dict[str, Any]) -> None:
         'python scripts/pipeline/query_rag_generator.py "O que é justificação?"',
         'python scripts/pipeline/query_rag_generator.py "Segundo os documentos reformados disponíveis, qual é a doutrina da assunção de Maria?"',
         "python scripts/pipeline/query_rag_generator.py --write-report",
-        "python -m py_compile src/sola_bot/generation/prompt_builder.py",
-        "python -m py_compile src/sola_bot/generation/evidence_policy.py",
-        "python -m py_compile src/sola_bot/generation/citation_formatter.py",
-        "python -m py_compile src/sola_bot/generation/rag_answer.py",
-        "python -m py_compile src/sola_bot/generation/rag_generator.py",
-        "python -m py_compile src/sola_bot/generation/rag_chain.py",
-        "python -m py_compile src/sola_bot/generation/source_grounded_prompt.py",
+        "python -m py_compile src/aia/generation/prompt_builder.py",
+        "python -m py_compile src/aia/generation/evidence_policy.py",
+        "python -m py_compile src/aia/generation/citation_formatter.py",
+        "python -m py_compile src/aia/generation/rag_answer.py",
+        "python -m py_compile src/aia/generation/rag_generator.py",
+        "python -m py_compile src/aia/generation/rag_chain.py",
+        "python -m py_compile src/aia/generation/source_grounded_prompt.py",
         "python -m py_compile scripts/pipeline/query_rag_generator.py",
         "python -m pytest tests/test_rag_answer_generation.py",
         "```",

@@ -8,7 +8,7 @@ def test_main_project_files_exist():
 
 
 def test_main_directories_exist():
-    assert Path("src/sola_bot").exists()
+    assert Path("src/aia").exists()
     assert Path("corpus/raw/reformed").exists()
     assert Path("corpus/raw/evaluation_sets").exists()
     assert Path("docs").exists()
@@ -22,18 +22,18 @@ def test_theoretical_documentation_exists():
 
 
 def test_advanced_retrieval_modules_exist():
-    assert Path("src/sola_bot/retrieval/bm25.py").exists()
-    assert Path("src/sola_bot/retrieval/hybrid_retriever.py").exists()
-    assert Path("src/sola_bot/retrieval/rrf.py").exists()
-    assert Path("src/sola_bot/retrieval/reranker.py").exists()
-    assert Path("src/sola_bot/retrieval/metadata_filter.py").exists()
-    assert Path("src/sola_bot/retrieval/parent_retriever.py").exists()
+    assert Path("src/aia/retrieval/bm25.py").exists()
+    assert Path("src/aia/retrieval/hybrid_retriever.py").exists()
+    assert Path("src/aia/retrieval/rrf.py").exists()
+    assert Path("src/aia/retrieval/reranker.py").exists()
+    assert Path("src/aia/retrieval/metadata_filter.py").exists()
+    assert Path("src/aia/retrieval/parent_retriever.py").exists()
 
 
 def test_generation_and_evaluation_modules_exist():
-    assert Path("src/sola_bot/generation/evidence_policy.py").exists()
-    assert Path("src/sola_bot/generation/source_grounded_prompt.py").exists()
-    assert Path("src/sola_bot/evaluation/ragas_metrics.py").exists()
-    assert Path("src/sola_bot/evaluation/ares_metrics.py").exists()
-    assert Path("src/sola_bot/evaluation/theological_contamination.py").exists()
-    assert Path("src/sola_bot/evaluation/citation_metrics.py").exists()
+    assert Path("src/aia/generation/evidence_policy.py").exists()
+    assert Path("src/aia/generation/source_grounded_prompt.py").exists()
+    assert Path("src/aia/evaluation/ragas_metrics.py").exists()
+    assert Path("src/aia/evaluation/ares_metrics.py").exists()
+    assert Path("src/aia/evaluation/theological_contamination.py").exists()
+    assert Path("src/aia/evaluation/citation_metrics.py").exists()

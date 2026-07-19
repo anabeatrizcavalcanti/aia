@@ -21,8 +21,8 @@ SRC_DIR = ROOT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from sola_bot.retrieval.query_embedder import QueryEmbeddingError  # noqa: E402
-from sola_bot.retrieval.vector_retriever import (  # noqa: E402
+from aia.retrieval.query_embedder import QueryEmbeddingError  # noqa: E402
+from aia.retrieval.vector_retriever import (  # noqa: E402
     DEFAULT_CHUNKS_PATH,
     DEFAULT_COLLECTION_NAME,
     DEFAULT_EMBEDDING_MODEL,
@@ -396,7 +396,7 @@ def write_reports(report: dict[str, Any]) -> None:
         "## Objetivo",
         "",
         (
-            "Implementar a primeira camada de recuperação documental do SolaBot: "
+            "Implementar a primeira camada de recuperação documental do AIA: "
             "gerar embedding da pergunta, consultar o índice ChromaDB do corpus reformado "
             "e retornar chunks com metadados e fontes rastreáveis."
         ),
@@ -440,9 +440,9 @@ def write_reports(report: dict[str, Any]) -> None:
         'python scripts/pipeline/query_vector_retriever.py "O que é o batismo?" --top-k 5',
         'python scripts/pipeline/query_vector_retriever.py "O que é eleição?" --top-k 5',
         'python scripts/pipeline/query_vector_retriever.py "O que é justificação?" --top-k 5',
-        "python -m py_compile src/sola_bot/retrieval/query_embedder.py",
-        "python -m py_compile src/sola_bot/retrieval/retrieval_result.py",
-        "python -m py_compile src/sola_bot/retrieval/vector_retriever.py",
+        "python -m py_compile src/aia/retrieval/query_embedder.py",
+        "python -m py_compile src/aia/retrieval/retrieval_result.py",
+        "python -m py_compile src/aia/retrieval/vector_retriever.py",
         "python -m py_compile scripts/pipeline/query_vector_retriever.py",
         "python -m pytest tests/test_vector_retriever.py",
         "```",

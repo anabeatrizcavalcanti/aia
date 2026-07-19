@@ -22,8 +22,8 @@ SRC_DIR = ROOT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from sola_bot.retrieval.hierarchical_retriever import HierarchicalRetriever  # noqa: E402
-from sola_bot.retrieval.parent_context import DEFAULT_PARENT_STRATEGY, ParentContext  # noqa: E402
+from aia.retrieval.hierarchical_retriever import HierarchicalRetriever  # noqa: E402
+from aia.retrieval.parent_context import DEFAULT_PARENT_STRATEGY, ParentContext  # noqa: E402
 
 
 REPORT_DIR = ROOT_DIR / "corpus" / "reports" / "retrieval"
@@ -165,7 +165,7 @@ def load_chunk_stats() -> dict[str, int]:
     parent_keys: set[str] = set()
     if not CHUNKS_PATH.exists():
         return {"chunks_loaded": 0, "parent_groups": 0}
-    from sola_bot.retrieval.parent_context import build_parent_key
+    from aia.retrieval.parent_context import build_parent_key
 
     with CHUNKS_PATH.open("r", encoding="utf-8") as handle:
         for line in handle:
@@ -305,8 +305,8 @@ def write_reports(report: dict[str, Any]) -> None:
         "",
         "## Código",
         "",
-        "- `src/sola_bot/retrieval/parent_context.py`",
-        "- `src/sola_bot/retrieval/hierarchical_retriever.py`",
+        "- `src/aia/retrieval/parent_context.py`",
+        "- `src/aia/retrieval/hierarchical_retriever.py`",
         "- `scripts/pipeline/query_hierarchical_retriever.py`",
         "",
         "## Configuração",
@@ -343,8 +343,8 @@ def write_reports(report: dict[str, Any]) -> None:
         'python scripts/pipeline/query_hierarchical_retriever.py "O que é eleição?" --top-k 5',
         'python scripts/pipeline/query_hierarchical_retriever.py "O que é justificação?" --top-k 5',
         "python scripts/pipeline/query_hierarchical_retriever.py --write-report",
-        "python -m py_compile src/sola_bot/retrieval/parent_context.py",
-        "python -m py_compile src/sola_bot/retrieval/hierarchical_retriever.py",
+        "python -m py_compile src/aia/retrieval/parent_context.py",
+        "python -m py_compile src/aia/retrieval/hierarchical_retriever.py",
         "python -m py_compile scripts/pipeline/query_hierarchical_retriever.py",
         "python -m pytest tests/test_hierarchical_retriever.py",
         "```",

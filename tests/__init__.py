@@ -1,1 +1,1 @@
-"""Testes automatizados do SolaBot."""
+"""Testes automatizados do AIA."""

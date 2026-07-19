@@ -12,9 +12,9 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 REQUIRED_FILES = [
-    Path("src/sola_bot/retrieval/bm25_retriever.py"),
-    Path("src/sola_bot/retrieval/rrf.py"),
-    Path("src/sola_bot/retrieval/hybrid_retriever.py"),
+    Path("src/aia/retrieval/bm25_retriever.py"),
+    Path("src/aia/retrieval/rrf.py"),
+    Path("src/aia/retrieval/hybrid_retriever.py"),
     Path("scripts/pipeline/query_hybrid_retriever.py"),
 ]
 
@@ -28,7 +28,7 @@ def load_dotenv_if_available() -> None:
 
 
 def make_result(chunk_id: str, source: str, score: float):
-    from sola_bot.retrieval.retrieval_result import RetrievalResult
+    from aia.retrieval.retrieval_result import RetrievalResult
 
     return RetrievalResult(
         chunk_id=chunk_id,
@@ -69,14 +69,14 @@ def test_hybrid_retrieval_inputs_exist():
 
 def test_rank_bm25_is_declared_and_imported():
     requirements = Path("requirements.txt").read_text(encoding="utf-8")
-    bm25_module = Path("src/sola_bot/retrieval/bm25_retriever.py").read_text(encoding="utf-8")
+    bm25_module = Path("src/aia/retrieval/bm25_retriever.py").read_text(encoding="utf-8")
 
     assert "rank-bm25" in requirements
     assert "from rank_bm25 import BM25Okapi" in bm25_module
 
 
 def test_bm25_tokenizer_preserves_doctrinal_terms():
-    from sola_bot.retrieval.bm25_retriever import tokenize_for_bm25
+    from aia.retrieval.bm25_retriever import tokenize_for_bm25
 
     tokens = tokenize_for_bm25("Eleição, justificação, regeneração, expiação e batismo.")
 
@@ -91,7 +91,7 @@ def test_bm25_retriever_returns_results_when_dependency_is_available():
     if importlib.util.find_spec("rank_bm25") is None:
         pytest.skip("rank-bm25 não está instalado neste ambiente.")
 
-    from sola_bot.retrieval.bm25_retriever import BM25Retriever
+    from aia.retrieval.bm25_retriever import BM25Retriever
 
     retriever = BM25Retriever()
     results = retriever.retrieve("batismo", top_k=5)
@@ -106,7 +106,7 @@ def test_bm25_retriever_returns_results_when_dependency_is_available():
 
 
 def test_rrf_combines_rankings_without_duplicate_chunks():
-    from sola_bot.retrieval.rrf import reciprocal_rank_fusion
+    from aia.retrieval.rrf import reciprocal_rank_fusion
 
     vector_results = [
         make_result("chunk-a", "vector", 0.2),
@@ -137,7 +137,7 @@ def test_hybrid_retriever_returns_results_when_dependencies_are_available():
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.retrieval.hybrid_retriever import HybridRetriever
+    from aia.retrieval.hybrid_retriever import HybridRetriever
 
     retriever = HybridRetriever(vector_candidate_k=5, bm25_candidate_k=5, final_top_k=3)
     results = retriever.retrieve("O que é o batismo?", top_k=3)

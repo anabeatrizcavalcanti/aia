@@ -5,7 +5,7 @@ from pathlib import Path
 
 EMBEDDINGS_PATH = Path("corpus/processed/embeddings/alliance/openai_embeddings.jsonl")
 PERSIST_DIR = Path("corpus/indexes/chroma/alliance")
-COLLECTION_NAME = "solabot_alliance_v1"
+COLLECTION_NAME = "aia_alliance_v1"
 
 
 def read_jsonl(path: Path) -> list[dict]:

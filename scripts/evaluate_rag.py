@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    """Executa avaliações controladas do SolaBot."""
+    """Executa avaliações controladas do AIA."""
     raise NotImplementedError("RAG evaluation is not implemented yet.")
 
 

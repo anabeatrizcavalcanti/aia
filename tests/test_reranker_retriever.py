@@ -12,8 +12,8 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 REQUIRED_FILES = [
-    Path("src/sola_bot/retrieval/cross_encoder_reranker.py"),
-    Path("src/sola_bot/retrieval/reranked_retriever.py"),
+    Path("src/aia/retrieval/cross_encoder_reranker.py"),
+    Path("src/aia/retrieval/reranked_retriever.py"),
     Path("scripts/pipeline/query_reranked_retriever.py"),
 ]
 REQUIRED_INPUTS = [
@@ -47,7 +47,7 @@ def load_dotenv_if_available() -> None:
 
 
 def make_result(chunk_id: str, text: str, score: float):
-    from sola_bot.retrieval.retrieval_result import RetrievalResult
+    from aia.retrieval.retrieval_result import RetrievalResult
 
     return RetrievalResult(
         chunk_id=chunk_id,
@@ -86,14 +86,14 @@ def test_reranker_inputs_exist():
 
 def test_sentence_transformers_is_declared_and_cross_encoder_is_imported():
     requirements = Path("requirements.txt").read_text(encoding="utf-8")
-    module = Path("src/sola_bot/retrieval/cross_encoder_reranker.py").read_text(encoding="utf-8")
+    module = Path("src/aia/retrieval/cross_encoder_reranker.py").read_text(encoding="utf-8")
 
     assert "sentence-transformers" in requirements
     assert "from sentence_transformers import CrossEncoder" in module
 
 
 def test_build_reranker_text_includes_metadata_and_respects_limit():
-    from sola_bot.retrieval.cross_encoder_reranker import build_reranker_text
+    from aia.retrieval.cross_encoder_reranker import build_reranker_text
 
     result = make_result("chunk-a", "Texto do chunk sobre eleição.", 0.2)
     text = build_reranker_text(result, max_chars=500)
@@ -108,7 +108,7 @@ def test_build_reranker_text_includes_metadata_and_respects_limit():
 
 
 def test_cross_encoder_reranker_orders_with_fake_model():
-    from sola_bot.retrieval.cross_encoder_reranker import CrossEncoderReranker
+    from aia.retrieval.cross_encoder_reranker import CrossEncoderReranker
 
     candidates = [
         make_result("chunk-baixo", "texto score baixo", 0.90),
@@ -130,7 +130,7 @@ def test_cross_encoder_reranker_orders_with_fake_model():
 
 
 def test_cross_encoder_reranker_deduplicates_chunk_ids():
-    from sola_bot.retrieval.cross_encoder_reranker import CrossEncoderReranker
+    from aia.retrieval.cross_encoder_reranker import CrossEncoderReranker
 
     candidates = [
         make_result("chunk-a", "texto score alto", 0.1),
@@ -155,7 +155,7 @@ def test_reranked_retriever_returns_results_when_dependencies_are_available():
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.retrieval.reranked_retriever import RerankedRetriever
+    from aia.retrieval.reranked_retriever import RerankedRetriever
 
     try:
         retriever = RerankedRetriever(hybrid_candidate_k=5, final_top_k=2)

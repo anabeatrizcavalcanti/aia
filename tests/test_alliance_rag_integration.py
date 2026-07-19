@@ -15,7 +15,7 @@ if str(SRC_DIR) not in sys.path:
 ALLIANCE_CHUNKS = Path("corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl")
 ALLIANCE_EMBEDDINGS = Path("corpus/processed/embeddings/alliance/openai_embeddings.jsonl")
 ALLIANCE_CHROMA_DIR = Path("corpus/indexes/chroma/alliance")
-ALLIANCE_COLLECTION = "solabot_alliance_v1"
+ALLIANCE_COLLECTION = "aia_alliance_v1"
 EXPECTED_NORMATIVE_DOCS = {
     "confissao-fe-congregacional-alianca",
     "constituicao-alianca-2022",
@@ -78,8 +78,8 @@ def test_chroma_collection_contains_new_document_ids_when_available():
 
 
 def test_citation_formatter_prefers_full_reference():
-    from sola_bot.generation.citation_formatter import citations_from_source_map, format_citations
-    from sola_bot.retrieval.final_context import RetrievalContextPackage
+    from aia.generation.citation_formatter import citations_from_source_map, format_citations
+    from aia.retrieval.final_context import RetrievalContextPackage
 
     package = RetrievalContextPackage(
         query="Quais critérios existem para emancipação de campos missionários?",
@@ -115,8 +115,8 @@ def test_citation_formatter_prefers_full_reference():
 
 
 def test_evidence_policy_distinguishes_normative_and_doctrinal_questions():
-    from sola_bot.generation.evidence_policy import EvidencePolicy
-    from sola_bot.retrieval.final_context import FinalContext, RetrievalContextPackage
+    from aia.generation.evidence_policy import EvidencePolicy
+    from aia.retrieval.final_context import FinalContext, RetrievalContextPackage
 
     doctrinal_context = FinalContext(
         query="Como uma igreja se filia à Aliança?",
@@ -183,7 +183,7 @@ def test_minimum_questions_retrieve_expected_documents_when_openai_available():
     if not os.getenv("OPENAI_API_KEY", "").strip():
         pytest.skip("OPENAI_API_KEY não está configurada neste ambiente.")
 
-    from sola_bot.retrieval.vector_retriever import VectorRetriever
+    from aia.retrieval.vector_retriever import VectorRetriever
 
     expectations = [
         ("O que a Confissão de Fé Congregacional ensina sobre justificação?", {"confissao-fe-congregacional-alianca"}),

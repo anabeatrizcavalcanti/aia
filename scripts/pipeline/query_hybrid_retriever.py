@@ -22,10 +22,10 @@ SRC_DIR = ROOT_DIR / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from sola_bot.retrieval.bm25_retriever import BM25Retriever, BM25RetrieverError  # noqa: E402
-from sola_bot.retrieval.hybrid_retriever import HybridRetriever  # noqa: E402
-from sola_bot.retrieval.query_embedder import QueryEmbeddingError  # noqa: E402
-from sola_bot.retrieval.vector_retriever import DEFAULT_FILTERS, VectorRetrieverError  # noqa: E402
+from aia.retrieval.bm25_retriever import BM25Retriever, BM25RetrieverError  # noqa: E402
+from aia.retrieval.hybrid_retriever import HybridRetriever  # noqa: E402
+from aia.retrieval.query_embedder import QueryEmbeddingError  # noqa: E402
+from aia.retrieval.vector_retriever import DEFAULT_FILTERS, VectorRetrieverError  # noqa: E402
 
 
 REPORT_DIR = ROOT_DIR / "corpus" / "reports" / "retrieval"
@@ -350,7 +350,7 @@ def write_reports(report: dict[str, Any]) -> None:
         "",
         "- Chunks: `corpus/processed/chunks/reformed/all_chunks_for_embeddings.jsonl`.",
         "- Índice ChromaDB: `corpus/indexes/chroma/reformed/`.",
-        "- Collection: `solabot_reformed_v1`.",
+        "- Collection: `aia_reformed_v1`.",
         f"- BM25: `rank-bm25` / `BM25Okapi`, `{report['bm25_chunks_loaded']}` chunks carregados.",
         "- Modelo de embedding da pergunta: `text-embedding-3-large`.",
         "",
@@ -393,9 +393,9 @@ def write_reports(report: dict[str, Any]) -> None:
         "",
         "## Código",
         "",
-        "- `src/sola_bot/retrieval/bm25_retriever.py`",
-        "- `src/sola_bot/retrieval/rrf.py`",
-        "- `src/sola_bot/retrieval/hybrid_retriever.py`",
+        "- `src/aia/retrieval/bm25_retriever.py`",
+        "- `src/aia/retrieval/rrf.py`",
+        "- `src/aia/retrieval/hybrid_retriever.py`",
         "- `scripts/pipeline/query_hybrid_retriever.py`",
         "",
         "## Configuração",
@@ -423,9 +423,9 @@ def write_reports(report: dict[str, Any]) -> None:
         'python scripts/pipeline/query_hybrid_retriever.py "O que é eleição?" --top-k 5',
         'python scripts/pipeline/query_hybrid_retriever.py "O que é justificação?" --top-k 5',
         "python scripts/pipeline/query_hybrid_retriever.py --write-report",
-        "python -m py_compile src/sola_bot/retrieval/bm25_retriever.py",
-        "python -m py_compile src/sola_bot/retrieval/rrf.py",
-        "python -m py_compile src/sola_bot/retrieval/hybrid_retriever.py",
+        "python -m py_compile src/aia/retrieval/bm25_retriever.py",
+        "python -m py_compile src/aia/retrieval/rrf.py",
+        "python -m py_compile src/aia/retrieval/hybrid_retriever.py",
         "python -m py_compile scripts/pipeline/query_hybrid_retriever.py",
         "python -m pytest tests/test_hybrid_retriever.py",
         "```",

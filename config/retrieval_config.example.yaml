@@ -1,7 +1,7 @@
 retrieval:
   vector_store: chromadb
   persist_directory: corpus/indexes/chroma/alliance
-  collection_name: solabot_alliance_v1
+  collection_name: aia_alliance_v1
   embedding_provider: openai
   embedding_model: text-embedding-3-large
   embedding_dimensions: 3072
@@ -47,7 +47,7 @@ hybrid_retrieval:
 reranker_retrieval:
   enabled: true
   provider: sentence_transformers
-  model_name: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+  model_name: cross-encoder/ms-marco-TinyBERT-L2-v2
   hybrid_candidate_k: 40
   final_top_k: 30
   max_text_chars: 3500
