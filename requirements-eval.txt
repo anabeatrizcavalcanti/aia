@@ -1,0 +1,14 @@
+# Dependências da etapa de avaliação automática.
+#
+# RAGAS 0.4.3 aceita show_progress/batch_size. O pin de
+# langchain-community 0.2.19 preserva o módulo legado de VertexAI que o RAGAS
+# importa incondicionalmente, embora a avaliação use OpenAI.
+-r requirements.txt
+ragas==0.4.3
+langchain==0.2.17
+langchain-core==0.2.43
+langchain-community==0.2.19
+langchain-openai==0.1.25
+openai==1.109.1
+datasets
+pandas

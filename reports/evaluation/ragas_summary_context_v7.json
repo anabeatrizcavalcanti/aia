@@ -1,0 +1,167 @@
+{
+  "input_jsonl": "reports\\evaluation\\rag_eval_run_v7.jsonl",
+  "total_items": 30,
+  "items_evaluated": 25,
+  "items_skipped": 5,
+  "items_excluded_from_primary_metrics": 5,
+  "skipped_items": [
+    {
+      "id": "Q026",
+      "categoria": "ambigua",
+      "reason": "fora da média RAGAS principal: deve_responder = com_ressalva"
+    },
+    {
+      "id": "Q027",
+      "categoria": "ambigua",
+      "reason": "fora da média RAGAS principal: deve_responder = com_ressalva"
+    },
+    {
+      "id": "Q028",
+      "categoria": "fora_do_escopo",
+      "reason": "fora da média RAGAS principal: deve_responder = não"
+    },
+    {
+      "id": "Q029",
+      "categoria": "fora_do_escopo",
+      "reason": "fora da média RAGAS principal: deve_responder = não"
+    },
+    {
+      "id": "Q030",
+      "categoria": "fora_do_escopo",
+      "reason": "fora da média RAGAS principal: deve_responder = não"
+    }
+  ],
+  "overall_metrics": {
+    "context_precision": 0.8846666666083778,
+    "context_recall": 0.7866666666666667
+  },
+  "metrics_by_category": {
+    "ambigua": {
+      "count": 0,
+      "context_precision": null,
+      "context_recall": null
+    },
+    "doutrinaria_especifica": {
+      "count": 5,
+      "context_precision": 0.8166666666008334,
+      "context_recall": 0.8
+    },
+    "doutrinaria_geral": {
+      "count": 5,
+      "context_precision": 0.9833333333038888,
+      "context_recall": 0.9
+    },
+    "fora_do_escopo": {
+      "count": 0,
+      "context_precision": null,
+      "context_recall": null
+    },
+    "multidocumental": {
+      "count": 5,
+      "context_precision": 0.9499999999358334,
+      "context_recall": 0.5066666666666666
+    },
+    "normativa_especifica": {
+      "count": 5,
+      "context_precision": 0.7666666666,
+      "context_recall": 0.8833333333333332
+    },
+    "normativa_geral": {
+      "count": 5,
+      "context_precision": 0.9066666666013333,
+      "context_recall": 0.8433333333333334
+    }
+  },
+  "behavioral_evaluation": {
+    "count": 5,
+    "by_category": {
+      "ambigua": 2,
+      "fora_do_escopo": 3
+    },
+    "by_expected_behavior": {
+      "com_ressalva": 2,
+      "não": 3
+    },
+    "by_chatbot_status": {
+      "answered": 5
+    },
+    "items": [
+      {
+        "id": "Q026",
+        "categoria": "ambigua",
+        "deve_responder": "com_ressalva",
+        "chatbot_status": "answered",
+        "context_count": 4,
+        "source_count": 28,
+        "ragas_skipped_reason": "fora da média RAGAS principal: deve_responder = com_ressalva",
+        "error": null,
+        "warning": null
+      },
+      {
+        "id": "Q027",
+        "categoria": "ambigua",
+        "deve_responder": "com_ressalva",
+        "chatbot_status": "answered",
+        "context_count": 4,
+        "source_count": 17,
+        "ragas_skipped_reason": "fora da média RAGAS principal: deve_responder = com_ressalva",
+        "error": null,
+        "warning": null
+      },
+      {
+        "id": "Q028",
+        "categoria": "fora_do_escopo",
+        "deve_responder": "não",
+        "chatbot_status": "answered",
+        "context_count": 4,
+        "source_count": 13,
+        "ragas_skipped_reason": "fora da média RAGAS principal: deve_responder = não",
+        "error": null,
+        "warning": null
+      },
+      {
+        "id": "Q029",
+        "categoria": "fora_do_escopo",
+        "deve_responder": "não",
+        "chatbot_status": "answered",
+        "context_count": 4,
+        "source_count": 11,
+        "ragas_skipped_reason": "fora da média RAGAS principal: deve_responder = não",
+        "error": null,
+        "warning": null
+      },
+      {
+        "id": "Q030",
+        "categoria": "fora_do_escopo",
+        "deve_responder": "não",
+        "chatbot_status": "answered",
+        "context_count": 4,
+        "source_count": 4,
+        "ragas_skipped_reason": "fora da média RAGAS principal: deve_responder = não",
+        "error": null,
+        "warning": null
+      }
+    ]
+  },
+  "requested_metrics": [
+    "context_precision",
+    "context_recall"
+  ],
+  "setup_error": null,
+  "ragas_environment": {
+    "ragas_version": "0.4.3",
+    "dataset_column_mapping": {
+      "question": "question ou user_input",
+      "answer": "answer ou response",
+      "contexts": "contexts ou retrieved_contexts",
+      "ground_truth": "ground_truth ou reference"
+    },
+    "model_config": {
+      "llm_model": "gpt-5.4-mini",
+      "embedding_model": "text-embedding-3-large",
+      "llm_source": "OPENAI_CHAT_MODEL",
+      "embedding_source": "OPENAI_EMBEDDING_MODEL",
+      "explicit_clients": true
+    }
+  }
+}
