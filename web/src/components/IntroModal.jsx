@@ -43,9 +43,8 @@ function IntroModal({ documents = [], isLoadingDocuments = false, onClose }) {
       <div className="intro-modal-panel">
         <header className="intro-modal-header">
           <div className="intro-modal-title-block">
-            <p>Bem-vindo ao</p>
-            <h2 id="introModalTitle">FonteAliança</h2>
-            <span>Assistente documental da Aliança com fontes rastreáveis</span>
+            <h2 id="introModalTitle">Conheça a AIA</h2>
+            <span>Assistente Inteligente da ALIANÇA com fontes rastreáveis</span>
           </div>
 
           <button className="intro-modal-close" type="button" onClick={onClose} aria-label="Fechar introdução">
@@ -66,8 +65,8 @@ function IntroModal({ documents = [], isLoadingDocuments = false, onClose }) {
           {tab === "intro" ? (
             <div className="intro-modal-intro">
               <p>
-                O FonteAliança é um assistente de consulta documental que responde a partir de documentos doutrinários, regimentais,
-                éticos e administrativos da Aliança. Ele encontra trechos relevantes, organiza uma resposta clara e mostra quais fontes sustentam cada ponto. É simples de usar:
+                A AIA é uma assistente inteligente de consulta documental que responde a partir de documentos doutrinários, regimentais,
+                éticos e administrativos da Aliança. Ela encontra trechos relevantes, organiza uma resposta clara e mostra quais fontes sustentam cada ponto. É simples de usar:
                 escreva sua pergunta, envie e confira as fontes ao final.
               </p>
 

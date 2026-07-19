@@ -44,7 +44,7 @@ const DOCTRINAL_SUGGESTIONS = [
   {
     question: "O que é o batismo?",
     title: "Batismo",
-    detail: "sinal, sacramento e vida cristã",
+    detail: "sinal, ordenança e vida cristã",
     icon: Waves,
   },
   {
@@ -149,7 +149,7 @@ const INITIAL_MESSAGE = {
   role: "bot",
   status: "intro",
   answer:
-    "Olá! Sou o assistente documental da Aliança. Respondo perguntas doutrinárias e normativas com base nos documentos processados e apresento as fontes utilizadas. Quando não houver evidência documental suficiente, a resposta será recusada.",
+    "Olá! Sou a AIA, Assistente Inteligente da ALIANÇA. Respondo perguntas doutrinárias e normativas com base nos documentos processados e apresento as fontes utilizadas. Quando não houver evidência documental suficiente, a resposta será recusada.",
   metadata: {
     note: "As respostas são limitadas aos documentos atualmente processados na base documental.",
   },
@@ -192,6 +192,26 @@ function createMessageId() {
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
 
+function buildChatHistory(messages, maxMessages = 8) {
+  return messages
+    .filter((message) => message.id !== "welcome")
+    .filter((message) => message.role === "user" || message.role === "bot")
+    .slice(-maxMessages)
+    .map((message) => {
+      if (message.role === "user") {
+        return {
+          role: "user",
+          content: String(message.question || "").slice(0, 1600),
+        };
+      }
+      return {
+        role: "assistant",
+        content: String(message.answer || message.message || "").slice(0, 1600),
+      };
+    })
+    .filter((message) => message.content.trim());
+}
+
 function App() {
   const [messages, setMessages] = useState([INITIAL_MESSAGE]);
   const [question, setQuestion] = useState("");
@@ -200,7 +220,7 @@ function App() {
   const [isDocumentsLoading, setIsDocumentsLoading] = useState(true);
   const [showIntro, setShowIntro] = useState(() => {
     try {
-      return localStorage.getItem("solabot-intro-seen") !== "true";
+      return localStorage.getItem("aia-intro-seen") !== "true";
     } catch {
       return true;
     }
@@ -211,7 +231,7 @@ function App() {
   const [suggestionMode, setSuggestionMode] = useState("topics");
   const [questionSuggestionsEnabled, setQuestionSuggestionsEnabled] = useState(() => {
     try {
-      return localStorage.getItem("solabot-question-suggestions") !== "false";
+      return localStorage.getItem("aia-question-suggestions") !== "false";
     } catch {
       return true;
     }
@@ -234,7 +254,7 @@ function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem("solabot-question-suggestions", String(questionSuggestionsEnabled));
+      localStorage.setItem("aia-question-suggestions", String(questionSuggestionsEnabled));
     } catch {
       // Preferir não interromper a conversa se o navegador bloquear localStorage.
     }
@@ -275,7 +295,7 @@ function App() {
   function closeIntro() {
     setShowIntro(false);
     try {
-      localStorage.setItem("solabot-intro-seen", "true");
+      localStorage.setItem("aia-intro-seen", "true");
     } catch {
       // Fechar o modal não deve depender do armazenamento local do navegador.
     }
@@ -302,6 +322,7 @@ function App() {
   async function sendQuestion(nextQuestion) {
     const cleanQuestion = nextQuestion.trim();
     if (!cleanQuestion || isLoading) return;
+    const chatHistory = buildChatHistory(messages);
 
     setMessages((current) => [
       ...current,
@@ -322,6 +343,7 @@ function App() {
           question: cleanQuestion,
           document_id: null,
           chunk_type: null,
+          history: chatHistory,
         }),
       });
 
@@ -446,14 +468,14 @@ function App() {
   }
 
   return (
-    <div className="app-shell" aria-label="FonteAliança">
+    <div className="app-shell" aria-label="AIA">
       {showIntro ? (
         <IntroModal documents={availableDocuments} isLoadingDocuments={isDocumentsLoading} onClose={closeIntro} />
       ) : null}
 
       <Header onIntroOpen={() => setShowIntro(true)} />
 
-      <main className={`main-content ${!conversationStarted ? "landing-main" : ""}`} aria-label="Conversa com o FonteAliança">
+      <main className={`main-content ${!conversationStarted ? "landing-main" : ""}`} aria-label="Conversa com o AIA">
         <div className="message-stack" aria-live="polite">
           {visibleMessages.map((message) => (
             <ChatMessage key={message.id} message={message} />
@@ -715,6 +737,10 @@ function App() {
               </button>
             </div>
           </form>
+
+          <p className="composer-disclaimer">
+            A AIA pode cometer erros. Por isso, confira as fontes e documentos relevantes.
+          </p>
         </div>
       </section>
     </div>

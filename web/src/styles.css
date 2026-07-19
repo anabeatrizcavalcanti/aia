@@ -1495,6 +1495,14 @@ pre {
   display: block;
 }
 
+.composer-disclaimer {
+  margin: -2px 0 0;
+  color: #8b95a5;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
 .composer-input-wrap {
   display: flex;
   align-items: center;
@@ -1772,6 +1780,11 @@ textarea::-webkit-scrollbar-corner {
 
   .composer-inner {
     width: min(100% - 24px, 896px);
+    gap: 8px;
+  }
+
+  .composer-disclaimer {
+    font-size: 0.68rem;
   }
 
   .compact-suggestion-strip {

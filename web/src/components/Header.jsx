@@ -5,8 +5,8 @@ function Header({ onIntroOpen }) {
     <header className="hero-header">
       <div className="header-inner">
         <div className="brand-copy">
-          <p className="eyebrow">Assistente documental da Aliança</p>
-          <h1>FonteAliança</h1>
+          <p className="eyebrow">Assistente Inteligente da ALIANÇA</p>
+          <h1>AIA</h1>
           <div className="brand-subline">
             <p>Consulta doutrinária e normativa com fontes rastreáveis.</p>
           </div>
