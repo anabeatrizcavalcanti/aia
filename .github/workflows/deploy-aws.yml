@@ -15,6 +15,9 @@ jobs:
     name: Build and restart Docker app
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    environment:
+      name: production
+      url: http://56.125.22.78:8000
 
     steps:
       - name: Checkout main
