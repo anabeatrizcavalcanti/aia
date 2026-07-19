@@ -32,8 +32,8 @@ jobs:
           test -n "$EC2_SSH_KEY"
 
           mkdir -p ~/.ssh
-          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/solabot_ec2_key
-          chmod 600 ~/.ssh/solabot_ec2_key
+          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/aia_ec2_key
+          chmod 600 ~/.ssh/aia_ec2_key
           ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
 
       - name: Upload source to EC2
@@ -42,8 +42,8 @@ jobs:
           EC2_USER: ${{ secrets.EC2_USER }}
         run: |
           EC2_USER="${EC2_USER:-ubuntu}"
-          APP_DIR="/home/$EC2_USER/sola-bot"
-          ARCHIVE_PATH="/tmp/solabot-source.tar.gz"
+          APP_DIR="/home/$EC2_USER/aia"
+          ARCHIVE_PATH="/tmp/aia-source.tar.gz"
 
           tar \
             --exclude='.git' \
@@ -56,16 +56,16 @@ jobs:
             --exclude='.ruff_cache' \
             -czf "$ARCHIVE_PATH" .
 
-          scp -i ~/.ssh/solabot_ec2_key "$ARCHIVE_PATH" "$EC2_USER@$EC2_HOST:/tmp/solabot-source.tar.gz"
+          scp -i ~/.ssh/aia_ec2_key "$ARCHIVE_PATH" "$EC2_USER@$EC2_HOST:/tmp/aia-source.tar.gz"
 
-          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+          ssh -i ~/.ssh/aia_ec2_key "$EC2_USER@$EC2_HOST" \
             "APP_DIR='$APP_DIR' bash -s" <<'REMOTE'
           set -euo pipefail
 
           mkdir -p "$APP_DIR"
           find "$APP_DIR" -mindepth 1 -maxdepth 1 ! -name ".env" -exec rm -rf {} +
-          tar -xzf /tmp/solabot-source.tar.gz -C "$APP_DIR"
-          rm -f /tmp/solabot-source.tar.gz
+          tar -xzf /tmp/aia-source.tar.gz -C "$APP_DIR"
+          rm -f /tmp/aia-source.tar.gz
           REMOTE
 
       - name: Sync production env
@@ -80,10 +80,10 @@ jobs:
           fi
 
           EC2_USER="${EC2_USER:-ubuntu}"
-          APP_DIR="/home/$EC2_USER/sola-bot"
+          APP_DIR="/home/$EC2_USER/aia"
 
           printf '%s\n' "$PRODUCTION_ENV" > .env.production
-          scp -i ~/.ssh/solabot_ec2_key .env.production "$EC2_USER@$EC2_HOST:$APP_DIR/.env"
+          scp -i ~/.ssh/aia_ec2_key .env.production "$EC2_USER@$EC2_HOST:$APP_DIR/.env"
 
       - name: Rebuild and restart container
         env:
@@ -91,9 +91,9 @@ jobs:
           EC2_USER: ${{ secrets.EC2_USER }}
         run: |
           EC2_USER="${EC2_USER:-ubuntu}"
-          APP_DIR="/home/$EC2_USER/sola-bot"
+          APP_DIR="/home/$EC2_USER/aia"
 
-          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+          ssh -i ~/.ssh/aia_ec2_key "$EC2_USER@$EC2_HOST" \
             "APP_DIR='$APP_DIR' bash -s" <<'REMOTE'
           set -euo pipefail
 
@@ -111,5 +111,5 @@ jobs:
         run: |
           EC2_USER="${EC2_USER:-ubuntu}"
 
-          ssh -i ~/.ssh/solabot_ec2_key "$EC2_USER@$EC2_HOST" \
+          ssh -i ~/.ssh/aia_ec2_key "$EC2_USER@$EC2_HOST" \
             "sleep 8 && curl -fsS http://127.0.0.1:8000/api/health"

@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT = ROOT_DIR / "runtime_artifacts" / "solabot-runtime-corpus.tar.gz"
+DEFAULT_OUTPUT = ROOT_DIR / "runtime_artifacts" / "aia-runtime-corpus.tar.gz"
 REQUIRED_PATHS = [
     ROOT_DIR / "corpus" / "processed" / "chunks" / "alliance" / "all_chunks_for_embeddings.jsonl",
     ROOT_DIR / "corpus" / "indexes" / "chroma" / "alliance",

@@ -1,8 +1,8 @@
 services:
-  solabot:
+  aia:
     build: .
-    image: solabot:local
-    container_name: solabot
+    image: aia:local
+    container_name: aia
     restart: unless-stopped
     ports:
       - "8000:8000"

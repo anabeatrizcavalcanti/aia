@@ -9,7 +9,7 @@ venv/
 node_modules/
 runtime_artifacts/
 !runtime_artifacts/
-!runtime_artifacts/solabot-runtime-corpus.tar.gz
+!runtime_artifacts/aia-runtime-corpus.tar.gz
 runtime_logs/
 corpus/indexes/chroma/*
 !corpus/indexes/chroma/.gitkeep

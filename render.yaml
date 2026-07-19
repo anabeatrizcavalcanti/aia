@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: solabot
+    name: aia
     runtime: docker
     plan: free
     healthCheckPath: /api/health
@@ -16,7 +16,7 @@ services:
       - key: RAG_CHUNKS_PATH
         value: /app/corpus/processed/chunks/alliance/all_chunks_for_embeddings.jsonl
       - key: CHROMA_COLLECTION_NAME
-        value: solabot_alliance_v1
+        value: aia_alliance_v1
       - key: HF_HOME
         value: /app/.cache/huggingface
       - key: RERANKER_ENABLED
@@ -40,4 +40,4 @@ services:
       - key: LANGSMITH_API_KEY
         sync: false
       - key: LANGSMITH_PROJECT
-        value: solabot-production
+        value: aia-production
