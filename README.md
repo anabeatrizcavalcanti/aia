@@ -6,7 +6,7 @@ AIA é uma assistente documental baseada em RAG para consulta a documentos doutr
 
 O sistema está disponível em: [http://56.125.22.78:8000](http://56.125.22.78:8000)
 
-O deploy atual roda em uma VM AWS EC2 com Docker. Se a instância for parada e não houver Elastic IP configurado, o IP público pode mudar quando ela for iniciada novamente.
+O deploy atual roda em uma VM AWS EC2 com Docker.
 
 ## Escopo
 
