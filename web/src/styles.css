@@ -1195,6 +1195,7 @@ pre {
 }
 
 .compact-suggestions-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1311,9 +1312,13 @@ pre {
 }
 
 .question-suggestion-pager {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
   align-items: center;
   gap: 4px;
+  transform: translate(-50%, -50%);
 }
 
 .question-suggestion-pager button {
