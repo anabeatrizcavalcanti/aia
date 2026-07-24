@@ -95,6 +95,7 @@ const NORMATIVE_SUGGESTIONS = [
 ];
 
 const SUGGESTIONS = [...DOCTRINAL_SUGGESTIONS, ...NORMATIVE_SUGGESTIONS];
+const QUESTION_SUGGESTION_PREVIEW_COUNT = 3;
 
 const FALLBACK_DOCUMENTS = [
   {
@@ -229,6 +230,7 @@ function App() {
   const [dynamicSuggestions, setDynamicSuggestions] = useState([]);
   const [suggestionsLoading, setSuggestionsLoading] = useState(false);
   const [suggestionMode, setSuggestionMode] = useState("topics");
+  const [questionSuggestionPage, setQuestionSuggestionPage] = useState(0);
   const [questionSuggestionsEnabled, setQuestionSuggestionsEnabled] = useState(() => {
     try {
       return localStorage.getItem("aia-question-suggestions") !== "false";
@@ -244,6 +246,13 @@ function App() {
   const hasDynamicSuggestions = dynamicSuggestions.length > 0;
   const isQuestionMode = hasDynamicSuggestions && suggestionMode === "questions";
   const conversationSuggestions = isQuestionMode ? dynamicSuggestions : suggestionsLoading && !hasDynamicSuggestions ? [] : SUGGESTIONS;
+  const questionSuggestionPageCount = Math.ceil(conversationSuggestions.length / QUESTION_SUGGESTION_PREVIEW_COUNT);
+  const firstPanelQuestionIndex = questionSuggestionPage * QUESTION_SUGGESTION_PREVIEW_COUNT;
+  const panelQuestionSuggestions = conversationSuggestions.slice(
+    firstPanelQuestionIndex,
+    firstPanelQuestionIndex + QUESTION_SUGGESTION_PREVIEW_COUNT,
+  );
+  const hasQuestionSuggestionPages = isQuestionMode && questionSuggestionPageCount > 1;
   const suggestionLabel = isQuestionMode ? "Perguntas" : "Tópicos";
   const suggestionPanelTitle = isQuestionMode ? "Perguntas sugeridas" : "Tópicos sugeridos";
   const visibleMessages = conversationStarted ? messages.filter((message) => message.id !== "welcome") : [];
@@ -273,6 +282,10 @@ function App() {
       loadingBubbleRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 60);
   }, [isLoading]);
+
+  useEffect(() => {
+    setQuestionSuggestionPage(0);
+  }, [dynamicSuggestions, suggestionMode]);
 
   async function fetchDocuments() {
     setIsDocumentsLoading(true);
@@ -332,6 +345,7 @@ function App() {
     setSuggestionsOpen(false);
     setDynamicSuggestions([]);
     setSuggestionMode("questions");
+    setQuestionSuggestionPage(0);
     setIsLoading(true);
     let answerPayload = null;
 
@@ -408,6 +422,7 @@ function App() {
       if (nextSuggestions.length) {
         setDynamicSuggestions(nextSuggestions);
         setSuggestionMode("questions");
+        setQuestionSuggestionPage(0);
         setSuggestionsOpen(true);
       }
     } catch {
@@ -436,6 +451,7 @@ function App() {
     setSuggestionsOpen(false);
     setDynamicSuggestions([]);
     setSuggestionMode("topics");
+    setQuestionSuggestionPage(0);
 
     window.requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -449,6 +465,7 @@ function App() {
         setSuggestionsLoading(false);
         setDynamicSuggestions([]);
         setSuggestionMode("topics");
+        setQuestionSuggestionPage(0);
       }
       return next;
     });
@@ -528,6 +545,31 @@ function App() {
                 <div className={`compact-suggestions-panel ${isQuestionMode ? "question-suggestions-panel" : "topic-suggestions-panel"}`}>
                   <div className="compact-suggestions-header">
                     <p>{suggestionPanelTitle}</p>
+                    <div className="compact-suggestions-header-actions">
+                      {isQuestionMode && hasQuestionSuggestionPages ? (
+                        <div className="question-suggestion-pager" aria-label="Navegar perguntas sugeridas">
+                          <button
+                            type="button"
+                            onClick={() => setQuestionSuggestionPage((current) => Math.max(0, current - 1))}
+                            disabled={questionSuggestionPage === 0}
+                            aria-label="Perguntas sugeridas anteriores"
+                          >
+                            <ChevronLeft size={15} aria-hidden="true" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setQuestionSuggestionPage((current) =>
+                                Math.min(questionSuggestionPageCount - 1, current + 1),
+                              )
+                            }
+                            disabled={questionSuggestionPage >= questionSuggestionPageCount - 1}
+                            aria-label="Próximas perguntas sugeridas"
+                          >
+                            <ChevronRight size={15} aria-hidden="true" />
+                          </button>
+                        </div>
+                      ) : null}
                     {hasDynamicSuggestions ? (
                       <div className="suggestion-mode-switch" aria-label="Alternar sugestões">
                         <button
@@ -546,26 +588,29 @@ function App() {
                         </button>
                       </div>
                     ) : null}
+                    </div>
                   </div>
                   {isQuestionMode ? (
-                    <div className="compact-suggestion-list">
-                      {suggestionsLoading ? <span className="suggestions-loading">Gerando novas perguntas...</span> : null}
-                      {conversationSuggestions.map((suggestion) => {
-                        const Icon = suggestion.icon;
-                        return (
-                          <button
-                            key={suggestion.id || suggestion.question}
-                            type="button"
-                            className="topic-pill question-pill"
-                            disabled={isLoading}
-                            onClick={() => sendQuestion(suggestion.question)}
-                            title={suggestion.question}
-                          >
-                            <Icon size={14} aria-hidden="true" />
-                            <span>{suggestion.question}</span>
-                          </button>
-                        );
-                      })}
+                    <div className="question-suggestion-carousel">
+                      <div className="compact-suggestion-list">
+                        {suggestionsLoading ? <span className="suggestions-loading">Gerando novas perguntas...</span> : null}
+                        {panelQuestionSuggestions.map((suggestion) => {
+                          const Icon = suggestion.icon;
+                          return (
+                            <button
+                              key={suggestion.id || suggestion.question}
+                              type="button"
+                              className="topic-pill question-pill"
+                              disabled={isLoading}
+                              onClick={() => sendQuestion(suggestion.question)}
+                              title={suggestion.question}
+                            >
+                              <Icon size={14} aria-hidden="true" />
+                              <span>{suggestion.question}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
                   ) : (
                     <div className="compact-topic-groups">
@@ -731,7 +776,6 @@ function App() {
                   disabled={isLoading}
                 />
               </div>
-
               <button className="send-button" type="submit" disabled={isLoading || !question.trim()} aria-label="Enviar pergunta">
                 {isLoading ? <Loader2 size={15} className="spin" aria-hidden="true" /> : <Send size={15} aria-hidden="true" />}
               </button>

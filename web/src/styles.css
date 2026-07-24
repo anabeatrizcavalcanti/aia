@@ -1183,6 +1183,9 @@ pre {
 }
 
 .compact-suggestions-panel {
+  min-height: 208px;
+  display: grid;
+  grid-template-rows: auto 1fr;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 14px;
@@ -1201,11 +1204,19 @@ pre {
 
 .compact-suggestions-header > p {
   margin: 0;
+  flex: 1 1 auto;
   color: #9ba3af;
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.compact-suggestions-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
 }
 
 .suggestion-mode-switch {
@@ -1289,8 +1300,41 @@ pre {
 
 .question-suggestions-panel .compact-suggestion-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   align-items: stretch;
+  gap: 5px;
+}
+
+.question-suggestion-carousel {
+  display: grid;
+  align-content: center;
+}
+
+.question-suggestion-pager {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.question-suggestion-pager button {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 20px;
+  border: 0;
+  color: var(--burgundy);
+  background: transparent;
+  cursor: pointer;
+  transition: color 140ms ease, opacity 140ms ease;
+}
+
+.question-suggestion-pager button:hover:not(:disabled) {
+  color: var(--primary);
+}
+
+.question-suggestion-pager button:disabled {
+  cursor: default;
+  opacity: 0.32;
 }
 
 .suggestions-loading {
@@ -1446,12 +1490,20 @@ pre {
 }
 
 .question-pill {
-  min-height: 42px;
+  min-height: 38px;
   width: 100%;
   max-width: none;
+  align-items: center;
   justify-content: flex-start;
-  border-radius: 10px;
-  padding: 9px 10px;
+  border-color: var(--border-strong);
+  border-radius: 8px;
+  padding: 7px 9px;
+  background: var(--surface);
+  white-space: normal;
+}
+
+.question-pill svg {
+  margin-top: 0;
 }
 
 .question-chip span,
@@ -1466,9 +1518,12 @@ pre {
 }
 
 .question-pill span {
-  white-space: nowrap;
+  display: -webkit-box;
+  white-space: normal;
   text-align: left;
-  line-height: 1.2;
+  line-height: 1.25;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .ghost-chip {
